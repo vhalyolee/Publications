@@ -1,0 +1,84 @@
+\documentclass{JINST}
+
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{wrapfig}
+\usepackage{multirow}
+
+\title{GPU Enahncement of the Trigger to Extend Physics Reach at the LHC}
+
+\author{V. Halyo\thanks{Corresponding Author} P. Jindal, P. Legresley, P. Lujan \\
+\llap Princeton University, Princeton, NJ, USA \\
+E-mail: \email{vhalyo@gmail.com}}
+
+\abstract 
+{Significant new challenges are continuously confronting the High Energy Physics (HEP) experiments in particular the Large Hadron Collider (LHC) at CERN who at nominal
+ conditions will deliver proton-proton collisions to the detectors at a rate of 40 MHz. This rate must be significantly reduced to comply with the performance limitations of the mass storage hardware, and the capabilities of the computing resources to process the collected data in a timely fashion for physics analysis. At the same time, the physics signals of interest must be retained with high efficiency. 
+
+The quest for rare new physics phenomena at the LHC and the flexibility of the trigger system allows to evaluate a GPU enhancement of the conventional computer farm to not only 
+provide faster and more efficient events selection but also include new complex triggers that were not possible before.  A new tracking algorithm is evaluated on the hybrid a K20
+Inter multi core processor  allowing for example for the first time to reconstruct long lived particles at the tracker system in the trigger. Preliminary time performance and
+efficiency will be presented.}
+
+\keywords{ATLAS; CMS; Level-1 trigger; HLT; Tracker system; }
+
+\begin{document}
+
+% 
+%\setcounter{section}{1} 
+% 
+\section{Introduction} 
+% 
+In p--p collisions the transverse 
+momentum (p$_T$) distribution of muons falls off strongly with increasing p$_T$ 
+(Fig.~\ref{Muon_momenta}). Total muon cross sections above p$_T$ values like 10, 20 and 40 
+GeV are 734, 47 and 3 nb, respectively. 
+% 
+
+\section{The Trigger System}
+%
+
+\section{Fast Tracking Algorithm}
+
+
+\section{Implementation and Results}
+
+%
+\section{Summary}
+%
+The upgrade scheme for the Level-1 muon trigger described above allows to sharpen the threshold of
+the  high-p$_T$ trigger by about an order of magnitude, sufficient for the luminosity increase
+envisioned  for the SLHC. This way the existing RPC trigger chambers can stay in place. The readout
+electronics of  RPC as well as MDT will need complete replacement. A number of readout units along
+the data path will  have to be designed to contain local intelligence and the possibility for
+precise timing adjustment in  order to fulfill the synchronicity requirement, mentioned above.
+Design, prototyping, production and  installation will require a significant effort and a strong
+contribution from the ATLAS muon  spectrometer community. 
+
+%%%%%%%%%%%%%%%%
+% References
+%%%%%%%%%%%%%%%%
+
+\begin{thebibliography}{9}
+
+\bibitem{trigger_tdr}
+ATLAS Collaboration,
+\textsl{Technical Design Report for the ATLAS Muon Spectrometer},
+CERN/LHCC/97-22, May 1997.
+
+
+\bibitem{ATLAS_detector_paper}
+The ATLAS collaboration,
+\emph{The ATLAS Experiment at the CERN Large Hadron Collider},
+JINST {\textbf 3}  S08003 (2008)
+%
+\bibitem{CMS_detector_paper}
+The CMS collaboration,
+\emph{The CMS Experiment at the CERN Large Hadron Collider},
+JINST {\textbf 3}  S08003 (2008)
+%
+
+
+\end{thebibliography}
+
+\end{document}
