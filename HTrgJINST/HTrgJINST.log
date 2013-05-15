@@ -1,27 +1,19 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  14 MAY 2013 19:05
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_9) (format=pdflatex 2012.8.27)  15 MAY 2013 13:10
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **HTrgJINST.tex
 (./HTrgJINST.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
-c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
-h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
-h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
-ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
-rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
-kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
- polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
-lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
-welsh, loaded.
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
 (./JINST.cls
 Document Class: JINST 2006/07/11 v1.0.1 LaTeX document class - P.D.
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \@emptytoks=\toks14
 \symAMSa=\mathgroup4
@@ -29,17 +21,17 @@ Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/fontenc.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.def
+(/opt/local/share/texmf-texlive-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/times.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/mathptmx.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/mathptmx.sty
 Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -75,31 +67,31 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/opt/local/share/texmf-texlive-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/opt/local/share/texmf-texlive-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count79
@@ -109,10 +101,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \symforjmath=\mathgroup8
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size11.clo
+(/opt/local/share/texmf-texlive-dist/tex/latex/base/size11.clo
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/plain/misc/pdfcolor.tex)
+(/opt/local/share/texmf-texlive-dist/tex/plain/misc/pdfcolor.tex)
 \titlesk@ja=\skip41
 \titlesk@jb=\skip42
 \titlesk@jc=\skip43
@@ -132,7 +124,7 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \Jpaper@url=\box29
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 809.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1pcr.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 \c@figure=\count86
@@ -165,12 +157,12 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 Class JINST Warning: ATTENTION!!! watermark disabled. Add it with pdftk (use co
 mpilaJINSTpdflatex for instance).
 
-) (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/epsfig.sty
+) (/opt/local/share/texmf-texlive-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 \epsfxsize=\dimen114
 \epsfysize=\dimen115
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/subfigure/subfigure.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip48
 \subfigcapskip=\skip49
@@ -186,11 +178,11 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/usr/local/texlive/2012/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(/opt/local/share/texmf-texlive-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip52
 \subfig@bottom=\skip53
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen118
 \WF@size=\dimen119
 \c@WF@wrappedlines=\count98
@@ -198,7 +190,7 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \WF@everypar=\toks19
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/multirow/multirow.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen120
 )
 (./HTrgJINST.aux
@@ -229,25 +221,25 @@ LaTeX Warning: Label `fig:fu' multiply defined.
 )
 \openout1 = `HTrgJINST.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 27.
- (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1ptm.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 26.
+ (/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 \big@size=\dimen121
 
-(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+(/opt/local/share/texmf-texlive-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count99
 \scratchdimen=\dimen122
@@ -260,48 +252,39 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 \MPnumerator=\count103
 \makeMPintoPDFobject=\count104
 \everyMPtoPDFconversion=\toks21
-) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) (/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-
-
-! Package ifpdf Error: Name clash, \ifpdf is already defined.
-
-See the ifpdf package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173     }
-           %
-? 
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+)
+(/opt/local/share/texmf-texlive-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -312,279 +295,276 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.jpg,.jpeg,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/opt/local/share/texmf-texlive-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 27
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 26
 .
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 27
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 26
 .
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 27
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 26
 .
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 27
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 26
 .
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 27.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 26.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 26.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1phv.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 27.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 27.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 27.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
  [0
 
-{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 27.
-
-No file HTrgJINST.toc.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 26.
+ (./HTrgJINST.toc)
 \tf@toc=\write3
 \openout3 = `HTrgJINST.toc'.
 
 
-LaTeX Warning: Citation `bib:TDR2' on page 1 undefined on input line 41.
+
+LaTeX Warning: Citation `bib:TDR2' on page 1 undefined on input line 40.
 
 [1]
 
-LaTeX Warning: Citation `bib:CUDA' on page 2 undefined on input line 84.
+LaTeX Warning: Citation `bib:CUDA' on page 2 undefined on input line 79.
 
 [2]
 
-LaTeX Warning: Citation `bib:HSV' on page 3 undefined on input line 138.
+LaTeX Warning: Citation `bib:HSV' on page 3 undefined on input line 130.
 
 
-LaTeX Warning: Citation `bib:TP' on page 3 undefined on input line 154.
+LaTeX Warning: Citation `bib:TP' on page 3 undefined on input line 146.
 
 
-LaTeX Warning: Citation `bib:TDR1' on page 3 undefined on input line 158.
+LaTeX Warning: Citation `bib:TDR1' on page 3 undefined on input line 150.
 
 
-LaTeX Warning: Citation `bib:TDR2' on page 3 undefined on input line 159.
+LaTeX Warning: Citation `bib:TDR2' on page 3 undefined on input line 151.
 
 
-LaTeX Warning: Citation `bib:HLT' on page 3 undefined on input line 159.
+LaTeX Warning: Citation `bib:HLT' on page 3 undefined on input line 151.
 
-<figs/CMSTrigger.pdf, id=29, 722.7pt x 542.025pt>
+<figs/CMSTrigger.pdf, id=51, 722.7pt x 542.025pt>
 File: figs/CMSTrigger.pdf Graphic file (type pdf)
  <use figs/CMSTrigger.pdf>
-Package pdftex.def Info: figs/CMSTrigger.pdf used on input line 169.
+Package pdftex.def Info: figs/CMSTrigger.pdf used on input line 161.
 (pdftex.def)             Requested size: 204.85844pt x 153.64339pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 172.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 164.
 
-<figs/integrated1U.pdf, id=30, 234.80814pt x 305.94452pt>
+<figs/integrated1U.pdf, id=52, 234.80814pt x 305.94452pt>
 File: figs/integrated1U.pdf Graphic file (type pdf)
 
 <use figs/integrated1U.pdf>
-Package pdftex.def Info: figs/integrated1U.pdf used on input line 177.
+Package pdftex.def Info: figs/integrated1U.pdf used on input line 169.
 (pdftex.def)             Requested size: 119.50104pt x 155.70285pt.
 
-Underfull \hbox (badness 1009) in paragraph at lines 178--178
+Underfull \hbox (badness 1009) in paragraph at lines 170--170
 []\T1/ptm/b/n/10 Figure 2. \T1/ptm/m/n/10 Schematic of an in-te-grated
  []
 
 [3]
 
-LaTeX Warning: Citation `bib:TDR2' on page 4 undefined on input line 183.
+LaTeX Warning: Citation `bib:TDR2' on page 4 undefined on input line 175.
 
 
-LaTeX Warning: Citation `bib:HLT' on page 4 undefined on input line 183.
+LaTeX Warning: Citation `bib:HLT' on page 4 undefined on input line 175.
 
 
-LaTeX Warning: Citation `bib:datamodel' on page 4 undefined on input line 184.
+LaTeX Warning: Citation `bib:datamodel' on page 4 undefined on input line 176.
 
-[4 <./figs/CMSTrigger.pdf> <./figs/integrated1U.pdf>]
-<figs/50events_hits.pdf, id=72, 569.12625pt x 538.01pt>
+[4 <./figs/CMSTrigger.pdf> <./figs/integrated1U.pdf>] [5]
+<figs/50events_hits.pdf, id=97, 569.12625pt x 538.01pt>
 File: figs/50events_hits.pdf Graphic file (type pdf)
 
 <use figs/50events_hits.pdf>
-Package pdftex.def Info: figs/50events_hits.pdf used on input line 259.
+Package pdftex.def Info: figs/50events_hits.pdf used on input line 252.
 (pdftex.def)             Requested size: 113.81102pt x 107.58366pt.
 pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:hltar
 c}) has been already used, duplicate ignored
 <to be read again> 
                    }
-l.262 with up to eight slices. \label{fig:hltarc}}
+l.255 with up to eight slices. \label{fig:hltarc}}
                                                   
-Underfull \hbox (badness 1184) in paragraph at lines 262--262
+Underfull \hbox (badness 1184) in paragraph at lines 255--255
 \T1/ptm/m/n/10 event builder (72 Read-out
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 262--262
+Underfull \hbox (badness 1540) in paragraph at lines 255--255
 \T1/ptm/m/n/10 Units, 288 Builder Units)
  []
 
-<figs/50events_accumulator.pdf, id=73, 2055.68pt x 2055.68pt>
+<figs/50events_accumulator.pdf, id=98, 2055.68pt x 2055.68pt>
 File: figs/50events_accumulator.pdf Graphic file (type pdf)
 
 <use figs/50events_accumulator.pdf>
-Package pdftex.def Info: figs/50events_accumulator.pdf used on input line 267.
+Package pdftex.def Info: figs/50events_accumulator.pdf used on input line 260.
 (pdftex.def)             Requested size: 88.77245pt x 88.76892pt.
 pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:hltar
 c}) has been already used, duplicate ignored
 <to be read again> 
                    }
-l.270 with up to eight slices. \label{fig:hltarc}}
+l.263 with up to eight slices. \label{fig:hltarc}}
                                                   
-Underfull \hbox (badness 1184) in paragraph at lines 270--270
+Underfull \hbox (badness 1184) in paragraph at lines 263--263
 \T1/ptm/m/n/10 event builder (72 Read-out
  []
 
 
-Underfull \hbox (badness 1540) in paragraph at lines 270--270
+Underfull \hbox (badness 1540) in paragraph at lines 263--263
 \T1/ptm/m/n/10 Units, 288 Builder Units)
  []
 
-<figs/50events_hits_tracks.pdf, id=74, 569.12625pt x 538.01pt>
+<figs/50events_hits_tracks.pdf, id=99, 569.12625pt x 538.01pt>
 File: figs/50events_hits_tracks.pdf Graphic file (type pdf)
 
 <use figs/50events_hits_tracks.pdf>
-Package pdftex.def Info: figs/50events_hits_tracks.pdf used on input line 275.
+Package pdftex.def Info: figs/50events_hits_tracks.pdf used on input line 268.
 (pdftex.def)             Requested size: 102.42921pt x 96.8294pt.
 
-Underfull \hbox (badness 1122) in paragraph at lines 278--278
+Underfull \hbox (badness 1122) in paragraph at lines 271--271
 \T1/ptm/m/n/10 send ac-cepted events (Re-
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 278--278
+Underfull \hbox (badness 2126) in paragraph at lines 271--271
 \T1/ptm/m/n/10 struct the physics con-tent
  []
 
-[5] <figs/curved_500events_hits.pdf, id=83, 569.12625pt x 546.04pt>
+<figs/curved_500events_hits.pdf, id=100, 569.12625pt x 546.04pt>
 File: figs/curved_500events_hits.pdf Graphic file (type pdf)
 
 <use figs/curved_500events_hits.pdf>
-Package pdftex.def Info: figs/curved_500events_hits.pdf used on input line 286.
+Package pdftex.def Info: figs/curved_500events_hits.pdf used on input line 279.
 
 (pdftex.def)             Requested size: 204.85844pt x 196.54926pt.
 pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:hltar
 c}) has been already used, duplicate ignored
 <to be read again> 
                    }
-l.289 with up to eight slices. \label{fig:hltarc}}
+l.282 with up to eight slices. \label{fig:hltarc}}
                                                   
-<figs/curved_500events_hits_tracks.pdf, id=84, 569.12625pt x 546.04pt>
+<figs/curved_500events_hits_tracks.pdf, id=101, 569.12625pt x 546.04pt>
 File: figs/curved_500events_hits_tracks.pdf Graphic file (type pdf)
 
 <use figs/curved_500events_hits_tracks.pdf>
 Package pdftex.def Info: figs/curved_500events_hits_tracks.pdf used on input li
-ne 294.
+ne 287.
 (pdftex.def)             Requested size: 204.85844pt x 196.54926pt.
 
-Overfull \hbox (27.1182pt too wide) in paragraph at lines 284--300
+Overfull \hbox (27.1182pt too wide) in paragraph at lines 277--293
 [][] [] 
  []
 
-<figs/TimePerformance.pdf, id=85, 561.09625pt x 403.5075pt>
+<figs/TimePerformance.pdf, id=102, 561.09625pt x 403.5075pt>
 File: figs/TimePerformance.pdf Graphic file (type pdf)
 
 <use figs/TimePerformance.pdf>
-Package pdftex.def Info: figs/TimePerformance.pdf used on input line 311.
+Package pdftex.def Info: figs/TimePerformance.pdf used on input line 304.
 (pdftex.def)             Requested size: 204.85844pt x 147.31903pt.
 pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:hltar
 c}) has been already used, duplicate ignored
 <to be read again> 
                    }
-l.314 with up to eight slices. \label{fig:hltarc}}
+l.307 with up to eight slices. \label{fig:hltarc}}
                                                   
-<figs/Eff.pdf, id=86, 475.7775pt x 342.27875pt>
+<figs/Eff.pdf, id=103, 475.7775pt x 342.27875pt>
 File: figs/Eff.pdf Graphic file (type pdf)
  <use figs/Eff.pdf>
-Package pdftex.def Info: figs/Eff.pdf used on input line 319.
+Package pdftex.def Info: figs/Eff.pdf used on input line 312.
 (pdftex.def)             Requested size: 204.85844pt x 147.37544pt.
 
-Overfull \hbox (27.1182pt too wide) in paragraph at lines 309--325
+Overfull \hbox (27.1182pt too wide) in paragraph at lines 302--318
 [][] [] 
  []
 
-<figs/TimeVsThreads.pdf, id=87, 513.92pt x 369.38pt>
+[6pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:fu}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \endgroup \set@typeset@protect 
+l.318 \end{figure}
+                   <./figs/50events_hits.pdf, page is rotated 90 degrees> <./fi
+gs/50events_accumulator.pdf> <./figs/50events_hits_tracks.pdf, page is rotated 
+90 degrees> <./figs/curved_500events_hits.pdf, page is rotated 90 degrees> <./f
+igs/curved_500events_hits_tracks.pdf, page is rotated 90 degrees>]
+<figs/TimeVsThreads.pdf, id=296, 513.92pt x 369.38pt>
 File: figs/TimeVsThreads.pdf Graphic file (type pdf)
 
 <use figs/TimeVsThreads.pdf>
-Package pdftex.def Info: figs/TimeVsThreads.pdf used on input line 331.
+Package pdftex.def Info: figs/TimeVsThreads.pdf used on input line 324.
 (pdftex.def)             Requested size: 204.85844pt x 147.24211pt.
 pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:hltar
 c}) has been already used, duplicate ignored
 <to be read again> 
                    }
-l.334 with up to eight slices. \label{fig:hltarc}}
+l.327 with up to eight slices. \label{fig:hltarc}}
                                                   
-<figs/TimeVsTracks.pdf, id=88, 518.93875pt x 374.39874pt>
+<figs/TimeVsTracks.pdf, id=297, 518.93875pt x 374.39874pt>
 File: figs/TimeVsTracks.pdf Graphic file (type pdf)
 
 <use figs/TimeVsTracks.pdf>
-Package pdftex.def Info: figs/TimeVsTracks.pdf used on input line 339.
+Package pdftex.def Info: figs/TimeVsTracks.pdf used on input line 332.
 (pdftex.def)             Requested size: 204.85844pt x 147.80304pt.
-
-Overfull \hbox (27.1182pt too wide) in paragraph at lines 329--345
+pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:fu}) 
+has been already used, duplicate ignored
+<to be read again> 
+                   }
+l.335 (EventProcessor) are split.  \label{fig:fu}}
+                                                  
+Overfull \hbox (27.1182pt too wide) in paragraph at lines 322--338
 [][] [] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:fu
-}) has been already used, duplicate ignored
+[7pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:fu}
+) has been already used, duplicate ignored
 <to be read again> 
                    \endgroup \set@typeset@protect 
-l.369 \bibitem{ATLAS_detector_paper}
-                                     <./figs/50events_hits.pdf, page is rotated
- 90 degrees> <./figs/50events_accumulator.pdf> <./figs/50events_hits_tracks.pdf
-, page is rotated 90 degrees> <./figs/curved_500events_hits.pdf, page is rotate
-d 90 degrees> <./figs/curved_500events_hits_tracks.pdf, page is rotated 90 degr
-ees>] [7pdfTeX warning (ext4): destination with the same identifier (name{ref-f
-ig:fu}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.384 \end{thebibliography}
-                           pdfTeX warning (ext4): destination with the same ide
-ntifier (name{ref-fig:fu}) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.384 \end{thebibliography}
-                            <./figs/TimePerformance.pdf> <./figs/Eff.pdf> <./fi
-gs/TimeVsThreads.pdf> <./figs/TimeVsTracks.pdf>] [8] (./HTrgJINST.aux)
+l.376 
+       <./figs/TimePerformance.pdf> <./figs/Eff.pdf> <./figs/TimeVsThreads.pdf>
+ <./figs/TimeVsTracks.pdf>] [8] (./HTrgJINST.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -593,27 +573,28 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3092 strings out of 493488
- 40272 string characters out of 3141326
- 96434 words of memory out of 3000000
- 6258 multiletter control sequences out of 15000+200000
+ 3096 strings out of 495063
+ 40439 string characters out of 3181831
+ 95127 words of memory out of 3000000
+ 6136 multiletter control sequences out of 15000+200000
  83707 words of font info for 124 fonts, out of 3000000 for 9000
- 957 hyphenation exceptions out of 8191
- 38i,9n,26p,294b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2012/
-texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2012/texmf-d
-ist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2012/texmf-dist/fonts/t
-ype1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/t
-imes/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmr8
-a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on HTrgJINST.pdf (9 pages, 2020610 bytes).
+ 14 hyphenation exceptions out of 8191
+ 38i,9n,26p,344b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/opt/local/share/texmf-texlive-dist/fonts/enc/dvips/base/8r.enc}</opt/local/
+share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/
+share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/s
+hare/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></opt/local/s
+hare/texmf-texlive-dist/fonts/type1/urw/courier/ucrr8a.pfb></opt/local/share/te
+xmf-texlive-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/local/share/texmf-te
+xlive-dist/fonts/type1/urw/symbol/usyr.pfb></opt/local/share/texmf-texlive-dist
+/fonts/type1/urw/times/utmb8a.pfb></opt/local/share/texmf-texlive-dist/fonts/ty
+pe1/urw/times/utmr8a.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/urw/t
+imes/utmr8a.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/urw/times/utmr
+i8a.pfb>
+Output written on HTrgJINST.pdf (9 pages, 2021179 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 243 compressed objects within 3 object streams
+ 414 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
  35 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
