@@ -28,28 +28,40 @@
 \@writefile{toc}{\contentsline {section}{\numberline {4}Inner Tracker}{5}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Fast Tracking Algorithm}{5}}
 \global\@todotoctrue
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces CMS DAQ Architecture. The size of the event builder (72 Readout Units, 288 Builder Units) represents one “slice”; the system can be equipped with up to eight slices. }}{6}}
-\newlabel{fig:hltarc}{{3}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces CMS DAQ Architectur. The size of the event builder (72 Readout Units, 288 Builder Units) represents one “slice”; the system can be equipped with up to eight slices. }}{6}}
-\newlabel{fig:hltarc}{{4}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Filter Unit architecture: the responsibilities to receive, reformat, and send accepted events (ResourceBroker), and to reconstruct the physics content (EventProcessor) are split. }}{6}}
-\newlabel{fig:fu}{{5}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces CMS DAQ Architecture. The size of the event builder (72 Readout Units, 288 Builder Units) represents one “slice”; the system can be equipped with up to eight slices. }}{6}}
-\newlabel{fig:hltarc}{{6}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Filter Unit architecture: the responsibilities to receive, reformat, and send accepted events (ResourceBroker), and to reconstruct the physics content (EventProcessor) are split. }}{6}}
-\newlabel{fig:fu}{{7}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Simulated event made up of 50 straight line tracks, with 10 hits per track. }}{6}}
+\newlabel{fig:hits}{{3}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Each hit results in a sinusoidal line in the parameter space. Locations where many of these sinusoidal lines cross are likely to be tracks in the original data. }}{6}}
+\newlabel{fig:accumulator}{{4}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Candidate tracks identified from finding local maxima in the parameter space. }}{6}}
+\newlabel{fig:tracks}{{5}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Preliminary Results}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Speedup for two different implementations of the Hough Transform. Parallelization uses OpenMP on an Intel Core i7-3770 (Ivy Bridge, Quad Core, 3.4GHz) }}{7}}
+\newlabel{fig:cpu_speedup}{{6}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Performance comparison of the Intel CPU (using 4 threads), NVIDIA Tesla C2075, and NVIDIA Tesla K20c. }}{7}}
+\newlabel{fig:TimePerformance}{{7}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Monte Carlo data for curved tracks originating from the interaction point. }}{7}}
+\newlabel{fig:mc_hits}{{8}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Curved tracks identified using the Hough Transform. }}{7}}
+\newlabel{fig:mc_tracks}{{9}{7}}
 \global\@todotoctrue
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces CPU speedup for the fitting computation. }}{8}}
+\newlabel{fig:TimeVsThreads}{{10}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Time required for the fitting computation as the number of tracks is varied. }}{8}}
+\newlabel{fig:TimeVsTracks}{{11}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Summary}{8}}
 \bibcite{trigger_tdr}{1}
 \bibcite{ATLAS_detector_paper}{2}
 \bibcite{CMS_detector_paper}{3}
 \bibcite{bib:hiddenvalley}{4}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Preliminary Results}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces CMS DAQ Architecture. The size of the event builder (72 Readout Units, 288 Builder Units) represents one “slice”; the system can be equipped with up to eight slices. }}{7}}
-\newlabel{fig:hltarc}{{8}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Filter Unit architecture: the responsibilities to receive, reformat, and send accepted events (ResourceBroker), and to reconstruct the physics content (EventProcessor) are split. }}{7}}
-\newlabel{fig:fu}{{9}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces CMS DAQ Architecture. The size of the event builder (72 Readout Units, 288 Builder Units) represents one “slice”; the system can be equipped with up to eight slices. }}{7}}
-\newlabel{fig:hltarc}{{10}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Filter Unit architecture: the responsibilities to receive, reformat, and send accepted events (ResourceBroker), and to reconstruct the physics content (EventProcessor) are split. }}{7}}
-\newlabel{fig:fu}{{11}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Summary}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Tracks originating from a displaced jet. }}{9}}
+\newlabel{fig:jet1_tracks}{{12}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Parameter space shows the maxima are on a single sinusoid. }}{9}}
+\newlabel{fig:jet1_accumulator}{{13}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Second Hough Transform identifies the sinusoid corresponding to the jet vertex. }}{9}}
+\newlabel{fig:jet1_vertex}{{14}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Tracks originating from multiple displaced jets. }}{9}}
+\newlabel{fig:jet2_tracks}{{15}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Parameter space is difficult to visually interpret. }}{9}}
+\newlabel{fig:jet2_accumulator}{{16}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Second Hough Transform identifies the sinusoids corresponding to the jet vertices. }}{9}}
+\newlabel{fig:jet2_vertex}{{17}{9}}

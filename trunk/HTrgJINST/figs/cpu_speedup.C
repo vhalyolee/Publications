@@ -1,0 +1,130 @@
+{
+//=========Macro generated from canvas: c1/c1
+//=========  (Mon Mar 18 20:01:20 2013) by ROOT version5.28/00h
+   TCanvas *c1 = new TCanvas("c1", "c1",0,22,800,600);
+   c1->Range(-1.5,-0.5,8.5,4.5);
+   c1->SetBorderSize(2);
+   c1->SetFrameFillColor(0);
+   
+   TProfile *speedupa = new TProfile("speedupa","CPU Speedup",8,-0.5,7.5,"");
+   speedupa->SetBinEntries(1,9);
+   speedupa->SetBinEntries(2,9);
+   speedupa->SetBinEntries(3,9);
+   speedupa->SetBinEntries(4,9);
+   speedupa->SetBinEntries(5,9);
+   speedupa->SetBinEntries(6,9);
+   speedupa->SetBinEntries(7,9);
+   speedupa->SetBinEntries(8,9);
+   speedupa->SetBinContent(1,9);
+   speedupa->SetBinContent(2,15.17385);
+   speedupa->SetBinContent(3,20.97221);
+   speedupa->SetBinContent(4,23.52684);
+   speedupa->SetBinContent(5,21.02442);
+   speedupa->SetBinContent(6,20.96103);
+   speedupa->SetBinContent(7,20.48849);
+   speedupa->SetBinContent(8,15.82972);
+   speedupa->SetBinError(1,3);
+   speedupa->SetBinError(2,5.057981);
+   speedupa->SetBinError(3,6.990769);
+   speedupa->SetBinError(4,7.842319);
+   speedupa->SetBinError(5,7.008141);
+   speedupa->SetBinError(6,6.98701);
+   speedupa->SetBinError(7,6.829498);
+   speedupa->SetBinError(8,5.276574);
+   speedupa->SetMinimum(0);
+   speedupa->SetMaximum(4);
+   speedupa->SetEntries(72);
+   speedupa->SetStats(0);
+   speedupa->SetMarkerStyle(21);
+   speedupa->GetXaxis()->SetTitle("Threads");
+   speedupa->GetXaxis()->SetBinLabel(1,"1");
+   speedupa->GetXaxis()->SetBinLabel(2,"2");
+   speedupa->GetXaxis()->SetBinLabel(3,"3");
+   speedupa->GetXaxis()->SetBinLabel(4,"4");
+   speedupa->GetXaxis()->SetBinLabel(5,"5");
+   speedupa->GetXaxis()->SetBinLabel(6,"6");
+   speedupa->GetXaxis()->SetBinLabel(7,"7");
+   speedupa->GetXaxis()->SetBinLabel(8,"8");
+   speedupa->GetYaxis()->SetTitle("Speedup");
+   speedupa->Draw("");
+   
+   TProfile *speedupb = new TProfile("speedupb","CPU Speedup",8,-0.5,7.5,"");
+   speedupb->SetBinEntries(1,9);
+   speedupb->SetBinEntries(2,9);
+   speedupb->SetBinEntries(3,9);
+   speedupb->SetBinEntries(4,9);
+   speedupb->SetBinEntries(5,9);
+   speedupb->SetBinEntries(6,9);
+   speedupb->SetBinEntries(7,9);
+   speedupb->SetBinEntries(8,9);
+   speedupb->SetBinContent(1,9);
+   speedupb->SetBinContent(2,17.27122);
+   speedupb->SetBinContent(3,25.37674);
+   speedupb->SetBinContent(4,32.76257);
+   speedupb->SetBinContent(5,21.26227);
+   speedupb->SetBinContent(6,24.72642);
+   speedupb->SetBinContent(7,28.20853);
+   speedupb->SetBinContent(8,31.41639);
+   speedupb->SetBinError(1,3);
+   speedupb->SetBinError(2,5.757075);
+   speedupb->SetBinError(3,8.458915);
+   speedupb->SetBinError(4,10.92086);
+   speedupb->SetBinError(5,7.087422);
+   speedupb->SetBinError(6,8.24214);
+   speedupb->SetBinError(7,9.402843);
+   speedupb->SetBinError(8,10.47213);
+   speedupb->SetEntries(72);
+   speedupb->SetStats(0);
+
+   Int_t ci;   // for color index setting
+   ci = TColor::GetColor("#ff0000");
+   speedupb->SetLineColor(ci);
+
+   ci = TColor::GetColor("#ff0000");
+   speedupb->SetMarkerColor(ci);
+   speedupb->SetMarkerStyle(20);
+   speedupb->GetXaxis()->SetBinLabel(1,"1");
+   speedupb->GetXaxis()->SetBinLabel(2,"2");
+   speedupb->GetXaxis()->SetBinLabel(3,"3");
+   speedupb->GetXaxis()->SetBinLabel(4,"4");
+   speedupb->GetXaxis()->SetBinLabel(5,"5");
+   speedupb->GetXaxis()->SetBinLabel(6,"6");
+   speedupb->GetXaxis()->SetBinLabel(7,"7");
+   speedupb->GetXaxis()->SetBinLabel(8,"8");
+   speedupb->Draw("same");
+   
+   TLegend *leg = new TLegend(0.5326633,0.1643357,0.8505025,0.3653846,NULL,"brNDC");
+   leg->SetTextFont(72);
+   leg->SetTextSize(0.04);
+   leg->SetLineColor(1);
+   leg->SetLineStyle(1);
+   leg->SetLineWidth(1);
+   leg->SetFillColor(19);
+   leg->SetFillStyle(1001);
+   TLegendEntry *entry=leg->AddEntry("speedupa","Implementation A","p");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+   entry->SetMarkerColor(1);
+   entry->SetMarkerStyle(21);
+   entry->SetMarkerSize(1);
+   entry=leg->AddEntry("speedupb","Implementation B","p");
+   entry->SetLineColor(1);
+   entry->SetLineStyle(1);
+   entry->SetLineWidth(1);
+
+   ci = TColor::GetColor("#ff0000");
+   entry->SetMarkerColor(ci);
+   entry->SetMarkerStyle(20);
+   entry->SetMarkerSize(1);
+   leg->Draw();
+   
+   TPaveText *pt = new TPaveText(0.01,0.9404546,0.2536181,0.995,"blNDC");
+   pt->SetName("title");
+   pt->SetBorderSize(2);
+   TText *text = pt->AddText("CPU Speedup");
+   pt->Draw();
+   c1->Modified();
+   c1->cd();
+   c1->SetSelected(c1);
+}

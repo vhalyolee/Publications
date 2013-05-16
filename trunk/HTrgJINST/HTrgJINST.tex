@@ -230,122 +230,153 @@ localized features of a data set.  Rather the technique is in some sense more
 holistic, operating on an entire image as a whole.
 The technique is described at length in existing literature, but the concept as it would be applicable to the
 tracking problem is to consider the parameterization of any given track.  Any given hit
-observed in the detector can correspond to many different possible tracks in parameter
-space but when integrated over the entire data set, peaks appear in parameter space
-at the values corresponding to the actual, physical trajectories.  As was briefly described
-previously, the traditional Kalman approach implicitly depends on various assumptions and
-constraints on the phase space of the seed tracks, with one of the most significant
-results being suppression of displaced vertices.  It is hoped that a more holistic algorithm
-can be used to supplement the existing tracking algorithm in a significant way.
-
-As a demonstration of this, a simple tracking algorithm was developed 
-and run against a stand alone Monte Carlo simulation with a simple tracker geometry file. 
-The preliminary investigation was performed on a modest testbench consisting XXX Machine
-with NVIDIA Tesla C2075 and K20c GPU cards........
-
-%Patrick please continue to discribe vaguly the algo and reference to the plots below
-
+observed in the detector, for example the simulated straight line track data shown in Figure~\ref{fig:hits}, can correspond to many different possible tracks in parameter space as shown in Figure~\ref{fig:accumulator}.  When integrated over the entire data set, peaks appear in parameter space at the values corresponding to the actual, physical trajectories as shown in Figure~\ref{fig:tracks}.
 
 \begin{figure}[!Hhtb]
-\begin{minipage}[t]{4.0cm}
+\begin{minipage}[t]{4.9cm}
 \begin{center}
 	\includegraphics[width=1.\textwidth]{figs/50events_hits.pdf}
-	\caption{CMS DAQ Architecture. The size  of the event builder (72 Readout
-Units, 288  Builder Units) represents one “slice”; the  system can be equipped
-with up to eight slices. \label{fig:hltarc}}
+	\caption{Simulated event made up of 50 straight line tracks, with 10 hits per track. \label{fig:hits}}
 	\end{center}
 \end{minipage}
-\begin{minipage}[t]{4.0cm}
+\begin{minipage}[t]{4.9cm}
 \begin{center}
-	\includegraphics[width=0.78\textwidth]{figs/50events_accumulator.pdf}
-	\caption{CMS DAQ Architectur. The size  of the event builder (72 Readout
-Units, 288  Builder Units) represents one “slice”; the  system can be equipped
-with up to eight slices. \label{fig:hltarc}}
+	\includegraphics[width=0.95\textwidth]{figs/50events_accumulator.pdf}
+	\caption{Each hit results in a sinusoidal line in the parameter space.  Locations where many of these sinusoidal lines cross are likely to be tracks in the original data.  \label{fig:accumulator}}
 	\end{center}
 \end{minipage}
-\begin{minipage}[t]{4.0cm}
+\begin{minipage}[t]{4.9cm}
 \begin{center}
-	\includegraphics[width=0.9\textwidth]{figs/50events_hits_tracks.pdf}
-	\caption{Filter Unit architecture: the responsibilities to receive, reformat, and
-send accepted events (ResourceBroker), and to reconstruct the physics content
-(EventProcessor) are split.  \label{fig:fu}}
+	\includegraphics[width=1.\textwidth]{figs/50events_hits_tracks.pdf}
+	\caption{Candidate tracks identified from finding local maxima in the parameter space.  \label{fig:tracks}}
 	\end{center}
 \end{minipage}
 \end{figure}
+
+\section{Preliminary Results}
+
+As was briefly described previously, the traditional Kalman approach implicitly depends on various assumptions and
+constraints on the phase space of the seed tracks, with one of the most significant
+results being suppression of displaced vertices.  It is hoped that a more holistic algorithm
+can be used to supplement the existing tracking algorithm in a significant way.
+As a demonstration of this a simple tracking algorithm based on the Hough Transform was developed 
+and run against a stand alone Monte Carlo simulation with a simple tracker geometry file. 
+The preliminary investigation was performed using Intel multicore CPUs and NVIDIA Tesla C2075 and K20c GPUs.
+
+The Hough Transform algorithm is not trivial to implement in parallel because the computation of the parameter space is subject to race
+conditions whereby it is not necessarily safe to have multiple threads arbitrarily make updates as hits are processed.  In the interest of time
+and having an unbiased performance comparison for our own GPU implementation it would have been preferable to use the CPU implementation of the Hough Transform from the Intel Performance Primitives (IPP) library.  However, it was observed that the implementation in IPP is not parallelized and so to provide a more fair performance comparison we have developed our own Hough Transform implementation for the CPU.  This CPU implementation is parallelized using OpenMP threads and the performance as the number of threads increases is shown in Figure~\ref{fig:cpu_speedup} for two slightly different implementations of the Hough Transform.  The CPU used for the performance results is a quad core CPU but supports up to two threads per physical core using Simultaneous Multithreading (SMT), with the Intel implementation of SMT known as HyperThreading (HT).  SMT does not show any performance advantage for this application because the speedup actually drops as the number of threads exceeds the number of physical cores.  For the GPU implementation, performance results for the two most recent generations of NVIDIA GPUs are shown in Figure~\ref{fig:TimePerformance}.  Note that the GPU implementation is up to 100x faster than our best multithreaded CPU implementation.
+
+\begin{figure}[!Hhtb]
+\begin{minipage}[t]{8.0cm}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{figs/cpu_speedup.pdf}
+	\caption{Speedup for two different implementations of the Hough Transform.  Parallelization uses OpenMP on an Intel Core i7-3770 (Ivy Bridge, Quad Core, 3.4GHz)  \label{fig:cpu_speedup}}
+	\end{center}
+\end{minipage}
+\begin{minipage}[t]{8.0cm}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{figs/TimePerformance.pdf}
+	\caption{Performance comparison of the Intel CPU (using 4 threads), NVIDIA Tesla C2075, and NVIDIA Tesla K20c. \label{fig:TimePerformance}}
+	\end{center}
+\end{minipage}
+% Maybe we don't want to use this??
+%\begin{minipage}[t]{4.9cm}
+%\begin{center}
+%	\includegraphics[width=0.9\textwidth]{figs/Eff.pdf}
+%	\caption{Efficiency as the number of tracks per event is varied.  \label{fig:Eff}}
+%	\end{center}
+%\end{minipage}
+\end{figure}
+
+Although the Hough Transform is most often associated with finding straight lines in data it is applicable to any feature which can be represented by a finite number of parameters.  For example, circles of unknown location and radius and location can be identified in a three dimensional parameter space representing the x and y location of the center plus a third parameter for the radius.  Figures~\ref{fig:mc_hits} and~\ref{fig:mc_tracks} show an example of results for our Hough Transform implementation used for identifying curved tracks.  Similar to straight tracks, this curved track implementation is in terms of a two dimensional parameter space by constraining the tracks to pass through the interaction point.  The computational cost of the Hough Transform is strongly dependent on the total number of parameters while the details of the particular parameterization has essentially no effect on the performance.
 
 \begin{figure}[!Hhtb]
 \begin{minipage}[t]{8.0cm}
 \begin{center}
 	\includegraphics[width=0.9\textwidth]{figs/curved_500events_hits.pdf}
-	\caption{CMS DAQ Architecture. The size  of the event builder (72 Readout
-Units, 288  Builder Units) represents one “slice”; the  system can be equipped
-with up to eight slices. \label{fig:hltarc}}
+	\caption{Monte Carlo data for curved tracks originating from the interaction point. \label{fig:mc_hits}}
 	\end{center}
 \end{minipage}
 \begin{minipage}[t]{8.0cm}
 \begin{center}
 	\includegraphics[width=0.9\textwidth]{figs/curved_500events_hits_tracks.pdf}
-	\caption{Filter Unit architecture: the responsibilities to receive, reformat, and
-send accepted events (ResourceBroker), and to reconstruct the physics content
-(EventProcessor) are split.  \label{fig:fu}}
+	\caption{Curved tracks identified using the Hough Transform.  \label{fig:mc_tracks}}
 	\end{center}
 \end{minipage}
 \end{figure}
 
-
-
-
-\section{Preliminary Results}
-% Patrick : Could you please describe the results
-
-\begin{figure}[!Hhtb]
-\begin{minipage}[t]{8.0cm}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{figs/TimePerformance.pdf}
-	\caption{CMS DAQ Architecture. The size  of the event builder (72 Readout
-Units, 288  Builder Units) represents one “slice”; the  system can be equipped
-with up to eight slices. \label{fig:hltarc}}
-	\end{center}
-\end{minipage}
-\begin{minipage}[t]{8.0cm}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{figs/Eff.pdf}
-	\caption{Filter Unit architecture: the responsibilities to receive, reformat, and
-send accepted events (ResourceBroker), and to reconstruct the physics content
-(EventProcessor) are split.  \label{fig:fu}}
-	\end{center}
-\end{minipage}
-\end{figure}
-
+While the Hough Transform is a critical part of the proposed tracking algorithm, it is not the only aspect of the computation.  After candidate tracks have been identified from analysis of the parameter space it may be necessary to perform a fit of the hits to the candidate tracks.  This fitting operation is well suited to parallelization on the GPU, but the performance results in Figures~\ref{fig:TimeVsThreads} and~\ref{fig:TimeVsTracks} shows that a multithreaded CPU implementation requires only a few milliseconds.  In comparison the Hough Transform on the GPU requires many tens of milliseconds so the fitting operation is relatively low priority for performance optimization.  If or when fitting became a significant performance bottleneck it could certainly be run on the GPU to further increase performance.
 
 \begin{figure}[!Hhtb]
 \begin{minipage}[t]{8.0cm}
 \begin{center}
 	\includegraphics[width=0.9\textwidth]{figs/TimeVsThreads.pdf}
-	\caption{CMS DAQ Architecture. The size  of the event builder (72 Readout
-Units, 288  Builder Units) represents one “slice”; the  system can be equipped
-with up to eight slices. \label{fig:hltarc}}
+	\caption{CPU speedup for the fitting computation. \label{fig:TimeVsThreads}}
 	\end{center}
 \end{minipage}
 \begin{minipage}[t]{8.0cm}
 \begin{center}
 	\includegraphics[width=0.9\textwidth]{figs/TimeVsTracks.pdf}
-	\caption{Filter Unit architecture: the responsibilities to receive, reformat, and
-send accepted events (ResourceBroker), and to reconstruct the physics content
-(EventProcessor) are split.  \label{fig:fu}}
+	\caption{Time required for the fitting computation as the number of tracks is varied.  \label{fig:TimeVsTracks}}
 	\end{center}
 \end{minipage}
 \end{figure}
 
+The ability to handle displaced vertices provides the opportunity to identify interesting new physics such as jets and black holes.  To demonstrate this capability consider the tracks in Figure~\ref{fig:jet1_tracks} which originate from a displaced vertex.  Again the Hough Transform is applied to the corresponding hits making up these tracks to generate the parameter space in Figure~\ref{fig:jet1_accumulator}.  Recall that the parameter space identifies candidate tracks as locations where many sinusoids cross one another.  In Figure~\ref{fig:jet1_accumulator} the locations of these crossings are visually apparent as the bright spots in the parameter space.  However, the analysis is taken one step further by noting that the crossings all lie along a single sinusoidal curve in the parameter space.  This single sinusoidal curve has been isolated in Figure~\ref{fig:jet1_vertex} and is significant because that one sinusoidal curve in the parameter space corresponds to a point in the original x-y space.  More importantly that point in the original x-y space corresponds to the vertex of the displaced jet.  And interestingly the most convenient way to implement this process is to use the Hough Transform a second time, this time applying it not to the hits in the x-y space but the crossings in the parameter space.  Using the appropriate parameterization to look for sinusoidal curves instead of straight lines the curve in Figure~\ref{fig:jet1_vertex} is identified and the vertex of the jet is now located.  Figures~\ref{fig:jet2_tracks} -~\ref{fig:jet2_vertex} illustrate the same technique applied to an event with multiple displaced jets.
 
+\begin{figure}[!Hhtb]
+\begin{minipage}[t]{4.9cm}
+\begin{center}
+	\includegraphics[width=1.\textwidth]{figs/jet1/tracks.pdf}
+	\caption{Tracks originating from a displaced jet. \label{fig:jet1_tracks}}
+	\end{center}
+\end{minipage}
+\begin{minipage}[t]{4.9cm}
+\begin{center}
+	\includegraphics[width=0.88\textwidth]{figs/jet1/accumulator.pdf}
+	\caption{Parameter space shows the maxima are on a single sinusoid.  \label{fig:jet1_accumulator}}
+	\end{center}
+\end{minipage}
+\begin{minipage}[t]{4.9cm}
+\begin{center}
+	\includegraphics[width=0.88\textwidth]{figs/jet1/vertex.pdf}
+	\caption{Second Hough Transform identifies the sinusoid corresponding to the jet vertex.  \label{fig:jet1_vertex}}
+	\end{center}
+\end{minipage}
+\end{figure}
 
-
+\begin{figure}[!Hhtb]
+\begin{minipage}[t]{4.9cm}
+\begin{center}
+	\includegraphics[width=1.\textwidth]{figs/jet2/tracks.pdf}
+	\caption{Tracks originating from multiple displaced jets. \label{fig:jet2_tracks}}
+	\end{center}
+\end{minipage}
+\begin{minipage}[t]{4.9cm}
+\begin{center}
+	\includegraphics[width=0.88\textwidth]{figs/jet2/accumulator.pdf}
+	\caption{Parameter space is difficult to visually interpret.  \label{fig:jet2_accumulator}}
+	\end{center}
+\end{minipage}
+\begin{minipage}[t]{4.9cm}
+\begin{center}
+	\includegraphics[width=0.88\textwidth]{figs/jet2/vertex.pdf}
+	\caption{Second Hough Transform identifies the sinusoids corresponding to the jet vertices.  \label{fig:jet2_vertex}}
+	\end{center}
+\end{minipage}
+\end{figure}
 
 %
 \section{Summary}
 %
 
 % VH will write the conclusion and summary
+
+Possible sentences for future work to better optimize CPU performance:
+
+To better understand the relative performance of CPUs and GPUs we intend to implement vectorization on the CPU to fully utilize the Advanced Vector Extensions (AVX) capability present on modern CPUs from Intel and AMD.  Although we feel the GPU will still show a compelling performance advantage for this class of computations, the 256 bit AVX capabilities should increase the CPU performance and allow us to better quantify that advantage.
+
 
 %%%%%%%%%%%%%%%%
 % References

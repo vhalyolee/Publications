@@ -3,5 +3,5 @@
 \contentsline {section}{\numberline {3}Trigger System}{3}
 \contentsline {section}{\numberline {4}Inner Tracker}{5}
 \contentsline {section}{\numberline {5}Fast Tracking Algorithm}{5}
-\contentsline {section}{\numberline {6}Preliminary Results}{7}
-\contentsline {section}{\numberline {7}Summary}{7}
+\contentsline {section}{\numberline {6}Preliminary Results}{6}
+\contentsline {section}{\numberline {7}Summary}{8}
