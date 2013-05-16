@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_9) (format=pdflatex 2012.8.27)  15 MAY 2013 13:10
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_9) (format=pdflatex 2012.8.27)  16 MAY 2013 14:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -193,32 +193,7 @@ Package: wrapfig 2003/01/31  v 3.6
 (/opt/local/share/texmf-texlive-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen120
 )
-(./HTrgJINST.aux
-
-LaTeX Warning: Label `fig:hltarc' multiply defined.
-
-
-LaTeX Warning: Label `fig:hltarc' multiply defined.
-
-
-LaTeX Warning: Label `fig:hltarc' multiply defined.
-
-
-LaTeX Warning: Label `fig:fu' multiply defined.
-
-
-LaTeX Warning: Label `fig:hltarc' multiply defined.
-
-
-LaTeX Warning: Label `fig:fu' multiply defined.
-
-
-LaTeX Warning: Label `fig:hltarc' multiply defined.
-
-
-LaTeX Warning: Label `fig:fu' multiply defined.
-
-)
+(./HTrgJINST.aux)
 \openout1 = `HTrgJINST.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -234,7 +209,8 @@ LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 26.
- (/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/t1ptm.fd
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 \big@size=\dimen121
@@ -386,7 +362,7 @@ LaTeX Warning: Citation `bib:TDR2' on page 3 undefined on input line 151.
 
 LaTeX Warning: Citation `bib:HLT' on page 3 undefined on input line 151.
 
-<figs/CMSTrigger.pdf, id=51, 722.7pt x 542.025pt>
+<figs/CMSTrigger.pdf, id=52, 722.7pt x 542.025pt>
 File: figs/CMSTrigger.pdf Graphic file (type pdf)
  <use figs/CMSTrigger.pdf>
 Package pdftex.def Info: figs/CMSTrigger.pdf used on input line 161.
@@ -394,7 +370,7 @@ Package pdftex.def Info: figs/CMSTrigger.pdf used on input line 161.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 164.
 
-<figs/integrated1U.pdf, id=52, 234.80814pt x 305.94452pt>
+<figs/integrated1U.pdf, id=53, 234.80814pt x 305.94452pt>
 File: figs/integrated1U.pdf Graphic file (type pdf)
 
 <use figs/integrated1U.pdf>
@@ -415,171 +391,154 @@ LaTeX Warning: Citation `bib:HLT' on page 4 undefined on input line 175.
 
 LaTeX Warning: Citation `bib:datamodel' on page 4 undefined on input line 176.
 
-[4 <./figs/CMSTrigger.pdf> <./figs/integrated1U.pdf>] [5]
-<figs/50events_hits.pdf, id=97, 569.12625pt x 538.01pt>
+[4 <./figs/CMSTrigger.pdf> <./figs/integrated1U.pdf>]
+<figs/50events_hits.pdf, id=96, 798.985pt x 762.85pt>
 File: figs/50events_hits.pdf Graphic file (type pdf)
 
 <use figs/50events_hits.pdf>
-Package pdftex.def Info: figs/50events_hits.pdf used on input line 252.
-(pdftex.def)             Requested size: 113.81102pt x 107.58366pt.
-pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:hltar
-c}) has been already used, duplicate ignored
-<to be read again> 
-                   }
-l.255 with up to eight slices. \label{fig:hltarc}}
-                                                  
-Underfull \hbox (badness 1184) in paragraph at lines 255--255
-\T1/ptm/m/n/10 event builder (72 Read-out
- []
+Package pdftex.def Info: figs/50events_hits.pdf used on input line 238.
+(pdftex.def)             Requested size: 139.41832pt x 133.10498pt.
 
-
-Underfull \hbox (badness 1540) in paragraph at lines 255--255
-\T1/ptm/m/n/10 Units, 288 Builder Units)
- []
-
-<figs/50events_accumulator.pdf, id=98, 2055.68pt x 2055.68pt>
+<figs/50events_accumulator.pdf, id=97, 4111.36pt x 4111.36pt>
 File: figs/50events_accumulator.pdf Graphic file (type pdf)
 
 <use figs/50events_accumulator.pdf>
-Package pdftex.def Info: figs/50events_accumulator.pdf used on input line 260.
-(pdftex.def)             Requested size: 88.77245pt x 88.76892pt.
-pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:hltar
-c}) has been already used, duplicate ignored
-<to be read again> 
-                   }
-l.263 with up to eight slices. \label{fig:hltarc}}
-                                                  
-Underfull \hbox (badness 1184) in paragraph at lines 263--263
-\T1/ptm/m/n/10 event builder (72 Read-out
- []
+Package pdftex.def Info: figs/50events_accumulator.pdf used on input line 244.
+(pdftex.def)             Requested size: 132.44698pt x 132.43193pt.
 
-
-Underfull \hbox (badness 1540) in paragraph at lines 263--263
-\T1/ptm/m/n/10 Units, 288 Builder Units)
- []
-
-<figs/50events_hits_tracks.pdf, id=99, 569.12625pt x 538.01pt>
+<figs/50events_hits_tracks.pdf, id=98, 798.985pt x 762.85pt>
 File: figs/50events_hits_tracks.pdf Graphic file (type pdf)
 
 <use figs/50events_hits_tracks.pdf>
-Package pdftex.def Info: figs/50events_hits_tracks.pdf used on input line 268.
-(pdftex.def)             Requested size: 102.42921pt x 96.8294pt.
+Package pdftex.def Info: figs/50events_hits_tracks.pdf used on input line 250.
+(pdftex.def)             Requested size: 139.41832pt x 133.10498pt.
+ [5]
+<figs/cpu_speedup.pdf, id=107, 798.985pt x 574.145pt>
+File: figs/cpu_speedup.pdf Graphic file (type pdf)
 
-Underfull \hbox (badness 1122) in paragraph at lines 271--271
-\T1/ptm/m/n/10 send ac-cepted events (Re-
+<use figs/cpu_speedup.pdf>
+Package pdftex.def Info: figs/cpu_speedup.pdf used on input line 273.
+(pdftex.def)             Requested size: 204.85844pt x 147.20663pt.
+
+<figs/TimePerformance.pdf, id=108, 561.09625pt x 403.5075pt>
+File: figs/TimePerformance.pdf Graphic file (type pdf)
+
+<use figs/TimePerformance.pdf>
+Package pdftex.def Info: figs/TimePerformance.pdf used on input line 279.
+(pdftex.def)             Requested size: 204.85844pt x 147.31903pt.
+
+Overfull \hbox (27.1182pt too wide) in paragraph at lines 271--290
+[][] [] 
  []
 
-
-Underfull \hbox (badness 2126) in paragraph at lines 271--271
-\T1/ptm/m/n/10 struct the physics con-tent
- []
-
-<figs/curved_500events_hits.pdf, id=100, 569.12625pt x 546.04pt>
+[6 <./figs/50events_hits.pdf> <./figs/50events_accumulator.pdf> <./figs/50event
+s_hits_tracks.pdf>]
+<figs/curved_500events_hits.pdf, id=151, 569.12625pt x 546.04pt>
 File: figs/curved_500events_hits.pdf Graphic file (type pdf)
 
 <use figs/curved_500events_hits.pdf>
-Package pdftex.def Info: figs/curved_500events_hits.pdf used on input line 279.
+Package pdftex.def Info: figs/curved_500events_hits.pdf used on input line 297.
 
 (pdftex.def)             Requested size: 204.85844pt x 196.54926pt.
-pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:hltar
-c}) has been already used, duplicate ignored
-<to be read again> 
-                   }
-l.282 with up to eight slices. \label{fig:hltarc}}
-                                                  
-<figs/curved_500events_hits_tracks.pdf, id=101, 569.12625pt x 546.04pt>
+
+<figs/curved_500events_hits_tracks.pdf, id=152, 569.12625pt x 546.04pt>
 File: figs/curved_500events_hits_tracks.pdf Graphic file (type pdf)
 
 <use figs/curved_500events_hits_tracks.pdf>
 Package pdftex.def Info: figs/curved_500events_hits_tracks.pdf used on input li
-ne 287.
+ne 303.
 (pdftex.def)             Requested size: 204.85844pt x 196.54926pt.
 
-Overfull \hbox (27.1182pt too wide) in paragraph at lines 277--293
+Overfull \hbox (27.1182pt too wide) in paragraph at lines 295--307
 [][] [] 
  []
 
-<figs/TimePerformance.pdf, id=102, 561.09625pt x 403.5075pt>
-File: figs/TimePerformance.pdf Graphic file (type pdf)
-
-<use figs/TimePerformance.pdf>
-Package pdftex.def Info: figs/TimePerformance.pdf used on input line 304.
-(pdftex.def)             Requested size: 204.85844pt x 147.31903pt.
-pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:hltar
-c}) has been already used, duplicate ignored
-<to be read again> 
-                   }
-l.307 with up to eight slices. \label{fig:hltarc}}
-                                                  
-<figs/Eff.pdf, id=103, 475.7775pt x 342.27875pt>
-File: figs/Eff.pdf Graphic file (type pdf)
- <use figs/Eff.pdf>
-Package pdftex.def Info: figs/Eff.pdf used on input line 312.
-(pdftex.def)             Requested size: 204.85844pt x 147.37544pt.
-
-Overfull \hbox (27.1182pt too wide) in paragraph at lines 302--318
-[][] [] 
- []
-
-[6pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:fu}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.318 \end{figure}
-                   <./figs/50events_hits.pdf, page is rotated 90 degrees> <./fi
-gs/50events_accumulator.pdf> <./figs/50events_hits_tracks.pdf, page is rotated 
-90 degrees> <./figs/curved_500events_hits.pdf, page is rotated 90 degrees> <./f
-igs/curved_500events_hits_tracks.pdf, page is rotated 90 degrees>]
-<figs/TimeVsThreads.pdf, id=296, 513.92pt x 369.38pt>
+[7 <./figs/cpu_speedup.pdf> <./figs/TimePerformance.pdf> <./figs/curved_500even
+ts_hits.pdf, page is rotated 90 degrees> <./figs/curved_500events_hits_tracks.p
+df, page is rotated 90 degrees>]
+<figs/TimeVsThreads.pdf, id=274, 513.92pt x 369.38pt>
 File: figs/TimeVsThreads.pdf Graphic file (type pdf)
 
 <use figs/TimeVsThreads.pdf>
-Package pdftex.def Info: figs/TimeVsThreads.pdf used on input line 324.
+Package pdftex.def Info: figs/TimeVsThreads.pdf used on input line 314.
 (pdftex.def)             Requested size: 204.85844pt x 147.24211pt.
-pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:hltar
-c}) has been already used, duplicate ignored
-<to be read again> 
-                   }
-l.327 with up to eight slices. \label{fig:hltarc}}
-                                                  
-<figs/TimeVsTracks.pdf, id=297, 518.93875pt x 374.39874pt>
+
+<figs/TimeVsTracks.pdf, id=275, 518.93875pt x 374.39874pt>
 File: figs/TimeVsTracks.pdf Graphic file (type pdf)
 
 <use figs/TimeVsTracks.pdf>
-Package pdftex.def Info: figs/TimeVsTracks.pdf used on input line 332.
+Package pdftex.def Info: figs/TimeVsTracks.pdf used on input line 320.
 (pdftex.def)             Requested size: 204.85844pt x 147.80304pt.
-pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:fu}) 
-has been already used, duplicate ignored
-<to be read again> 
-                   }
-l.335 (EventProcessor) are split.  \label{fig:fu}}
-                                                  
-Overfull \hbox (27.1182pt too wide) in paragraph at lines 322--338
+
+Overfull \hbox (27.1182pt too wide) in paragraph at lines 312--324
 [][] [] 
  []
 
-[7pdfTeX warning (ext4): destination with the same identifier (name{ref-fig:fu}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \endgroup \set@typeset@protect 
-l.376 
-       <./figs/TimePerformance.pdf> <./figs/Eff.pdf> <./figs/TimeVsThreads.pdf>
- <./figs/TimeVsTracks.pdf>] [8] (./HTrgJINST.aux)
+<figs/jet1/tracks.pdf, id=283, 598.235pt x 574.145pt>
+File: figs/jet1/tracks.pdf Graphic file (type pdf)
+
+<use figs/jet1/tracks.pdf>
+Package pdftex.def Info: figs/jet1/tracks.pdf used on input line 331.
+(pdftex.def)             Requested size: 139.41832pt x 133.80272pt.
+
+Underfull \hbox (badness 1867) in paragraph at lines 332--332
+[]\T1/ptm/b/n/10 Figure 12. \T1/ptm/m/n/10 Tracks orig-i-nat-ing
+ []
+
+<figs/jet1/accumulator.pdf, id=284, 2055.68pt x 2055.68pt>
+File: figs/jet1/accumulator.pdf Graphic file (type pdf)
+
+<use figs/jet1/accumulator.pdf>
+Package pdftex.def Info: figs/jet1/accumulator.pdf used on input line 337.
+(pdftex.def)             Requested size: 122.6888pt x 122.67676pt.
+
+<figs/jet1/vertex.pdf, id=285, 2055.68pt x 2055.68pt>
+File: figs/jet1/vertex.pdf Graphic file (type pdf)
+
+<use figs/jet1/vertex.pdf>
+Package pdftex.def Info: figs/jet1/vertex.pdf used on input line 343.
+(pdftex.def)             Requested size: 122.6888pt x 122.67676pt.
+
+<figs/jet2/tracks.pdf, id=286, 598.235pt x 574.145pt>
+File: figs/jet2/tracks.pdf Graphic file (type pdf)
+
+<use figs/jet2/tracks.pdf>
+Package pdftex.def Info: figs/jet2/tracks.pdf used on input line 352.
+(pdftex.def)             Requested size: 139.41832pt x 133.80272pt.
+
+Underfull \hbox (badness 1867) in paragraph at lines 353--353
+[]\T1/ptm/b/n/10 Figure 15. \T1/ptm/m/n/10 Tracks orig-i-nat-ing
+ []
+
+<figs/jet2/accumulator.pdf, id=287, 2055.68pt x 2055.68pt>
+File: figs/jet2/accumulator.pdf Graphic file (type pdf)
+
+<use figs/jet2/accumulator.pdf>
+Package pdftex.def Info: figs/jet2/accumulator.pdf used on input line 358.
+(pdftex.def)             Requested size: 122.6888pt x 122.67676pt.
+
+<figs/jet2/vertex.pdf, id=288, 2055.68pt x 2055.68pt>
+File: figs/jet2/vertex.pdf Graphic file (type pdf)
+
+<use figs/jet2/vertex.pdf>
+Package pdftex.def Info: figs/jet2/vertex.pdf used on input line 364.
+(pdftex.def)             Requested size: 122.6888pt x 122.67676pt.
+ [8 <./figs/TimeVsThreads.pdf> <./figs/TimeVsTracks.pdf>] [9 <./figs/jet1/track
+s.pdf> <./figs/jet1/accumulator.pdf> <./figs/jet1/vertex.pdf> <./figs/jet2/trac
+ks.pdf> <./figs/jet2/accumulator.pdf> <./figs/jet2/vertex.pdf>] (./HTrgJINST.au
+x)
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 3096 strings out of 495063
- 40439 string characters out of 3181831
- 95127 words of memory out of 3000000
- 6136 multiletter control sequences out of 15000+200000
+ 3160 strings out of 495063
+ 41752 string characters out of 3181831
+ 96206 words of memory out of 3000000
+ 6174 multiletter control sequences out of 15000+200000
  83707 words of font info for 124 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,26p,344b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,26p,1694b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/opt/local/share/texmf-texlive-dist/fonts/enc/dvips/base/8r.enc}</opt/local/
 share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/
 share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/s
@@ -591,10 +550,10 @@ xlive-dist/fonts/type1/urw/symbol/usyr.pfb></opt/local/share/texmf-texlive-dist
 pe1/urw/times/utmr8a.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on HTrgJINST.pdf (9 pages, 2021179 bytes).
+Output written on HTrgJINST.pdf (10 pages, 3888895 bytes).
 PDF statistics:
- 414 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
- 35 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 450 PDF objects out of 1000 (max. 8388607)
+ 315 compressed objects within 4 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 
