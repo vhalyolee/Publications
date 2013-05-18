@@ -1,7 +1,8 @@
 \contentsline {section}{\numberline {1}Introduction}{1}
-\contentsline {section}{\numberline {2}Physics Motivation}{2}
-\contentsline {section}{\numberline {3}Trigger System}{3}
+\contentsline {section}{\numberline {2}Physics Motivation}{3}
+\contentsline {section}{\numberline {3}Trigger System}{4}
 \contentsline {section}{\numberline {4}Inner Tracker}{5}
 \contentsline {section}{\numberline {5}Fast Tracking Algorithm}{5}
 \contentsline {section}{\numberline {6}Preliminary Results}{6}
-\contentsline {section}{\numberline {7}Summary}{8}
+\contentsline {section}{\numberline {7}New Tracking Capabilities}{7}
+\contentsline {section}{\numberline {8}Summary}{9}

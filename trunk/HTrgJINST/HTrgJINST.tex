@@ -164,16 +164,16 @@ Units, 288  Builder Units) represents one “slice”; the  system can be equipp
 with up to eight slices. \label{fig:hltarc}}
 	\end{center}
 \end{minipage}
-\begin{minipage}[t]{6.0cm}
+\begin{minipage}[t]{7.0cm}
 \begin{center}
-	\includegraphics[width=0.7\textwidth]{figs/integrated1U.pdf}
-	\caption{Schematic of an integrated GPU/CPU 1U server.   \label{fig:integratedsys}}
+	\includegraphics[width=0.8\textwidth]{figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no_cover_large.pdf}
+	\caption{Integrated GPU/CPU 1U server (image courtesy of NVIDIA).   \label{fig:integratedsys}}
 	\end{center}
 \end{minipage}
 \end{figure}
 
 The architecture of the CMS HLT~\cite{bib:TDR2},\cite{bib:HLT} combines the flexibility gained by using the offline
-reconstruction~\cite{bib:datamodel} with the robustness required for reliable online operation of the DAQ. Fig.~\ref{fig:hltarc} shows 
+reconstruction~\cite{bib:datamodel} with the robustness required for reliable online operation of the DAQ. Figure~\ref{fig:hltarc} shows 
 a schematic of the architecture of the CMS DAQ system. Event fragments are read out and stored in Readout Units (RU) for each event accepted
 by the Level-1 trigger. The fragments are subsequently assembled into complete events by an Event Builder through a complex of switched 
 networks into “event buffers” (BU). The full event content is then handed to one of the HLT Filter Units (FU). The FU execute a series of 
@@ -186,10 +186,9 @@ memory of a Filter Unit requires high bandwidth I/O, while the subsequent HLT pr
 The EventProcessor previously mentioned encapsulates the event processing machinery of the CMS reconstruction, providing the full flexibility 
 required to execute complex physics algorithms. 
 
-The farms of commercial processors where these event selection are executed is a natural place where the GPU cards could be integrated.
-A simple prototype solution is shown in Fig.~\ref{fig:integratedsys} where a 1U server made up of a motherboard with two PCI-e x16 slots would allow installation of two GPU Host Interface Cards (HIC) onto the system without using additional hardware to host 
-the GPU server.  While this would provide a single, integrated 1U GPU/CPU server this of course implies replacing the existing servers, 
-evaluating the new power consumption, and the cost of these servers relative to any other multi core option.
+The farms of machines where these event selections are executed is a natural place where the GPUs could be integrated.
+A simple solution is shown in Figure~\ref{fig:integratedsys} with a 1U server containing dual multicore CPUs and two NVIDIA Tesla GPUs.  While this would provide a single, integrated 1U GPU/CPU server this of course implies replacing the existing servers, 
+evaluating the new power consumption, and the cost of these servers relative to any other options.
 
 
 
@@ -265,28 +264,27 @@ The preliminary investigation was performed using Intel multicore CPUs and NVIDI
 
 The Hough Transform algorithm is not trivial to implement in parallel because the computation of the parameter space is subject to race
 conditions whereby it is not necessarily safe to have multiple threads arbitrarily make updates as hits are processed.  In the interest of time
-and having an unbiased performance comparison for our own GPU implementation it would have been preferable to use the CPU implementation of the Hough Transform from the Intel Performance Primitives (IPP) library.  However, it was observed that the implementation in IPP is not parallelized and so to provide a more fair performance comparison we have developed our own Hough Transform implementation for the CPU.  This CPU implementation is parallelized using OpenMP threads and the performance as the number of threads increases is shown in Figure~\ref{fig:cpu_speedup} for two slightly different implementations of the Hough Transform.  The CPU used for the performance results is a quad core CPU but supports up to two threads per physical core using Simultaneous Multithreading (SMT), with the Intel implementation of SMT known as HyperThreading (HT).  SMT does not show any performance advantage for this application because the speedup actually drops as the number of threads exceeds the number of physical cores.  For the GPU implementation, performance results for the two most recent generations of NVIDIA GPUs are shown in Figure~\ref{fig:TimePerformance}.  Note that the GPU implementation is up to 100x faster than our best multithreaded CPU implementation.
+and having an unbiased performance comparison for the GPU implementation it would have been preferable to use the CPU implementation of the Hough Transform from the Intel Performance Primitives (IPP) library.  However, it was observed that the implementation in IPP is not parallelized and so to provide a more fair performance comparison a parallel implementation of the Hough Transform for the CPU has been developed as part of this work.  This CPU implementation is parallelized using OpenMP threads and speedups of 2.6 - 3.6 were achieved on a Intel Core i7-3770 (Ivy Bridge, Quad Core, 3.4 GHz) processor.  The CPU used for the performance results is physically a quad core CPU but supports up to two threads per physical core using Simultaneous Multithreading (SMT), with the Intel implementation of SMT known as HyperThreading (HT).  SMT did not show any performance advantage for this application because the speedup actually dropped as the number of threads exceeded the number of physical cores.  For the GPU implementation, performance results for the two most recent generations of NVIDIA GPUs are shown in Figure~\ref{fig:TimePerformance}.  Note that the GPU implementation is up to 100x faster than the best multithreaded CPU implementation.
 
 \begin{figure}[!Hhtb]
-\begin{minipage}[t]{8.0cm}
-\begin{center}
-	\includegraphics[width=0.9\textwidth]{figs/cpu_speedup.pdf}
-	\caption{Speedup for two different implementations of the Hough Transform.  Parallelization uses OpenMP on an Intel Core i7-3770 (Ivy Bridge, Quad Core, 3.4GHz)  \label{fig:cpu_speedup}}
-	\end{center}
-\end{minipage}
+%\begin{minipage}[t]{8.0cm}
+%\begin{center}
+%	\includegraphics[width=0.9\textwidth]{figs/cpu_speedup.pdf}
+%	\caption{Speedup for two different implementations of the Hough Transform.  Parallelization uses OpenMP on an Intel Core i7-3770 (Ivy Bridge, Quad Core, 3.4GHz)  \label{fig:cpu_speedup}}
+%	\end{center}
+%\end{minipage}
 \begin{minipage}[t]{8.0cm}
 \begin{center}
 	\includegraphics[width=0.9\textwidth]{figs/TimePerformance.pdf}
 	\caption{Performance comparison of the Intel CPU (using 4 threads), NVIDIA Tesla C2075, and NVIDIA Tesla K20c. \label{fig:TimePerformance}}
 	\end{center}
 \end{minipage}
-% Maybe we don't want to use this??
-%\begin{minipage}[t]{4.9cm}
-%\begin{center}
-%	\includegraphics[width=0.9\textwidth]{figs/Eff.pdf}
-%	\caption{Efficiency as the number of tracks per event is varied.  \label{fig:Eff}}
-%	\end{center}
-%\end{minipage}
+\begin{minipage}[t]{8.0cm}
+\begin{center}
+	\includegraphics[width=0.9\textwidth]{figs/Eff.pdf}
+	\caption{Efficiency as the number of tracks per event is varied.  \label{fig:Eff}}
+	\end{center}
+\end{minipage}
 \end{figure}
 
 Although the Hough Transform is most often associated with finding straight lines in data it is applicable to any feature which can be represented by a finite number of parameters.  For example, circles of unknown location and radius and location can be identified in a three dimensional parameter space representing the x and y location of the center plus a third parameter for the radius.  Figures~\ref{fig:mc_hits} and~\ref{fig:mc_tracks} show an example of results for our Hough Transform implementation used for identifying curved tracks.  Similar to straight tracks, this curved track implementation is in terms of a two dimensional parameter space by constraining the tracks to pass through the interaction point.  The computational cost of the Hough Transform is strongly dependent on the total number of parameters while the details of the particular parameterization has essentially no effect on the performance.
@@ -322,6 +320,8 @@ While the Hough Transform is a critical part of the proposed tracking algorithm,
 	\end{center}
 \end{minipage}
 \end{figure}
+
+\section{New Tracking Capabilities}
 
 The ability to handle displaced vertices provides the opportunity to identify interesting new physics such as jets and black holes.  To demonstrate this capability consider the tracks in Figure~\ref{fig:jet1_tracks} which originate from a displaced vertex.  Again the Hough Transform is applied to the corresponding hits making up these tracks to generate the parameter space in Figure~\ref{fig:jet1_accumulator}.  Recall that the parameter space identifies candidate tracks as locations where many sinusoids cross one another.  In Figure~\ref{fig:jet1_accumulator} the locations of these crossings are visually apparent as the bright spots in the parameter space.  However, the analysis is taken one step further by noting that the crossings all lie along a single sinusoidal curve in the parameter space.  This single sinusoidal curve has been isolated in Figure~\ref{fig:jet1_vertex} and is significant because that one sinusoidal curve in the parameter space corresponds to a point in the original x-y space.  More importantly that point in the original x-y space corresponds to the vertex of the displaced jet.  And interestingly the most convenient way to implement this process is to use the Hough Transform a second time, this time applying it not to the hits in the x-y space but the crossings in the parameter space.  Using the appropriate parameterization to look for sinusoidal curves instead of straight lines the curve in Figure~\ref{fig:jet1_vertex} is identified and the vertex of the jet is now located.  Figures~\ref{fig:jet2_tracks} -~\ref{fig:jet2_vertex} illustrate the same technique applied to an event with multiple displaced jets.
 
