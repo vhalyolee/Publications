@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_9) (format=pdflatex 2012.8.27)  18 MAY 2013 13:44
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_9) (format=pdflatex 2012.8.27)  20 MAY 2013 11:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -196,19 +196,19 @@ Package: wrapfig 2003/01/31  v 3.6
 (./HTrgJINST.aux)
 \openout1 = `HTrgJINST.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 28.
+LaTeX Font Info:    ... okay on input line 28.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 28.
 
 (/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -275,103 +275,122 @@ Package grfext Info: Graphics extension search list:
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 26
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 28
 .
 
 (/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 26
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 28
 .
 
 (/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 26
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 28
 .
 
 (/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 26
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 28
 .
 
 (/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 26.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 28.
 
 (/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 26.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 28.
 
 (/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 26.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 26.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 26.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 26.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
  [0
 
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 26.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 28.
  (./HTrgJINST.toc)
 \tf@toc=\write3
 \openout3 = `HTrgJINST.toc'.
 
 
 
-LaTeX Warning: Citation `bib:TDR2' on page 1 undefined on input line 40.
+LaTeX Warning: Citation `bib:CMSTDR2' on page 1 undefined on input line 42.
+
+
+LaTeX Warning: Citation `bib:ATLASTDR' on page 1 undefined on input line 42.
+
+
+LaTeX Warning: Citation `bib:CMSdetpaper' on page 1 undefined on input line 42.
+
+
+
+LaTeX Warning: Citation `bib:ATLASdetpaper' on page 1 undefined on input line 4
+2.
+
+
+LaTeX Warning: Citation `bib:CMSdetpaper' on page 1 undefined on input line 52.
+
+
+
+LaTeX Warning: Citation `bib:ATLASdetpaper' on page 1 undefined on input line 5
+2.
+
+
+LaTeX Warning: Citation `bib:CMStrigger' on page 1 undefined on input line 58.
 
 [1]
 
-LaTeX Warning: Citation `bib:CUDA' on page 2 undefined on input line 79.
+LaTeX Warning: Citation `bib:CUDA' on page 2 undefined on input line 83.
+
+[2]
+
+LaTeX Warning: Citation `bib:HSV' on page 3 undefined on input line 135.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2]
-
-LaTeX Warning: Citation `bib:HSV' on page 3 undefined on input line 130.
+LaTeX Warning: Citation `bib:TP' on page 3 undefined on input line 151.
 
 
-LaTeX Warning: Citation `bib:TP' on page 3 undefined on input line 146.
+LaTeX Warning: Citation `bib:TDR1' on page 3 undefined on input line 155.
 
 
-LaTeX Warning: Citation `bib:TDR1' on page 3 undefined on input line 150.
+LaTeX Warning: Citation `bib:TDR2' on page 3 undefined on input line 156.
 
 
-LaTeX Warning: Citation `bib:TDR2' on page 3 undefined on input line 151.
-
-
-LaTeX Warning: Citation `bib:HLT' on page 3 undefined on input line 151.
+LaTeX Warning: Citation `bib:HLT' on page 3 undefined on input line 156.
 
 <figs/CMSTrigger.pdf, id=57, 722.7pt x 542.025pt>
 File: figs/CMSTrigger.pdf Graphic file (type pdf)
  <use figs/CMSTrigger.pdf>
-Package pdftex.def Info: figs/CMSTrigger.pdf used on input line 161.
+Package pdftex.def Info: figs/CMSTrigger.pdf used on input line 166.
 (pdftex.def)             Requested size: 204.85844pt x 153.64339pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 164.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 169.
 
 <figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no_cover_large.pdf, id=58, 501.
 875pt x 378.41376pt>
@@ -380,167 +399,183 @@ File: figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no_cover_large.pdf Graphic
 
 <use figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no_cover_large.pdf>
 Package pdftex.def Info: figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no_cove
-r_large.pdf used on input line 169.
+r_large.pdf used on input line 174.
 (pdftex.def)             Requested size: 159.33603pt x 120.14214pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[3]
 
- [3]
-
-LaTeX Warning: Citation `bib:TDR2' on page 4 undefined on input line 175.
+LaTeX Warning: Citation `bib:TDR2' on page 4 undefined on input line 180.
 
 
-LaTeX Warning: Citation `bib:HLT' on page 4 undefined on input line 175.
+LaTeX Warning: Citation `bib:HLT' on page 4 undefined on input line 180.
 
 
-LaTeX Warning: Citation `bib:datamodel' on page 4 undefined on input line 176.
+LaTeX Warning: Citation `bib:datamodel' on page 4 undefined on input line 181.
 
 [4 <./figs/CMSTrigger.pdf> <./figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no
-_cover_large.pdf>] [5] <figs/50events_hits.pdf, id=105, 798.985pt x 762.85pt>
+_cover_large.pdf>]
+
+LaTeX Warning: Citation `Fruhwirth:1987fm' on page 5 undefined on input line 22
+9.
+
+[5]
+
+LaTeX Warning: Citation `bib:HT1' on page 6 undefined on input line 259.
+
+
+LaTeX Warning: Citation `bib:HT2' on page 6 undefined on input line 259.
+
+<figs/50events_hits.pdf, id=105, 798.985pt x 762.85pt>
 File: figs/50events_hits.pdf Graphic file (type pdf)
 
 <use figs/50events_hits.pdf>
-Package pdftex.def Info: figs/50events_hits.pdf used on input line 237.
+Package pdftex.def Info: figs/50events_hits.pdf used on input line 270.
 (pdftex.def)             Requested size: 139.41832pt x 133.10498pt.
 
 <figs/50events_accumulator.pdf, id=106, 4111.36pt x 4111.36pt>
 File: figs/50events_accumulator.pdf Graphic file (type pdf)
 
 <use figs/50events_accumulator.pdf>
-Package pdftex.def Info: figs/50events_accumulator.pdf used on input line 243.
+Package pdftex.def Info: figs/50events_accumulator.pdf used on input line 276.
 (pdftex.def)             Requested size: 132.44698pt x 132.43193pt.
 
 <figs/50events_hits_tracks.pdf, id=107, 798.985pt x 762.85pt>
 File: figs/50events_hits_tracks.pdf Graphic file (type pdf)
 
 <use figs/50events_hits_tracks.pdf>
-Package pdftex.def Info: figs/50events_hits_tracks.pdf used on input line 249.
+Package pdftex.def Info: figs/50events_hits_tracks.pdf used on input line 283.
 (pdftex.def)             Requested size: 139.41832pt x 133.10498pt.
+
+Underfull \vbox (badness 1383) has occurred while \output is active []
+
  [6 <./figs/50events_hits.pdf> <./figs/50events_accumulator.pdf> <./figs/50even
-ts_hits_tracks.pdf>]
-<figs/TimePerformance.pdf, id=148, 561.09625pt x 403.5075pt>
+ts_hits_tracks.pdf>] <figs/TimePerformance.pdf, id=148, 561.09625pt x 403.5075p
+t>
 File: figs/TimePerformance.pdf Graphic file (type pdf)
 
 <use figs/TimePerformance.pdf>
-Package pdftex.def Info: figs/TimePerformance.pdf used on input line 278.
+Package pdftex.def Info: figs/TimePerformance.pdf used on input line 320.
 (pdftex.def)             Requested size: 204.85844pt x 147.31903pt.
 
 <figs/Eff.pdf, id=149, 475.7775pt x 342.27875pt>
 File: figs/Eff.pdf Graphic file (type pdf)
  <use figs/Eff.pdf>
-Package pdftex.def Info: figs/Eff.pdf used on input line 284.
+Package pdftex.def Info: figs/Eff.pdf used on input line 326.
 (pdftex.def)             Requested size: 204.85844pt x 147.37544pt.
 
-Overfull \hbox (27.1182pt too wide) in paragraph at lines 276--288
-[][] [] 
- []
-
-<figs/curved_500events_hits.pdf, id=152, 569.12625pt x 546.04pt>
-File: figs/curved_500events_hits.pdf Graphic file (type pdf)
-
-<use figs/curved_500events_hits.pdf>
-Package pdftex.def Info: figs/curved_500events_hits.pdf used on input line 295.
-
-(pdftex.def)             Requested size: 204.85844pt x 196.54926pt.
-
-<figs/curved_500events_hits_tracks.pdf, id=153, 569.12625pt x 546.04pt>
-File: figs/curved_500events_hits_tracks.pdf Graphic file (type pdf)
-
-<use figs/curved_500events_hits_tracks.pdf>
-Package pdftex.def Info: figs/curved_500events_hits_tracks.pdf used on input li
-ne 301.
-(pdftex.def)             Requested size: 204.85844pt x 196.54926pt.
-
-Overfull \hbox (27.1182pt too wide) in paragraph at lines 293--305
-[][] [] 
- []
-
-<figs/TimeVsThreads.pdf, id=156, 513.92pt x 369.38pt>
-File: figs/TimeVsThreads.pdf Graphic file (type pdf)
-
-<use figs/TimeVsThreads.pdf>
-Package pdftex.def Info: figs/TimeVsThreads.pdf used on input line 312.
-(pdftex.def)             Requested size: 204.85844pt x 147.24211pt.
-
-<figs/TimeVsTracks.pdf, id=157, 518.93875pt x 374.39874pt>
-File: figs/TimeVsTracks.pdf Graphic file (type pdf)
-
-<use figs/TimeVsTracks.pdf>
-Package pdftex.def Info: figs/TimeVsTracks.pdf used on input line 318.
-(pdftex.def)             Requested size: 204.85844pt x 147.80304pt.
-
-Overfull \hbox (27.1182pt too wide) in paragraph at lines 310--322
+Overfull \hbox (27.1182pt too wide) in paragraph at lines 318--330
 [][] [] 
  []
 
 [7 <./figs/TimePerformance.pdf> <./figs/Eff.pdf>]
-<figs/jet1/tracks.pdf, id=203, 598.235pt x 574.145pt>
+<figs/curved_500events_hits.pdf, id=185, 569.12625pt x 546.04pt>
+File: figs/curved_500events_hits.pdf Graphic file (type pdf)
+
+<use figs/curved_500events_hits.pdf>
+Package pdftex.def Info: figs/curved_500events_hits.pdf used on input line 343.
+
+(pdftex.def)             Requested size: 204.85844pt x 196.54926pt.
+
+<figs/curved_500events_hits_tracks.pdf, id=186, 569.12625pt x 546.04pt>
+File: figs/curved_500events_hits_tracks.pdf Graphic file (type pdf)
+
+<use figs/curved_500events_hits_tracks.pdf>
+Package pdftex.def Info: figs/curved_500events_hits_tracks.pdf used on input li
+ne 349.
+(pdftex.def)             Requested size: 204.85844pt x 196.54926pt.
+
+Overfull \hbox (27.1182pt too wide) in paragraph at lines 341--353
+[][] [] 
+ []
+
+<figs/TimeVsThreads.pdf, id=189, 513.92pt x 369.38pt>
+File: figs/TimeVsThreads.pdf Graphic file (type pdf)
+
+<use figs/TimeVsThreads.pdf>
+Package pdftex.def Info: figs/TimeVsThreads.pdf used on input line 364.
+(pdftex.def)             Requested size: 204.85844pt x 147.24211pt.
+
+<figs/TimeVsTracks.pdf, id=190, 518.93875pt x 374.39874pt>
+File: figs/TimeVsTracks.pdf Graphic file (type pdf)
+
+<use figs/TimeVsTracks.pdf>
+Package pdftex.def Info: figs/TimeVsTracks.pdf used on input line 370.
+(pdftex.def)             Requested size: 204.85844pt x 147.80304pt.
+
+Overfull \hbox (27.1182pt too wide) in paragraph at lines 362--374
+[][] [] 
+ []
+
+[8 <./figs/curved_500events_hits.pdf, page is rotated 90 degrees> <./figs/curve
+d_500events_hits_tracks.pdf, page is rotated 90 degrees>]
+<figs/jet1/tracks.pdf, id=296, 598.235pt x 574.145pt>
 File: figs/jet1/tracks.pdf Graphic file (type pdf)
 
 <use figs/jet1/tracks.pdf>
-Package pdftex.def Info: figs/jet1/tracks.pdf used on input line 331.
+Package pdftex.def Info: figs/jet1/tracks.pdf used on input line 395.
 (pdftex.def)             Requested size: 139.41832pt x 133.80272pt.
 
-Underfull \hbox (badness 1867) in paragraph at lines 332--332
+Underfull \hbox (badness 1867) in paragraph at lines 396--396
 []\T1/ptm/b/n/10 Figure 12. \T1/ptm/m/n/10 Tracks orig-i-nat-ing
  []
 
-<figs/jet1/accumulator.pdf, id=204, 2055.68pt x 2055.68pt>
+<figs/jet1/accumulator.pdf, id=297, 2055.68pt x 2055.68pt>
 File: figs/jet1/accumulator.pdf Graphic file (type pdf)
 
 <use figs/jet1/accumulator.pdf>
-Package pdftex.def Info: figs/jet1/accumulator.pdf used on input line 337.
+Package pdftex.def Info: figs/jet1/accumulator.pdf used on input line 401.
 (pdftex.def)             Requested size: 122.6888pt x 122.67676pt.
 
-<figs/jet1/vertex.pdf, id=205, 2055.68pt x 2055.68pt>
+<figs/jet1/vertex.pdf, id=298, 2055.68pt x 2055.68pt>
 File: figs/jet1/vertex.pdf Graphic file (type pdf)
 
 <use figs/jet1/vertex.pdf>
-Package pdftex.def Info: figs/jet1/vertex.pdf used on input line 343.
+Package pdftex.def Info: figs/jet1/vertex.pdf used on input line 407.
 (pdftex.def)             Requested size: 122.6888pt x 122.67676pt.
 
-<figs/jet2/tracks.pdf, id=206, 598.235pt x 574.145pt>
+<figs/jet2/tracks.pdf, id=299, 598.235pt x 574.145pt>
 File: figs/jet2/tracks.pdf Graphic file (type pdf)
 
 <use figs/jet2/tracks.pdf>
-Package pdftex.def Info: figs/jet2/tracks.pdf used on input line 352.
+Package pdftex.def Info: figs/jet2/tracks.pdf used on input line 416.
 (pdftex.def)             Requested size: 139.41832pt x 133.80272pt.
 
-Underfull \hbox (badness 1867) in paragraph at lines 353--353
+Underfull \hbox (badness 1867) in paragraph at lines 417--417
 []\T1/ptm/b/n/10 Figure 15. \T1/ptm/m/n/10 Tracks orig-i-nat-ing
  []
 
-<figs/jet2/accumulator.pdf, id=207, 2055.68pt x 2055.68pt>
+<figs/jet2/accumulator.pdf, id=300, 2055.68pt x 2055.68pt>
 File: figs/jet2/accumulator.pdf Graphic file (type pdf)
 
 <use figs/jet2/accumulator.pdf>
-Package pdftex.def Info: figs/jet2/accumulator.pdf used on input line 358.
+Package pdftex.def Info: figs/jet2/accumulator.pdf used on input line 422.
 (pdftex.def)             Requested size: 122.6888pt x 122.67676pt.
 
-<figs/jet2/vertex.pdf, id=208, 2055.68pt x 2055.68pt>
+<figs/jet2/vertex.pdf, id=301, 2055.68pt x 2055.68pt>
 File: figs/jet2/vertex.pdf Graphic file (type pdf)
 
 <use figs/jet2/vertex.pdf>
-Package pdftex.def Info: figs/jet2/vertex.pdf used on input line 364.
+Package pdftex.def Info: figs/jet2/vertex.pdf used on input line 428.
 (pdftex.def)             Requested size: 122.6888pt x 122.67676pt.
- [8 <./figs/curved_500events_hits.pdf, page is rotated 90 degrees> <./figs/curv
-ed_500events_hits_tracks.pdf, page is rotated 90 degrees> <./figs/TimeVsThreads
-.pdf> <./figs/TimeVsTracks.pdf>] [9 <./figs/jet1/tracks.pdf> <./figs/jet1/accum
-ulator.pdf> <./figs/jet1/vertex.pdf> <./figs/jet2/tracks.pdf> <./figs/jet2/accu
-mulator.pdf> <./figs/jet2/vertex.pdf>] [10]
-(./HTrgJINST.aux)
+ [9 <./figs/TimeVsThreads.pdf> <./figs/TimeVsTracks.pdf> <./figs/jet1/tracks.pd
+f> <./figs/jet1/accumulator.pdf> <./figs/jet1/vertex.pdf>] [10 <./figs/jet2/tra
+cks.pdf> <./figs/jet2/accumulator.pdf> <./figs/jet2/vertex.pdf>] [11] (./HTrgJI
+NST.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 3162 strings out of 495063
- 41925 string characters out of 3181831
- 96206 words of memory out of 3000000
- 6174 multiletter control sequences out of 15000+200000
+ 3186 strings out of 495063
+ 42143 string characters out of 3181831
+ 96257 words of memory out of 3000000
+ 6185 multiletter control sequences out of 15000+200000
  83707 words of font info for 124 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,9n,26p,1694b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,9n,26p,287b,339s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/opt/local/share/texmf-texlive-dist/fonts/enc/dvips/base/8r.enc}</opt/local/
 share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></opt/local/
 share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/s
@@ -552,10 +587,10 @@ xlive-dist/fonts/type1/urw/symbol/usyr.pfb></opt/local/share/texmf-texlive-dist
 pe1/urw/times/utmr8a.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></opt/local/share/texmf-texlive-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on HTrgJINST.pdf (11 pages, 4028528 bytes).
+Output written on HTrgJINST.pdf (12 pages, 4033916 bytes).
 PDF statistics:
- 459 PDF objects out of 1000 (max. 8388607)
- 323 compressed objects within 4 object streams
- 58 named destinations out of 1000 (max. 500000)
+ 477 PDF objects out of 1000 (max. 8388607)
+ 340 compressed objects within 4 object streams
+ 71 named destinations out of 1000 (max. 500000)
  86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

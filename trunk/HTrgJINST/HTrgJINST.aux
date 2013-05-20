@@ -1,6 +1,12 @@
 \relax 
 \global\@todotoctrue
-\citation{bib:TDR2}
+\citation{bib:CMSTDR2}
+\citation{bib:ATLASTDR}
+\citation{bib:CMSdetpaper}
+\citation{bib:ATLASdetpaper}
+\citation{bib:CMSdetpaper}
+\citation{bib:ATLASdetpaper}
+\citation{bib:CMStrigger}
 \newlabel{-TOC-}{{}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \citation{bib:CUDA}
@@ -19,51 +25,67 @@
 \citation{bib:HLT}
 \citation{bib:datamodel}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Trigger System}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces CMS DAQ Architecture. The size of the event builder (72 Readout Units, 288 Builder Units) represents one “slice”; the system can be equipped with up to eight slices. }}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces CMS DAQ Architecture. The size of the event builder (72 Readout Units, 288 Builder Units) represents one; the system can be equipped with up to eight slices. }}{4}}
 \newlabel{fig:hltarc}{{1}{4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Integrated GPU/CPU 1U server (image courtesy of NVIDIA). }}{4}}
 \newlabel{fig:integratedsys}{{2}{4}}
 \global\@todotoctrue
 \global\@todotoctrue
+\citation{Fruhwirth:1987fm}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Inner Tracker}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Fast Tracking Algorithm}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Current Tracking Algorithm}{5}}
 \global\@todotoctrue
+\citation{bib:HT1}
+\citation{bib:HT2}
+\global\@todotoctrue
+\@writefile{toc}{\contentsline {section}{\numberline {6}Proposed Fast Tracking Algorithm}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Simulated event made up of 50 straight line tracks, with 10 hits per track. }}{6}}
 \newlabel{fig:hits}{{3}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Each hit results in a sinusoidal line in the parameter space. Locations where many of these sinusoidal lines cross are likely to be tracks in the original data. }}{6}}
 \newlabel{fig:accumulator}{{4}{6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Candidate tracks identified from finding local maxima in the parameter space. }}{6}}
 \newlabel{fig:tracks}{{5}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Preliminary Results}{6}}
-\global\@todotoctrue
+\@writefile{toc}{\contentsline {section}{\numberline {7}Preliminary Results}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Performance comparison of the Intel CPU (using 4 threads), NVIDIA Tesla C2075, and NVIDIA Tesla K20c. }}{7}}
 \newlabel{fig:TimePerformance}{{6}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Efficiency as the number of tracks per event is varied. }}{7}}
 \newlabel{fig:Eff}{{7}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}New Tracking Capabilities}{7}}
 \global\@todotoctrue
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Monte Carlo data for curved tracks originating from the interaction point. }}{8}}
 \newlabel{fig:mc_hits}{{8}{8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Curved tracks identified using the Hough Transform. }}{8}}
 \newlabel{fig:mc_tracks}{{9}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces CPU speedup for the fitting computation. }}{8}}
-\newlabel{fig:TimeVsThreads}{{10}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Time required for the fitting computation as the number of tracks is varied. }}{8}}
-\newlabel{fig:TimeVsTracks}{{11}{8}}
-\bibcite{trigger_tdr}{1}
-\bibcite{ATLAS_detector_paper}{2}
-\bibcite{CMS_detector_paper}{3}
-\bibcite{bib:hiddenvalley}{4}
+\@writefile{toc}{\contentsline {section}{\numberline {8}New Tracking Capabilities}{8}}
+\global\@todotoctrue
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces CPU speedup for the fitting computation. }}{9}}
+\newlabel{fig:TimeVsThreads}{{10}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Time required for the fitting computation as the number of tracks is varied. }}{9}}
+\newlabel{fig:TimeVsTracks}{{11}{9}}
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Tracks originating from a displaced jet. }}{9}}
 \newlabel{fig:jet1_tracks}{{12}{9}}
 \@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Parameter space shows the maxima are on a single sinusoid. }}{9}}
 \newlabel{fig:jet1_accumulator}{{13}{9}}
 \@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Second Hough Transform identifies the sinusoid corresponding to the jet vertex. }}{9}}
 \newlabel{fig:jet1_vertex}{{14}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Tracks originating from multiple displaced jets. }}{9}}
-\newlabel{fig:jet2_tracks}{{15}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Parameter space is difficult to visually interpret. }}{9}}
-\newlabel{fig:jet2_accumulator}{{16}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Second Hough Transform identifies the sinusoids corresponding to the jet vertices. }}{9}}
-\newlabel{fig:jet2_vertex}{{17}{9}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Summary}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Summary}{9}}
+\bibcite{bib:ATLAStrigger_tdr}{1}
+\bibcite{bib:CMSTDR2}{2}
+\bibcite{ATLAS_detector_paper}{3}
+\bibcite{CMS_detector_paper}{4}
+\bibcite{bib:CUDA}{5}
+\bibcite{bib:hiddenvalley}{6}
+\bibcite{bib:HtoLJ}{7}
+\bibcite{bib:HMSSM}{8}
+\bibcite{bib:HSV}{9}
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Tracks originating from multiple displaced jets. }}{10}}
+\newlabel{fig:jet2_tracks}{{15}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Parameter space is difficult to visually interpret. }}{10}}
+\newlabel{fig:jet2_accumulator}{{16}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {17}{\ignorespaces Second Hough Transform identifies the sinusoids corresponding to the jet vertices. }}{10}}
+\newlabel{fig:jet2_vertex}{{17}{10}}
+\bibcite{bib:TP}{10}
+\bibcite{bib:TDR1}{11}
+\bibcite{bib:TDR2}{12}
+\bibcite{bib:HLT}{13}
+\bibcite{bib:HT1}{14}
+\bibcite{bib:HT2}{15}
