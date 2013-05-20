@@ -254,8 +254,6 @@ As an example, the Hough Transform is a well known algorithm used in various mac
 vision applications that differs from the Kalman approach in that it does not operate on
 localized features of a data set.  Rather the technique is in some sense more
 holistic, operating on an entire image as a whole. 
-% Patrick a comment to account to the fact that would not need large MEM to move around to process the
-% large amount of data is required here
 The technique is described at length in existing literature\cite{bib:HT1},\cite{bib:HT2},
  but the concept as it would be applicable to the
 tracking problem is to consider the parameterization of any given track.  Any given hit
@@ -306,7 +304,9 @@ fair performance comparison a parallel implementation of the Hough Transform for
 for the performance results is physically a quad core CPU but supports up to two threads per physical core using Simultaneous Multithreading (SMT), 
 with the Intel implementation of SMT known as HyperThreading (HT).  SMT did not show any performance advantage for this application because the speedup
  actually dropped as the number of threads exceeded the number of physical cores.  For the GPU implementation, performance results for the two most recent 
-generations of NVIDIA GPUs are shown in Figure~\ref{fig:TimePerformance}.  Note that the GPU implementation is up to 100x faster than the best multithreaded CPU implementation.
+generations of NVIDIA GPUs are shown in Figure~\ref{fig:TimePerformance}.  Throughout the event processing all of the data associated
+with the hits, parameter space, and peak detection fit within the memory of the GPU.  This eliminates the need to perform
+expensive movements of the data back and forth between the CPU and GPU over PCI Express, helping to achieve a GPU implementation that is up to 100x faster than the multithreaded CPU implementation.
 
 \begin{figure}[!Hhtb]
 %\begin{minipage}[t]{8.0cm}
