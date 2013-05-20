@@ -78,7 +78,6 @@ the massive computational power of a modern GPU available for more general purpo
 as opposed to being hard wired for specific graphical operations.  In certain applications that can be executed in massively parallel
  fashion, this can yield several orders of magnitude better performance than a conventional CPU.
 
-
 Furthermore, leading technology vendors have released supported development APIs, such as NVIDIA
 CUDA ("Compute Unified Device Architecture'')~\cite{bib:CUDA}, which allow rapid development of
 software in nearly standard C code.CUDA allows CPU-based applications to access the resources of a GPU 
@@ -235,10 +234,30 @@ estimate and its uncertainty. After this first fit is complete, a smoothing stag
 to apply the information from the later hits to the earlier ones. This step uses a Runge-Kutta propagator to account for the effect of 
 material interactions and an inhomogeneous magnetic field. Finally, track selection requirements are applied to reduce the fake rate of the resulting track candidates.
 
+\section{GPU Architecture}
 
+The NVIDIA GPU architecture consists of a
+number of general purpose floating point processors: {\it stream processors}.
+The stream processors are fully programmable and can be utilized as general
+purpose compute cores for computationally intensive purposes outside of graphics.
+Multiple stream processors, a parallel data cache (a user managed
+on-chip cache), and on some processors a hardware managed L1 cache are
+grouped together into a multiprocessor.  Typical high end GPUs feature tens
+of multiprocessors with hundreds of stream processors.
 
+The streaming processors can be utilized for general purpose computations using
+CUDA ("Compute Unified Device Architecture").  Unlike past efforts to harness
+the computational power found in GPUs using a graphics API, CUDA specifies a
+few simple extensions to the C programming language and a parallel programming
+model to enable full access to the GPU hardware.
 
-
+The programmer writes a CPU program that invokes functions called {\it kernels}
+that execute on the GPU.  A kernel consists of many thousands of threads that
+execute in parallel across the stream processors.  Groups of threads called
+{\it blocks} are scheduled on a single multiprocessor and can cooperate among
+themselves through access to a parallel data cache.  Each block is independent
+by design so the many blocks of a kernel, called a {\it grid}, can be executed
+in parallel on several multiprocessors.
 
 \section{Proposed Fast Tracking Algorithm}
 
