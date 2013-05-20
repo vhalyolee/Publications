@@ -19,7 +19,7 @@ E-mail: \email{vhalyo@gmail.com}}
  At the same time the physics signals of interest must be retained with high efficiency. 
 
 The quest for rare new physics phenomena at the LHC and the flexibility of the trigger system leads us to evaluate a Graphics Processing Unit (GPU) enhancement of the compute farm to not only 
-to eventaully provide faster and more efficient events selection but also include new complex triggers that were not possible before. 
+to eventually provide faster and more efficient events selection but also include new complex triggers that were not possible before. 
  A new tracking algorithm is evaluated on a NVIDIA Tesla K20c GPU, allowing for the first time the reconstruction of long lived particles at the tracker system 
 in the trigger. Preliminary time performance and efficiency will be presented.}
 
@@ -52,8 +52,8 @@ events of at least ${\sim}400,000:1$.
 The required level of performance can be achieved in both CMS\cite{bib:CMSdetpaper}/ATLAS\cite{bib:ATLASdetpaper}
  by implementing a typical trigger system with a hierarchy of multiple levels, ranging from fast and relatively simple criteria implemented
 entirely in hardware and firmware, to more sophisticated software based analysis. 
-In the following only the CMS detecor would be considered, however, the detecor perfromaces
-are comparable and the dicussions can be generalized to both detectors.
+In the following only the CMS detector would be considered, however, the detector performances
+are comparable and the discussions can be generalized to both detectors.
  The CMS trigger is implemented in 2 levels: a hardware Level-1 trigger reducing the event rate
 to less than $100~\mathrm{kHz}$, followed by further processing in the High-Level Trigger (HLT)\cite{bib:CMStrigger}
 designed to reduce this maximum Level-1 acceptance rate of 100 kHz to a final output rate of 100 Hz.
@@ -226,14 +226,14 @@ The CMS track reconstruction uses an iterative algorithm, with earlier iteration
 to search for lower momentum or highly displaced tracks without the combinatorial possibilities becoming too large. Each iteration 
 consists of four steps. First, a seed, consisting of either three hits or two hits and a primary vertex constraint, is constructed 
 to create an initial estimate of the trajectory parameters for the track. Second, track finding is performed using a global Kalman 
-fiter.~\cite{Fruhwirth:1987fm} This step performs a fast propagation of the track candidate to propagate the track through the
+fitter.~\cite{Fruhwirth:1987fm} This step performs a fast propagation of the track candidate to propagate the track through the
  layers of the detector, search for compatible nearby hits, and attach them to the candidate. After all candidates in this step have
  been found, the track candidate collection is then cleaned to remove duplicate tracks or tracks which share a large number of hits. 
 The third step is to perform a full Kalman fit over the whole track to obtain the best estimate of the track parameters at all points 
 along the trajectory. The filter begins at the innermost hits, and then iterates outward through each hit to update the track trajectory 
 estimate and its uncertainty. After this first fit is complete, a smoothing stage is then performed running backwards from the last hit 
 to apply the information from the later hits to the earlier ones. This step uses a Runge-Kutta propagator to account for the effect of 
-material interactions and an inhomogenous magnetic field. Finally, track selection requirements are applied to reduce the fake rate of the resulting track candidates.
+material interactions and an inhomogeneous magnetic field. Finally, track selection requirements are applied to reduce the fake rate of the resulting track candidates.
 
 
 
@@ -290,7 +290,7 @@ of these sinusoidal lines cross are likely to be tracks in the original data.  \
 
 As was briefly described previously, the traditional combinatoric track finder  approach implicitly depends on various assumptions and
 constraints on the phase space of the seed tracks, with one of the most significant
-results being suppression of displaced vertices and other odd tracks due to extensice processing time.
+results being suppression of displaced vertices and other odd tracks due to extensive processing time.
  It is hoped that a more holistic algorithm
 can be used to supplement the existing tracking algorithm in a significant way.
 As a demonstration of this a simple tracking algorithm based on the Hough Transform was developed 
@@ -436,11 +436,11 @@ Figures~\ref{fig:jet2_tracks} -~\ref{fig:jet2_vertex} illustrate the same techni
 %
 
 The quest for rare new physics phenomena and the flexibility of the trigger systems of the general purpose detectors at the LHC 
-allowed the authors to proposed a GPU enhancement of the trigger systems.  A tracking algoritm based on a machine vision, Hough Transform algorithm provides
-a different, complemetary technique  which is a more holistic operating on an entire image as whole. The algorithm not only permits to find simultanouly any
+allowed the authors to proposed a GPU enhancement of the trigger systems.  A tracking algorithm based on a machine vision, Hough Transform algorithm provides
+a different, complimentary technique  which is a more holistic operating on an entire image as whole. The algorithm not only permits to find simultaneously any
  random orientation of prompt/non prompt tracks but also us to develop new trigger algorithms such as displaced jets or black holes. These new algorithms are smoking guns to 
-to new type of topologies  that surley extend the reach of physics at the LHC. This tracking algorithm will not replace the exisiting combinatoric track 
-finder but will enhanhance its capabilities on the trigger. The results presented here are our first preliminary results meant to demonstrate the feasibility of the 
+to new type of topologies  that surely extend the reach of physics at the LHC. This tracking algorithm will not replace the existing combinatoric track 
+finder but will enhance its capabilities on the trigger. The results presented here are our first preliminary results meant to demonstrate the feasibility of the 
 algorithm and its potential impact. Even tough it is feasible to complete the testing of the new triggers proposed by the end of the shut down.
 Extensive work has to be done to improve tracking efficiency and purity for the general full tracking algorithm. In addition, 
 %Possible sentences for future work to better optimize CPU performance:
