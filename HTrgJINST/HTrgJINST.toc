@@ -1,10 +1,10 @@
 \contentsline {section}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {2}Physics Motivation}{3}
 \contentsline {section}{\numberline {3}Trigger System}{4}
-\contentsline {section}{\numberline {4}Inner Tracker}{5}
-\contentsline {section}{\numberline {5}Current Tracking Algorithm}{5}
-\contentsline {section}{\numberline {6}GPU Architecture}{6}
-\contentsline {section}{\numberline {7}Proposed Fast Tracking Algorithm}{6}
+\contentsline {section}{\numberline {4}GPU Architecture}{5}
+\contentsline {section}{\numberline {5}Inner Tracker}{6}
+\contentsline {section}{\numberline {6}Current Tracking Algorithm}{6}
+\contentsline {section}{\numberline {7}Proposed Fast Tracking Algorithm}{7}
 \contentsline {section}{\numberline {8}Preliminary Results}{7}
-\contentsline {section}{\numberline {9}New Tracking Capabilities}{8}
+\contentsline {section}{\numberline {9}New Trigger Capabilities}{10}
 \contentsline {section}{\numberline {10}Summary}{10}
