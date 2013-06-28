@@ -54,13 +54,13 @@ events of at least ${\sim}400,000:1$.
 The required level of performance is achieved in both CMS~\cite{Chatrchyan:2008aa} and ATLAS~\cite{Aad:2008zzm}
  by implementing a typical trigger system with a hierarchy of multiple levels, ranging from fast and relatively simple criteria implemented
 entirely in hardware and firmware, to more sophisticated software-based analysis. 
-While the discussion in this paper focuses principally on the CMS detector, the trigger principles and performances are
+While the discussion in this paper focuses principally on the CMS detector, the trigger principles and performance are
 comparable between the two and the discussions can be generalized to both detectors.
 The CMS trigger is implemented in 2 levels: a hardware Level-1 trigger reducing the event rate
 to less than $100~\mathrm{kHz}$, followed by further processing in the High-Level Trigger (HLT)~\cite{Sakulin:2007rj}
 designed to reduce this maximum Level-1 acceptance rate of 100 kHz to a final output rate of 100 Hz.
 The primary goal of the HLT is to apply a specific set of
-physics selection algorithms on the events read out to accept the events with the most interesting physics 
+physics selection algorithms on the events read out and accept the events with the most interesting physics 
 content. This computationally intensive processing is executed on a farm of commercial CPU processors that
 constitute the CMS HLT hardware.
 
@@ -96,7 +96,7 @@ for example, the selection of events with multiple displaced
 vertices at any location in the silicon tracker, which would be a ``smoking gun'' for new topological
 signatures not predicted by the Standard Model. Such a new tracking algorithm would allow us to
 augment the existing trigger with new types of trigger filters to select events with topological signatures
-that are currently not efficiently recorded.
+that are currently not recorded efficiently.
 
 In the following, a description of the physics motivation behind GPU enhancement of the HLT is provided.
 This includes a brief description of the existing High Level Trigger and the tracking algorithm used, 
@@ -112,18 +112,18 @@ would be a clear indicator of new physics at the LHC.
 An enhancement of the HLT might permit processing of the new tracking reconstruction on the full event 
 at the Level-1 event rate up to design luminosity. The proposed HLT tracking would have a far-reaching impact on the physics program 
 set by the HLT where the ultimate goal is to select the events of interest for CMS.
-The new tracking algorithm would introduce new possible trigger paths that are currently not possible due to the extensive
+The new tracking algorithm would also introduce new possible trigger paths that are currently not possible due to the extensive
  processing time that would be required using CPUs alone. The robust parallel processing of the tracking on the 
 hybrid CPU/GPU system would allow reconstruction of not only charged prompt tracks from the interaction point
 but also reconstruction of displaced vertices in the tracker far beyond what is possible in both CMS and ATLAS.
-Therefore, the tracking algorithm using the GPU will enrich the physics program and allow for searches on models with of new topological signatures that were not possible or suppressed before.
+Therefore, the tracking algorithm using the GPU will enrich the physics program and allow for searches on models with new topological signatures that were not possible or suppressed before.
 
 Only a few of the large selection of topological models can be described here. An example of an
 interesting class of models which would benefit from such triggers are hidden-valley models~\cite{bib:hiddenvalley}, 
 in which a new confining gauge group is added to the standard model. The resulting (electrically-neutral) bound states can have
  low masses and long lifetimes and could be observed at the LHC. The production multiplicities are often large and events with final states with heavy flavor are
 common. In addition, displaced vertices and missing energy are possible. Accounting for LEP constraints, LHC production 
-cross-sections were estimated to be typically in the 1-100 fb range, though they can be larger.
+cross-sections were estimated to typically be in the 1-100 fb range, though they can be larger.
 
 New tracking triggers would permit us to select at the HLT level events where a Higgs-like particle decays with a substantial branching fraction to long-lived neutral particles decaying
 at macroscopic distances from the primary vertex~\cite{bib:hiddenvalley} in the tracker. The limited experimental constraints on light neutral long-lived particles
@@ -132,11 +132,12 @@ are not constrained, decays at centimeter and meter scales are equally possible.
 with the multiplicity possibly varying from event to event. In many models the resonances will decay to the heaviest fermion 
 pair available, with branching fractions similar to those of the standard model Higgs.
 
-Other models that predict these unusual signatures~\cite{bib:hiddenvalley}--\cite{Strassler:2006ri} include either simple models where a scalar is added to the Higgs potential or superpotential depending whether a nonsupersymmetric
+Other models that predict these unusual signatures~\cite{bib:hiddenvalley}--\cite{Strassler:2006ri} include either simple models where a scalar is added to the Higgs potential or superpotential depending on whether a nonsupersymmetric
 or supersymmetric framework was used to build the model. Another possibility is confining hidden valley models, which produce qualitatively similar signals, though the origin of the signals is 
 quite different.  A complex Higgs decay in a hidden-valley model could produce, for example, four resonances: one decaying promptly to jets,
  one escaping the detector giving missing energy, and two decaying to $b\bar{b}$, each with a displaced vertex.  
 
+% TODO: This sentence needs to be reworked and maybe split into two but I'm not sure how...
 Other obvious channels that would benefit from the new tracking algorithm or displaced jets or vertex triggers are inclusive
 and exclusive $b$-decay channels, or various topologies with boosted jets that will be more frequent as we increase our center of
 mass energy of the collision at design luminosity. These new triggers will allow us to be sensitive to a larger  parameter space,
@@ -154,7 +155,7 @@ the rate to approximately 100~Hz. The Level-1 trigger~\cite{Dasu:2000ge} is base
 to about 100~kHz, corresponding to 100~GB/s, assuming an average event size of 1~MB. The High Level Trigger (HLT)~\cite{Sphicas:2002gg},\cite{Sakulin:2007rj}
 is purely software-based and must achieve the remaining rate reduction by executing sophisticated offline-quality algorithms.
 An HLT path consists of algorithms that are executed in order of increasing complexity, so that
-the execution of a path can stopped quickly as soon as evidence for the signal of interest is not found.
+the execution of a path can be stopped quickly as soon as evidence for the signal of interest is found to be missing.
 This optimization means that the more sophisticated and time-consuming reconstruction algorithms are only applied when necessary.
 The ability to select the events of interest is the foundation of our
 quest for rare new physics phenomena, and thanks to the flexibility of the CMS HLT software and hardware computing farm we are  able
@@ -219,8 +220,8 @@ Both the CMS and ATLAS inner trackers include a silicon pixel detector and a sil
 All tracker layers provide two-dimensional hit position measurements, but only the pixel tracker
  and a subset of the strip tracker layers provide three-dimensional hit position measurements.
 Only the CMS tracker is considered; however, the detector performances are comparable
-in the CMS and ATLAS experiments, and the tracking algorithm and results discussed are applicable for both of 
-these experiments as well. The CMS pixel detector includes three barrel layers and two forward disks
+in the CMS and ATLAS experiments, and the tracking algorithm and results discussed are applicable to both of 
+these experiments. The CMS pixel detector includes three barrel layers and two forward disks
 on either end of the detector; outside the pixel detector is the strip detector, consisting of ten layers in the barrel plus three 
 inner disks and nine forward disks at each end of the detector.
 Owing to the strong magnetic field and the high granularity of the silicon tracker, 
@@ -252,7 +253,7 @@ search for lower momentum or highly displaced tracks without the combinatorial p
 large. Each iteration consists of four steps: a seeding step, a track finding step, a track fitting step,
 and a selection step.
 
-In the first step, a seed, consisting of either three hits or two hits and a primary vertex constraint,
+In the first step, a seed, consisting of two or three hits and a primary vertex constraint,
 is constructed to create an initial estimate of the trajectory parameters for the track. Second, the
 track finding is performed using a global Kalman filter~\cite{Fruhwirth:1987fm}. This step performs a fast
 propagation of the track candidate to propagate the track through the layers of the detector, search for
@@ -344,7 +345,7 @@ algorithm.
 \end{figure}
 
 Although the Hough transform is most often associated with finding straight lines in data, it is applicable to any feature which can be represented 
-by a finite number of parameters.  For example, circles of unknown location and radius and location can be identified in a three-dimensional parameter 
+by a finite number of parameters.  For example, circles of unknown location and radius can be identified in a three-dimensional parameter 
 space representing the x and y location of the center plus a third parameter for the radius.  Figure~\ref{fig:hough_curved} shows
 an example of results for our Hough transform implementation used for identifying curved tracks.  In this case, the
 tracks are constrained to pass through the interaction point, reducing the parameter space to a two-dimensional space
@@ -385,7 +386,7 @@ from a displaced vertex. First, we simulate a set of tracks in the jet, as shown
 Figure~\ref{fig:DisplacedJetTracks}. Again, the Hough transform is applied to the corresponding hits making up these
 tracks to generate the parameter space displayed in Figure~\ref{fig:DisplacedJetAccumulator}. Recall that the parameter
 space identifies candidate tracks as locations where many sinusoids cross one another. In
-Figure~\ref{fig:DisplacedJetAccumulator} the locations of these crossings are visually apparent as the bright spots in
+Figure~\ref{fig:DisplacedJetAccumulator} the locations of these crossings are visually apparent as the dark spots in
 the parameter space.  However, the analysis is taken one step further by noting that the crossings all lie along a
 single sinusoidal curve in the parameter space.  This single sinusoidal curve has been isolated in
 Figure~\ref{fig:DisplacedJetVertex} and is significant because that one sinusoidal curve in the parameter space
