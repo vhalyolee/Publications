@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {4}GPU Architecture}{5}
 \contentsline {section}{\numberline {5}Inner Tracker}{6}
 \contentsline {section}{\numberline {6}Current Tracking Algorithm}{6}
-\contentsline {section}{\numberline {7}Proposed Fast Tracking Algorithm}{7}
-\contentsline {section}{\numberline {8}Preliminary Results}{7}
-\contentsline {section}{\numberline {9}New Trigger Capabilities}{10}
-\contentsline {section}{\numberline {10}Summary}{10}
+\contentsline {section}{\numberline {7}Proposed Fast Tracking Algorithm}{8}
+\contentsline {section}{\numberline {8}Preliminary Results}{8}
+\contentsline {section}{\numberline {9}New Trigger Capabilities}{11}
+\contentsline {section}{\numberline {10}Summary}{12}

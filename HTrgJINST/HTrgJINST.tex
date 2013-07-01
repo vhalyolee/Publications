@@ -19,7 +19,7 @@ performance limitations of the mass storage hardware and the capabilities of the
 collected data in a timely fashion for physics analysis.  At the same time, the physics signals of interest must be
 retained with high efficiency.
 
-The quest for rare new physics phenomena at the LHC leads us to evaluate a Graphics Processing Unit (GPU) enhancement of
+The quest for rare new physics phenomena at the LHC leads to evaluation of a Graphics Processing Unit (GPU) enhancement for
 the existing High-Level Trigger (HLT), made possible by the current flexibility of the trigger system, which not only
 provides faster and more efficient event selection, but also includes the possibility of new complex triggers that were
 not previously feasible. A new tracking algorithm is evaluated on a NVIDIA Tesla K20c GPU, allowing for the first time
@@ -39,7 +39,7 @@ efficiency will be presented.}
 The stunning performance of the LHC, the successful physics results, and the discovery of 
 a new Higgs-like particle will mark in history the first LHC running period not as the beginning of the end but rather
 the end of the beginning. The first LHC shutdown, scheduled for 2 years, provides a remarkable opportunity to
-improve our detector performance even further; in particular, to enhance and extend the physics reach by improving the set of events selected and recorded by the trigger.
+improve detector performance even further; in particular, to enhance and extend the physics reach by improving the set of events selected and recorded by the trigger.
 
 The Trigger and Data Acquisition (DAQ) systems~\cite{Sphicas:2002gg}, \cite{ATLAS:2003aa}, \cite{Chatrchyan:2008aa}, \cite{Aad:2008zzm}
 in a modern collider experiment, such as the ATLAS and CMS experiments at LHC, provide essential preliminary online analysis of the raw data for the purpose of
@@ -94,14 +94,16 @@ reduces the pattern recognition task to its purest form.  From the physics persp
 such an enhancement of the trigger capabilities would allow inclusion of new tracking triggers;
 for example, the selection of events with multiple displaced
 vertices at any location in the silicon tracker, which would be a ``smoking gun'' for new topological
-signatures not predicted by the Standard Model. Such a new tracking algorithm would allow us to
-augment the existing trigger with new types of trigger filters to select events with topological signatures
+signatures not predicted by the Standard Model. Such a new tracking algorithm would allow
+augmentation of the existing trigger with new types of trigger filters to select events with topological signatures
 that are currently not recorded efficiently.
 
 In the following, a description of the physics motivation behind GPU enhancement of the HLT is provided.
 This includes a brief description of the existing High Level Trigger and the tracking algorithm used, 
-the GPU and CUDA architecture, and the additional capabilities
-which would be enabled by a hybrid GPU/CPU computing farm for the HLT. 
+and the GPU and CUDA architecture.  Additional capabilities
+would be enabled by a hybrid GPU/CPU computing farm and
+the use of GPUs for the HLT systems of both CMS and ATLAS are being studied by several
+groups~\cite{Emeliyanov:2012mg}, \cite{Mattmann:2012hi}, \cite{Clark:2011zzb}.
 The authors propose a new tracking reconstruction algorithm, show preliminary results,
 and discuss proposed new triggers that could trigger on events with a highly distinct signature which
 would be a clear indicator of new physics at the LHC.
@@ -125,9 +127,9 @@ in which a new confining gauge group is added to the standard model. The resulti
 common. In addition, displaced vertices and missing energy are possible. Accounting for LEP constraints, LHC production 
 cross-sections were estimated to typically be in the 1-100 fb range, though they can be larger.
 
-New tracking triggers would permit us to select at the HLT level events where a Higgs-like particle decays with a substantial branching fraction to long-lived neutral particles decaying
+New tracking triggers would permit selection at the HLT level of events where a Higgs-like particle decays with a substantial branching fraction to long-lived neutral particles decaying
 at macroscopic distances from the primary vertex~\cite{bib:hiddenvalley} in the tracker. The limited experimental constraints on light neutral long-lived particles
-suggests that we probably should not be surprised if a Higgs-like particle reveals itself  through such decays. As the lifetimes of these resonances 
+suggests that one should probably not be surprised if a Higgs-like particle reveals itself  through such decays. As the lifetimes of these resonances 
 are not constrained, decays at centimeter and meter scales are equally possible. Each Higgs-like decay may produce two or more resonances 
 with the multiplicity possibly varying from event to event. In many models the resonances will decay to the heaviest fermion 
 pair available, with branching fractions similar to those of the standard model Higgs.
@@ -139,8 +141,8 @@ quite different.  A complex Higgs decay in a hidden-valley model could produce, 
 
 % TODO: This sentence needs to be reworked and maybe split into two but I'm not sure how...
 Other obvious channels that would benefit from the new tracking algorithm or displaced jets or vertex triggers are inclusive
-and exclusive $b$-decay channels, or various topologies with boosted jets that will be more frequent as we increase our center of
-mass energy of the collision at design luminosity. These new triggers will allow us to be sensitive to a larger  parameter space,
+and exclusive $b$-decay channels, or various topologies with boosted jets that will be more frequent as the center of
+mass energy of the collision at design luminosity is increased. These new triggers will allow sensitivity to a larger  parameter space,
 including lower-mass Higgs, that could have evaded detection in previous experiments.
 
 %VH add citation to H4l and all the ones I had before
@@ -157,15 +159,15 @@ is purely software-based and must achieve the remaining rate reduction by execut
 An HLT path consists of algorithms that are executed in order of increasing complexity, so that
 the execution of a path can be stopped quickly as soon as evidence for the signal of interest is found to be missing.
 This optimization means that the more sophisticated and time-consuming reconstruction algorithms are only applied when necessary.
-The ability to select the events of interest is the foundation of our
-quest for rare new physics phenomena, and thanks to the flexibility of the CMS HLT software and hardware computing farm we are  able
-to propose an enhancement for the HLT a few years down the road after startup.
+The ability to select the events of interest is the foundation of a
+quest for rare new physics phenomena, and thanks to the flexibility of the CMS HLT software and hardware computing farm an enhancement for the HLT is proposed.
 
 \begin{figure}[!Hhtb]
   \begin{center}
-    \subfigure[]{\includegraphics[width=0.5\textwidth]{figs/CMSTrigger.pdf} \label{fig:hltarc}}
-    \subfigure[]{\includegraphics[width=0.4\textwidth]{figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no_cover_large.pdf} \label{fig:integratedsys}}
-      \caption{Left: CMS DAQ architecture. The size of the event builder (72 Readout Units, 288 Builder Units) represents one slice; the system can be equipped with up to eight slices. Right: Integrated GPU/CPU 1U server (image courtesy of NVIDIA).}
+    \includegraphics[width=1.0\textwidth]{figs/CMSTrigger.pdf} \label{fig:hltarc}
+    %\subfigure[]{\includegraphics[width=0.5\textwidth]{figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no_cover_large.pdf} \label{fig:integratedsys}}
+      \caption{CMS DAQ architecture. The size of the event builder (72 Readout Units, 288 Builder Units) represents one slice; the system can be equipped with up to eight slices.}
+      %Bottom: Integrated GPU/CPU 1U server (image courtesy of NVIDIA).}
   \end{center}
 \end{figure}
 
@@ -185,7 +187,7 @@ The EventProcessor previously mentioned encapsulates the event processing machin
 required to execute complex physics algorithms. 
 
 As the farms of machines where these event selections are executed are commercial servers, GPUs can be easily integrated into them.
-A simple solution is shown in Figure~\ref{fig:integratedsys} with a 1U server containing dual multicore CPUs and two NVIDIA Tesla GPUs. 
+A simple solution is 1U servers containing dual multicore CPUs and two NVIDIA Tesla GPUs. 
 While this would provide a single, integrated 1U GPU/CPU server, this of course implies replacing the existing servers, 
 evaluating the new power consumption, and the cost of these servers relative to any other options.
 
@@ -235,10 +237,10 @@ with data~\cite{Khachatryan:2010pw}. The silicon tracker is also used to reconst
 
 \begin{figure}[!Hhtb]
 \begin{center}
-	\includegraphics[width=0.35\textwidth]{figs/CMSTrackerLayout.pdf}
+	\includegraphics[width=1.0\textwidth]{figs/CMSTrackerLayout.pdf}
 	%\includegraphics[width=0.27\textwidth]{figs/ATLASTrackerLayout.pdf}
-	\includegraphics[width=0.55\textwidth]{figs/CMS2DLayout.pdf}
-	\caption{The CMS tracker in a 3-D view (left) and a 2-D view (right), showing the pixel detector and the silicon
+	\includegraphics[width=1.0\textwidth]{figs/CMS2DLayout.pdf}
+	\caption{The CMS tracker in a 3-D view (top) and a 2-D view (bottom), showing the pixel detector and the silicon
 	strip tracker. \label{fig:tracker}}
 	\end{center}
 \end{figure}
@@ -274,7 +276,7 @@ candidates.
 
 One possible application of the GPU-enabled parallelism would be to accelerate the performance of the
 existing combinatorial track finder.  Since the finding and fitting process for each track is largely
-independent of the other tracks, parallelization should not be conceptually difficult. However, the use
+independent of the other tracks, parallelization should not be conceptually difficult.  However, the use
 of GPU-based computing in the HLT also enables the possibility of running tracking algorithms which are
 dramatically and qualitatively different in nature to the current CTF, thus enhancing the discovery potential.
 
@@ -309,9 +311,11 @@ keep the number of possible track combinations under control, which means that d
 are often not reconstructed due to the extensive processing time required to consider them.
 It is hoped that a more holistic algorithm can be used to supplement the existing
 tracking algorithm in a significant way.  As a demonstration of this, a simple tracking algorithm based on
-the Hough transform was developed and run against a standalone Monte Carlo simulation with a simple
-tracker geometry file.  The preliminary investigation was performed using Intel multicore CPUs and NVIDIA
-Tesla C2075 and K20c GPUs.
+the Hough transform was developed and run against a standalone Monte Carlo simulation.
+Simulations are performed using a simple detector model in which only the transverse plane is considered. The detector model 
+contains a simulated beampipe with a radius of 3.0 cm, surrounded by ten concentric, evenly-spaced tracking layers with the last layer at a 
+radius of 110.0 cm. Resolution for a single hit is taken to be 0.4 mm in each direction.
+Performance was evaluated using Intel multicore CPUs and NVIDIA Tesla C2075 and K20c GPUs.
 
 The Hough transform algorithm is not trivial to implement in parallel because the computation of the parameter space is
 subject to race conditions, where it is not necessarily safe to have multiple threads arbitrarily make updates as hits
@@ -323,11 +327,12 @@ achieved on a Intel Core i7-3770 (Ivy Bridge, quad core, 3.4 GHz) processor.  Th
 is physically a quad core CPU but supports up to two threads per physical core using Simultaneous Multithreading (SMT),
 with the Intel implementation of SMT known as HyperThreading (HT).  SMT did not show any performance advantage for this
 application, because the speedup actually dropped as the number of threads exceeded the number of physical
-cores. Figure~\ref{fig:TimePerformance} shows the results of the CPU compared to the two NVIDIA GPUs. Throughout the
-event processing, all of the data associated with the hits, parameter space, and peak detection fit within the memory of
-the GPU.  This eliminates the need to perform expensive movements of the data back and forth between the CPU and GPU
-over PCI Express, helping to achieve a GPU implementation that is up to 100x faster than the multithreaded CPU
-implementation. Figure~\ref{fig:Eff} shows the efficiency defined as the fraction of simulated tracks successfully
+cores.
+
+Performance results for the CPU compared to two NVIDIA GPUs are shown in Figure~\ref{fig:TimePerformance}.
+The GPUs have multiple GB of memory and all of the data associated with a single event: up to 5000 hits, the parameter space, and peak detection reside within that memory.  Because all of this data fits in the GPU memory with ample margins, it is not necessary to perform expensive movements of the data back and forth between the CPU and GPU over PCI Express during the processing of an event.  For implementation in a production environment each GPU would process a single event, and then be assigned the processing of another event, and so on.  This means that through a combination of software and hardware support the GPU can simultaneously be processing one event, transferring data from the CPU memory to the GPU memory for the next event to be processed, and returning the results from the GPU memory to the CPU memory for the previously processed event.  Since this completely overlaps data transfer with computation the timing results in Figure~\ref{fig:TimePerformance} are for the processing of one event and exclude data transfer that would be overlapped with the processing of other events.  In other words these timings represent the steady state throughput of a production system and not the latency for processing a single event.
+
+Figure~\ref{fig:Eff} shows the efficiency defined as the fraction of simulated tracks successfully
 reconstructed by the algorithm as a function of the number of tracks present in the event. As this is only a preliminary 
 implementation, the efficiency and purity are not yet optimized, with the efficiency about 80\% for events with a few 
 thousand tracks and comparable values for the purity. More work is obviously needed to improve the performance of the 
@@ -345,13 +350,13 @@ algorithm.
 \end{figure}
 
 Although the Hough transform is most often associated with finding straight lines in data, it is applicable to any feature which can be represented 
-by a finite number of parameters.  For example, circles of unknown location and radius can be identified in a three-dimensional parameter 
-space representing the x and y location of the center plus a third parameter for the radius.  Figure~\ref{fig:hough_curved} shows
-an example of results for our Hough transform implementation used for identifying curved tracks.  In this case, the
-tracks are constrained to pass through the interaction point, reducing the parameter space to a two-dimensional space
-similar to that used for straight tracks.
-The computational cost of the Hough transform is strongly dependent on the total number of parameters, while the details of the particular parameterization
- have essentially no effect on the performance.
+by a finite number of parameters.  For example, circles of unknown location and radius could be identified in a three-dimensional parameter 
+space representing the x and y location of the center plus a third parameter for the radius.  While the details of the particular parameterization
+ have essentially no effect on the performance, the computational cost of the Hough transform is highly dependent on the total number of parameters.
+Therefore, where possible the number of parameters should be minimized to reduce the computation time.  Figure~\ref{fig:hough_curved} shows
+an example of results for the Hough transform implementation used for identifying curved tracks.  In this case, the
+curved tracks are constrained to pass through the interaction point, reducing the parameter space to a two-dimensional space
+similar to that used for straight tracks.  Curved, displaced tracks would require a three parameter space which has not yet been implemented and optimized.
 
 \begin{figure}[!Hhtb]
 \begin{center}
@@ -381,9 +386,8 @@ identified from analysis of the parameter space, it may be necessary to perform 
 \section{New Trigger Capabilities}
 
 The ability to handle displaced vertices provides the opportunity to identify interesting new physics such as non-prompt
-jets and black holes. Figure~\ref{fig:DisplacedJet} shows an example of the Hough transform applied to a jet originating
-from a displaced vertex. First, we simulate a set of tracks in the jet, as shown in
-Figure~\ref{fig:DisplacedJetTracks}. Again, the Hough transform is applied to the corresponding hits making up these
+jets and black holes. As an example a simulated set of tracks making up a jet, as shown in
+Figure~\ref{fig:DisplacedJetTracks}, are considered.  The Hough transform is applied to the corresponding hits making up these
 tracks to generate the parameter space displayed in Figure~\ref{fig:DisplacedJetAccumulator}. Recall that the parameter
 space identifies candidate tracks as locations where many sinusoids cross one another. In
 Figure~\ref{fig:DisplacedJetAccumulator} the locations of these crossings are visually apparent as the dark spots in
@@ -421,6 +425,7 @@ Figure~\ref{fig:DisplacedJets} illustrates the same technique applied to an even
 \end{center}
 \end{figure}
 
+As previously mentioned it is the number of parameters, and not the details of the particular parameterization, that determines the computational cost of the Hough transform.  Therefore, compared to the performance results for a single Hough transform in Figure~\ref{fig:TimePerformance} the jet finding in Figure~\ref{fig:DisplacedJet} and Figure~\ref{fig:DisplacedJets} has double the computational cost because of the need to perform two transforms.
 %
 \section{Summary}
 %
@@ -429,19 +434,19 @@ The quest for rare new physics phenomena has motivated the authors to propose a 
 system, made possible by the flexibility of the current trigger systems of the general-purpose detectors at the LHC. The
 Hough transform algorithm, originally designed for machine vision problems, can be used as a tracking algorithm to
 provide a different, complementary technique, which is a more holistic picture of the image as a whole. The algorithm
-not only permits us to find simultaneously any combination of prompt and non-prompt tracks, but to develop new trigger
+not only permits simultaneously finding any combination of prompt and non-prompt tracks, but also the development of new trigger
 algorithms for exotic phenomena such as highly-displaced jets or black holes. These new topologies would represent a
 ``smoking gun'' for new physics, and so extending the trigger algorithm to be able to efficiently recognize them would
 dramatically increase the reach of physics at the LHC. The proposed tracking algorithm would not replace the existing
-combinatoric track finger, but will enhance its capabilities at the trigger level. The results presented here are our
-first preliminary results meant to demonstrate the feasibility of the algorithm and its potential impact. Although it is
+combinatoric track finger, but will enhance its capabilities at the trigger level. The results presented here are
+preliminary results meant to demonstrate the feasibility of the algorithm and its potential impact. Although it is
 feasible to complete the testing of the new triggers proposed by the end of the shutdown, extensive work must be done to
 improve tracking efficiency and purity for the general full tracking algorithm. In addition,
 %Possible sentences for future work to better optimize CPU performance:
-to better understand the relative performance of CPUs and GPUs, we intend to implement vectorization on the CPU to fully
-utilize the Advanced Vector Extensions (AVX) capability present on modern CPUs from Intel and AMD.  Although the GPU
+to better understand the relative performance of CPUs and GPUs, vectorization on the CPU to fully
+utilize the Advanced Vector Extensions (AVX) capability present on modern CPUs from Intel and AMD will be implemented.  Although the GPU
 might still show a compelling performance advantage for this class of computations, the 256 bit AVX capabilities should
-increase the CPU performance and allow us to better quantify that advantage.
+increase the CPU performance and allow better quantification of that advantage.
 
 
 %%%%%%%%%%%%%%%%
@@ -495,7 +500,28 @@ increase the CPU performance and allow us to better quantify that advantage.
 J. Sabders, E. Kandrot,
 \emph{CUDA by Example},
 ISBN 978-0-13-138768-3, Addison-Wesley.
-
+%
+% Related GPU work for CMS and ATLAS
+%
+%\cite{Emeliyanov:2012mg}
+\bibitem{Emeliyanov:2012mg} 
+  D.~Emeliyanov {\it et al.}  [ATLAS Collaboration],
+  \emph{GPU-based tracking algorithms for the ATLAS high-level trigger},
+  J.\ Phys.\ Conf.\ Ser.\  {\bf 396}, 012018 (2012).
+  %%CITATION = 00462,396,012018;%%
+%\cite{Mattmann:2012hi}
+\bibitem{Mattmann:2012hi} 
+  J.~Mattmann {\it et al.}  [ATLAS Collaboration],
+  \emph{Track finding in ATLAS using GPUs},
+  J.\ Phys.\ Conf.\ Ser.\  {\bf 396}, 022035 (2012).
+  %%CITATION = 00462,396,022035;%%
+%\cite{Clark:2011zzb}
+\bibitem{Clark:2011zzb} 
+  P.~J.~Clark {\it et al.}  [ATLAS Collaboration],
+  \emph{Algorithm acceleration from GPGPUs for the ATLAS upgrade},
+  J.\ Phys.\ Conf.\ Ser.\  {\bf 331}, 022031 (2011).
+  %%CITATION = 00462,331,022031;%%
+%
 % This one is correct
 \bibitem{bib:hiddenvalley} 
 M. J. Strassler, K. M. Zurek, 

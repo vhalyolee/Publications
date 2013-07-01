@@ -10,6 +10,9 @@
 \newlabel{-TOC-}{{}{1}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \citation{bib:CUDA}
+\citation{Emeliyanov:2012mg}
+\citation{Mattmann:2012hi}
+\citation{Clark:2011zzb}
 \global\@todotoctrue
 \citation{bib:hiddenvalley}
 \citation{bib:hiddenvalley}
@@ -25,30 +28,24 @@
 \citation{Sakulin:2007rj}
 \citation{bib:datamodel}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Trigger System}{4}}
-\newlabel{fig:hltarc}{{1(a)}{4}}
-\newlabel{sub@fig:hltarc}{{(a)}{4}}
-\newlabel{fig:integratedsys}{{1(b)}{4}}
-\newlabel{sub@fig:integratedsys}{{(b)}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Left: CMS DAQ architecture. The size of the event builder (72 Readout Units, 288 Builder Units) represents one slice; the system can be equipped with up to eight slices. Right: Integrated GPU/CPU 1U server (image courtesy of NVIDIA).}}{4}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{4}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{4}}
 \global\@todotoctrue
 \citation{bib:CUDA}
+\newlabel{fig:hltarc}{{3}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces CMS DAQ architecture. The size of the event builder (72 Readout Units, 288 Builder Units) represents one slice; the system can be equipped with up to eight slices.}}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}GPU Architecture}{5}}
 \global\@todotoctrue
 \citation{Khachatryan:2010pw}
-\@writefile{toc}{\contentsline {section}{\numberline {4}GPU Architecture}{5}}
 \global\@todotoctrue
 \citation{Fruhwirth:1987fm}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Inner Tracker}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The CMS tracker in a 3-D view (left) and a 2-D view (right), showing the pixel detector and the silicon strip tracker. }}{6}}
-\newlabel{fig:tracker}{{2}{6}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Current Tracking Algorithm}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The CMS tracker in a 3-D view (top) and a 2-D view (bottom), showing the pixel detector and the silicon strip tracker. }}{7}}
+\newlabel{fig:tracker}{{2}{7}}
 \global\@todotoctrue
 \citation{bib:HT1}
 \citation{bib:HT2}
 \global\@todotoctrue
-\@writefile{toc}{\contentsline {section}{\numberline {7}Proposed Fast Tracking Algorithm}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Preliminary Results}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Proposed Fast Tracking Algorithm}{8}}
 \newlabel{fig:hits}{{3(a)}{8}}
 \newlabel{sub@fig:hits}{{(a)}{8}}
 \newlabel{fig:accumulator}{{3(b)}{8}}
@@ -60,48 +57,52 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{8}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{8}}
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{8}}
-\newlabel{fig:TimePerformance}{{4(a)}{9}}
-\newlabel{sub@fig:TimePerformance}{{(a)}{9}}
-\newlabel{fig:Eff}{{4(b)}{9}}
-\newlabel{sub@fig:Eff}{{(b)}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Left: Time performance comparison of the Intel CPU (using 4 threads), NVIDIA Tesla C2075, and NVIDIA Tesla K20c. The inset shows the same data on a logarithmic scale. Right: Efficiency of the track-finding algorithm on the GPU implementation as a function of the number of tracks present in the event.}}{9}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{9}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The Hough transform algorithm applied to a case with curved tracks. Left: Hits from Monte Carlo simulation for curved tracks originating from the interaction point. Right: Curved tracks identified using the Hough transform. }}{9}}
-\newlabel{fig:hough_curved}{{5}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Preliminary Results}{8}}
+\newlabel{fig:TimePerformance}{{4(a)}{10}}
+\newlabel{sub@fig:TimePerformance}{{(a)}{10}}
+\newlabel{fig:Eff}{{4(b)}{10}}
+\newlabel{sub@fig:Eff}{{(b)}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Left: Time performance comparison of the Intel CPU (using 4 threads), NVIDIA Tesla C2075, and NVIDIA Tesla K20c. The inset shows the same data on a logarithmic scale. Right: Efficiency of the track-finding algorithm on the GPU implementation as a function of the number of tracks present in the event.}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces The Hough transform algorithm applied to a case with curved tracks. Left: Hits from Monte Carlo simulation for curved tracks originating from the interaction point. Right: Curved tracks identified using the Hough transform. }}{10}}
+\newlabel{fig:hough_curved}{{5}{10}}
 \global\@todotoctrue
 \global\@todotoctrue
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Time performance of a CPU-based algorithm for the fitting step of the tracking. Left: Speed-up observed as a function of number of threads used for the fitting. Right: Time required as a function of the number of tracks present in the event. }}{10}}
-\newlabel{fig:FittingTime}{{6}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}New Trigger Capabilities}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {10}Summary}{10}}
-\newlabel{fig:DisplacedJetTracks}{{7(a)}{11}}
-\newlabel{sub@fig:DisplacedJetTracks}{{(a)}{11}}
-\newlabel{fig:DisplacedJetAccumulator}{{7(b)}{11}}
-\newlabel{sub@fig:DisplacedJetAccumulator}{{(b)}{11}}
-\newlabel{fig:DisplacedJetVertex}{{7(c)}{11}}
-\newlabel{sub@fig:DisplacedJetVertex}{{(c)}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Hough transform algorithm applied to a displaced jet. Left: Simulated tracks originating from a displaced jet. Center: In the parameter space, the maxima are on a single sinusoid. Right: The second Hough transform identifies the sinusoid corresponding to the jet vertex. }}{11}}
-\newlabel{fig:DisplacedJet}{{7}{11}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{11}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{11}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Hough transform algorithm applied to an event with multiple displaced jets. Left: Simulated tracks in the event. Center: The parameter space is difficult to visually interpret. Right: The second Hough transform identifies the sinusoids corresponding to the jet vertices. }}{11}}
-\newlabel{fig:DisplacedJets}{{8}{11}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Time performance of a CPU-based algorithm for the fitting step of the tracking. Left: Speed-up observed as a function of number of threads used for the fitting. Right: Time required as a function of the number of tracks present in the event. }}{11}}
+\newlabel{fig:FittingTime}{{6}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}New Trigger Capabilities}{11}}
+\newlabel{fig:DisplacedJetTracks}{{7(a)}{12}}
+\newlabel{sub@fig:DisplacedJetTracks}{{(a)}{12}}
+\newlabel{fig:DisplacedJetAccumulator}{{7(b)}{12}}
+\newlabel{sub@fig:DisplacedJetAccumulator}{{(b)}{12}}
+\newlabel{fig:DisplacedJetVertex}{{7(c)}{12}}
+\newlabel{sub@fig:DisplacedJetVertex}{{(c)}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Hough transform algorithm applied to a displaced jet. Left: Simulated tracks originating from a displaced jet. Center: In the parameter space, the maxima are on a single sinusoid. Right: The second Hough transform identifies the sinusoid corresponding to the jet vertex. }}{12}}
+\newlabel{fig:DisplacedJet}{{7}{12}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{12}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{12}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {}}}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Hough transform algorithm applied to an event with multiple displaced jets. Left: Simulated tracks in the event. Center: The parameter space is difficult to visually interpret. Right: The second Hough transform identifies the sinusoids corresponding to the jet vertices. }}{12}}
+\newlabel{fig:DisplacedJets}{{8}{12}}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Summary}{12}}
 \bibcite{Sphicas:2002gg}{1}
 \bibcite{ATLAS:2003aa}{2}
 \bibcite{Chatrchyan:2008aa}{3}
 \bibcite{Aad:2008zzm}{4}
 \bibcite{Sakulin:2007rj}{5}
 \bibcite{bib:CUDA}{6}
-\bibcite{bib:hiddenvalley}{7}
-\bibcite{Falkowski:2010cm}{8}
-\bibcite{Chang:2005ht}{9}
-\bibcite{Strassler:2006ri}{10}
-\bibcite{CMS:1994hea}{11}
-\bibcite{Dasu:2000ge}{12}
-\bibcite{bib:datamodel}{13}
-\bibcite{Khachatryan:2010pw}{14}
-\bibcite{Fruhwirth:1987fm}{15}
-\bibcite{bib:HT1}{16}
-\bibcite{bib:HT2}{17}
+\bibcite{Emeliyanov:2012mg}{7}
+\bibcite{Mattmann:2012hi}{8}
+\bibcite{Clark:2011zzb}{9}
+\bibcite{bib:hiddenvalley}{10}
+\bibcite{Falkowski:2010cm}{11}
+\bibcite{Chang:2005ht}{12}
+\bibcite{Strassler:2006ri}{13}
+\bibcite{CMS:1994hea}{14}
+\bibcite{Dasu:2000ge}{15}
+\bibcite{bib:datamodel}{16}
+\bibcite{Khachatryan:2010pw}{17}
+\bibcite{Fruhwirth:1987fm}{18}
+\bibcite{bib:HT1}{19}
+\bibcite{bib:HT2}{20}
