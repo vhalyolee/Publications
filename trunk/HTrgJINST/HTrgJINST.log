@@ -1,27 +1,19 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  21 MAY 2013 07:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/MacPorts 2012_10) (format=pdflatex 2012.8.27)  1 JUL 2013 15:28
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **HTrgJINST.tex
 (./HTrgJINST.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
-rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
-c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
-h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
-h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
-ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
-rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
-kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
- polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
-lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
-welsh, loaded.
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, lo
+aded.
 (./JINST.cls
 Document Class: JINST 2006/07/11 v1.0.1 LaTeX document class - P.D.
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 \@emptytoks=\toks14
 \symAMSa=\mathgroup4
@@ -29,17 +21,17 @@ Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
 ))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/fontenc.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/t1enc.def
+(/opt/local/share/texmf-texlive-dist/tex/latex/base/t1enc.def
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
 ))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/times.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/mathptmx.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/mathptmx.sty
 Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -75,31 +67,31 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+(/opt/local/share/texmf-texlive-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/opt/local/share/texmf-texlive-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count79
@@ -109,10 +101,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \symforjmath=\mathgroup8
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size11.clo
+(/opt/local/share/texmf-texlive-dist/tex/latex/base/size11.clo
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
-(/usr/local/texlive/2012/texmf-dist/tex/plain/misc/pdfcolor.tex)
+(/opt/local/share/texmf-texlive-dist/tex/plain/misc/pdfcolor.tex)
 \titlesk@ja=\skip41
 \titlesk@jb=\skip42
 \titlesk@jc=\skip43
@@ -132,7 +124,7 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \Jpaper@url=\box29
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 809.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1pcr.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 \c@figure=\count86
@@ -165,12 +157,12 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 Class JINST Warning: ATTENTION!!! watermark disabled. Add it with pdftk (use co
 mpilaJINSTpdflatex for instance).
 
-) (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/epsfig.sty
+) (/opt/local/share/texmf-texlive-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 \epsfxsize=\dimen114
 \epsfysize=\dimen115
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/subfigure/subfigure.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip48
 \subfigcapskip=\skip49
@@ -186,11 +178,11 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/usr/local/texlive/2012/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(/opt/local/share/texmf-texlive-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip52
 \subfig@bottom=\skip53
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen118
 \WF@size=\dimen119
 \c@WF@wrappedlines=\count98
@@ -198,7 +190,7 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \WF@everypar=\toks19
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/multirow/multirow.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen120
 )
 (./HTrgJINST.aux)
@@ -217,11 +209,13 @@ LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
 LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 31.
- (/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1ptm.fd
+
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 \big@size=\dimen121
- (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/opt/local/share/texmf-texlive-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count99
 \scratchdimen=\dimen122
@@ -234,15 +228,15 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 \MPnumerator=\count103
 \makeMPintoPDFobject=\count104
 \everyMPtoPDFconversion=\toks21
-) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+) (/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -251,22 +245,22 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/opt/local/share/texmf-texlive-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/opt/local/share/texmf-texlive-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -277,37 +271,37 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.jpg,.jpeg,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/opt/local/share/texmf-texlive-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 31
 .
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 31
 .
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 31
 .
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 31
 .
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 31.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
@@ -318,7 +312,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
 LaTeX Font Info:    Try loading font information for T1+phv on input line 31.
 
-(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/t1phv.fd
+(/opt/local/share/texmf-texlive-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
@@ -337,189 +331,174 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
  [0
 
-{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 31.
  (./HTrgJINST.toc)
 \tf@toc=\write3
 \openout3 = `HTrgJINST.toc'.
 
-
-[1] [2] [3] <figs/CMSTrigger.pdf, id=87, 722.7pt x 542.025pt>
+ [1] [2]
+[3] <figs/CMSTrigger.pdf, id=94, 722.7pt x 542.025pt>
 File: figs/CMSTrigger.pdf Graphic file (type pdf)
 
 <use figs/CMSTrigger.pdf>
-Package pdftex.def Info: figs/CMSTrigger.pdf used on input line 165.
-(pdftex.def)             Requested size: 215.1032pt x 161.3268pt.
-
-<figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no_cover_large.pdf, id=88, 501.
-875pt x 378.41376pt>
-File: figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no_cover_large.pdf Graphic
- file (type pdf)
-
-<use figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no_cover_large.pdf>
-Package pdftex.def Info: figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no_cove
-r_large.pdf used on input line 166.
-(pdftex.def)             Requested size: 172.07993pt x 129.75027pt.
+Package pdftex.def Info: figs/CMSTrigger.pdf used on input line 167.
+(pdftex.def)             Requested size: 430.20639pt x 322.65361pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 167.
-
-[4 <./figs/CMSTrigger.pdf> <./figs/Tesla_M1060_1u_Super_Micro_Front_Elevated_no
-_cover_large.pdf>]
-Underfull \vbox (badness 1221) has occurred while \output is active []
-
- [5]
-<figs/CMSTrackerLayout.pdf, id=134, 306.8504pt x 201.61423pt>
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 169.
+ [4] [5 <./figs/CMSTrigger.pdf>]
+<figs/CMSTrackerLayout.pdf, id=128, 306.8504pt x 201.61423pt>
 File: figs/CMSTrackerLayout.pdf Graphic file (type pdf)
 
 <use figs/CMSTrackerLayout.pdf>
-Package pdftex.def Info: figs/CMSTrackerLayout.pdf used on input line 237.
-(pdftex.def)             Requested size: 150.57486pt x 98.93333pt.
+Package pdftex.def Info: figs/CMSTrackerLayout.pdf used on input line 240.
+(pdftex.def)             Requested size: 430.20639pt x 282.66713pt.
 
-<figs/CMS2DLayout.pdf, id=135, 482.38318pt x 241.92282pt>
+<figs/CMS2DLayout.pdf, id=129, 482.38318pt x 241.92282pt>
 File: figs/CMS2DLayout.pdf Graphic file (type pdf)
 
 <use figs/CMS2DLayout.pdf>
-Package pdftex.def Info: figs/CMS2DLayout.pdf used on input line 239.
-(pdftex.def)             Requested size: 236.61482pt x 118.66502pt.
- [6 <./figs/CMSTrackerLayout.pdf> <./figs/CMS2DLayout.pdf>] <figs/50events_hits
-.pdf, id=167, 569.12625pt x 538.01pt>
+Package pdftex.def Info: figs/CMS2DLayout.pdf used on input line 242.
+(pdftex.def)             Requested size: 430.20639pt x 215.75728pt.
+ [6] [7 <./figs/CMSTrackerLayout.pdf> <./figs/CMS2DLayout.pdf>] <figs/50events_
+hits.pdf, id=165, 569.12625pt x 538.01pt>
 File: figs/50events_hits.pdf Graphic file (type pdf)
 
 <use figs/50events_hits.pdf>
-Package pdftex.def Info: figs/50events_hits.pdf used on input line 294.
+Package pdftex.def Info: figs/50events_hits.pdf used on input line 297.
 (pdftex.def)             Requested size: 137.66919pt x 130.14299pt.
 
-<figs/50events_accumulator.pdf, id=168, 4111.36pt x 4111.36pt>
+<figs/50events_accumulator.pdf, id=166, 4111.36pt x 4111.36pt>
 File: figs/50events_accumulator.pdf Graphic file (type pdf)
 
 <use figs/50events_accumulator.pdf>
-Package pdftex.def Info: figs/50events_accumulator.pdf used on input line 295.
+Package pdftex.def Info: figs/50events_accumulator.pdf used on input line 298.
 (pdftex.def)             Requested size: 129.06322pt x 129.04428pt.
 
-<figs/50events_hits_tracks.pdf, id=169, 569.12625pt x 538.01pt>
+<figs/50events_hits_tracks.pdf, id=167, 569.12625pt x 538.01pt>
 File: figs/50events_hits_tracks.pdf Graphic file (type pdf)
 
 <use figs/50events_hits_tracks.pdf>
-Package pdftex.def Info: figs/50events_hits_tracks.pdf used on input line 296.
+Package pdftex.def Info: figs/50events_hits_tracks.pdf used on input line 299.
 (pdftex.def)             Requested size: 137.66919pt x 130.14299pt.
- [7]
-<figs/TimePerformance.pdf, id=180, 561.09625pt x 403.5075pt>
+ [8 <./figs/50events_hits.pdf, page is rotated 90 degrees> <./figs/50events_acc
+umulator.pdf> <./figs/50events_hits_tracks.pdf, page is rotated 90 degrees>]
+<figs/TimePerformance.pdf, id=275, 561.09625pt x 403.5075pt>
 File: figs/TimePerformance.pdf Graphic file (type pdf)
 
 <use figs/TimePerformance.pdf>
-Package pdftex.def Info: figs/TimePerformance.pdf used on input line 337.
+Package pdftex.def Info: figs/TimePerformance.pdf used on input line 343.
 (pdftex.def)             Requested size: 193.59155pt x 139.21638pt.
 
-<figs/Eff.pdf, id=181, 475.7775pt x 342.27875pt>
+<figs/Eff.pdf, id=276, 475.7775pt x 342.27875pt>
 File: figs/Eff.pdf Graphic file (type pdf)
  <use figs/Eff.pdf>
-Package pdftex.def Info: figs/Eff.pdf used on input line 338.
+Package pdftex.def Info: figs/Eff.pdf used on input line 344.
 (pdftex.def)             Requested size: 193.59155pt x 139.26974pt.
-
-<figs/curved_500events_hits.pdf, id=183, 569.12625pt x 546.04pt>
+ [9]
+<figs/curved_500events_hits.pdf, id=284, 569.12625pt x 546.04pt>
 File: figs/curved_500events_hits.pdf Graphic file (type pdf)
 
 <use figs/curved_500events_hits.pdf>
-Package pdftex.def Info: figs/curved_500events_hits.pdf used on input line 357.
+Package pdftex.def Info: figs/curved_500events_hits.pdf used on input line 363.
 
 (pdftex.def)             Requested size: 193.59155pt x 185.74278pt.
 
-<figs/curved_500events_hits_tracks.pdf, id=184, 569.12625pt x 546.04pt>
+<figs/curved_500events_hits_tracks.pdf, id=285, 569.12625pt x 546.04pt>
 File: figs/curved_500events_hits_tracks.pdf Graphic file (type pdf)
 
 <use figs/curved_500events_hits_tracks.pdf>
 Package pdftex.def Info: figs/curved_500events_hits_tracks.pdf used on input li
-ne 358.
+ne 364.
 (pdftex.def)             Requested size: 193.59155pt x 185.74278pt.
 
-Underfull \vbox (badness 8038) has occurred while \output is active []
+Underfull \vbox (badness 3668) has occurred while \output is active []
 
- [8 <./figs/50events_hits.pdf, page is rotated 90 degrees> <./figs/50events_acc
-umulator.pdf> <./figs/50events_hits_tracks.pdf, page is rotated 90 degrees>]
-<figs/TimeVsThreads.pdf, id=289, 513.92pt x 369.38pt>
+ [10 <./figs/TimePerformance.pdf> <./figs/Eff.pdf> <./figs/curved_500events_hit
+s.pdf, page is rotated 90 degrees> <./figs/curved_500events_hits_tracks.pdf, pa
+ge is rotated 90 degrees>] <figs/TimeVsThreads.pdf, id=407, 513.92pt x 369.38pt
+>
 File: figs/TimeVsThreads.pdf Graphic file (type pdf)
 
 <use figs/TimeVsThreads.pdf>
-Package pdftex.def Info: figs/TimeVsThreads.pdf used on input line 372.
+Package pdftex.def Info: figs/TimeVsThreads.pdf used on input line 378.
 (pdftex.def)             Requested size: 193.59155pt x 139.14278pt.
 
-<figs/TimeVsTracks.pdf, id=290, 518.93875pt x 374.39874pt>
+<figs/TimeVsTracks.pdf, id=408, 518.93875pt x 374.39874pt>
 File: figs/TimeVsTracks.pdf Graphic file (type pdf)
 
 <use figs/TimeVsTracks.pdf>
-Package pdftex.def Info: figs/TimeVsTracks.pdf used on input line 373.
+Package pdftex.def Info: figs/TimeVsTracks.pdf used on input line 379.
 (pdftex.def)             Requested size: 193.59155pt x 139.67365pt.
- [9 <./figs/TimePerformance.pdf> <./figs/Eff.pdf> <./figs/curved_500events_hits
-.pdf, page is rotated 90 degrees> <./figs/curved_500events_hits_tracks.pdf, pag
-e is rotated 90 degrees>]
-<figs/jet1/tracks.pdf, id=418, 598.235pt x 574.145pt>
+
+<figs/jet1/tracks.pdf, id=415, 598.235pt x 574.145pt>
 File: figs/jet1/tracks.pdf Graphic file (type pdf)
 
 <use figs/jet1/tracks.pdf>
-Package pdftex.def Info: figs/jet1/tracks.pdf used on input line 401.
+Package pdftex.def Info: figs/jet1/tracks.pdf used on input line 406.
 (pdftex.def)             Requested size: 150.57486pt x 144.50833pt.
 
-<figs/jet1/accumulator.pdf, id=419, 2055.68pt x 2055.68pt>
+<figs/jet1/accumulator.pdf, id=416, 2055.68pt x 2055.68pt>
 File: figs/jet1/accumulator.pdf Graphic file (type pdf)
 
 <use figs/jet1/accumulator.pdf>
-Package pdftex.def Info: figs/jet1/accumulator.pdf used on input line 402.
+Package pdftex.def Info: figs/jet1/accumulator.pdf used on input line 407.
 (pdftex.def)             Requested size: 129.06322pt x 129.04428pt.
 
-<figs/jet1/vertex.pdf, id=420, 2055.68pt x 2055.68pt>
+<figs/jet1/vertex.pdf, id=417, 2055.68pt x 2055.68pt>
 File: figs/jet1/vertex.pdf Graphic file (type pdf)
 
 <use figs/jet1/vertex.pdf>
-Package pdftex.def Info: figs/jet1/vertex.pdf used on input line 403.
+Package pdftex.def Info: figs/jet1/vertex.pdf used on input line 408.
 (pdftex.def)             Requested size: 129.06322pt x 129.04428pt.
 
-<figs/jet2/tracks.pdf, id=421, 598.235pt x 574.145pt>
+<figs/jet2/tracks.pdf, id=418, 598.235pt x 574.145pt>
 File: figs/jet2/tracks.pdf Graphic file (type pdf)
 
 <use figs/jet2/tracks.pdf>
-Package pdftex.def Info: figs/jet2/tracks.pdf used on input line 413.
+Package pdftex.def Info: figs/jet2/tracks.pdf used on input line 418.
 (pdftex.def)             Requested size: 150.57486pt x 144.50833pt.
 
-<figs/jet2/accumulator.pdf, id=422, 2055.68pt x 2055.68pt>
+<figs/jet2/accumulator.pdf, id=419, 2055.68pt x 2055.68pt>
 File: figs/jet2/accumulator.pdf Graphic file (type pdf)
 
 <use figs/jet2/accumulator.pdf>
-Package pdftex.def Info: figs/jet2/accumulator.pdf used on input line 414.
+Package pdftex.def Info: figs/jet2/accumulator.pdf used on input line 419.
 (pdftex.def)             Requested size: 129.06322pt x 129.04428pt.
 
-<figs/jet2/vertex.pdf, id=423, 2055.68pt x 2055.68pt>
+<figs/jet2/vertex.pdf, id=420, 2055.68pt x 2055.68pt>
 File: figs/jet2/vertex.pdf Graphic file (type pdf)
 
 <use figs/jet2/vertex.pdf>
-Package pdftex.def Info: figs/jet2/vertex.pdf used on input line 415.
+Package pdftex.def Info: figs/jet2/vertex.pdf used on input line 420.
 (pdftex.def)             Requested size: 129.06322pt x 129.04428pt.
- [10 <./figs/TimeVsThreads.pdf> <./figs/TimeVsTracks.pdf>] [11 <./figs/jet1/tra
+ [11 <./figs/TimeVsThreads.pdf> <./figs/TimeVsTracks.pdf>] [12 <./figs/jet1/tra
 cks.pdf> <./figs/jet1/accumulator.pdf> <./figs/jet1/vertex.pdf> <./figs/jet2/tr
-acks.pdf> <./figs/jet2/accumulator.pdf> <./figs/jet2/vertex.pdf>] [12] (./HTrgJ
-INST.aux) ) 
+acks.pdf> <./figs/jet2/accumulator.pdf> <./figs/jet2/vertex.pdf>] [13] [14] (./
+HTrgJINST.aux) ) 
 Here is how much of TeX's memory you used:
- 3191 strings out of 493488
- 42367 string characters out of 3141326
- 98806 words of memory out of 3000000
- 6320 multiletter control sequences out of 15000+200000
+ 3190 strings out of 495063
+ 42133 string characters out of 3181831
+ 95496 words of memory out of 3000000
+ 6192 multiletter control sequences out of 15000+200000
  80920 words of font info for 122 fonts, out of 3000000 for 9000
- 957 hyphenation exceptions out of 8191
- 38i,9n,26p,511b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</us
-r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
-cal/texlive/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texl
-ive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/201
-2/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2012/texmf-dis
-t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/ty
-pe1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/ti
-mes/utmri8a.pfb>
-Output written on HTrgJINST.pdf (13 pages, 4227409 bytes).
+ 14 hyphenation exceptions out of 8191
+ 38i,9n,26p,1284b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/opt/local/share/texmf-texlive-dist/fonts/enc/dvips/base/8r.en
+c}</opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b></opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+></opt/local/share/texmf-texlive-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+></opt/local/share/texmf-texlive-dist/fonts/type1/urw/courier/ucrr8a.pfb></opt/
+local/share/texmf-texlive-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></opt/local/
+share/texmf-texlive-dist/fonts/type1/urw/symbol/usyr.pfb></opt/local/share/texm
+f-texlive-dist/fonts/type1/urw/times/utmb8a.pfb></opt/local/share/texmf-texlive
+-dist/fonts/type1/urw/times/utmr8a.pfb></opt/local/share/texmf-texlive-dist/fon
+ts/type1/urw/times/utmri8a.pfb>
+Output written on HTrgJINST.pdf (15 pages, 3995655 bytes).
 PDF statistics:
- 577 PDF objects out of 1000 (max. 8388607)
- 390 compressed objects within 4 object streams
- 65 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 582 PDF objects out of 1000 (max. 8388607)
+ 397 compressed objects within 4 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
