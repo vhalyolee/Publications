@@ -345,6 +345,11 @@ processed event.  Since this completely overlaps data transfer with computation 
 Figure~\ref{fig:TimePerformance} are for the processing of one event and exclude data transfer that would be
 overlapped with the processing of other events.  In other words these timings represent the steady state
 throughput of a production system and not the latency for processing a single event.
+Evaluation of the memory requirement from the GPU in the extreme case of pile up of about 100 interactions
+ per bunch crossing shows, that if one expect about 5000 tracks with an average number of hits per track of about 15.
+This will necessitate about  4.5 MB of memory using double precision. This amount of memory
+is far less then 6GB available by the current GPU, concluding GPU could easily be incorporated in the LHC DAQ.
+
 
 Figure~\ref{fig:Eff} shows the efficiency defined as the fraction of simulated tracks successfully
 reconstructed by the algorithm as a function of the number of tracks present in the event. As this is only a preliminary 

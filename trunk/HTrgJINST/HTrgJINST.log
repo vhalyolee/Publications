@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  9 JUL 2013 10:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  31 JUL 2013 16:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -340,12 +340,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 32.
-
-No file HTrgJINST.toc.
+ (./HTrgJINST.toc)
 \tf@toc=\write3
 \openout3 = `HTrgJINST.toc'.
 
-[1] [2] [3] <figs/CMSTrigger.pdf, id=67, 722.7pt x 542.025pt>
+
+[1] [2] [3] <figs/CMSTrigger.pdf, id=98, 722.7pt x 542.025pt>
 File: figs/CMSTrigger.pdf Graphic file (type pdf)
 
 <use figs/CMSTrigger.pdf>
@@ -353,169 +353,156 @@ Package pdftex.def Info: figs/CMSTrigger.pdf used on input line 170.
 (pdftex.def)             Requested size: 430.20639pt x 322.65361pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 172.
-
-Underfull \vbox (badness 1028) has occurred while \output is active []
-
- [4 <./figs/CMSTrigger.pdf>]
-Underfull \vbox (badness 4001) has occurred while \output is active []
-
- [5]
-<figs/CMSTrackerLayout.pdf, id=103, 306.8504pt x 201.61423pt>
+ [4] [5 <./figs/CMSTrigger.pdf>]
+<figs/CMSTrackerLayout.pdf, id=134, 306.8504pt x 201.61423pt>
 File: figs/CMSTrackerLayout.pdf Graphic file (type pdf)
 
 <use figs/CMSTrackerLayout.pdf>
 Package pdftex.def Info: figs/CMSTrackerLayout.pdf used on input line 243.
 (pdftex.def)             Requested size: 430.20639pt x 282.66713pt.
 
-<figs/CMS2DLayout.pdf, id=104, 482.38318pt x 241.92282pt>
+<figs/CMS2DLayout.pdf, id=135, 482.38318pt x 241.92282pt>
 File: figs/CMS2DLayout.pdf Graphic file (type pdf)
 
 <use figs/CMS2DLayout.pdf>
 Package pdftex.def Info: figs/CMS2DLayout.pdf used on input line 245.
 (pdftex.def)             Requested size: 430.20639pt x 215.75728pt.
-
-Underfull \vbox (badness 1383) has occurred while \output is active []
-
- [6]
-[7 <./figs/CMSTrackerLayout.pdf> <./figs/CMS2DLayout.pdf>]
-<figs/50events_hits.pdf, id=142, 569.12625pt x 538.01pt>
+ [6] [7 <./figs/CMSTrackerLayout.pdf> <./figs/CMS2DLayout.pdf>] <figs/50events_
+hits.pdf, id=170, 569.12625pt x 538.01pt>
 File: figs/50events_hits.pdf Graphic file (type pdf)
 
 <use figs/50events_hits.pdf>
 Package pdftex.def Info: figs/50events_hits.pdf used on input line 300.
 (pdftex.def)             Requested size: 137.66919pt x 130.14299pt.
 
-<figs/50events_accumulator.pdf, id=143, 4111.36pt x 4111.36pt>
+<figs/50events_accumulator.pdf, id=171, 4111.36pt x 4111.36pt>
 File: figs/50events_accumulator.pdf Graphic file (type pdf)
 
 <use figs/50events_accumulator.pdf>
 Package pdftex.def Info: figs/50events_accumulator.pdf used on input line 301.
 (pdftex.def)             Requested size: 129.06322pt x 129.04428pt.
 
-<figs/50events_hits_tracks.pdf, id=144, 569.12625pt x 538.01pt>
+<figs/50events_hits_tracks.pdf, id=172, 569.12625pt x 538.01pt>
 File: figs/50events_hits_tracks.pdf Graphic file (type pdf)
 
 <use figs/50events_hits_tracks.pdf>
 Package pdftex.def Info: figs/50events_hits_tracks.pdf used on input line 302.
 (pdftex.def)             Requested size: 137.66919pt x 130.14299pt.
  [8 <./figs/50events_hits.pdf, page is rotated 90 degrees> <./figs/50events_acc
-umulator.pdf> <./figs/50events_hits_tracks.pdf, page is rotated 90 degrees>]
-<figs/TimePerformance.pdf, id=255, 561.09625pt x 403.5075pt>
+umulator.pdf> <./figs/50events_hits_tracks.pdf, page is rotated 90 degrees>] [9
+]
+<figs/TimePerformance.pdf, id=284, 561.09625pt x 403.5075pt>
 File: figs/TimePerformance.pdf Graphic file (type pdf)
 
 <use figs/TimePerformance.pdf>
-Package pdftex.def Info: figs/TimePerformance.pdf used on input line 357.
+Package pdftex.def Info: figs/TimePerformance.pdf used on input line 362.
 (pdftex.def)             Requested size: 193.59155pt x 139.21638pt.
 
-<figs/Eff.pdf, id=256, 475.7775pt x 342.27875pt>
+<figs/Eff.pdf, id=285, 475.7775pt x 342.27875pt>
 File: figs/Eff.pdf Graphic file (type pdf)
  <use figs/Eff.pdf>
-Package pdftex.def Info: figs/Eff.pdf used on input line 358.
+Package pdftex.def Info: figs/Eff.pdf used on input line 363.
 (pdftex.def)             Requested size: 193.59155pt x 139.26974pt.
 
-<figs/curved_500events_hits.pdf, id=258, 569.12625pt x 546.04pt>
+<figs/curved_500events_hits.pdf, id=287, 569.12625pt x 546.04pt>
 File: figs/curved_500events_hits.pdf Graphic file (type pdf)
 
 <use figs/curved_500events_hits.pdf>
-Package pdftex.def Info: figs/curved_500events_hits.pdf used on input line 377.
+Package pdftex.def Info: figs/curved_500events_hits.pdf used on input line 382.
 
 (pdftex.def)             Requested size: 193.59155pt x 185.74278pt.
 
-<figs/curved_500events_hits_tracks.pdf, id=259, 569.12625pt x 546.04pt>
+<figs/curved_500events_hits_tracks.pdf, id=288, 569.12625pt x 546.04pt>
 File: figs/curved_500events_hits_tracks.pdf Graphic file (type pdf)
 
 <use figs/curved_500events_hits_tracks.pdf>
 Package pdftex.def Info: figs/curved_500events_hits_tracks.pdf used on input li
-ne 378.
+ne 383.
 (pdftex.def)             Requested size: 193.59155pt x 185.74278pt.
- [9]
-<figs/TimeVsThreads.pdf, id=268, 513.92pt x 369.38pt>
+
+<figs/TimeVsThreads.pdf, id=290, 513.92pt x 369.38pt>
 File: figs/TimeVsThreads.pdf Graphic file (type pdf)
 
 <use figs/TimeVsThreads.pdf>
-Package pdftex.def Info: figs/TimeVsThreads.pdf used on input line 392.
+Package pdftex.def Info: figs/TimeVsThreads.pdf used on input line 397.
 (pdftex.def)             Requested size: 193.59155pt x 139.14278pt.
 
-<figs/TimeVsTracks.pdf, id=269, 518.93875pt x 374.39874pt>
+<figs/TimeVsTracks.pdf, id=291, 518.93875pt x 374.39874pt>
 File: figs/TimeVsTracks.pdf Graphic file (type pdf)
 
 <use figs/TimeVsTracks.pdf>
-Package pdftex.def Info: figs/TimeVsTracks.pdf used on input line 393.
+Package pdftex.def Info: figs/TimeVsTracks.pdf used on input line 398.
 (pdftex.def)             Requested size: 193.59155pt x 139.67365pt.
- [10 <./figs/TimePerformance.pdf> <./figs/Eff.pdf> <./figs/curved_500events_hit
-s.pdf, page is rotated 90 degrees> <./figs/curved_500events_hits_tracks.pdf, pa
-ge is rotated 90 degrees>]
-<figs/jet1/tracks.pdf, id=396, 598.235pt x 574.145pt>
+ [10 <./figs/TimePerformance.pdf> <./figs/Eff.pdf>]
+[11 <./figs/curved_500events_hits.pdf, page is rotated 90 degrees> <./figs/curv
+ed_500events_hits_tracks.pdf, page is rotated 90 degrees> <./figs/TimeVsThreads
+.pdf> <./figs/TimeVsTracks.pdf>]
+<figs/jet1/tracks.pdf, id=458, 598.235pt x 574.145pt>
 File: figs/jet1/tracks.pdf Graphic file (type pdf)
 
 <use figs/jet1/tracks.pdf>
-Package pdftex.def Info: figs/jet1/tracks.pdf used on input line 420.
+Package pdftex.def Info: figs/jet1/tracks.pdf used on input line 425.
 (pdftex.def)             Requested size: 150.57486pt x 144.50833pt.
 
-<figs/jet1/accumulator.pdf, id=397, 2055.68pt x 2055.68pt>
+<figs/jet1/accumulator.pdf, id=459, 2055.68pt x 2055.68pt>
 File: figs/jet1/accumulator.pdf Graphic file (type pdf)
 
 <use figs/jet1/accumulator.pdf>
-Package pdftex.def Info: figs/jet1/accumulator.pdf used on input line 421.
+Package pdftex.def Info: figs/jet1/accumulator.pdf used on input line 426.
 (pdftex.def)             Requested size: 129.06322pt x 129.04428pt.
 
-<figs/jet1/vertex.pdf, id=398, 2055.68pt x 2055.68pt>
+<figs/jet1/vertex.pdf, id=460, 2055.68pt x 2055.68pt>
 File: figs/jet1/vertex.pdf Graphic file (type pdf)
 
 <use figs/jet1/vertex.pdf>
-Package pdftex.def Info: figs/jet1/vertex.pdf used on input line 422.
+Package pdftex.def Info: figs/jet1/vertex.pdf used on input line 427.
 (pdftex.def)             Requested size: 129.06322pt x 129.04428pt.
 
-<figs/jet2/tracks.pdf, id=399, 598.235pt x 574.145pt>
+<figs/jet2/tracks.pdf, id=461, 598.235pt x 574.145pt>
 File: figs/jet2/tracks.pdf Graphic file (type pdf)
 
 <use figs/jet2/tracks.pdf>
-Package pdftex.def Info: figs/jet2/tracks.pdf used on input line 432.
+Package pdftex.def Info: figs/jet2/tracks.pdf used on input line 437.
 (pdftex.def)             Requested size: 150.57486pt x 144.50833pt.
 
-<figs/jet2/accumulator.pdf, id=400, 2055.68pt x 2055.68pt>
+<figs/jet2/accumulator.pdf, id=462, 2055.68pt x 2055.68pt>
 File: figs/jet2/accumulator.pdf Graphic file (type pdf)
 
 <use figs/jet2/accumulator.pdf>
-Package pdftex.def Info: figs/jet2/accumulator.pdf used on input line 433.
+Package pdftex.def Info: figs/jet2/accumulator.pdf used on input line 438.
 (pdftex.def)             Requested size: 129.06322pt x 129.04428pt.
 
-<figs/jet2/vertex.pdf, id=401, 2055.68pt x 2055.68pt>
+<figs/jet2/vertex.pdf, id=463, 2055.68pt x 2055.68pt>
 File: figs/jet2/vertex.pdf Graphic file (type pdf)
 
 <use figs/jet2/vertex.pdf>
-Package pdftex.def Info: figs/jet2/vertex.pdf used on input line 434.
+Package pdftex.def Info: figs/jet2/vertex.pdf used on input line 439.
 (pdftex.def)             Requested size: 129.06322pt x 129.04428pt.
- [11 <./figs/TimeVsThreads.pdf> <./figs/TimeVsTracks.pdf>] [12 <./figs/jet1/tra
-cks.pdf> <./figs/jet1/accumulator.pdf> <./figs/jet1/vertex.pdf> <./figs/jet2/tr
-acks.pdf> <./figs/jet2/accumulator.pdf> <./figs/jet2/vertex.pdf>] [13] [14] (./
-HTrgJINST.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [12 <./figs/jet1/tracks.pdf> <./figs/jet1/accumulator.pdf> <./figs/jet1/vertex
+.pdf> <./figs/jet2/tracks.pdf> <./figs/jet2/accumulator.pdf> <./figs/jet2/verte
+x.pdf>] [13] [14] (./HTrgJINST.aux) ) 
 Here is how much of TeX's memory you used:
- 3191 strings out of 493488
- 42033 string characters out of 3141326
- 98792 words of memory out of 3000000
+ 3194 strings out of 493488
+ 42067 string characters out of 3141326
+ 96804 words of memory out of 3000000
  6318 multiletter control sequences out of 15000+200000
- 79813 words of font info for 121 fonts, out of 3000000 for 9000
+ 80920 words of font info for 122 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,9n,26p,511b,299s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
-ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
-ve/2012/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2012/
-texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2012/texmf-d
-ist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2012/texmf-dist/fonts/t
-ype1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/t
-imes/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri
-8a.pfb>
-Output written on HTrgJINST.pdf (15 pages, 3995189 bytes).
+{/usr/local/texlive/2012/texmf-dist/fonts/
+enc/dvips/base/8r.enc}</usr/local/texlive/2012/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/courier/u
+crr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.p
+fb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texliv
+e/2012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2012/tex
+mf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on HTrgJINST.pdf (15 pages, 3997037 bytes).
 PDF statistics:
- 566 PDF objects out of 1000 (max. 8388607)
- 381 compressed objects within 4 object streams
+ 587 PDF objects out of 1000 (max. 8388607)
+ 401 compressed objects within 5 object streams
  71 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
