@@ -1,4 +1,4 @@
-%\pdfoutput=1
+\pdfoutput=1
 \documentclass{JINST}
 \let\ifpdf\relax
 
@@ -88,24 +88,16 @@ for more general-purpose computing without the limitations of using a graphics A
  A modern GPU can simultaneously execute many thousands of computations in parallel, and an application using 
 effective collaboration between the CPU and the GPU can see dramatic acceleration in algorithm execution.
 
-A particularly good application for this technology would be to try executing machine vision
+A particularly good application for this technology would be executing machine vision
 and pattern recognition algorithms on detector data. These algorithms are often parallel
 by their very nature, and the highly controlled data produced by a particle physics detector
 reduces the pattern recognition task to its purest form.  From the physics perspective,
 such an enhancement of the trigger capabilities would allow inclusion of new tracking triggers;
-for example, the selection of events with multiple displaced vertices at any location in the silicon 
-tracker, which would be a ``smoking gun'' for new topological
+for example, the selection of events with multiple displaced
+vertices at any location in the silicon tracker, which would be a ``smoking gun'' for new topological
 signatures not predicted by the Standard Model. Such a new tracking algorithm would allow
 augmentation of the existing trigger with new types of trigger filters to select events with topological signatures
-that are currently not recorded efficiently. 
-
-One should note, this paper does not imply that executing machine vision
-and pattern recognition algorithms  is more appropriate for GPU compare to the
- conventional Combinatorial Track Finder algorithms used in high energy physics.
-But merely a complementary way that was first studied by the authors  due to the similarity of 
-the problem with computer graphic image analysis. Computer graphic has proven 
-successful in analysis and looking for feature in image processing using
-Hough Transform on the GPUs.
+that are currently not recorded efficiently.
 
 In the following, a description of the physics motivation behind GPU enhancement of the HLT is provided.  This
 includes a brief description of the existing High Level Trigger and the tracking algorithm used, and the GPU
@@ -127,8 +119,7 @@ The new tracking algorithm would also introduce new possible trigger paths that 
  processing time that would be required using CPUs alone. The robust parallel processing of the tracking on the 
 hybrid CPU/GPU system would allow reconstruction of not only charged prompt tracks from the interaction point
 but also reconstruction of displaced vertices in the tracker far beyond what is possible in both CMS and ATLAS.
-Therefore, the tracking algorithm using the GPU will enrich the physics program and allow for searches on models
- with new topological signatures that were not possible or suppressed before.
+Therefore, the tracking algorithm using the GPU will enrich the physics program and allow for searches on models with new topological signatures that were not possible or suppressed before.
 
 Only a few of the large selection of topological models can be described here. An example of an
 interesting class of models which would benefit from such triggers are hidden-valley models~\cite{bib:hiddenvalley},~\cite{Han:2007ae},
@@ -137,8 +128,7 @@ in which a new confining gauge group is added to the standard model. The resulti
 common. In addition, displaced vertices and missing energy are possible. Accounting for LEP constraints, LHC production 
 cross-sections were estimated to typically be in the 1-100 fb range, though they can be larger.
 
-New tracking triggers would permit selection at the HLT level of events where a Higgs-like particle decays with a substantial branching 
-fraction to long-lived neutral particles decaying
+New tracking triggers would permit selection at the HLT level of events where a Higgs-like particle decays with a substantial branching fraction to long-lived neutral particles decaying
 at macroscopic distances from the primary vertex~\cite{bib:hiddenvalley} in the tracker. The limited experimental constraints on light neutral long-lived particles
 suggests that one should probably not be surprised if a Higgs-like particle reveals itself  through such decays. As the lifetimes of these resonances 
 are not constrained, decays at centimeter and meter scales are equally possible. Each Higgs-like decay may produce two or more resonances 
@@ -297,13 +287,13 @@ dramatically and qualitatively different in nature to the current CTF, thus enha
 vision applications that differs from the CTF approach in that it does not operate on
 localized features of a data set.  Rather, the technique is in some sense more
 holistic, operating on an entire image as a whole. 
-The technique is described at length in existing literature~\cite{bib:HT1},~\cite{bib:HT2},~\cite{bib:HT3},
+The technique is described at length in existing literature~\cite{bib:HT1},~\cite{bib:HT2},
 but the concept as it would be applicable to the
 tracking problem is to consider the parameterization of any given track.  Any given set of hits
 observed in the detector, for example, the simulated straight line track data shown in Figure~\ref{fig:hits},
 can correspond to many different possible tracks in parameter space as shown in Figure~\ref{fig:accumulator}.
 When integrated over the entire data set, peaks appear in parameter space at the values corresponding to the actual, 
-physical trajectories as shown in Figure~\ref{fig:tracks}. 
+physical trajectories as shown in Figure~\ref{fig:tracks}.
 
 \begin{figure}[!Hhtb]
 \begin{center}
@@ -316,12 +306,6 @@ physical trajectories as shown in Figure~\ref{fig:tracks}.
     Candidate tracks identified from finding local maxima in the parameter space.\label{fig:hough}}
 \end{center}
 \end{figure}
-
-One should note, The Hough Transform approach as presented above is computationally extensive.
-Hence, variations of the standard Hough transform method ~\cite{bib:LHT},~\cite{bib:AHT} 
-were previously  used for the purpose of track finding in High Energy 
-Physics~\cite{bib:slac}-~\cite{bib:cosmicmu}.
-
 
 \section{Preliminary Results}
 
@@ -361,10 +345,11 @@ processed event.  Since this completely overlaps data transfer with computation 
 Figure~\ref{fig:TimePerformance} are for the processing of one event and exclude data transfer that would be
 overlapped with the processing of other events.  In other words these timings represent the steady state
 throughput of a production system and not the latency for processing a single event.
-Evaluation of the memory requirement from the GPU in the extreme case of pile up of about 100 interactions
- per bunch crossing shows, that if one expect about 5000 tracks with an average number of hits per track of about 15.
-This will necessitate about  4.5 MB of memory using double precision. This amount of memory
-is far less then 6GB available by the current GPU, concluding GPU could easily be incorporated in the LHC DAQ.
+Evaluation of the memory requirement for the GPU in a case with an extreme pileup scenario of 100 
+interactions per bunch crossing shows that, if one expects about 5000 tracks with an average of 15 
+hits per track, this will require approximately 4.5 MB of memory using double precision. This amount 
+of memory is far less than the 6 GB available in the current GPU, so we conclude that the GPU could 
+easily be incorporated in the LHC DAQ.
 
 
 Figure~\ref{fig:Eff} shows the efficiency defined as the fraction of simulated tracks successfully
@@ -391,7 +376,8 @@ space representing the x and y location of the center plus a third parameter for
 Therefore, where possible the number of parameters should be minimized to reduce the computation time.  Figure~\ref{fig:hough_curved} shows
 an example of results for the Hough transform implementation used for identifying curved tracks.  In this case, the
 curved tracks are constrained to pass through the interaction point, reducing the parameter space to a two-dimensional space
-similar to that used for straight tracks.  Curved, displaced tracks would require a three-parameter space, which has not yet been implemented and optimized.
+similar to that used for straight tracks. This algorithm produces an efficiency about 86\% and comparable purity.  Curved, displaced tracks would require a
+ three-parameter space, which has not yet been implemented and optimized.
 
 \begin{figure}[!Hhtb]
 \begin{center}
@@ -473,7 +459,7 @@ not only permits simultaneously finding any combination of prompt and non-prompt
 algorithms for exotic phenomena such as highly-displaced jets or black holes. These new topologies would represent a
 ``smoking gun'' for new physics, and so extending the trigger algorithm to be able to efficiently recognize them would
 dramatically increase the reach of physics at the LHC. The proposed tracking algorithm would not replace the existing
-combinatoric track finder, but will enhance its capabilities at the trigger level. The results presented here are
+combinatoric track finger, but will enhance its capabilities at the trigger level. The results presented here are
 preliminary results meant to demonstrate the feasibility of the algorithm and its potential impact. Although it is
 feasible to complete the testing of the new triggers proposed by the end of the shutdown, extensive work must be done to
 improve tracking efficiency and purity for the general full tracking algorithm. In addition,
@@ -652,67 +638,9 @@ February 13--17, 2006 Mumbai, India
 Proc. Int. Conf. High Energy Accelerators and Instrumentation, 1959.
 %
 %
-\bibitem{bib:HT2} P. Hough,
-\emph{Method and mean for recognizing complex patterns}, 
-United States Patent 3069654, 1962
-
-\bibitem{bib:HT3} Gonzalez, R.C. and Woods, R.E., 
+\bibitem{bib:HT2} Gonzalez, R.C. and Woods, R.E., 
 \emph{Digital Image Processing},
 Prentice Hall, 1993.
-
-
-\bibitem{bib:LHT} M. Ohlsson, C. Peterson. 
-\emph{Track ﬁnding with deformable templates},
- Computer Physics Communication, v. 71, pp. 77-98, 1992.
-
-\bibitem{bib:AHT} J. Illingworth. 
-\emph{The adaptive Hough transform}, 
-Trans. Pattern Analysis and Machine Intelligence, v. 9, 5 pp.. 690-697, 1987
-
-
-\bibitem{bib:slac} S. J. Bailey, G. W. Brandenburg, N. Felt, T. Fries, S. Harder, M. Morii, J. N. Oliver, N. B. Sinev, E. Won,
-\emph{Rapid 3D track reconstruction with the BABAR trigger upgrade},
- inProc. IEEE Nuclear Science Symp., 2003, pp. 1288–1291.
-
-\bibitem{bib:Gesualdi2007} Gesualdi, Aline R. and Seixas, Jos{\'e} M. and Albuquerque, M\'{a}rcio P.,
-\emph{Straight-line Track Reconstruction in 3D Images Using Adaptive Morphological Hough Transform},
- Proceedings of the Ninth IASTED International Conference on Signal and Image Processing , 2007.
-
-
-%\bibitem{bib:TLV} D.~Primor, H.~Messer and G.~Mikenberg,
-%\emph{Local tracking in the ATLAS muon spectrometer},
-%CERN-THESIS-2007-103.
-%Tel Aviv : Zandman-Slaner Graduate School of Engineering, 2007. - 165 p.
-
-\bibitem{bib:Weizmann} D. Primor, G. Mikenberg, and H. Messer,
-\emph{Muon detection in the ATLAS CSC detector},
- IEEE Trans. Nucl. Sci., vol. 54, no. 3, pp. 634–642, Jun. 2007
-
-
-\bibitem{bib:TLV} N.~Amram, and E.~Etzion,
-\emph{Hough Transform Track Reconstruction in the Cathode Strip Chambers in ATLAS},
-CERN-THESIS-2008-062.
-
-
-
-\bibitem{bib:cosmicmu} L.M.~de A. Filho, and J.M.~de Seixas,
-\emph{Combining hough transform and optimal filtering for efficient cosmic ray detection with a hadronic calorimeter},
-PoS ACAT08 (2008) 095.
-
-
-
-% {SIP '07},
-% year = {2007},
-% isbn = {978-0-88986-676-8},
-% location = {Honolulu, Hawaii},
-% pages = {196--201},
-% numpages = {6},
-% url = {http://dl.acm.org/citation.cfm?id=1659892.1659931},
-% acmid = {1659931},
-% publisher = {ACTA Press},
-% address = {Anaheim, CA, USA},
-% keywords = {ATLAS detector, adaptive hough transform, hough transform, morphological mask, track reconstruction},
-
 
 \end{thebibliography}
 
