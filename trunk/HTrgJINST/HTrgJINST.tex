@@ -88,7 +88,7 @@ for more general-purpose computing without the limitations of using a graphics A
  A modern GPU can simultaneously execute many thousands of computations in parallel, and an application using 
 effective collaboration between the CPU and the GPU can see dramatic acceleration in algorithm execution.
 
-A particularly good application for this technology would be executing machine vision
+A particularly good application for this technology would be to try executing machine vision
 and pattern recognition algorithms on detector data. These algorithms are often parallel
 by their very nature, and the highly controlled data produced by a particle physics detector
 reduces the pattern recognition task to its purest form.  From the physics perspective,
@@ -98,6 +98,13 @@ vertices at any location in the silicon tracker, which would be a ``smoking gun'
 signatures not predicted by the Standard Model. Such a new tracking algorithm would allow
 augmentation of the existing trigger with new types of trigger filters to select events with topological signatures
 that are currently not recorded efficiently.
+
+One should note that this paper does not imply that executing machine vision and pattern recognition 
+algorithms is necessarily more appropriate for GPUs compared to the conventional Combinatorial Track 
+Finder algorithms used in high energy physics. Rather, it is a complementary way that was first studied
+ by the authors due to the similarity of the problem with computer image analysis. These techniques have
+ proven successful in image processing using the Hough transform on GPUs.
+
 
 In the following, a description of the physics motivation behind GPU enhancement of the HLT is provided.  This
 includes a brief description of the existing High Level Trigger and the tracking algorithm used, and the GPU
@@ -287,7 +294,7 @@ dramatically and qualitatively different in nature to the current CTF, thus enha
 vision applications that differs from the CTF approach in that it does not operate on
 localized features of a data set.  Rather, the technique is in some sense more
 holistic, operating on an entire image as a whole. 
-The technique is described at length in existing literature~\cite{bib:HT1},~\cite{bib:HT2},
+The technique is described at length in existing literature~\cite{bib:HT1},~\cite{bib:HT2},~\cite{bib:HT3},
 but the concept as it would be applicable to the
 tracking problem is to consider the parameterization of any given track.  Any given set of hits
 observed in the detector, for example, the simulated straight line track data shown in Figure~\ref{fig:hits},
@@ -298,7 +305,7 @@ physical trajectories as shown in Figure~\ref{fig:tracks}.
 \begin{figure}[!Hhtb]
 \begin{center}
   \subfigure[]{\includegraphics[width=0.32\textwidth]{figs/50events_hits.pdf} \label{fig:hits}}
-  \subfigure[]{\includegraphics[width=0.30\textwidth]{figs/50events_accumulator.pdf} \label{fig:accumulator}}
+  \subfigure[]{\includegraphics[width=0.30\textwidth]{figs/50events_accumulator.pdf} \label{fig:accumulator}} 
   \subfigure[]{\includegraphics[width=0.32\textwidth]{figs/50events_hits_tracks.pdf} \label{fig:tracks}}
   \caption{The Hough transform algorithm applied to a simple example. Left: Hits in a simulated event with 50
     straight-line tracks and 10 hits per track. Center: Each hit results in a sinusoidal curve in the parameter
@@ -306,6 +313,12 @@ physical trajectories as shown in Figure~\ref{fig:tracks}.
     Candidate tracks identified from finding local maxima in the parameter space.\label{fig:hough}}
 \end{center}
 \end{figure}
+
+
+One should note, The Hough Transform approach as presented above is computationally expensive.
+Hence, variations of the standard Hough transform method ~\cite{bib:LHT},~\cite{bib:AHT} 
+were previously  used for the purpose of track finding in High Energy Physics~\cite{bib:slac}-~\cite{bib:cosmicmu}.
+
 
 \section{Preliminary Results}
 
@@ -633,14 +646,63 @@ February 13--17, 2006 Mumbai, India
   Nucl.\ Instrum.\ Meth.\ A {\bf 262}, 444 (1987).
   %%CITATION = NUIMA,A262,444;%%
 %
+%
 \bibitem{bib:HT1}P.~V.~C. Hough, 
 \emph{Machine Analysis of Bubble Chamber Pictures}, 
 Proc. Int. Conf. High Energy Accelerators and Instrumentation, 1959.
 %
 %
-\bibitem{bib:HT2} Gonzalez, R.C. and Woods, R.E., 
+\bibitem{bib:HT2} P. Hough,
+\emph{Method and mean for recognizing complex patterns}, 
+United States Patent 3069654, 1962
+%
+%
+\bibitem{bib:HT3} Gonzalez, R.C. and Woods, R.E., 
 \emph{Digital Image Processing},
 Prentice Hall, 1993.
+%
+%
+\bibitem{bib:LHT} M. Ohlsson, C. Peterson. 
+\emph{Track ﬁnding with deformable templates},
+ Computer Physics Communication, v. 71, pp. 77-98, 1992.
+%
+%
+\bibitem{bib:AHT} J. Illingworth. 
+\emph{The adaptive Hough transform}, 
+Trans. Pattern Analysis and Machine Intelligence, v. 9, 5 pp.. 690-697, 1987
+%
+%
+\bibitem{bib:slac} S. J. Bailey, G. W. Brandenburg, N. Felt, T. Fries, S. Harder, M. Morii, J. N. Oliver, N. B. Sinev, E. Won,
+\emph{Rapid 3D track reconstruction with the BABAR trigger upgrade},
+ inProc. IEEE Nuclear Science Symp., 2003, pp. 1288–1291.
+%
+%
+\bibitem{bib:Gesualdi2007} Gesualdi, Aline R. and Seixas, Jos{\'e} M. and Albuquerque, M\'{a}rcio P.,
+\emph{Straight-line Track Reconstruction in 3D Images Using Adaptive Morphological Hough Transform},
+ Proceedings of the Ninth IASTED International Conference on Signal and Image Processing , 2007.
+%
+%
+%\bibitem{bib:TLV} D.~Primor, H.~Messer and G.~Mikenberg,
+%\emph{Local tracking in the ATLAS muon spectrometer},
+%CERN-THESIS-2007-103.
+%Tel Aviv : Zandman-Slaner Graduate School of Engineering, 2007. - 165 p.
+%
+%
+\bibitem{bib:Weizmann} D. Primor, G. Mikenberg, and H. Messer,
+\emph{Muon detection in the ATLAS CSC detector},
+ IEEE Trans. Nucl. Sci., vol. 54, no. 3, pp. 634–642, Jun. 2007
+%
+%
+\bibitem{bib:TLV} N.~Amram, and E.~Etzion,
+\emph{Hough Transform Track Reconstruction in the Cathode Strip Chambers in ATLAS},
+CERN-THESIS-2008-062.
+%
+%
+\bibitem{bib:cosmicmu} L.M.~de A. Filho, and J.M.~de Seixas,
+\emph{Combining hough transform and optimal filtering for efficient cosmic ray detection with a hadronic calorimeter},
+PoS ACAT08 (2008) 095.
+
+
 
 \end{thebibliography}
 
