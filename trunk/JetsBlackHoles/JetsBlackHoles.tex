@@ -50,8 +50,8 @@ While compute performance may increase around 40\% per year in accordance with M
 
 \begin{figure}[!Hhtb]
 \begin{center}
-	\includegraphics[width=1.0\textwidth]{figs/Core_i7_die.pdf}
-	\caption{Intel Core i7 die showing major components of the processor (image from Intel). \label{fig:core_i7_die}}
+\includegraphics[width=0.75\textwidth]{figs/Core_i7_die.pdf}
+\caption{Intel Core i7 die showing major components of the processor (image from Intel). \label{fig:core_i7_die}}
 \end{center}
 \end{figure}
 
@@ -73,7 +73,7 @@ Regardless of whether the future is GPUs or the architecturally similar Xeon Phi
 
 \section{Hough Transform Algorithm}
 
-As an example of implementing a computationally intensive algorithm on a massively parallel processor, previous work has implemented the Hough transform on NVIDIA GPUs using CUDA.  The Hough transform is an image processing algorithm for feature detection that considers all possible instances of a candidate feature (line, circle, etc.).  Each possible instance of a feature receives votes in parameter space based on how well the input data matches with that instance.  More votes for a candidate feature means it is more likely to be a true feature in the input data.  Final determination of features then amounts to finding the local maxima in the parameter space.
+As an example of implementing a computationally intensive algorithm on a massively parallel processor the authors have previously developed an implementation of the Hough transform using CUDA.  The Hough transform is an image processing algorithm for feature detection that considers all possible instances of a feature (line, circle, etc.).  Each possible instance of a feature starts with zero votes in the parameter space, and then for each piece of input data votes are added to the feature instances that would include that input data.  After all input data has been processed the votes in the parameter space are processed.  Locations in the parameter space with more votes are likely to be actual features in the input data so this step amounts to looking for local maxima in the parameter space.  Once candidate features have been identified more expensive computations can be applied to confirm the existence of the feature.
 
 \begin{figure}[!Hhtb]
 \begin{center}
@@ -87,16 +87,59 @@ As an example of implementing a computationally intensive algorithm on a massive
 \end{center}
 \end{figure}
 
-One advantage of the Hough transform is that it is tolerant to missing data or data that does not exactly fit the candidate features.  This could occur for example if there is noise in the data.
+One advantage of the Hough transform is that it is tolerant to missing data or data that does not exactly fit the candidate features.  This could occur if there is noise in the data, or if the resolution of the data results in features that cannot be perfectly represented with a given computational discretization.  The downside of this robustness is that the Hough transform is computationally expensive.  However, the implementation using the GPU has demonstrated significant performance advantages compared to a multithreaded CPU implementation.  This performance comparison was made using a self developed CPU implementation because typical implementations such as the one in Intel MKL are sequential implementations that do not utilize multicore CPUs.  It was felt that the multithreaded CPU implementation was a more fair way to compare performance, but self implementations can sometimes be biased.  Therefore, additional CPU performance optimizations have been implemented in the form of using AVX intrinsics and improvements to the OpenMP parallelization.  As shown in Figure~\ref{fig:TimePerformance} the combination of improvements resulted in approximately a 40\% decrease in the runtime for the CPU implementation.
+
+\begin{figure}[!Hhtb]
+\begin{center}
+\includegraphics[width=0.75\textwidth]{figs/TimePerformance.pdf} 
+\caption{Time performance of old and new CPU implementations compared to NVIDIA Tesla C2075 and K20c.  Intel Core i7-3770 CPU running a multithreaded implementation.\label{fig:TimePerformance}}
+\end{center}
+\end{figure}
+
+It is worth mentioning that while the use of AVX has the potential for an 8x improvement when using single precision floating point, only improving the performance by 40\% was not unexpected for this code.  That is because the previous CPU implementation sought to minimize expensive computations by ensuring that redundant computations were moved outside of loops and intermediate results reused where possible.  These existing optimizations meant the implementation was limited more by memory access operations rather than the computational rate.  It is always useful to understand what aspect(s) of the hardware, such as computations or data access, limit the performance of an algorithm so that time spent on implementing optimizations is used effectively.
 
 \section{Jet and Black Hole Detection}
 
-New stuff ....
+Computational approach: two HT
+
+
+\begin{figure}[!Hhtb]
+\begin{center}
+	\includegraphics[width=0.35\textwidth]{figs/jet2/tracks.pdf}
+	\includegraphics[width=0.30\textwidth]{figs/jet2/accumulator.pdf}
+	\includegraphics[width=0.30\textwidth]{figs/jet2/vertex.pdf}
+	\caption{Hough transform algorithm applied to an event with multiple displaced jets. Left: Simulated
+	tracks in the event. Center: The parameter space is difficult to visually interpret. Right: The
+	second Hough transform identifies the sinusoids corresponding to the jet vertices.
+	\label{fig:DisplacedJets}}
+\end{center}
+\end{figure}
 
 \section{Results}
 
-Figures, tables, etc.
+performance
+
+efficiency (and maybe purity) versus number of tracks at a given singularity
+
+efficiency (and maybe purity) versus total number of singularities
+
+efficiency (and maybe purity) versus distance from interaction point
+
+results with singularities plus normal tracks from the interaction point
+
 
 \section{Summary}
+
+Improvements have been made on CPU implementation of HT to better quantify relative performance of CPU and GPU implementations.  GPU implementation is still approximately 60x faster than a multithreaded CPU implementation.
+
+Extended usage of HT for detecting new and rare physics phenomena such as displaced jets and black holes.
+
+Massively parallel processor still has advantage in terms of absolute performance.
+
+Further focus on efficiency and/or purity improvements?
+
+Should we do a more formal economic analysis for cost of hardware, operating costs, etc.?  It's hard to account for hardware costs because no one pays retail and lots of sales deals get negotiated.  However, the operating costs could be quantified by plugging computers into power monitors to look at performance per Watt for example.
+
+Would like to investigate performance of Xeon Phi for HT?
 
 \end{document}
