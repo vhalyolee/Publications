@@ -126,7 +126,7 @@ As a demonstration of how computationally intensive 2D tracking algorithms can t
 \end{center}
 \end{figure}
 
-One advantage of the Hough transform is that it is tolerant to missing data or data that does not exactly fit the candidate features.  This could occur if there is noise in the data, or if the resolution of the data results in features that cannot be perfectly represented with a given computational discretization.  The downside of this robustness is that the Hough transform is computationally expensive.  However, the implementation using the GPU has demonstrated significant performance advantages compared to a multithreaded CPU implementation.  This performance comparison was made using a self-developed CPU implementation because typical implementations such as the one in Intel MKL are sequential implementations that do not utilize multicore CPUs.  It was felt that the multithreaded CPU implementation was a more fair way to compare performance, but self-implementations can sometimes be biased.  Therefore, additional CPU performance optimizations have been implemented in the form of using AVX intrinsics and improvements to the OpenMP parallelization.
+One advantage of the Hough transform is that it is tolerant to missing data or data that does not exactly fit the candidate features.  This could occur if there is noise in the data, or if the resolution of the data results in features that cannot be perfectly represented with a given computational discretization.  The downside of this robustness is that the Hough transform is computationally expensive.  However, the implementation using the GPU has demonstrated significant performance advantages compared to a multithreaded CPU implementation.  This performance comparison was made using a self-developed CPU implementation because typical implementations such as the one in the Intel Integrated Performance Primitives (IPP) library are sequential implementations that do not utilize multicore CPUs.  It was felt that the multithreaded CPU implementation was a more fair way to compare performance, but self-implementations can sometimes be biased.  Therefore, additional CPU performance optimizations have been implemented in the form of using AVX intrinsics and improvements to the OpenMP parallelization.
 
 Sample input data was generated using a Monte Carlo simulation of a simple detector model where only the transverse plane is considered.  The model contains a simulated beam pipe with a radius of 3.0 cm surrounded by ten concentric, evenly-spaced tracking layers with an overall radius of 110.0 cm.  A hit resolution of 0.4 mm in each direction is used.
 
@@ -135,7 +135,7 @@ As shown in Figure~\ref{fig:TimePerformance} the combination of improvements res
 \begin{figure}[!Hhtb]
 \begin{center}
 \includegraphics[width=0.75\textwidth]{figs/TimePerformance.pdf} 
-\caption{Time performance of old and new CPU implementations compared to NVIDIA Tesla C2075 and K20c. 
+\caption{Time performance of old and new CPU implementations compared to NVIDIA Tesla C2075 and K20c GPUs. 
  Intel Core i7-3770 CPU running a multithreaded implementation.\label{fig:TimePerformance}}
 \end{center}
 \end{figure}
@@ -181,7 +181,7 @@ In Figure~\ref{fig:eff_num_tracks_per_singularity} results for the efficiency of
 \begin{minipage}[t]{8cm}
 \begin{center}
 \includegraphics[width=0.8 \textwidth]{figs/performance.pdf}
- \caption{Time performance of the tracking plus displaced jet detection algorithm using an NVIDIA Tesla K20c.  
+ \caption{Time performance of the tracking plus displaced jet detection algorithm using an NVIDIA Tesla K20c GPU.  
           Ten percent of the tracks are associated with a displaced jet. \label{fig:performance}}
 \end{center}
 \end{minipage}\quad
@@ -195,7 +195,7 @@ In Figure~\ref{fig:eff_num_tracks_per_singularity} results for the efficiency of
 
 Identification of a jet or black hole becomes more difficult if there are multiple such features in the event.  Figure~\ref{fig:eff_num_jets} shows efficiency with a varying number of jets per event.  Each jet has 10 tracks with 10 hits per track and dispersion angles between 15 and 60 degrees.  There seems to be a slight trend towards lower efficiency as the number of jets per event is increased.
 
-Finally we consider a more realistic event made up of 3000 total tracks of 10 hits each, with some of the tracks being part of a varying number of jets made up of 10 tracks each and having dispersion angles between 15 and 60 degrees.  Because there are now tracks originating at the interaction point, the jet detection filters out any potential vertices within the 3.0 cm beam pipe radius.  As shown in Figure~\ref{fig:eff_jets_plus_tracks} the efficiency seems to be independent of the number of displaced jets.
+Finally a more realistic event made up of 3000 total tracks of 10 hits each is considered, with some of the tracks being part of a varying number of jets made up of 10 tracks each and having dispersion angles between 15 and 60 degrees.  Because there are now tracks originating at the interaction point, the jet detection filters out any potential vertices within the 3.0 cm beam pipe radius.  As shown in Figure~\ref{fig:eff_jets_plus_tracks} the efficiency seems to be independent of the number of displaced jets.
 %
 \begin{figure}[!Hhtb]
 \begin{minipage}[t]{8cm}
