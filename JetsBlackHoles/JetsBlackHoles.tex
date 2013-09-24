@@ -10,7 +10,7 @@
 \title{Massively Parallel Computing and the Search for Jets and Black Holes at the LHC}
 
 \author{V. Halyo\thanks{Corresponding Author}, P. LeGresley, P. Lujan \\
-\llap Princeton University, Princeton, NJ, USA \\
+\llap Department of Physics, Princeton University, Princeton, NJ 08544, USA \\
 E-mail: \email{vhalyo@gmail.com}}
 
 \abstract{Massively parallel computing at the LHC could be the next leap necessary 
@@ -40,8 +40,11 @@ Parallel processors, in the form of multicore CPUs and more recently highly prog
 
 
 Various extensions BSM predict the existence of new, strongly interacting particles that lead to final states
-with high jet multiplicities. Other exotic models might include boosted jets or long-lived neutral particles decaying
-at macroscopic distances from the primary vertex~\cite{bib:hiddenvalley} in the tracker. The key to observing these events is selecting these jets in real time in the trigger system for archiving and further careful, offline analysis.
+with high jet multiplicities\cite{bib:sixjets}-\cite{bib:altchiral}. Other exotic models might include boosted 
+jets~\cite{Thaler:2008ju},\cite{Altheimer:2012mn} or long-lived neutral particles decaying at macroscopic distances 
+from the primary vertex~\cite{bib:hiddenvalley},\cite{Halyo:2013yfa} 
+in the tracker. The key to observing these events is selecting these jets in real time in the trigger system for archiving
+ and further careful, offline analysis.
 
 Both CMS~\cite{Chatrchyan:2008aa} and ATLAS~\cite{Aad:2008zzm} have a typical trigger system with a hierarchy of multiple levels, 
 ranging from fast and relatively simple criteria implemented entirely in hardware and firmware, to more sophisticated software-based analysis. 
@@ -49,8 +52,8 @@ The primary goal of the software based level is to apply a specific set of
 physics selection algorithms on the events read out and accept the events with the most interesting physics 
 content. This computationally intensive processing is executed on a farm of commercial CPU processors.
 The quest for new physics and the flexibility of the trigger system suggests that this computer farm is the natural
-place to integrate GPU or MIC cards. These cards allow for the development of fast and unique algorithms using massively parallel programming architectures
-to select events that would indicate physics BSM. 
+place to integrate GPU or MIC cards. These cards allow for the development of fast and unique algorithms using massively
+ parallel programming architectures to select events that would indicate physics BSM. 
 
 In this article newly developed trigger algorithms are described that would be able to select events
 that include displaced jets originating from long lived particles, or various topologies with boosted jets that will
@@ -61,25 +64,28 @@ performed a search for long-lived neutral particles decaying to displaced lepton
 but the efficiency for measuring leptons originating from a low-mass Higgs of $M_H = 120$ GeV/$c^2$ is very low 
 due to the lepton momentum requirements in the trigger, resulting in relatively poor limits for this mass region.
 
-Generalization of the trigger algorithm developed in this article would allow searching for 
+Generalization of the trigger algorithm developed in this article would also allow to search for 
  the existence of soft displaced black hole like decay. Namely, high multiplicity democratic decay of soft particles  
-that originate a few centimeters from the interaction point. To conclude, 
-introducing massively parallel programming allows for development of algorithms that are computationally infeasible using CPUs and
-might provide an invaluable way to test for topological signatures that clearly do not exist in the SM.
+that originate a few centimeters from the interaction point. To conclude, introducing massively parallel programming
+ allows for development of algorithms that are computationally infeasible using CPUs and
+might provide an invaluable way to test for topological signatures that clearly do not exist in the SM in real time.
 
 
 
 \section{Processor Architecture}
 
-When discussing computer processors it is common to bring up Moore's Law.  However, it is important to recognize what Moore's Law actually represents.  Moore's Law is an empirical observation made by Intel co-founder Gordon Moore in the 1960s that it was economically feasible to double the number of transistors on a single integrated circuit every 24 months.  So although modern usage tends to associate Moore's Law with processor performance it is first and foremost about manufacturing technology and the ability to fabricate ever smaller transistors.
+When discussing computer processors it is common to bring up Moore's Law.  However, it is important to recognize what Moore's Law actually represents.  Moore's Law is an empirical observation made by Intel co-founder Gordon Moore in the 1960s that it was economically feasible to double the number of transistors on a single integrated circuit every 24 months.
+Emphasizing   the manufacturing technology and the ability to fabricate ever smaller transistors.
 
-In terms of performance, one of the most obvious benefits of smaller transistors is the ability to run processors at faster clock rates.  Over the course of a few years processor clock speeds jumped from tens of MHz to GHz speeds.  However, manufacturers were not able to fully decrease operating voltages in a corresponding way and this led to increases in power density and the inability to dissipate so much power from such a small area.  For the first time processors had become power limited.
 
-It is fairly clear how a faster clock speed yields a faster processor.  What is a little less obvious is how more transistors can make a single core processor faster even at fixed clock speeds.  One option is to perform multiple operations at each clock cycle with parallel execution units.  In the late 1990s Intel and AMD added something to their processors that has come to be known as SSE, or Streaming SIMD Extensions, where SIMD refers to a type of parallel architecture as defined by Flynn's taxonomy.  In the SIMD (Same Instruction Multiple Data) model one instruction such as multiplication, addition, etc. is applied to multiple data items.  This parallelism is typically something to be expressed by the software developer based on the computations to be performed and the capabilities of the hardware.  However, most modern compilers can also target the SSE units in a process typically referred to as auto vectorization.  The effectiveness of auto vectorization depends on the capabilities of the compiler, the complexity of the code being analyzed, and the skill of the software developer at writing code that can be successfully analyzed by the compiler.
+In terms of performance, one of the most obvious benefits of smaller transistors is the ability to run processors at faster clock rates.  Over the course of a few years processor clock speeds jumped from tens of MHz to GHz speeds.  However it was realized that it is no longer feasible to relay 
+on the increase of processor clock speed as a mean for additional power from an existing architecture mainly due to power 
+and heat restriction.
 
-A potential disadvantage of the SSE approach is that it requires software that specifically makes use of it, either through manual programming by the software developer or auto vectorization at compile time.  But the additional transistors available at each generation of Moore's Law also allowed hardware designers to implement Instruction Level Parallelism (ILP).  Instead of the processor executing one operation per clock cycle (an arithmetic operation, or a load from memory, or a store back to memory, etc.) multiple instructions are executed in parallel.  For example, a load from memory is issued for a future arithmetic operation, an arithmetic operation is performed, and a store back to memory of a previous arithmetic operation is issued.  In x86 processors this is determined dynamically as the program is executing and allows arbitrary single-threaded software to run faster by exploiting parallelism within the instruction stream.
+It is fairly clear how a faster clock speed yields a faster processor.  What is a little less obvious is how more transistors can make a single core processor faster even at fixed clock speeds.  In the late 1990s Intel and AMD added to their processors what has come to be known as SSE, or Streaming SIMD Extensions, where Same Instruction Multiple Data (SIMD)
+refers to a type of parallel architecture as defined by Flynn's taxonomy.  In the SIMD  model one instruction such as multiplication, addition, etc. is applied to multiple data items.  This parallelism is typically something to be expressed by the software developer based on the computations to be performed and the capabilities of the hardware.  However, most modern compilers can also target the SSE units in a process typically referred to as auto vectorization.  The effectiveness of auto vectorization depends on the capabilities of the compiler, the complexity of the code being analyzed, and the skill of the software developer at writing code that can be successfully analyzed by the compiler.
 
-The implementation of ILP and the associated techniques of instruction pipelining, out-of-order execution, speculative execution, and hardware branch prediction helped consume many of the additional transistors made available through Moore's Law.  But in addition to ILP, the growing gap between the performance of the processors running at GHz speeds and the off chip memory systems necessitated adding a complicated cache hierarchy to modern processors.
+A potential disadvantage of the SSE approach is that it requires software that specifically makes use of it, either through manual programming by the software developer or auto vectorization at compile time.  But the additional transistors available at each generation of Moore's Law also allowed hardware designers to implement Instruction Level Parallelism (ILP).  Instead of the processor executing one operation per clock cycle multiple instructions are executed in parallel. The implementation of ILP and the associated techniques of instruction pipelining, out-of-order execution, speculative execution, and hardware branch prediction helped consume many of the additional transistors made available through Moore's Law.  But in addition to ILP, the growing gap between the performance of the processors running at GHz speeds and the off chip memory systems necessitated adding a complicated cache hierarchy to modern processors.
 
 While compute performance may increase around 40\% per year in accordance with Moore's Law, memory performance increases approximately 10\% year.  If left unchecked this gap in performance would have resulted in processors that had the potential to be very computationally powerful but would be limited in actual performance because of the constant need to wait on the memory system.  To address this modern processors have a complicated cache hierarchy not only for data, but also for instructions, and even for translating virtual memory addresses to physical memory addresses in the form of Translation Lookaside Buffers (TLB).  Additional logic in the form of hardware prefetchers observes memory access patterns in real time and attempts to prefetch into the caches data and instructions that are likely to be needed in the future.  The disparity between processor and memory performance is so bad that the vast majority of the chip area in modern processors is devoted not to computation but to data handling.  As shown in Figure~\ref{fig:core_i7_die} the L3 cache plus the memory controller and other I/O portions of a chip can easily represent around 50\% of the area.  Within each core there is an L1 and L2 cache, plus all of the logic associated with ILP for that core.  The actual chip area devoted to computations is remarkably small.
 
@@ -92,15 +98,16 @@ While compute performance may increase around 40\% per year in accordance with M
 
 Faster clock speeds, ILP, and hardware prefetechers had the advantage of using existing software and simply running it faster.  However, there are limits to what the hardware can do to automatically extract ILP and predict the memory access pattern of arbitrary applications.  Deep instruction pipelines, which in some processors exceeded 30 stages, have issues with hazards that would affect the correctness of results if not correctly handled by the processor, stalls due to unavailable inputs, and mispredicted branching behavior.  At some point this reaches a level of diminishing returns where the hardware complexity, and hence cost, outweighs the performance benefits.
 
-With faster clock speeds not feasible and ILP also reaching its limits, hardware designers in the early 2000s turned to multicore to utilize all of those additional transistors available to them from Moore's Law.  As seen in Figure~\ref{fig:core_i7_die}, the hardware designers develop the design for a core, plus the hardware logic to link them together, and can then place as many cores on a single chip as current manufacturing technology allows.  With multiple cores, independent instances of applications (web browser, word processor, anti-virus, etc.) can run in parallel on the multiple cores without application level changes.  But if one application such as a video transcoder wants to speed up the processing of a single video it must be specially written to make use of multiple cores.
+With faster clock speeds not feasible and ILP also reaching its limits, hardware designers in the early 2000s turned to multicore to utilize all of those additional transistors available to them from Moore's Law.  As seen in Figure~\ref{fig:core_i7_die}, the hardware designers develop the design for a core, plus the hardware logic to link them together, and can then place as many cores on a single chip as current manufacturing technology allows.  With multiple cores, independent instances of applications can run in parallel on the multiple cores without application level changes.  But if one application such as a video transcoder wants to speed up the processing of a single video it must be specially written to make use of multiple cores.
 
-Modern CPUs with ILP, SIMD units, and multicore are highly parallel processors yet still retain the ability to efficiently run single-threaded, sequential software because so many applications make little to no use of parallel computing.  An alternate approach would be to design an inherently parallel processor that is only designed to run parallel programs efficiently.  Such a processor would not need to run single-threaded, sequential software and therefore could devote more chip area to computations and less to features like ILP, caches, and hardware prefetechers.  An example of a processor that is specialized to running parallel workloads is GPUs.
+Modern CPUs with ILP, SIMD units, and multicore are highly parallel processors yet still retain the ability to efficiently run single-threaded, sequential software because so many applications make little to no use of parallel computing.  A different approach would be to design an inherently parallel processor that is only designed to run parallel programs efficiently.  Such a processor would not need to run single-threaded, sequential software and therefore could devote more chip area to computations and less to features like ILP, caches, and hardware prefetechers.  An example of a processor that is specialized to running parallel workloads is Graphic Processor Units (GPUs).
 
-As implied by the name GPUs were designed as specialized processors for processing graphics.  In the 1990s the initial GPUs targeted towards consumer applications handled the computations associated with computing the color of each pixel in a process referred to as pixel shading.  Like any integrated circuit, GPUs also take advantage of Moore's Law.  The pixel shaders became more programmable so that game designers could create better looking graphics that were not the same as the graphics from everyone else, and additional functionality in the form of vertex shaders were added to the GPU for processing the geometry used in 3D graphics.
+The final rising alternative was the use of systems consisting processors with multiple cores integrated with Graphics processing units (GPU) as a modified form 
+of stream processor. This concept turns the massive floating-point computational power of a modern graphics accelerator's shader 
+pipeline into general-purpose computing power, as opposed to being hard wired solely to do graphical operations. In certain 
+applications requiring massive vector operations, this can yield several orders of magnitude higher performance than a conventional CPU.
 
-CPUs are designed to be multipurpose and run operating systems, word processors, spreadsheets, games, etc. while the GPU was more special purpose and only intended to do graphics computations.  Because the GPU was intended for a specialized workload, the designers had a choice when using additional transistors to make the GPU more powerful.  One option would be to follow the CPU model and create one or more very complicated cores with ILP, caches, etc. or design a simpler, smaller core that allows many more cores per chip.  The disadvantage of simpler, smaller cores is that such a core probably will not be as fast at running single threaded code but that did not matter for the GPU since it targeted a special application area with lots of available parallelism.  Modern GPU designs use the simpler, smaller core approach and modern high end GPU hardware has thousands of parallel execution units.
-
-In addition to making GPUs more computationally powerful, the programmability has been improved through both changes in hardware and new software tools.  The programmability of GPUs using options such as CUDA, OpenCL, and OpenACC make the hardware usable for many applications beyond graphics, and without requiring programmers to have a specialized graphics background.  However, a strong background in parallel computing is still required to make effective use of a GPU.
+In addition to making GPUs more computationally powerful, the programmability has been improved through both changes in hardware and new software tools.  The programmability of GPUs using options such as Compute Unified Device Architecture (CUDA), OpenCL, and OpenACC make the hardware usable for many applications beyond graphics, and without requiring programmers to have a specialized graphics background.  However, a strong background in parallel computing is still required to make effective use of a GPU.
 
 With the growing success of GPUs as a massively parallel processor well suited to more general purpose applications, Intel has introduced a line of products based on a Many Integrated Core (MIC) architecture and marketed as Xeon Phi.  The Xeon Phi products physically look similar to a GPU in that they plug into a host system via PCI Express.  And from an architecture perspective they also have many similarities to GPUs.  Xeon Phi is based on an x86 Pentium core from the early 1990s.  This is a much simplified, and hence smaller, core compared to modern x86 CPUs.  To make these simplified cores more computationally powerful, 512 bit wide SIMD units known as Advanced Vector Extensions 2 (AVX2) have been added to the core.  Because of the simple nature of the core a single Xeon Phi processor may have up to 64 cores.
 
@@ -108,7 +115,7 @@ Regardless of whether the future is GPUs or the architecturally similar Xeon Phi
 
 \section{Hough Transform Algorithm}
 
-As an example of implementing a computationally intensive algorithm on a massively parallel processor the authors have previously developed an implementation of the Hough transform using CUDA~\cite{Halyo:2013}.  The Hough transform is an image processing algorithm for feature detection that considers all possible instances of a parameterized feature such as a line or circle.  Each possible instance of a feature starts with zero votes in the parameter space, and then for each piece of input data votes are added to the feature instances that would include that input data.  After all input data has been processed the votes in the parameter space are processed.  Locations in the parameter space with more votes are likely to be actual features in the input data so this step amounts to looking for local maxima in the parameter space.  Once candidate features have been identified more expensive computations can be applied to confirm the existence of the feature.
+ A computationally intensive 2D tracking algorithm was recently developed on a massively parallel processor called GPUs. The authors developed an implementation of the Hough transform using CUDA~\cite{Halyo:2013} in order to measure in real time the transverse momentum of prompt or non prompt tracks.  The Hough transform~\cite{bib:HT1},~\cite{bib:HT2},~\cite{bib:HT3} is an image processing algorithm for feature detection that considers all possible instances of a parameterized feature such as a line or circle.  Each possible instance of a feature starts with zero votes in the parameter space, and then for each piece of input data votes are added to the feature instances that would include that input data.  After all input data has been processed the votes in the parameter space are processed.  Locations in the parameter space with more votes are likely to be actual features in the input data so this step amounts to looking for local maxima in the parameter space.  Once candidate features have been identified more expensive computations can be applied to confirm the existence of the feature.
 
 \begin{figure}[!Hhtb]
 \begin{center}
@@ -122,7 +129,7 @@ As an example of implementing a computationally intensive algorithm on a massive
 \end{center}
 \end{figure}
 
-One advantage of the Hough transform is that it is tolerant to missing data or data that does not exactly fit the candidate features.  This could occur if there is noise in the data, or if the resolution of the data results in features that cannot be perfectly represented with a given computational discretization.  The downside of this robustness is that the Hough transform is computationally expensive.  However, the implementation using the GPU has demonstrated significant performance advantages compared to a multithreaded CPU implementation.  This performance comparison was made using a self developed CPU implementation because typical implementations such as the one in Intel MKL are sequential implementations that do not utilize multicore CPUs.  It was felt that the multithreaded CPU implementation was a more fair way to compare performance, but self implementations can sometimes be biased.  Therefore, additional CPU performance optimizations have been implemented in the form of using AVX intrinsics and improvements to the OpenMP parallelization.
+One advantage of the Hough transform is that it is tolerant to missing data or data that does not exactly fit the candidate features.  This could occur if there is noise in the data, or if the resolution of the data results in features that cannot be perfectly represented with a given computational discritization.  The downside of this robustness is that the Hough transform is computationally expensive.  However, the implementation using the GPU has demonstrated significant performance advantages compared to a multithreaded CPU implementation.  This performance comparison was made using a self developed CPU implementation because typical implementations such as the one in Intel MKL are sequential implementations that do not utilize multicore CPUs.  It was felt that the multithreaded CPU implementation was a more fair way to compare performance, but self implementations can sometimes be biased.  Therefore, additional CPU performance optimizations have been implemented in the form of using AVX intrinsics and improvements to the OpenMP parallelization.
 
 Sample input data was generated using a Monte Carlo simulation of a simple detector model where only the transverse plane is considered.  The model contains a simulated beam pipe with a radius of 3.0 cm and surrounded by ten concentric, evenly-spaced tracking layers with an overall radius of 110.0 cm.  A hit resolution of 0.4 mm in each direction is used.
 
@@ -131,7 +138,8 @@ As shown in Figure~\ref{fig:TimePerformance} the combination of improvements res
 \begin{figure}[!Hhtb]
 \begin{center}
 \includegraphics[width=0.75\textwidth]{figs/TimePerformance.pdf} 
-\caption{Time performance of old and new CPU implementations compared to NVIDIA Tesla C2075 and K20c.  Intel Core i7-3770 CPU running a multithreaded implementation.\label{fig:TimePerformance}}
+\caption{Time performance of old and new CPU implementations compared to NVIDIA Tesla C2075 and K20c. 
+ Intel Core i7-3770 CPU running a multithreaded implementation.\label{fig:TimePerformance}}
 \end{center}
 \end{figure}
 
@@ -172,22 +180,118 @@ At first glance the proposed enhancement for detecting displaced jets and black 
 
 In Figure~\ref{fig:eff_num_tracks_per_singularity} results for the efficiency of detecting a single jet with a varying number of tracks and 10 hits per track are shown.  Efficiency is defined as the fraction of simulated jets successfully identified by the algorithm divided by the number of jets known to be present.  The efficiency is relatively low for a small number of tracks but quickly rises for 10 tracks and beyond.  Because the peak finding has been optimized for track detection where 7 or more hits per track are expected, simple reuse of this code explains the efficiency results.  Separate tuning of the peak detection for a fewer number of votes per feature could improve the jet finding efficiency.
 %
-\begin{figure}[ht]\centering\begin{minipage}[b]{0.45\linewidth}  \includegraphics[width=\textwidth]{figs/performance.pdf}  \caption{Time performance of the tracking plus displaced jet detection algorithm using an NVIDIA Tesla K20c.  Ten percent of the tracks are associated with a displaced jet.}  \label{fig:performance}\end{minipage}\quad\begin{minipage}[b]{0.45\linewidth}  \includegraphics[width=\textwidth]{figs/eff_num_tracks_per_singularity.pdf}  \caption{Efficiency of displaced jet detection with varying number of tracks per displaced jet.}  \label{fig:eff_num_tracks_per_singularity}\end{minipage}\end{figure}
+\begin{figure}[!Hhtb]
+\begin{minipage}[t]{8cm}
+\begin{center}
+\includegraphics[width=0.8 \textwidth]{figs/performance.pdf}
+ \caption{Time performance of the tracking plus displaced jet detection algorithm using an NVIDIA Tesla K20c.  
+          Ten percent of the tracks are associated with a displaced jet. \label{fig:performance}}
+\end{center}
+\end{minipage}\quad
+\begin{minipage}[t]{8cm}
+\begin{center}
+\includegraphics[width=0.82\textwidth]{figs/eff_num_tracks_per_singularity.pdf} 
+\caption{Efficiency of displaced jet detection with varying number of tracks per displaced jet.\label{fig:eff_num_tracks_per_singularity}}
+\end{center}
+\end{minipage}
+\end{figure}
 
 Identification of a jet or black hole becomes more difficult if there are multiple such features in the event.  Figure~\ref{fig:eff_num_jets} shows efficiency with a varying number of jets per event.  Each jet has 10 tracks with 10 hits per track and dispersion angles between 15 and 60 degrees.  There seems to be a slight trend towards lower efficiency as the number of jets per event is increased.
 
 Finally we consider a more realistic event made up of 3000 total tracks of 10 hits each, with some of the tracks being part of a varying number of jets made up of 10 tracks each and having dispersal angles between 15 and 60 degrees.  Because there are now tracks originating at the interaction point, the jet detection filters out any potential vertices within the 3.0 cm beam pipe radius.  As shown in Figure~\ref{fig:eff_jets_plus_tracks} the efficiency seems to be independent of the number of displaced jets.
 %
-\begin{figure}[ht]\centering\begin{minipage}[b]{0.45\linewidth}  \includegraphics[width=\textwidth]{figs/eff_num_jets.pdf}  \caption{Efficiency of displaced jet detection with varying number of displaced jets per event.  Each displaced jet has 10 tracks and a dispersion angle between 15 and 60 degrees.}  \label{fig:eff_num_jets}\end{minipage}\quad\begin{minipage}[b]{0.45\linewidth}  \includegraphics[width=\textwidth]{figs/eff_jets_plus_tracks.pdf}  \caption{Efficiency of displaced jet detection in the presence of tracks originating from the interaction point.  There are a total of 3000 tracks, some of which make up a varying number of displaced jets.}  \label{fig:eff_jets_plus_tracks}\end{minipage}\end{figure}
+\begin{figure}[!Hhtb]
+\begin{minipage}[t]{8cm}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{figs/eff_num_jets.pdf} 
+ \caption{Efficiency of displaced jet detection with varying number of displaced jets per event.  
+Each displaced jet has 10 tracks and a dispersion angle between 15 and 60 degrees.  \label{fig:eff_num_jets}}
+\end{center}
+\end{minipage}\quad
+\begin{minipage}[t]{8cm}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{figs/eff_jets_plus_tracks.pdf}  
+\caption{Efficiency of displaced jet detection in the presence of tracks originating from the interaction point.  
+There are a total of 3000 tracks, some of which make up a varying number of displaced jets. \label{fig:eff_jets_plus_tracks}}
+\end{center}
+\end{minipage}
+\end{figure}
 
 
 \section{Summary}
 
-A previous proposal by the authors to enhance the trigger has been extended to detect displaced jets and black holes, which would be used to detect new physics beyond the Standard Model.  The proposed extension uses a second application of the Hough transform to identify tracks originating from a vertex displaced from the interaction point.  Although the Hough transform is a computationally expensive algorithm an implementation on a massively parallel processor such as a GPU is significantly faster than implementations on conventional CPUs.  Recent work to incorporate additional CPU optimizations yielded approximately a 40\% improvement in performance, although the GPU implementation is still approximately 60x faster than the corresponding multithreaded, vectorized CPU implementation.  The computational cost increase when performing the second Hough transform is mitigated by the data reduction of the first application of the transform which reduces the data dimensionality from the number of hits to the number of tracks.  Benchmarks using data from Monte Carlo simulations showed that the implementation of this proposed trigger enhancement for displaced jets and black holes only increased the runtime by 30\%.
+A natural extension of a computationally intensive 2D tracking algorithm  using the Hough Transform algorithm was developed to enhance the LHC trigger perfromance.
+The GPU based algorithm  has been extended to detect displaced jets and black holes, which smoking gun to physics beyond the Standard Model.  The proposed extension uses 
+a second application of the Hough transform to identify tracks originating from a vertex displaced from the interaction point.  Although the Hough transform is a 
+computationally expensive algorithm an implementation on a massively parallel processor such as a GPU is significantly faster than implementations on conventional CPUs.  Recent work to incorporate additional CPU optimizations yielded approximately a 40\% improvement in performance, although the GPU implementation is still approximately 60x faster 
+than the corresponding multithreaded, vectorized CPU implementation.  The computational cost increase when performing the second Hough transform is mitigated by the data reduction of the first application of the transform which reduces the data dimensionality from the number of hits to the number of tracks.  Benchmarks using data from Monte Carlo simulations showed that the implementation of this proposed trigger enhancement for displaced jets and black holes only increased the runtime by 30\%. Hence, the promising results of this trigger algorithm suggest that massively parallel computing at the LHC could be the next leap necessary 
+to reach an era of new discoveries at the LHC post the Higgs like discovery. 
 
-Future work will focus on efficiency and purity improvements, as well as investigating further GPU performance optimizations.  In addition it would be desirable to compare these performance results with an equivalent implementation on the Intel Xeon Phi.  While still based on the x86 architecture the Phi is designed using much simpler cores, allowing for many more cores per processor.  This means that compared to typical multicore CPUs, the Phi is more architecturally similar to GPUs.
+Future work will focus on efficiency and purity improvements, as well as investigating further GPU performance optimizations.  In addition it would be desirable to compare these performance results with an equivalent implementation on the Intel Xeon Phi.  While still based on the x86 architecture the Phi is designed using much simpler cores, allowing for many more cores per processor like in GPUs.
 
 \begin{thebibliography}{9}
+
+\bibitem{bib:sixjets}
+R.~S. Chivukula, M.~Golden, and E.~H. Simmons, 
+\emph{Six-jet signals of highly colored fermions,} \textit{ Phys. Lett. B} \textbf{ 257}  (1991) 403,
+%  \href{http://dx.doi.org/10.1016/0370-2693(91)91915-I}{\doi{10.1016/0370-2693(91)91915-I}}.
+%
+\bibitem{bib:multijets}
+R.~S. Chivukula, M.~Golden, and E.~H. Simmons, 
+\emph{Multi-jet physics at hadron colliders,} \textit{ Nucl. Phys. B} \textbf{ 363} (1991)  83,
+%  \href{http://dx.doi.org/10.1016/0550-3213(91)90235-P}{\doi{10.1016/0550-3213(91)90235-P}}.
+%
+\bibitem{bib:tcgut}
+E.~Farhi and L.~Susskind,
+\emph{Grand unified theory with heavy color,} \textit{ Phys. Rev. D} \textbf{ 20} (1979) 3404,
+%  \href{http://dx.doi.org/10.1103/PhysRevD.20.3404}{\doi{10.1103/PhysRevD.20.3404}}.
+%
+\bibitem{bib:exoquarks}
+W.~J. Marciano, 
+\emph{Exotic new quarks and dynamical symmetry breaking} 
+\textit{ Phys. Rev. D} \textbf{ 21} (1980) 2425,
+%  \href{http://dx.doi.org/10.1103/PhysRevD.21.2425}{\doi{10.1103/PhysRevD.21.2425}}.
+%
+\bibitem{bib:unichiral}
+P.~H. Frampton and S.~L. Glashow, 
+\emph{Unifiable Chiral Color  with Natural {GIM} Mechanism}
+ \textit{ Phys. Rev. Lett.} \textbf{ 58}  (1987) 2168,
+%  \href{http://dx.doi.org/10.1103/PhysRevLett.58.2168}{\doi{10.1103/PhysRevLett.58.2168}}.
+%
+\bibitem{bib:altchiral}
+ P.~H. Frampton and S.~L. Glashow, 
+\emph{Chiral Color: An   Alternative to the Standard Model} 
+\textit{ Phys. Lett. B} \textbf{ 190}  (1987) 157,
+%  \href{http://dx.doi.org/10.1016/0370-2693(87)90859-8}{\doi{10.1016/0370-2693(87)90859-8}}.
+%
+%\cite{Thaler:2008ju}
+\bibitem{Thaler:2008ju} 
+  J.~Thaler and L.~-T.~Wang,
+  %``Strategies to Identify Boosted Tops,''
+  JHEP {\bf 0807}, 092 (2008)
+  [arXiv:0806.0023 [hep-ph]].
+  %%CITATION = ARXIV:0806.0023;%%
+  %141 citations counted in INSPIRE as of 23 Sep 2013
+%
+%
+%\cite{Altheimer:2012mn}
+\bibitem{Altheimer:2012mn} 
+  A.~Altheimer, S.~Arora, L.~Asquith, G.~Brooijmans, J.~Butterworth, M.~Campanelli, B.~Chapleau and A.~E.~Cholakian {\it et al.},
+  %``Jet Substructure at the Tevatron and LHC: New results, new tools, new benchmarks,''
+  J.\ Phys.\ G {\bf 39}, 063001 (2012)
+  [arXiv:1201.0008 [hep-ph]].
+  %%CITATION = ARXIV:1201.0008;%%
+  %72 citations counted in INSPIRE as of 23 Sep 2013
+%
+%
+%\cite{Chatrchyan:2012uxa}
+%\bibitem{Chatrchyan:2012uxa} 
+%  S.~Chatrchyan {\it et al.}  [CMS Collaboration],
+  %``Search for three-jet resonances in $pp$ collisions at $\sqrt{s}=7$ TeV,''
+%  Phys.\ Lett.\ B {\bf 718}, 329 (2012)
+%  [arXiv:1208.2931 [hep-ex]].
+  %%CITATION = ARXIV:1208.2931;%%
+  %21 citations counted in INSPIRE as of 23 Sep 2013
 %
 % Hidden Valley cites
 %
@@ -195,6 +299,15 @@ Future work will focus on efficiency and purity improvements, as well as investi
 M. J. Strassler, K. M. Zurek, 
 \emph{Echoes of a hidden valley at hadron colliders},
 Phys. Lett. \textbf{B}651:374-379,2007 
+%
+%
+%\cite{Halyo:2013yfa}
+\bibitem{Halyo:2013yfa} 
+  V.~Halyo, H.~K.~Lou, P.~Lujan and W.~Zhu,
+  %``Data Driven Search in the Displaced $b\bar{b}$ Pair Channel for a Higgs Boson Decaying to Long-Lived Neutral Particles,''
+  arXiv:1308.6213 [hep-ph].
+  %%CITATION = ARXIV:1308.6213;%%
+  %1 citations counted in INSPIRE as of 23 Sep 2013
 %
 % CMS detector paper
 %
@@ -227,6 +340,23 @@ Phys. Lett. \textbf{B}651:374-379,2007
 V.~Halyo, A.~Hunt, P.~Jindal, P.~LeGresley, P.~Lujan,
 \emph{GPU Enhancement of the Trigger to Extend Physics Reach at the LHC},
 [arXiv:1305.4855 [physics.ins-det]].
+%
+%
+%
+\bibitem{bib:HT1}P.~V.~C. Hough, 
+\emph{Machine Analysis of Bubble Chamber Pictures}, 
+Proc. Int. Conf. High Energy Accelerators and Instrumentation, 1959.
+%
+%
+\bibitem{bib:HT2} P. Hough,
+\emph{Method and mean for recognizing complex patterns}, 
+United States Patent 3069654, 1962
+%
+%
+\bibitem{bib:HT3} Gonzalez, R.C. and Woods, R.E., 
+\emph{Digital Image Processing},
+Prentice Hall, 1993.
+%
 %
 \end{thebibliography}
 
