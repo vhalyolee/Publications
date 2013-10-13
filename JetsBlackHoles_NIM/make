@@ -1,0 +1,6 @@
+#!/bin/sh
+
+pdflatex JetsBlackHoles.tex
+bibtex JetsBlackHoles.aux
+pdflatex JetsBlackHoles.tex
+pdflatex JetsBlackHoles.tex
