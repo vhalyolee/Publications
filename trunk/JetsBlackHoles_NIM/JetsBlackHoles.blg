@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: JetsBlackHoles.aux
+The style file: model1-num-names.bst
+Database file #1: JetsBlackHoles.bib
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty journal in Halyo:2013yfa
+You've used 17 entries,
+            2910 wiz_defined-function locations,
+            749 strings with 7684 characters,
+and the built_in function-call counts, 9768 in all, are:
+= -- 720
+> -- 380
+< -- 12
++ -- 145
+- -- 126
+* -- 1200
+:= -- 1477
+add.period$ -- 17
+call.type$ -- 17
+change.case$ -- 121
+chr.to.int$ -- 15
+cite$ -- 18
+duplicate$ -- 676
+empty$ -- 668
+format.name$ -- 186
+if$ -- 1765
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 157
+newline$ -- 95
+num.names$ -- 68
+pop$ -- 151
+preamble$ -- 1
+purify$ -- 123
+quote$ -- 0
+skip$ -- 179
+stack$ -- 0
+substring$ -- 432
+swap$ -- 573
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 147
+warning$ -- 1
+while$ -- 65
+width$ -- 0
+write$ -- 229
+(There was 1 warning)

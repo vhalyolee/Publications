@@ -1,0 +1,362 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  13 OCT 2013 14:35
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**JetsBlackHoles.tex
+(./JetsBlackHoles.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, s
+lovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, 
+welsh, loaded.
+(./elsarticle.cls
+Document Class: elsarticle 2009/09/17, 1.20b: Elsevier Ltd
+\@bls=\dimen102
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen103
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\c@tnote=\count88
+\c@fnote=\count89
+\c@cnote=\count90
+\c@ead=\count91
+\c@author=\count92
+\@eadauthor=\toks15
+\c@affn=\count93
+\absbox=\box26
+\keybox=\box27
+\Columnwidth=\dimen106
+\space@left=\dimen107
+\els@boxa=\box28
+\els@boxb=\box29
+\leftMargin=\dimen108
+\@enLab=\toks16
+\@sep=\skip43
+\@@sep=\skip44
+
+(./JetsBlackHoles.spl)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip45
+\bibsep=\skip46
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count94
+)
+\splwrite=\write3
+\openout3 = `JetsBlackHoles.spl'.
+
+\appnamewidth=\dimen109
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen110
+\epsfysize=\dimen111
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip47
+\subfigcapskip=\skip48
+\subfigcaptopadj=\dimen112
+\subfigbottomskip=\skip49
+\subfigcapmargin=\dimen113
+\subfiglabelskip=\skip50
+\c@subfigure=\count95
+\c@lofdepth=\count96
+\c@subtable=\count97
+\c@lotdepth=\count98
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2012/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip51
+\subfig@bottom=\skip52
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen114
+\WF@size=\dimen115
+\c@WF@wrappedlines=\count99
+\WF@box=\box30
+\WF@everypar=\toks17
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen116
+)
+(./JetsBlackHoles.aux)
+\openout1 = `JetsBlackHoles.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count100
+\scratchdimen=\dimen117
+\scratchbox=\box31
+\nofMPsegments=\count101
+\nofMParguments=\count102
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count103
+\MPscratchDim=\dimen118
+\MPnumerator=\count104
+\makeMPintoPDFobject=\count105
+\everyMPtoPDFconversion=\toks19
+) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 36.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 36.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 36.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 36.
+
+[1
+
+
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2] [3] <Core_i7_die.pdf, id=24, 602.25pt x 377.41pt>
+File: Core_i7_die.pdf Graphic file (type pdf)
+ <use Core_i7_die.pdf>
+Package pdftex.def Info: Core_i7_die.pdf used on input line 98.
+(pdftex.def)             Requested size: 172.5pt x 108.09853pt.
+
+[4 <./Core_i7_die.pdf>]
+Overfull \hbox (2.26462pt too wide) in paragraph at lines 116--117
+[]\OT1/cmr/m/n/10 In ad-di-tion to mak-ing GPUs more com-pu-ta-tion-ally pow-er
+-ful, the pro-gramma-
+ []
+
+[5] <50events_hits.pdf, id=41, 569.12625pt x 538.01pt>
+File: 50events_hits.pdf Graphic file (type pdf)
+ <use 50events_hits.pdf>
+Package pdftex.def Info: 50events_hits.pdf used on input line 128.
+(pdftex.def)             Requested size: 110.40253pt x 104.3656pt.
+
+<50events_accumulator.pdf, id=42, 4111.36pt x 4111.36pt>
+File: 50events_accumulator.pdf Graphic file (type pdf)
+
+<use 50events_accumulator.pdf>
+Package pdftex.def Info: 50events_accumulator.pdf used on input line 129.
+(pdftex.def)             Requested size: 103.50105pt x 103.44873pt.
+
+<50events_hits_tracks.pdf, id=43, 569.12625pt x 538.01pt>
+File: 50events_hits_tracks.pdf Graphic file (type pdf)
+
+<use 50events_hits_tracks.pdf>
+Package pdftex.def Info: 50events_hits_tracks.pdf used on input line 130.
+(pdftex.def)             Requested size: 110.40253pt x 104.3656pt.
+ [6 <./50events_hits.pdf, page is rotated 90 degrees> <./50events_accumulator.p
+df> <./50events_hits_tracks.pdf, page is rotated 90 degrees>] <TimePerformance.
+pdf, id=141, 569.12625pt x 408.52625pt>
+File: TimePerformance.pdf Graphic file (type pdf)
+
+<use TimePerformance.pdf>
+Package pdftex.def Info: TimePerformance.pdf used on input line 146.
+(pdftex.def)             Requested size: 258.75pt x 185.74258pt.
+ [7 <./TimePerformance.pdf, page is rotated 90 degrees>] <Flowchart.pdf, id=189
+, 513.66214pt x 477.21935pt>
+File: Flowchart.pdf Graphic file (type pdf)
+ <use Flowchart.pdf>
+Package pdftex.def Info: Flowchart.pdf used on input line 162.
+(pdftex.def)             Requested size: 258.75pt x 240.39311pt.
+
+<tracks.pdf, id=190, 598.235pt x 574.145pt>
+File: tracks.pdf Graphic file (type pdf)
+ <use tracks.pdf>
+Package pdftex.def Info: tracks.pdf used on input line 173.
+(pdftex.def)             Requested size: 120.7521pt x 115.88701pt.
+
+<accumulator.pdf, id=191, 2055.68pt x 2055.68pt>
+File: accumulator.pdf Graphic file (type pdf)
+ <use accumulator.pdf>
+Package pdftex.def Info: accumulator.pdf used on input line 174.
+(pdftex.def)             Requested size: 103.50105pt x 103.48009pt.
+
+<vertex.pdf, id=192, 2055.68pt x 2055.68pt>
+File: vertex.pdf Graphic file (type pdf)
+ <use vertex.pdf>
+Package pdftex.def Info: vertex.pdf used on input line 175.
+(pdftex.def)             Requested size: 103.50105pt x 103.48009pt.
+ [8] [9 <./Flowchart.pdf> <./tracks.pdf> <./accumulator.pdf> <./vertex.pdf>]
+<performance.pdf, id=347, 569.12625pt x 408.52625pt>
+File: performance.pdf Graphic file (type pdf)
+ <use performance.pdf>
+Package pdftex.def Info: performance.pdf used on input line 192.
+(pdftex.def)             Requested size: 159.3356pt x 114.3741pt.
+
+<eff_num_tracks_per_singularity.pdf, id=348, 569.12625pt x 408.52625pt>
+File: eff_num_tracks_per_singularity.pdf Graphic file (type pdf)
+
+<use eff_num_tracks_per_singularity.pdf>
+Package pdftex.def Info: eff_num_tracks_per_singularity.pdf used on input line 
+199.
+(pdftex.def)             Requested size: 162.18062pt x 116.41249pt.
+
+<eff_num_jets.pdf, id=349, 569.12625pt x 408.52625pt>
+File: eff_num_jets.pdf Graphic file (type pdf)
+ <use eff_num_jets.pdf>
+Package pdftex.def Info: eff_num_jets.pdf used on input line 212.
+(pdftex.def)             Requested size: 159.3356pt x 114.3741pt.
+
+<eff_jets_plus_tracks.pdf, id=350, 569.12625pt x 408.52625pt>
+File: eff_jets_plus_tracks.pdf Graphic file (type pdf)
+
+<use eff_jets_plus_tracks.pdf>
+Package pdftex.def Info: eff_jets_plus_tracks.pdf used on input line 219.
+(pdftex.def)             Requested size: 162.18062pt x 116.41249pt.
+ [10 <./performance.pdf, page is rotated 90 degrees> <./eff_num_tracks_per_sing
+ularity.pdf, page is rotated 90 degrees>]
+(./JetsBlackHoles.bbl [11 <./eff_num_jets.pdf, page is rotated 90 degrees> <./e
+ff_jets_plus_tracks.pdf, page is rotated 90 degrees>]) [12]
+(./JetsBlackHoles.aux) ) 
+Here is how much of TeX's memory you used:
+ 2496 strings out of 493488
+ 34699 string characters out of 3141326
+ 95724 words of memory out of 3000000
+ 5759 multiletter control sequences out of 15000+200000
+ 7625 words of font info for 27 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 38i,8n,30p,1393b,303s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy6.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10
+.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.p
+fb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb
+>
+Output written on JetsBlackHoles.pdf (12 pages, 2877066 bytes).
+PDF statistics:
+ 572 PDF objects out of 1000 (max. 8388607)
+ 291 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+
