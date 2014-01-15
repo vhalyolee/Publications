@@ -64,14 +64,15 @@ The quest for new physics and the flexibility of the trigger system suggests tha
 place to integrate GPU or MIC cards. These cards allow for the development of fast and unique algorithms using massively
  parallel programming architectures to select events that would indicate BSM physics. 
 
-In this article newly developed trigger algorithms are described that would be able to select events
-that include displaced jets originating from long lived particles, or various topological with boosted jets that will
-be more frequent as the center of mass energy of the collision at design luminosity is increased. These new
-triggers will naturally be sensitive to a larger parameter space, including lower-mass Higgs that decay to
-displaced heavy flavor hadrons, that could have evaded detection in previous experiments. For example, CMS has 
-performed a search for long-lived neutral particles decaying to displaced leptons~\cite{Chatrchyan:2012jna}, 
-but the efficiency for measuring leptons originating from a low-mass Higgs of $M_H = 120$ GeV/$c^2$ is very low 
-due to the lepton momentum requirements in the trigger, resulting in relatively poor limits for this mass region.
+In this article newly developed trigger algorithms are described that would be able to select events that
+include displaced jets originating from long lived particles, or various topological signatures with boosted
+jets that will be more frequent as the center of mass energy of the collision at design luminosity is
+increased. These new triggers will naturally be sensitive to a larger parameter space, including lower-mass
+Higgs that decay to displaced heavy flavor hadrons, that could have evaded detection in previous
+experiments. For example, CMS has performed a search for long-lived neutral particles decaying to displaced
+leptons~\cite{Chatrchyan:2012jna}, but the efficiency for measuring leptons originating from a low-mass Higgs
+of $M_H = 120$ GeV/$c^2$ is very low due to the lepton momentum requirements in the trigger, resulting in
+relatively poor limits for this mass region.
 
 Generalization of the trigger algorithm developed in this article would also allow searching for 
 the existence of soft displaced black hole--like decay; that is, high multiplicity omnidirectional decay of soft particles  
@@ -144,10 +145,10 @@ Figure~\ref{fig:tracker} shows the layout of the CMS tracker.
 
 \begin{figure}[!Hhtb]
 \begin{center}
-    \includegraphics[width=1.0\textwidth]{CMSTrackerLayout.pdf}
+    \includegraphics[width=0.45\textwidth]{CMSTrackerLayout.pdf}
     %\includegraphics[width=0.27\textwidth]{figs/ATLASTrackerLayout.pdf}
-    \includegraphics[width=1.0\textwidth]{CMS2Dtracker.png}
-    \caption{The CMS tracker in a 3-D view (top) and a 2-D view (bottom), showing the pixel detector and the silicon
+    \includegraphics[width=0.45\textwidth]{CMS2Dtracker.png}
+    \caption{The CMS tracker in a 3-D view (left) and a 2-D view (right), showing the pixel detector and the silicon
     strip tracker. \label{fig:tracker}}
     \end{center}
 \end{figure}
@@ -290,11 +291,10 @@ There are a total of 3000 tracks, some of which make up a varying number of disp
 
 \section{Summary}
 
-
-Massively parallel computing  is a critical component at the LHC expreiment that is  necessary in order to extend its physics reach. 
-Integration of coprocessors based on GPUs or MIC architecture into LHC trigger server farm provides not 
-only the means to accelerate existing algorithms, but also the opportunity to develop new algorithms that select events
- in the trigger that previously would have evaded detection.
+Massively parallel computing is a critical component at the LHC experiment that is necessary in order to
+extend its physics reach. Integration of coprocessors based on GPUs or MIC architecture into the LHC trigger
+server farm provides not only the means to accelerate existing algorithms, but also the opportunity to develop
+new algorithms that select events in the trigger that previously would have evaded detection.
 
 A natural extension of a computationally intensive 2D tracking algorithm using the Hough Transform algorithm was developed to enhance the LHC trigger performance.
 The GPU based algorithm has been extended to detect topological signatures that include displaced jets and black holes never possible before; 
@@ -308,10 +308,10 @@ although the GPU implementation is still approximately 60x faster than the corre
 displaced jets and black holes only increased the runtime by 30\%. Hence, the promising results of this trigger algorithms suggest that massively parallel computing at the LHC could be the next leap necessary 
 to reach an era of new discoveries at the LHC post the Higgs discovery. 
 
-Future work will focus on efficiency and purity improvements, as well as investigating further GPU performance optimization.  In addition it would be desirable to compare these performance results with an equivalent implementation on the Intel Xeon Phi.  While still based on the x86 architecture the Xeon Phi is designed using much simpler cores, allowing for many more cores per processor like in GPUs.
+Future work will focus on efficiency and purity improvements, as well as investigating further GPU performance optimization.  In addition, it would be desirable to compare the performance results presented in this article with an equivalent implementation on the Intel Xeon Phi~\cite{bib:Halyo:2013gja}.  While still based on the x86 architecture, the Xeon Phi is designed using much simpler cores, allowing for many more cores per processor like in GPUs.
 
-To conclude, this work demonstrate one of the advantages of massively parallel computing at the LHC as a mean to reach an era of new discoveries at
-the LHC after the Higgs discovery.
+To conclude, this work demonstrates one of the advantages of massively parallel computing at the LHC as a means
+to reach an era of new discoveries at the LHC after the Higgs discovery.
 
 
 \bibliographystyle{model1-num-names}
