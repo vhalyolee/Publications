@@ -2,46 +2,59 @@ This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: JetsBlackHoles.aux
 The style file: model1-num-names.bst
 Database file #1: JetsBlackHoles.bib
+I was expecting a `,' or a `}'---line 240 of file JetsBlackHoles.bib
+ :       eprint         = 1310
+ :                            .7556"",
+I'm skipping whatever remains of this entry
+Too many commas in name 1 of "V.~Halyo, P.~LeGresley, P.~Lujan, V.~Karpusenko and A.~Vladimirov" for entry bib:Halyo:2013gja
+while executing---line 1419 of file model1-num-names.bst
+Too many commas in name 1 of "V.~Halyo, P.~LeGresley, P.~Lujan, V.~Karpusenko and A.~Vladimirov" for entry bib:Halyo:2013gja
+while executing---line 1419 of file model1-num-names.bst
 Warning--empty journal in Halyo:2013yfa
-You've used 19 entries,
+Too many commas in name 1 of "V.~Halyo, P.~LeGresley, P.~Lujan, V.~Karpusenko and A.~Vladimirov" for entry bib:Halyo:2013gja
+while executing---line 1509 of file model1-num-names.bst
+Too many commas in name 1 of "V.~Halyo, P.~LeGresley, P.~Lujan, V.~Karpusenko and A.~Vladimirov" for entry bib:Halyo:2013gja
+while executing---line 1509 of file model1-num-names.bst
+Warning--empty journal in bib:Halyo:2013gja
+You've used 20 entries,
             2910 wiz_defined-function locations,
-            765 strings with 8031 characters,
-and the built_in function-call counts, 10689 in all, are:
-= -- 791
-> -- 400
-< -- 14
-+ -- 153
-- -- 132
-* -- 1301
-:= -- 1622
-add.period$ -- 19
-call.type$ -- 19
-change.case$ -- 133
-chr.to.int$ -- 17
-cite$ -- 20
-duplicate$ -- 746
-empty$ -- 739
-format.name$ -- 194
-if$ -- 1933
+            770 strings with 8260 characters,
+and the built_in function-call counts, 11156 in all, are:
+= -- 828
+> -- 419
+< -- 15
++ -- 160
+- -- 138
+* -- 1353
+:= -- 1697
+add.period$ -- 20
+call.type$ -- 20
+change.case$ -- 140
+chr.to.int$ -- 18
+cite$ -- 22
+duplicate$ -- 779
+empty$ -- 767
+format.name$ -- 205
+if$ -- 2016
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 173
-newline$ -- 105
-num.names$ -- 76
-pop$ -- 161
+missing$ -- 180
+newline$ -- 109
+num.names$ -- 80
+pop$ -- 174
 preamble$ -- 1
-purify$ -- 135
+purify$ -- 142
 quote$ -- 0
-skip$ -- 201
+skip$ -- 212
 stack$ -- 0
-substring$ -- 477
-swap$ -- 629
+substring$ -- 489
+swap$ -- 650
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 165
-warning$ -- 1
-while$ -- 73
+type$ -- 174
+warning$ -- 2
+while$ -- 76
 width$ -- 0
-write$ -- 255
-(There was 1 warning)
+write$ -- 266
+(There were 5 error messages)
