@@ -1,49 +1,69 @@
-This is BibTeX, Version 0.99d (TeX Live 2012)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: JetsBlackHoles.aux
 The style file: model1-num-names.bst
 Database file #1: JetsBlackHoles.bib
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Warning--empty journal in Halyo:2013yfa
-You've used 17 entries,
+Illegal end of database file---line 256 of file JetsBlackHoles.bib
+ : }
+ :  
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "bib:multijets"
+Warning--I didn't find a database entry for "bib:tcgut"
+Warning--I didn't find a database entry for "bib:exoquarks"
+Warning--I didn't find a database entry for "bib:unichiral"
+Warning--I didn't find a database entry for "bib:altchiral"
+Warning--I didn't find a database entry for "Thaler:2008ju"
+Warning--I didn't find a database entry for "Altheimer:2012mn"
+Warning--I didn't find a database entry for "bib:hiddenvalley"
+Warning--I didn't find a database entry for "Halyo:2013yfa"
+Warning--I didn't find a database entry for "Chatrchyan:2008aa"
+Warning--I didn't find a database entry for "Aad:2008zzm"
+Warning--I didn't find a database entry for "Chatrchyan:2012jna"
+Warning--I didn't find a database entry for "Halyo:2013"
+Warning--I didn't find a database entry for "bib:HT1"
+Warning--I didn't find a database entry for "bib:HT2"
+Warning--I didn't find a database entry for "bib:HT3"
+Warning--empty title in bib:Fruhwirth:1987fm
+Warning--empty journal in bib:Fruhwirth:1987fm
+Warning--empty year in bib:Fruhwirth:1987fm; set to ????
+You've used 3 entries,
             2910 wiz_defined-function locations,
-            749 strings with 7684 characters,
-and the built_in function-call counts, 9768 in all, are:
-= -- 720
-> -- 380
-< -- 12
-+ -- 145
-- -- 126
-* -- 1200
-:= -- 1477
-add.period$ -- 17
-call.type$ -- 17
-change.case$ -- 121
-chr.to.int$ -- 15
-cite$ -- 18
-duplicate$ -- 676
-empty$ -- 668
-format.name$ -- 186
-if$ -- 1765
-int.to.chr$ -- 3
+            668 strings with 5812 characters,
+and the built_in function-call counts, 1510 in all, are:
+= -- 112
+> -- 47
+< -- 2
++ -- 18
+- -- 15
+* -- 165
+:= -- 243
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 19
+chr.to.int$ -- 3
+cite$ -- 6
+duplicate$ -- 103
+empty$ -- 103
+format.name$ -- 20
+if$ -- 265
+int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 157
-newline$ -- 95
-num.names$ -- 68
-pop$ -- 151
+missing$ -- 24
+newline$ -- 28
+num.names$ -- 12
+pop$ -- 34
 preamble$ -- 1
-purify$ -- 123
+purify$ -- 19
 quote$ -- 0
-skip$ -- 179
+skip$ -- 31
 stack$ -- 0
-substring$ -- 432
-swap$ -- 573
+substring$ -- 68
+swap$ -- 74
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 147
-warning$ -- 1
-while$ -- 65
+type$ -- 27
+warning$ -- 3
+while$ -- 11
 width$ -- 0
-write$ -- 229
-(There was 1 warning)
+write$ -- 49
+(There was 1 error message)

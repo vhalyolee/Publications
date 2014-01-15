@@ -4,6 +4,7 @@
 \usepackage{subfigure}
 \usepackage{wrapfig}
 \usepackage{multirow}
+\usepackage{graphicx}
 
 \begin{document}
 
@@ -23,10 +24,11 @@
 Massively parallel computing at the LHC could be the next leap necessary to reach an era of new discoveries at
 the LHC after the Higgs discovery. Scientific computing is a critical component of the LHC experiment, including
 operation, trigger, LHC computing GRID, simulation, and analysis. One way to improve the physics reach of the LHC is to
-take advantage of the flexibility of the trigger system by integrating coprocessors based on Graphics Processing Units (GPUs) or the Many Integrated Core (MIC) architecture into its server farm. This cutting edge technology provides not only the means to accelerate
-existing algorithms, but also the opportunity to develop new algorithms that select events that could have previously
-evaded detection. In this article we describe new algorithms to select prompt or non-prompt jet and black hole--like
-objects in the silicon tracker.
+take advantage of the flexibility of the trigger system by integrating coprocessors based on Graphics Processing Units 
+(GPUs) or the Many Integrated Core (MIC) architecture into its server farm. This cutting edge technology provides not 
+only the means to accelerate existing algorithms, but also the opportunity to develop new algorithms that select events
+ that could have previously evaded detection. In this article we describe new algorithms to select prompt or non-prompt
+ jet and black hole--like objects in the silicon tracker.
 \end{abstract}
 
 \begin{keyword}
@@ -91,7 +93,7 @@ refers to a type of parallel architecture as defined by Flynn's taxonomy.  In th
 
 SSE requires specific software instructions to make use of it, either through manual programming by the software developer or auto-vectorization at compile time.  The additional transistors available at each generation of Moore's Law have also allowed hardware designers to implement Instruction Level Parallelism (ILP).  Instead of the processor executing one operation per clock cycle, multiple instructions are executed in parallel. The implementation of ILP and the associated techniques of instruction pipelining, out-of-order execution, speculative execution, and hardware branch prediction helped consume many of the additional transistors made available through Moore's Law.  But in addition to ILP, the growing gap between the performance of the processors running at GHz speeds and the off-chip memory systems necessitated adding a complicated cache hierarchy to modern processors.
 
-While computing performance may increase by around 40\% per year in accordance with Moore's Law, memory performance increases approximately 10\% year.  If left unchecked this gap in performance would result in processors that had the potential to be very computationally powerful but would be limited in actual performance because of the constant need to wait on the memory system.  To address this, modern processors have a complicated cache hierarchy not only for data, but also for instructions, and even for translating virtual memory addresses to physical memory addresses in the form of Translation Lookaside Buffers (TLB).  Additional logic in the form of hardware prefetchers observes memory access patterns in real time and attempts to prefetch into the caches data and instructions that are likely to be needed in the future.  The disparity between processor and memory performance is so significant that the vast majority of the chip area in modern processors is devoted not to computation but to data handling.  As shown in Figure~\ref{fig:core_i7_die} the L3 cache plus the memory controller and other I/O portions of a chip can easily represent around 50\% of the area.  Within each core there is an L1 and L2 cache, plus all of the logic associated with ILP for that core.  The actual chip area devoted to computations is remarkably small.
+While computing performance may increase by around 40\% per year in accordance with Moore's Law, memory performance increases approximately 10\% per year.  If left unchecked this gap in performance would result in processors that had the potential to be very computationally powerful but would be limited in actual performance because of the constant need to wait on the memory system.  To address this, modern processors have a complicated cache hierarchy not only for data, but also for instructions, and even for translating virtual memory addresses to physical memory addresses in the form of Translation Lookaside Buffers (TLB).  Additional logic in the form of hardware prefetchers observes memory access patterns in real time and attempts to prefetch into the caches data and instructions that are likely to be needed in the future.  The disparity between processor and memory performance is so significant that the vast majority of the chip area in modern processors is devoted not to computation but to data handling.  As shown in Figure~\ref{fig:core_i7_die} the L3 cache plus the memory controller and other I/O portions of a chip can easily represent around 50\% of the area.  Within each core there is an L1 and L2 cache, plus all of the logic associated with ILP for that core.  The actual chip area devoted to computations is remarkably small.
 
 \begin{figure}[!Hhtb]
 \begin{center}
@@ -100,7 +102,7 @@ While computing performance may increase by around 40\% per year in accordance w
 \end{center}
 \end{figure}
 
-Faster clock speeds, ILP, and hardware prefetechers have the advantage of using existing software and simply running it faster.  However, there are limits to what the hardware can do to automatically extract ILP and predict the memory access pattern of arbitrary applications.  Deep instruction pipelines, which in some processors have exceeded 30 stages, have issues with hazards that would affect the correctness of results if not correctly handled by the processor, stalls due to unavailable inputs, and mispredicted branching behavior.  At some point this reaches a level of diminishing returns where the hardware complexity, and hence cost, outweighs the performance benefits.
+Faster clock speeds, ILP, and hardware prefetchers have the advantage of using existing software and simply running it faster.  However, there are limits to what the hardware can do to automatically extract ILP and predict the memory access pattern of arbitrary applications.  Deep instruction pipelines, which in some processors have exceeded 30 stages, have issues with hazards that would affect the correctness of results if not correctly handled by the processor, stalls due to unavailable inputs, and mispredicted branching behavior.  At some point this reaches a level of diminishing returns where the hardware complexity, and hence cost, outweighs the performance benefits.
 
 With faster clock speeds not feasible and ILP also reaching its limits, hardware designers in the early 2000s turned to multicore processing to utilize all of those additional transistors available to them from Moore's Law.  As seen in Figure~\ref{fig:core_i7_die}, the hardware designers develop the design for a core, plus the hardware logic to link them together, and can then place as many cores on a single chip as current manufacturing technology allows.  With multiple cores, independent instances of applications can run in parallel on the multiple cores without application-level changes.  But if one application such as a video transcoder wants to speed up the processing of a single video, it must be specially written to make use of multiple cores.
 
@@ -119,6 +121,67 @@ With the growing success of GPUs as a massively parallel processor well suited t
 
 Regardless of whether the future is GPUs or the architecturally similar Xeon Phi, it seems clear that the future of high-performance numerical computing is massively parallel processors.  This will require rethinking algorithms and their implementations to make effective use of these highly parallel processors.  Algorithms that have been viewed as computationally infeasible should be revisited, and current algorithms that do not parallelize well will need to be reworked to take advantage of modern processors.
 
+\section{Current Tracker and Tracking Algorithm}
+
+
+Both the CMS and ATLAS inner trackers include a silicon pixel detector and a silicon strip detector.
+All tracker layers provide two-dimensional hit position measurements, but only the pixel tracker
+ and a subset of the strip tracker layers provide three-dimensional hit position measurements.
+Only the CMS tracker is considered; however, the detector performances are comparable
+in the CMS and ATLAS experiments, and the tracking algorithm and results discussed are 
+applicable to both of these experiments.
+ The CMS pixel detector includes three barrel layers and two forward disks on either end of the
+detector; lying outside the pixel detector is the strip detector, consisting of ten layers in the barrel plus
+three inner disks and nine forward disks at each end of the detector. Owing to the strong magnetic field and
+the high granularity of the silicon tracker, promptly-produced charged particles with transverse momentum $p_T
+= 100$ GeV/c are reconstructed with a resolution in $p_T$ of 1.5\% and in transverse impact parameter $d_0$ of
+15 mm. The track reconstruction algorithms are able to reconstruct displaced tracks with transverse impact
+parameters up to 25 cm from particles decaying up to 50 cm from the beam line. The performance of the track
+reconstruction algorithms has been studied with data in~\cite{bib:Khachatryan:2010pw}. The silicon tracker is also
+used to reconstruct the primary vertex position with a precision of $\sigma_d = 20$ mm in each dimension.
+Figure~\ref{fig:tracker} shows the layout of the CMS tracker.
+
+\begin{figure}[!Hhtb]
+\begin{center}
+    \includegraphics[width=1.0\textwidth]{CMSTrackerLayout.pdf}
+    %\includegraphics[width=0.27\textwidth]{figs/ATLASTrackerLayout.pdf}
+    \includegraphics[width=1.0\textwidth]{CMS2Dtracker.png}
+    \caption{The CMS tracker in a 3-D view (top) and a 2-D view (bottom), showing the pixel detector and the silicon
+    strip tracker. \label{fig:tracker}}
+    \end{center}
+\end{figure}
+
+The CMS track reconstruction, known as the Combinatorial Track Finder (CTF), uses an iterative algorithm, with
+earlier iterations searching for tracks that are more easily found (relatively higher $p_T$ tracks close to
+the interaction region). The hits in these tracks are then removed, allowing later iterations to search for
+lower momentum or highly displaced tracks without the number of combinatorial possibilities becoming too
+large. Each iteration consists of four steps: a seeding step, a track finding step, a track fitting step, and
+a selection step.
+
+In the first step, a seed, consisting of either three hits or two hits and a primary vertex constraint, is
+constructed to create an initial estimate of the trajectory parameters for the track. Second, the track
+finding is performed using a global Kalman filter~\cite{bib:Fruhwirth:1987fm}. This step performs a fast
+propagation of the track candidate to propagate the track through the layers of the detector; at each layer, a
+search for compatible nearby hits is performed, and these are attached to the candidate. After all candidates
+in this step have been found, the track candidate collection is then cleaned to remove duplicate tracks or
+tracks which share a large number of hits. The third step is to perform a full Kalman fit over the whole
+track to obtain the best estimate of the track parameters at all points along the trajectory. The filter
+begins at the innermost hits, and then iterates outward through each hit to update the track trajectory
+estimate and its uncertainty. After this first fit is complete, a smoothing stage is then performed running
+backwards from the last hit to apply the information from the later hits to the earlier ones. This step uses a
+Runge-Kutta propagator to account for the effect of material interactions and an inhomogeneous magnetic
+field. Finally, track selection requirements are applied to reduce the fake rate of the resulting track
+candidates.
+
+While the CTF is a well-established and reliable algorithm, its combinatorial nature means that as the LHC
+luminosity, and hence the number of hits observed in the detector, increases, the number of possible
+combinations increases at a faster rate. Thus, increases in hardware performance alone are not necessarily
+enough to keep the running time of the algorithm reasonable as LHC luminosity continues to increase. This is a
+particularly severe problem in the CMS trigger, where the available computation time is quite limited; as a
+consequence, certain constraints on the tracks that can be reconstructed in the trigger are applied, to limit
+the number of possible combinations. This limits our ability to search for new physics models which would
+produce these kinds of tracks.
+
 \section{Hough Transform Algorithm}
 
 As a demonstration of how computationally intensive 2D tracking algorithms can take advantage of massively parallel GPU processing, the authors developed an implementation of the Hough transform using CUDA~\cite{Halyo:2013} in order to measure in real time the transverse momentum of prompt or non-prompt tracks.  The Hough transform~\cite{bib:HT1,bib:HT2,bib:HT3} is an image processing algorithm for feature detection that considers all possible instances of a parameterized feature such as a line or circle.  Each possible instance of a feature starts with zero votes in the parameter space, and then for each piece of input data votes are added to the feature instances that would include that input data.  After all input data has been processed the votes in the parameter space are processed.  Locations in the parameter space with more votes are likely to be actual features in the input data so this step amounts to looking for local maxima in the parameter space.  Once candidate features have been identified, more expensive computations can be applied to confirm the existence of the feature.
@@ -135,7 +198,7 @@ As a demonstration of how computationally intensive 2D tracking algorithms can t
 \end{center}
 \end{figure}
 
-One advantage of the Hough transform is that it is tolerant to missing data or data that does not exactly fit the candidate features.  This could occur if there is noise in the data, or if the resolution of the data results in features that cannot be perfectly represented with a given computational discretization.  The downside of this robustness is that the Hough transform is computationally expensive.  However, the implementation using the GPU has demonstrated significant performance advantages compared to a multithreaded CPU implementation.  This performance comparison was made using a self-developed CPU implementation because typical implementations such as the one in the Intel Integrated Performance Primitives (IPP) library are sequential implementations that do not utilize multicore CPUs.  It was felt that the multithreaded CPU implementation was a more fair way to compare performance, but self-implementations can sometimes be biased.  Therefore, additional CPU performance optimizations have been implemented in the form of using AVX intrinsics and improvements to the OpenMP parallelization.
+One advantage of the Hough transform is that it is tolerant to missing data or data that does not exactly fit the candidate features.  This could occur if there is noise in the data, or if the resolution of the data results in features that cannot be perfectly represented with a given computational discretization.  The downside of this robustness is that the Hough transform is computationally expensive.  However, the implementation using the GPU has demonstrated significant performance advantages compared to a multithreaded CPU implementation.  This performance comparison was made using a self-developed CPU implementation because typical implementations such as the one in the Intel Integrated Performance Primitives (IPP) library are sequential implementations that do not utilize multicore CPUs.  It was felt that the multithreaded CPU implementation was a more fair way to compare performance, but self-implementations can sometimes be biased.  Therefore, additional CPU performance optimizations have been implemented in the form of using Advanced Vector Extensions (AVX) intrinsics and improvements to the OpenMP parallelization.
 
 Sample input data was generated using a Monte Carlo simulation of a simple detector model where only the transverse plane is considered.  The model contains a simulated beam pipe with a radius of 3.0 cm surrounded by ten concentric, evenly-spaced tracking layers with an overall radius of 110.0 cm.  A hit resolution of 0.4 mm in each direction is used.
 
@@ -226,10 +289,10 @@ There are a total of 3000 tracks, some of which make up a varying number of disp
 
 \section{Summary}
 
-A natural extension of a computationally intensive 2D tracking algorithm using the Hough Transform algorithm was developed to enhance the LHC trigger perfromance.
+A natural extension of a computationally intensive 2D tracking algorithm using the Hough Transform algorithm was developed to enhance the LHC trigger performance.
 The GPU based algorithm has been extended to detect displaced jets and black holes; the signature of these events would be a smoking gun for the presence of physics beyond the Standard Model.  The proposed extension uses 
 a second application of the Hough transform to identify tracks originating from a vertex displaced from the interaction point.  Although the Hough transform is a 
-computationally expensive algorithm an implementation on a massively parallel processor such as a GPU is significantly faster than implementations on conventional CPUs.  Recent work to incorporate additional CPU optimizations yielded approximately a 40\% improvement in performance, although the GPU implementation is still approximately 60x faster 
+computationally expensive algorithm, an implementation on a massively parallel processor, such as a GPU, is significantly faster than implementations on conventional CPUs.  Recent work to incorporate additional CPU optimizations yielded approximately a 40\% improvement in performance, although the GPU implementation is still approximately 60x faster 
 than the corresponding multithreaded, vectorized CPU implementation.  The computational cost increase when performing the second Hough transform is mitigated by the data reduction of the first application of the transform, which reduces the data dimensionality from the number of hits to the number of tracks.  Benchmarks using data from Monte Carlo simulations showed that the implementation of this proposed trigger enhancement for displaced jets and black holes only increased the runtime by 30\%. Hence, the promising results of this trigger algorithm suggest that massively parallel computing at the LHC could be the next leap necessary 
 to reach an era of new discoveries at the LHC post the Higgs discovery. 
 
