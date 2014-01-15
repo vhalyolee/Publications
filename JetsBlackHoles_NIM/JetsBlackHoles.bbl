@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{19}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\href}[2]{#2}
@@ -12,12 +12,99 @@
 \providecommand{\bibinfo}[2]{#2}
 \ifx\xfnm\relax \def\xfnm[#1]{\unskip,\space#1}\fi
 %Type = Article
-\bibitem[{Chivukula et~al.(1991)Chivukula, Golden, and Simmons}]{bib:sixjets}
+\bibitem[{Chivukula et~al.(1991{\natexlab{a}})Chivukula, Golden, and
+  Simmons}]{bib:sixjets}
 \bibinfo{author}{R.~S. Chivukula}, \bibinfo{author}{M.~Golden},
   \bibinfo{author}{E.~H. Simmons},
 \newblock \bibinfo{title}{{Six-jet signals of highly colored fermions}},
 \newblock \bibinfo{journal}{Phys.Lett.} \bibinfo{volume}{B257}
-  (\bibinfo{year}{1991}) \bibinfo{pages}{403--408}.
+  (\bibinfo{year}{1991}{\natexlab{a}}) \bibinfo{pages}{403--408}.
+%Type = Article
+\bibitem[{Chivukula et~al.(1991{\natexlab{b}})Chivukula, Golden, and
+  Simmons}]{bib:multijets}
+\bibinfo{author}{R.~S. Chivukula}, \bibinfo{author}{M.~Golden},
+  \bibinfo{author}{E.~H. Simmons},
+\newblock \bibinfo{title}{{Multi-jet physics at hadron colliders}},
+\newblock \bibinfo{journal}{Nucl.Phys.} \bibinfo{volume}{B363}
+  (\bibinfo{year}{1991}{\natexlab{b}}) \bibinfo{pages}{83--96}.
+%Type = Article
+\bibitem[{Farhi and Susskind(1979)}]{bib:tcgut}
+\bibinfo{author}{E.~Farhi}, \bibinfo{author}{L.~Susskind},
+\newblock \bibinfo{title}{{Grand unified theory with heavy color}},
+\newblock \bibinfo{journal}{Phys.Rev.} \bibinfo{volume}{D20}
+  (\bibinfo{year}{1979}) \bibinfo{pages}{3404--3411}.
+%Type = Article
+\bibitem[{Marciano(1980)}]{bib:exoquarks}
+\bibinfo{author}{W.~J. Marciano},
+\newblock \bibinfo{title}{{Exotic New Quarks and Dynamical Symmetry Breaking}},
+\newblock \bibinfo{journal}{Phys.Rev.} \bibinfo{volume}{D21}
+  (\bibinfo{year}{1980}) \bibinfo{pages}{2425}.
+%Type = Article
+\bibitem[{Frampton and Glashow(1987{\natexlab{a}})}]{bib:unichiral}
+\bibinfo{author}{P.~H. Frampton}, \bibinfo{author}{S.~L. Glashow},
+\newblock \bibinfo{title}{{Unifiable Chiral Color With Natural {GIM}
+  Mechanism}},
+\newblock \bibinfo{journal}{Phys.Rev.Lett.} \bibinfo{volume}{58}
+  (\bibinfo{year}{1987}{\natexlab{a}}) \bibinfo{pages}{2168}.
+%Type = Article
+\bibitem[{Frampton and Glashow(1987{\natexlab{b}})}]{bib:altchiral}
+\bibinfo{author}{P.~H. Frampton}, \bibinfo{author}{S.~L. Glashow},
+\newblock \bibinfo{title}{{Chiral Color: An Alternative to the Standard
+  Model}},
+\newblock \bibinfo{journal}{Phys.Lett.} \bibinfo{volume}{B190}
+  (\bibinfo{year}{1987}{\natexlab{b}}) \bibinfo{pages}{157}.
+%Type = Article
+\bibitem[{Thaler and Wang(2008)}]{Thaler:2008ju}
+\bibinfo{author}{J.~Thaler}, \bibinfo{author}{L.-T. Wang},
+\newblock \bibinfo{title}{{Strategies to Identify Boosted Tops}},
+\newblock \bibinfo{journal}{JHEP} \bibinfo{volume}{0807} (\bibinfo{year}{2008})
+  \bibinfo{pages}{092}.
+%Type = Article
+\bibitem[{Altheimer et~al.(2012)Altheimer, Arora, Asquith, Brooijmans,
+  Butterworth et~al.}]{Altheimer:2012mn}
+\bibinfo{author}{A.~Altheimer}, \bibinfo{author}{S.~Arora},
+  \bibinfo{author}{L.~Asquith}, \bibinfo{author}{G.~Brooijmans},
+  \bibinfo{author}{J.~Butterworth}, et~al.,
+\newblock \bibinfo{title}{{Jet Substructure at the Tevatron and LHC: New
+  results, new tools, new benchmarks}},
+\newblock \bibinfo{journal}{J.Phys.} \bibinfo{volume}{G39}
+  (\bibinfo{year}{2012}) \bibinfo{pages}{063001}.
+%Type = Article
+\bibitem[{Strassler and Zurek(2007)}]{bib:hiddenvalley}
+\bibinfo{author}{M.~J. Strassler}, \bibinfo{author}{K.~M. Zurek},
+\newblock \bibinfo{title}{{Echoes of a hidden valley at hadron colliders}},
+\newblock \bibinfo{journal}{Phys.Lett.} \bibinfo{volume}{B651}
+  (\bibinfo{year}{2007}) \bibinfo{pages}{374--379}.
+%Type = Article
+\bibitem[{Halyo et~al.(2013)Halyo, Lou, Lujan, and Zhu}]{Halyo:2013yfa}
+\bibinfo{author}{V.~Halyo}, \bibinfo{author}{H.~K. Lou},
+  \bibinfo{author}{P.~Lujan}, \bibinfo{author}{W.~Zhu},
+\newblock \bibinfo{title}{{Data Driven Search in the Displaced $b\bar{b}$ Pair
+  Channel for a Higgs Boson Decaying to Long-Lived Neutral Particles}}
+  (\bibinfo{year}{2013}).
+%Type = Article
+\bibitem[{Chatrchyan et~al.(2008)}]{Chatrchyan:2008aa}
+\bibinfo{author}{S.~Chatrchyan}, et~al. (\bibinfo{collaboration}{CMS
+  Collaboration}),
+\newblock \bibinfo{title}{{The CMS experiment at the CERN LHC}},
+\newblock \bibinfo{journal}{JINST} \bibinfo{volume}{3} (\bibinfo{year}{2008})
+  \bibinfo{pages}{S08004}.
+%Type = Article
+\bibitem[{Aad et~al.(2008)}]{Aad:2008zzm}
+\bibinfo{author}{G.~Aad}, et~al. (\bibinfo{collaboration}{ATLAS
+  Collaboration}),
+\newblock \bibinfo{title}{{The ATLAS Experiment at the CERN Large Hadron
+  Collider}},
+\newblock \bibinfo{journal}{JINST} \bibinfo{volume}{3} (\bibinfo{year}{2008})
+  \bibinfo{pages}{S08003}.
+%Type = Article
+\bibitem[{Chatrchyan et~al.(2013)}]{Chatrchyan:2012jna}
+\bibinfo{author}{S.~Chatrchyan}, et~al. (\bibinfo{collaboration}{CMS
+  Collaboration}),
+\newblock \bibinfo{title}{{Search in leptonic channels for heavy resonances
+  decaying to long-lived neutral particles}},
+\newblock \bibinfo{journal}{JHEP} \bibinfo{volume}{1302} (\bibinfo{year}{2013})
+  \bibinfo{pages}{085}.
 %Type = Article
 \bibitem[{{\it et al.}~[CMS~Collaboration](2010)}]{bib:Khachatryan:2010pw}
 \bibinfo{author}{V.~K. {\it et al.}~[CMS~Collaboration]},
@@ -26,7 +113,38 @@
 \newblock \bibinfo{journal}{Eur.\ Phys.\ J.} \bibinfo{volume}{C70}
   (\bibinfo{year}{2010}) \bibinfo{pages}{1165}.
 %Type = Article
-\bibitem[{Fruhwirth(????)}]{bib:Fruhwirth:1987fm}
-\bibinfo{author}{R.~Fruhwirth}  (????).
+\bibitem[{Fruhwirth(1987)}]{bib:Fruhwirth:1987fm}
+\bibinfo{author}{R.~Fruhwirth},
+\newblock \bibinfo{title}{{Application of Kalman filtering to track and vertex
+  fitting}},
+\newblock \bibinfo{journal}{Nucl.\ Instrum.\ Meth.} \bibinfo{volume}{A262}
+  (\bibinfo{year}{1987}) \bibinfo{pages}{444}.
+%Type = Article
+\bibitem[{Halyo et~al.(2013)Halyo, Hunt, Jindal, LeGresley, and
+  Lujan}]{Halyo:2013}
+\bibinfo{author}{V.~Halyo}, \bibinfo{author}{A.~Hunt},
+  \bibinfo{author}{P.~Jindal}, \bibinfo{author}{P.~LeGresley},
+  \bibinfo{author}{P.~Lujan},
+\newblock \bibinfo{title}{{GPU Enhancement of the Trigger to Extend Physics
+  Reach at the LHC}},
+\newblock \bibinfo{journal}{JINST} \bibinfo{volume}{8} (\bibinfo{year}{2013})
+  \bibinfo{pages}{P10005}.
+%Type = Article
+\bibitem[{Hough(1959)}]{bib:HT1}
+\bibinfo{author}{P.~Hough},
+\newblock \bibinfo{title}{{Machine Analysis Of Bubble Chamber Pictures}},
+\newblock \bibinfo{journal}{Proc. Int. Conf. High Energy Accelerators and
+  Instrumentation} \bibinfo{volume}{C590914} (\bibinfo{year}{1959})
+  \bibinfo{pages}{554--558}.
+%Type = Book
+\bibitem[{Hough(1962)}]{bib:HT2}
+\bibinfo{author}{P.~Hough}, \bibinfo{title}{Method and mean for recognizing
+  complex patterns}, \bibinfo{publisher}{United States Patent 3069654},
+  \bibinfo{year}{1962}.
+%Type = Book
+\bibitem[{Gonzalez and Woods(1993)}]{bib:HT3}
+\bibinfo{author}{R.~Gonzalez}, \bibinfo{author}{R.~Woods},
+  \bibinfo{title}{Digital Image Processing}, \bibinfo{publisher}{Prentice
+  Hall}, \bibinfo{year}{1993}.
 
 \end{thebibliography}

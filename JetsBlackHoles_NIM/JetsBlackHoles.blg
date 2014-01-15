@@ -2,68 +2,46 @@ This is BibTeX, Version 0.99c (Web2C 7.5.6)
 The top-level auxiliary file: JetsBlackHoles.aux
 The style file: model1-num-names.bst
 Database file #1: JetsBlackHoles.bib
-Illegal end of database file---line 256 of file JetsBlackHoles.bib
- : }
- :  
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "bib:multijets"
-Warning--I didn't find a database entry for "bib:tcgut"
-Warning--I didn't find a database entry for "bib:exoquarks"
-Warning--I didn't find a database entry for "bib:unichiral"
-Warning--I didn't find a database entry for "bib:altchiral"
-Warning--I didn't find a database entry for "Thaler:2008ju"
-Warning--I didn't find a database entry for "Altheimer:2012mn"
-Warning--I didn't find a database entry for "bib:hiddenvalley"
-Warning--I didn't find a database entry for "Halyo:2013yfa"
-Warning--I didn't find a database entry for "Chatrchyan:2008aa"
-Warning--I didn't find a database entry for "Aad:2008zzm"
-Warning--I didn't find a database entry for "Chatrchyan:2012jna"
-Warning--I didn't find a database entry for "Halyo:2013"
-Warning--I didn't find a database entry for "bib:HT1"
-Warning--I didn't find a database entry for "bib:HT2"
-Warning--I didn't find a database entry for "bib:HT3"
-Warning--empty title in bib:Fruhwirth:1987fm
-Warning--empty journal in bib:Fruhwirth:1987fm
-Warning--empty year in bib:Fruhwirth:1987fm; set to ????
-You've used 3 entries,
+Warning--empty journal in Halyo:2013yfa
+You've used 19 entries,
             2910 wiz_defined-function locations,
-            668 strings with 5812 characters,
-and the built_in function-call counts, 1510 in all, are:
-= -- 112
-> -- 47
-< -- 2
-+ -- 18
-- -- 15
-* -- 165
-:= -- 243
-add.period$ -- 3
-call.type$ -- 3
-change.case$ -- 19
-chr.to.int$ -- 3
-cite$ -- 6
-duplicate$ -- 103
-empty$ -- 103
-format.name$ -- 20
-if$ -- 265
-int.to.chr$ -- 1
+            765 strings with 8031 characters,
+and the built_in function-call counts, 10689 in all, are:
+= -- 791
+> -- 400
+< -- 14
++ -- 153
+- -- 132
+* -- 1301
+:= -- 1622
+add.period$ -- 19
+call.type$ -- 19
+change.case$ -- 133
+chr.to.int$ -- 17
+cite$ -- 20
+duplicate$ -- 746
+empty$ -- 739
+format.name$ -- 194
+if$ -- 1933
+int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 24
-newline$ -- 28
-num.names$ -- 12
-pop$ -- 34
+missing$ -- 173
+newline$ -- 105
+num.names$ -- 76
+pop$ -- 161
 preamble$ -- 1
-purify$ -- 19
+purify$ -- 135
 quote$ -- 0
-skip$ -- 31
+skip$ -- 201
 stack$ -- 0
-substring$ -- 68
-swap$ -- 74
+substring$ -- 477
+swap$ -- 629
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 27
-warning$ -- 3
-while$ -- 11
+type$ -- 165
+warning$ -- 1
+while$ -- 73
 width$ -- 0
-write$ -- 49
-(There was 1 error message)
+write$ -- 255
+(There was 1 warning)

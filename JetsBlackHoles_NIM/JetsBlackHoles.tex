@@ -27,8 +27,9 @@ operation, trigger, LHC computing GRID, simulation, and analysis. One way to imp
 take advantage of the flexibility of the trigger system by integrating coprocessors based on Graphics Processing Units 
 (GPUs) or the Many Integrated Core (MIC) architecture into its server farm. This cutting edge technology provides not 
 only the means to accelerate existing algorithms, but also the opportunity to develop new algorithms that select events
- that could have previously evaded detection. In this article we describe new algorithms to select prompt or non-prompt
- jet and black hole--like objects in the silicon tracker.
+ in the trigger that previously would have evaded detection. In this article we describe new algorithms that would allow 
+to select in the trigger new topological signatures that include non-prompt jet and black hole--like objects 
+in the silicon tracker.
 \end{abstract}
 
 \begin{keyword}
@@ -43,7 +44,7 @@ Data analysis at the LHC requires approaches to processing that are effective at
 
 Leveraging processors derived from consumer products helps minimize costs associated with purchasing and operating large computing installations such as those required for the LHC, but there is also a software aspect that needs to be considered.  Moore's Law continues to yield ever more powerful processors, but the architecture of processors has changed significantly over the past decade.  For many years, CPUs were able to run the exact same software faster and faster with each new processor generation.  This changed in the early 2000s as Intel and AMD shifted focus to multicore processors featuring at first two cores, but with some newer processors featuring as many as 16 cores.
 
-Parallel processors, in the form of multicore CPUs and more recently highly programmable Graphics Processing Units (GPUs), may require a significant rethink of algorithms and their implementations.  At the same time the High Energy Physics (HEP) community is at a crossroads with tentative confirmation of the Higgs particle completing the search for particles predicted by the Standard Model.  The search for Beyond the Standard Model (BSM) physics will require development of advanced algorithms for detecting rare new physics phenomena, and these new algorithms will need to be designed and implemented based on knowledge of the current state and likely future directions for processor architecture.
+Parallel processors, in the form of multicore CPUs and more recently highly programmable Graphics Processing Units (GPUs), may require a significant rethink of algorithms and their implementations.  At the same time the High Energy Physics (HEP) community is at a crossroads with tentative confirmation of the Higgs particle completing the search for particles predicted by the Standard Model.  The search for Beyond the Standard Model (BSM) physics will require enhancement of the LHC trigger with parallel processors and computational accelerators such as GPUs or Xeon-Phi. In parallel it would require the development of advanced algorithms for detecting rare new physics phenomena. These new algorithms will need to be designed and implemented based on knowledge of the current state and likely future directions for processor architecture to allow and extend the physics reach at the LHC like never before.
 
 \section{Physics Motivation}
 
@@ -64,7 +65,7 @@ place to integrate GPU or MIC cards. These cards allow for the development of fa
  parallel programming architectures to select events that would indicate BSM physics. 
 
 In this article newly developed trigger algorithms are described that would be able to select events
-that include displaced jets originating from long lived particles, or various topologies with boosted jets that will
+that include displaced jets originating from long lived particles, or various topological with boosted jets that will
 be more frequent as the center of mass energy of the collision at design luminosity is increased. These new
 triggers will naturally be sensitive to a larger parameter space, including lower-mass Higgs that decay to
 displaced heavy flavor hadrons, that could have evaded detection in previous experiments. For example, CMS has 
@@ -289,14 +290,29 @@ There are a total of 3000 tracks, some of which make up a varying number of disp
 
 \section{Summary}
 
+
+Massively parallel computing  is a critical component at the LHC expreiment that is  necessary in order to extend its physics reach. 
+Integration of coprocessors based on GPUs or MIC architecture into LHC trigger server farm provides not 
+only the means to accelerate existing algorithms, but also the opportunity to develop new algorithms that select events
+ in the trigger that previously would have evaded detection.
+
 A natural extension of a computationally intensive 2D tracking algorithm using the Hough Transform algorithm was developed to enhance the LHC trigger performance.
-The GPU based algorithm has been extended to detect displaced jets and black holes; the signature of these events would be a smoking gun for the presence of physics beyond the Standard Model.  The proposed extension uses 
-a second application of the Hough transform to identify tracks originating from a vertex displaced from the interaction point.  Although the Hough transform is a 
-computationally expensive algorithm, an implementation on a massively parallel processor, such as a GPU, is significantly faster than implementations on conventional CPUs.  Recent work to incorporate additional CPU optimizations yielded approximately a 40\% improvement in performance, although the GPU implementation is still approximately 60x faster 
-than the corresponding multithreaded, vectorized CPU implementation.  The computational cost increase when performing the second Hough transform is mitigated by the data reduction of the first application of the transform, which reduces the data dimensionality from the number of hits to the number of tracks.  Benchmarks using data from Monte Carlo simulations showed that the implementation of this proposed trigger enhancement for displaced jets and black holes only increased the runtime by 30\%. Hence, the promising results of this trigger algorithm suggest that massively parallel computing at the LHC could be the next leap necessary 
+The GPU based algorithm has been extended to detect topological signatures that include displaced jets and black holes never possible before; 
+the signature of these events would be a smoking gun for the presence of physics beyond the Standard Model. 
+The proposed extension uses a second application of the Hough transform to identify tracks originating from a vertex displaced from the interaction point. 
+ Although the Hough transform is a computationally expensive algorithm that originally could not have run in the trigger system, an implementation on a computational accelerator, such as a GPU, 
+is significantly faster than implementations on conventional CPUs.  Recent work to incorporate additional CPU optimizations yielded approximately a 40\% improvement in performance, 
+although the GPU implementation is still approximately 60x faster than the corresponding multithreaded, vectorized CPU implementation.  The computational cost increase when performing the second
+ Hough transform is mitigated by the data reduction of the first application of the transform, which reduces the data dimensionality from the number of hits to the number of tracks. 
+ Benchmarks using data from Monte Carlo simulations showed that the implementation of this proposed trigger enhancement for topological signatures that include 
+displaced jets and black holes only increased the runtime by 30\%. Hence, the promising results of this trigger algorithms suggest that massively parallel computing at the LHC could be the next leap necessary 
 to reach an era of new discoveries at the LHC post the Higgs discovery. 
 
-Future work will focus on efficiency and purity improvements, as well as investigating further GPU performance optimizations.  In addition it would be desirable to compare these performance results with an equivalent implementation on the Intel Xeon Phi.  While still based on the x86 architecture the Xeon Phi is designed using much simpler cores, allowing for many more cores per processor like in GPUs.
+Future work will focus on efficiency and purity improvements, as well as investigating further GPU performance optimization.  In addition it would be desirable to compare these performance results with an equivalent implementation on the Intel Xeon Phi.  While still based on the x86 architecture the Xeon Phi is designed using much simpler cores, allowing for many more cores per processor like in GPUs.
+
+To conclude, this work demonstrate one of the advantages of massively parallel computing at the LHC as a mean to reach an era of new discoveries at
+the LHC after the Higgs discovery.
+
 
 \bibliographystyle{model1-num-names}
 \bibliography{JetsBlackHoles}
