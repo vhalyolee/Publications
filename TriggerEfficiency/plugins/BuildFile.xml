@@ -1,0 +1,15 @@
+<flags   CXXFLAGS="-O1 -ggdb"/>
+<export>
+</export>
+<library   name="TriggerEfficiency_plugins" file="*.cc">
+  <flags   EDM_PLUGIN="1"/>
+  <use   name="root"/>
+  <use   name="rootcore"/>
+  <use   name="FWCore/Framework"/>
+  <use   name="FWCore/MessageLogger"/>
+  <use   name="FWCore/PluginManager"/>
+  <use   name="FWCore/ParameterSet"/>
+  <use   name="FWCore/ServiceRegistry"/>
+  <use   name="HLTrigger/HLTcore"/>
+  <use   name="DataFormats/BeamSpot"/>
+</library>

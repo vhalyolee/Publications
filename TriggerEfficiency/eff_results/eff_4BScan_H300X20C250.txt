@@ -1,0 +1,82 @@
+Trigger info changed: 1
+                                      Trigger Name total  ctau0.1 ctau1.0 ctau10
+                                L1_DoubleMu_10_3p5 31/1000 0/0 31/1000 0/0 
+        HLT_L2DoubleMu23_NoVertex_2Cha_Angle2p5_v3 1/1000 0/0 1/1000 0/0 
+                        L1_DoubleMu0_HighQ_EtaCuts 33/1000 0/0 33/1000 0/0 
+        HLT_DoubleDisplacedMu4_DiPFJet40Neutral_v7 4/1000 0/0 4/1000 0/0 
+                                      L1_TripleMu0 7/1000 0/0 7/1000 0/0 
+   HLT_L2TripleMu10_0_0_NoVertex_PFJet40Neutral_v7 3/1000 0/0 3/1000 0/0 
+                                         L1_HTT150 282/1000 0/0 282/1000 0/0 
+               HLT_HT300_DoubleDisplacedPFJet60_v9 70/1000 0/0 70/1000 0/0 
+       L1_Mu10er_JetC12_WdEtaPhi1_DoubleJetC_20_12 119/1000 0/0 119/1000 0/0 
+HLT_Mu12_eta2p1_DiCentral_40_20_DiBTagIP3D1stTrack_v7 0/1000 0/0 0/1000 0/0 
+                             AnyDisplacedTriggerL1 349/1000 0/0 349/1000 0/0 
+                                      AnyTriggerL1 813/1000 0/0 813/1000 0/0 
+                            AnyDisplacedTriggerHLT 75/1000 0/0 75/1000 0/0 
+                                     AnyTriggerHLT 363/1000 0/0 363/1000 0/0 
+                                      Trigger Name total        ctau0.1      ctau1.0      ctau10
+                                L1_DoubleMu_10_3p5 3.1  +/- 0.5  no events     3.1  +/- 0.5  no events     
+HLT_L2DoubleMu23_NoVertex_2Cha_Angle2p5_v3         0.1  +/- 0.1  no events     0.1  +/- 0.1  no events     
+L1_DoubleMu0_HighQ_EtaCuts                         3.3  +/- 0.6  no events     3.3  +/- 0.6  no events     
+HLT_DoubleDisplacedMu4_DiPFJet40Neutral_v7         0.4  +/- 0.2  no events     0.4  +/- 0.2  no events     
+L1_TripleMu0                                       0.7  +/- 0.3  no events     0.7  +/- 0.3  no events     
+HLT_L2TripleMu10_0_0_NoVertex_PFJet40Neutral_v7    0.3  +/- 0.2  no events     0.3  +/- 0.2  no events     
+L1_HTT150                                          28.2 +/- 1.4  no events     28.2 +/- 1.4  no events     
+HLT_HT300_DoubleDisplacedPFJet60_v9                7.0  +/- 0.8  no events     7.0  +/- 0.8  no events     
+L1_Mu10er_JetC12_WdEtaPhi1_DoubleJetC_20_12        11.9 +/- 1.0  no events     11.9 +/- 1.0  no events     
+HLT_Mu12_eta2p1_DiCentral_40_20_DiBTagIP3D1stTrack_v7 0.0  +/- 0.0  no events     0.0  +/- 0.0  no events     
+AnyDisplacedTriggerL1                              34.9 +/- 1.5  no events     34.9 +/- 1.5  no events     
+AnyTriggerL1                                       81.3 +/- 1.2  no events     81.3 +/- 1.2  no events     
+AnyDisplacedTriggerHLT                             7.5  +/- 0.8  no events     7.5  +/- 0.8  no events     
+AnyTriggerHLT                                      36.3 +/- 1.5  no events     36.3 +/- 1.5  no events     
+--- Top L1 triggers ---
+ L1_ETM36 59.8 +/- 1.6  
+ L1_ETM40 57.4 +/- 1.6  
+ L1_ETM50 51.7 +/- 1.6  
+ L1_SingleJet128 48.9 +/- 1.6  
+ L1_DoubleJetC56 44.8 +/- 1.6  
+ L1_DoubleJet64_Central 40.4 +/- 1.6  
+ L1_ETM70 38.2 +/- 1.5  
+ L1_DoubleJetC36_ETM30 37.7 +/- 1.5  
+ L1_DoubleJetC44_ETM30 33.8 +/- 1.5  
+ L1_HTT150 28.2 +/- 1.4  
+ L1_DoubleJetC56_Eta1p74_WdEta4 27.2 +/- 1.4  
+ L1_HTT175 22.5 +/- 1.3  
+ L1_SingleEG20 21.5 +/- 1.3  
+ L1_Mu3_JetC52_WdEtaPhi2 21.2 +/- 1.3  
+ L1_SingleEG22 20.8 +/- 1.3  
+ L1_SingleEG24 20.1 +/- 1.3  
+ L1_ETM100 19.4 +/- 1.3  
+ L1_SingleEG18er 19.1 +/- 1.2  
+ L1_SingleEG30 18.7 +/- 1.2  
+ L1_HTT200 17.4 +/- 1.2  
+ L1_Mu0_HTT100 15.0 +/- 1.1  
+ L1_Mu10er_JetC32 14.6 +/- 1.1  
+ L1_Mu10er_JetC12_WdEtaPhi1_DoubleJetC_32_12 11.9 +/- 1.0  
+ L1_Mu10er_JetC12_WdEtaPhi1_DoubleJetC_20_12 11.9 +/- 1.0  
+ L1_TripleJet_64_44_24_VBF 11.9 +/- 1.0  
+ L1_Mu4_HTT125 11.4 +/- 1.0  
+ L1_DoubleEG6_HTT100 11.2 +/- 1.0  
+ L1_TripleJet_64_48_28_VBF 11.1 +/- 1.0  
+ L1_SingleMu14_Eta2p1 10.8 +/- 1.0  
+ L1_Mu12er_ETM20 10.7 +/- 1.0  
+ L1_TripleJet_68_48_32_VBF 10.5 +/- 1.0  
+ L1_SingleMu16 10.2 +/- 1.0  
+ L1_SingleMu16_Eta2p1 10.0 +/- 0.9  
+ L1_DoubleEG_13_7 9.9  +/- 0.9  
+ L1_DoubleEG6_HTT125 9.8  +/- 0.9  
+ L1_SingleMu18er 9.0  +/- 0.9  
+ L1_QuadJetC32 8.9  +/- 0.9  
+ L1_MuOpen_EG12 8.5  +/- 0.9  
+ L1_SingleMu20 8.3  +/- 0.9  
+ L1_SingleMu20er 8.1  +/- 0.9  
+ L1_ETT300 7.8  +/- 0.8  
+ L1_QuadJetC36 7.6  +/- 0.8  
+ L1_Mu3p5_EG12 7.2  +/- 0.8  
+ L1_QuadJetC40 6.2  +/- 0.8  
+ L1_SingleMu25er 6.2  +/- 0.8  
+ L1_Mu12_EG7 6.0  +/- 0.8  
+ L1_Mu5_DoubleEG5 4.5  +/- 0.7  
+ L1_DoubleTauJet44_Eta2p17 4.5  +/- 0.7  
+ L1_TripleEG_12_7_5 3.9  +/- 0.6  
+ L1_Mu5_DoubleEG6 3.7  +/- 0.6  

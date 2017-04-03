@@ -1,0 +1,600 @@
+Trigger info changed: 1
+LIST OF TRIGGERS
+================
+L1 algo triggers: 
+Name: L1_AlwaysTrue Alias: L1_AlwaysTrue prescale: -1
+Name: L1_BeamGas_Hf_BptxMinusPostQuiet Alias: L1_BeamGas_Hf_BptxMinusPostQuiet prescale: -1
+Name: L1_BeamGas_Hf_BptxPlusPostQuiet Alias: L1_BeamGas_Hf_BptxPlusPostQuiet prescale: -1
+Name: L1_BeamHalo Alias: L1_BeamHalo prescale: -1
+Name: L1_DoubleEG3_FwdVeto Alias: L1_DoubleEG3_FwdVeto prescale: -1
+Name: L1_DoubleEG5 Alias: L1_DoubleEG5 prescale: -1
+Name: L1_DoubleEG5_RomanPotsOR Alias: L1_DoubleEG5_RomanPotsOR prescale: -1
+Name: L1_DoubleEG6_HTT100 Alias: L1_DoubleEG6_HTT100 prescale: -1
+Name: L1_DoubleEG6_HTT125 Alias: L1_DoubleEG6_HTT125 prescale: -1
+Name: L1_DoubleEG6_HTT25 Alias: L1_DoubleEG6_HTT25 prescale: -1
+Name: L1_DoubleEG6_HTT50 Alias: L1_DoubleEG6_HTT50 prescale: -1
+Name: L1_DoubleEG6_HTT75 Alias: L1_DoubleEG6_HTT75 prescale: -1
+Name: L1_DoubleEG_13_7 Alias: L1_DoubleEG_13_7 prescale: -1
+Name: L1_DoubleForJet16_EtaOpp Alias: L1_DoubleForJet16_EtaOpp prescale: -1
+Name: L1_DoubleJet36_Central Alias: L1_DoubleJetC36 prescale: -1
+Name: L1_DoubleJet52_Central Alias: L1_DoubleJetC52 prescale: -1
+Name: L1_DoubleJet64_Central Alias: L1_DoubleJetC64 prescale: -1
+Name: L1_DoubleJetC36_ETM30 Alias: L1_DoubleJetC36_ETM30 prescale: -1
+Name: L1_DoubleJetC36_RomanPotsOR Alias: L1_DoubleJetC36_RomanPotsOR prescale: -1
+Name: L1_DoubleJetC44_ETM30 Alias: L1_DoubleJetC44_ETM30 prescale: -1
+Name: L1_DoubleJetC44_Eta1p74_WdEta4 Alias: L1_DoubleJetC44_Eta1p74_WdEta4 prescale: -1
+Name: L1_DoubleJetC56 Alias: L1_DoubleJetC56 prescale: -1
+Name: L1_DoubleJetC56_Eta1p74_WdEta4 Alias: L1_DoubleJetC56_Eta1p74_WdEta4 prescale: -1
+Name: L1_DoubleMu0 Alias: L1_DoubleMu0 prescale: -1
+Name: L1_DoubleMu0_HighQ_EtaCuts Alias: L1_DoubleMu0er_HighQ prescale: -1
+Name: L1_DoubleMu3er_HighQ_WdEta22 Alias: L1_DoubleMu3er_HighQ_WdEta22 prescale: -1
+Name: L1_DoubleMu3p5_EG5 Alias: L1_DoubleMu3p5_EG5 prescale: -1
+Name: L1_DoubleMu5_EG5 Alias: L1_DoubleMu5_EG5 prescale: -1
+Name: L1_DoubleMu5_RomanPotsOR Alias: L1_DoubleMu5_RomanPotsOR prescale: -1
+Name: L1_DoubleMu5_v1 Alias: L1_DoubleMu5 prescale: -1
+Name: L1_DoubleMu_10_3p5 Alias: L1_DoubleMu_10_3p5 prescale: -1
+Name: L1_DoubleMu_10_Open Alias: L1_DoubleMu_10_Open prescale: -1
+Name: L1_DoubleMu_12_5 Alias: L1_DoubleMu_12_5 prescale: -1
+Name: L1_DoubleMu_3er_0er_HighQ_WdEta22 Alias: L1_DoubleMu_3er_0er_HighQ_WdEta22 prescale: -1
+Name: L1_DoubleMu_5er_0er_HighQ_WdEta22 Alias: L1_DoubleMu_5er_0er_HighQ_WdEta22 prescale: -1
+Name: L1_DoubleTauJet44_Eta2p17 Alias: L1_DoubleTauJet44er prescale: -1
+Name: L1_EG18er_JetC_Cen28_Tau20_dPhi1 Alias: L1_EG18er_JetC_Cen28_Tau20_dPhi1 prescale: -1
+Name: L1_EG18er_JetC_Cen36_Tau28_dPhi1 Alias: L1_EG18er_JetC_Cen36_Tau28_dPhi1 prescale: -1
+Name: L1_EG22_ForJet24 Alias: L1_EG22_ForJet24 prescale: -1
+Name: L1_EG22_ForJet32 Alias: L1_EG22_ForJet32 prescale: -1
+Name: L1_EG8_DoubleJetC20 Alias: L1_EG8_DoubleJetC20 prescale: -1
+Name: L1_ETM100 Alias: L1_ETM100 prescale: -1
+Name: L1_ETM30 Alias: L1_ETM30 prescale: -1
+Name: L1_ETM36 Alias: L1_ETM36 prescale: -1
+Name: L1_ETM40 Alias: L1_ETM40 prescale: -1
+Name: L1_ETM50 Alias: L1_ETM50 prescale: -1
+Name: L1_ETM70 Alias: L1_ETM70 prescale: -1
+Name: L1_ETT140 Alias: L1_ETT140 prescale: -1
+Name: L1_ETT300 Alias: L1_ETT300 prescale: -1
+Name: L1_ETT80 Alias: L1_ETT80 prescale: -1
+Name: L1_HTT100 Alias: L1_HTT100 prescale: -1
+Name: L1_HTT125 Alias: L1_HTT125 prescale: -1
+Name: L1_HTT150 Alias: L1_HTT150 prescale: -1
+Name: L1_HTT175 Alias: L1_HTT175 prescale: -1
+Name: L1_HTT200 Alias: L1_HTT200 prescale: -1
+Name: L1_HTT50 Alias: L1_HTT50 prescale: -1
+Name: L1_HTT75 Alias: L1_HTT75 prescale: -1
+Name: L1_IsoEG18er_JetC_Cen32_Tau24_dPhi1 Alias: L1_IsoEG18er_JetC_Cen32_Tau24_dPhi1 prescale: -1
+Name: L1_IsoEG18er_JetC_Cen36_Tau28_dPhi1 Alias: L1_IsoEG18er_JetC_Cen36_Tau28_dPhi1 prescale: -1
+Name: L1_Mu0_HTT100 Alias: L1_Mu0_HTT100 prescale: -1
+Name: L1_Mu0_HTT25 Alias: L1_Mu0_HTT25 prescale: -1
+Name: L1_Mu0_HTT50 Alias: L1_Mu0_HTT50 prescale: -1
+Name: L1_Mu10er_JetC12_WdEtaPhi1_DoubleJetC_20_12 Alias: L1_Mu10er_JetC12_WdEtaPhi1_DoubleJetC_20_12 prescale: -1
+Name: L1_Mu10er_JetC12_WdEtaPhi1_DoubleJetC_32_12 Alias: L1_Mu10er_JetC12_WdEtaPhi1_DoubleJetC_32_12 prescale: -1
+Name: L1_Mu10er_JetC32 Alias: L1_Mu10er_JetC32 prescale: -1
+Name: L1_Mu12_EG7 Alias: L1_Mu12_EG7 prescale: -1
+Name: L1_Mu12er_ETM20 Alias: L1_Mu12er_ETM20 prescale: -1
+Name: L1_Mu3_JetC16_WdEtaPhi2 Alias: L1_Mu3_JetC16_WdEtaPhi2 prescale: -1
+Name: L1_Mu3_JetC52_WdEtaPhi2 Alias: L1_Mu3_JetC52_WdEtaPhi2 prescale: -1
+Name: L1_Mu3p5_EG12 Alias: L1_Mu3p5_EG12 prescale: -1
+Name: L1_Mu4_HTT125 Alias: L1_Mu4_HTT125 prescale: -1
+Name: L1_Mu5_DoubleEG5 Alias: L1_Mu5_DoubleEG5 prescale: -1
+Name: L1_Mu5_DoubleEG6 Alias: L1_Mu5_DoubleEG6 prescale: -1
+Name: L1_Mu8_DoubleJetC20 Alias: L1_Mu8_DoubleJetC20 prescale: -1
+Name: L1_MuOpen_EG12 Alias: L1_MuOpen_EG12 prescale: -1
+Name: L1_MuOpen_EG5 Alias: L1_MuOpen_EG5 prescale: -1
+Name: L1_QuadJetC32 Alias: L1_QuadJetC32 prescale: -1
+Name: L1_QuadJetC36 Alias: L1_QuadJetC36 prescale: -1
+Name: L1_QuadJetC40 Alias: L1_QuadJetC40 prescale: -1
+Name: L1_SingleEG12 Alias: L1_SingleEG12 prescale: -1
+Name: L1_SingleEG18er Alias: L1_SingleEG18er prescale: -1
+Name: L1_SingleEG20 Alias: L1_SingleEG20 prescale: -1
+Name: L1_SingleEG20_RomanPotsOR Alias: L1_SingleEG20_RomanPotsOR prescale: -1
+Name: L1_SingleEG22 Alias: L1_SingleEG22 prescale: -1
+Name: L1_SingleEG24 Alias: L1_SingleEG24 prescale: -1
+Name: L1_SingleEG30 Alias: L1_SingleEG30 prescale: -1
+Name: L1_SingleEG5 Alias: L1_SingleEG5 prescale: -1
+Name: L1_SingleEG7 Alias: L1_SingleEG7 prescale: -1
+Name: L1_SingleForJet16 Alias: L1_SingleForJet16 prescale: -1
+Name: L1_SingleIsoEG18er Alias: L1_SingleIsoEG18er prescale: -1
+Name: L1_SingleIsoEG20er Alias: L1_SingleIsoEG20er prescale: -1
+Name: L1_SingleJet128 Alias: L1_SingleJet128 prescale: -1
+Name: L1_SingleJet16 Alias: L1_SingleJet16 prescale: -1
+Name: L1_SingleJet16_FwdVeto5 Alias: L1_SingleJet16_FwdVeto5 prescale: -1
+Name: L1_SingleJet20_Central_NotBptxOR Alias: L1_SingleJetC20_NotBptxOR prescale: -1
+Name: L1_SingleJet36 Alias: L1_SingleJet36 prescale: -1
+Name: L1_SingleJet36_FwdVeto5 Alias: L1_SingleJet36_FwdVeto5 prescale: -1
+Name: L1_SingleJet52 Alias: L1_SingleJet52 prescale: -1
+Name: L1_SingleJet52_RomanPotsOR Alias: L1_SingleJet52_RomanPotsOR prescale: -1
+Name: L1_SingleJet68 Alias: L1_SingleJet68 prescale: -1
+Name: L1_SingleJet92 Alias: L1_SingleJet92 prescale: -1
+Name: L1_SingleJetC32_NotBptxOR Alias: L1_SingleJetC32_NotBptxOR prescale: -1
+Name: L1_SingleMu12 Alias: L1_SingleMu12 prescale: -1
+Name: L1_SingleMu14_Eta2p1 Alias: L1_SingleMu14er prescale: -1
+Name: L1_SingleMu16 Alias: L1_SingleMu16 prescale: -1
+Name: L1_SingleMu16_Eta2p1 Alias: L1_SingleMu16er prescale: -1
+Name: L1_SingleMu18er Alias: L1_SingleMu18er prescale: -1
+Name: L1_SingleMu20 Alias: L1_SingleMu20 prescale: -1
+Name: L1_SingleMu20_RomanPotsOR Alias: L1_SingleMu20_RomanPotsOR prescale: -1
+Name: L1_SingleMu20er Alias: L1_SingleMu20er prescale: -1
+Name: L1_SingleMu25er Alias: L1_SingleMu25er prescale: -1
+Name: L1_SingleMu3 Alias: L1_SingleMu3 prescale: -1
+Name: L1_SingleMu6_NotBptxOR Alias: L1_SingleMu6_NotBptxOR prescale: -1
+Name: L1_SingleMu7 Alias: L1_SingleMu7 prescale: -1
+Name: L1_SingleMuBeamHalo Alias: L1_SingleMuBeamHalo prescale: -1
+Name: L1_SingleMuOpen Alias: L1_SingleMuOpen prescale: -1
+Name: L1_TripleEG7 Alias: L1_TripleEG7 prescale: -1
+Name: L1_TripleEG_12_7_5 Alias: L1_TripleEG_12_7_5 prescale: -1
+Name: L1_TripleJetC_52_28_28 Alias: L1_TripleJetC_52_28_28 prescale: -1
+Name: L1_TripleJet_64_44_24_VBF Alias: L1_TripleJet_64_44_24_VBF prescale: -1
+Name: L1_TripleJet_64_48_28_VBF Alias: L1_TripleJet_64_48_28_VBF prescale: -1
+Name: L1_TripleJet_68_48_32_VBF Alias: L1_TripleJet_68_48_32_VBF prescale: -1
+Name: L1_TripleMu0 Alias: L1_TripleMu0 prescale: -1
+Name: L1_TripleMu0_HighQ Alias: L1_TripleMu0_HighQ prescale: -1
+Name: L1_TripleMu_5_5_0 Alias: L1_TripleMu_5_5_0 prescale: -1
+Name: L1_ZeroBias Alias: L1_ZeroBias prescale: -1
+Name: L1_ZeroBias_Instance1 Alias: L1_ZeroBias_Instance1 prescale: -1
+HLT triggers (process = HLT)
+Name: HLTriggerFirstPath Index: 0 Prescale: -1 1
+Name: HLT_Activity_Ecal_SC7_v12 Index: 1 Prescale: -1 1
+Name: HLT_L1SingleJet16_v6 Index: 2 Prescale: -1 1
+Name: HLT_L1SingleJet36_v6 Index: 3 Prescale: -1 1
+Name: HLT_Jet20_NoL1FastJet_v2 Index: 4 Prescale: -1 1
+Name: HLT_PFJet40_v5 Index: 5 Prescale: -1 1
+Name: HLT_Jet50_NoL1FastJet_v2 Index: 6 Prescale: -1 1
+Name: HLT_PFJet80_v5 Index: 7 Prescale: -1 1
+Name: HLT_PFJet140_v5 Index: 8 Prescale: -1 1
+Name: HLT_PFJet200_v5 Index: 9 Prescale: -1 1
+Name: HLT_PFJet260_v5 Index: 10 Prescale: -1 1
+Name: HLT_PFJet320_v5 Index: 11 Prescale: -1 1
+Name: HLT_Jet370_NoJetID_v13 Index: 12 Prescale: -1 1
+Name: HLT_PFJet400_v5 Index: 13 Prescale: -1 1
+Name: HLT_MonoCentralPFJet80_PFMETnoMu95_NHEF0p95_v5 Index: 14 Prescale: -1 1
+Name: HLT_SingleJetC5_v2 Index: 15 Prescale: -1 1
+Name: HLT_SingleForJet25_v2 Index: 16 Prescale: -1 1
+Name: HLT_SingleForJet15_v2 Index: 17 Prescale: -1 1
+Name: HLT_DiPFJetAve40_v6 Index: 18 Prescale: -1 1
+Name: HLT_DiPFJetAve80_v6 Index: 19 Prescale: -1 1
+Name: HLT_DiPFJetAve140_v6 Index: 20 Prescale: -1 1
+Name: HLT_DiPFJetAve200_v6 Index: 21 Prescale: -1 1
+Name: HLT_DiPFJetAve260_v6 Index: 22 Prescale: -1 1
+Name: HLT_DiPFJetAve320_v6 Index: 23 Prescale: -1 1
+Name: HLT_DiPFJetAve400_v6 Index: 24 Prescale: -1 1
+Name: HLT_FatDiPFJetMass750_DR1p1_Deta1p5_v5 Index: 25 Prescale: -1 1
+Name: HLT_DoubleJet20_ForwardBackward_v2 Index: 26 Prescale: -1 1
+Name: HLT_DiJet80_DiJet60_DiJet20_v2 Index: 27 Prescale: -1 1
+Name: HLT_DiPFJet40_PFMETnoMu65_MJJ800VBF_AllJets_v5 Index: 28 Prescale: -1 1
+Name: HLT_DiPFJet40_PFMETnoMu65_MJJ600VBF_LeadingJets_v5 Index: 29 Prescale: -1 1
+Name: HLT_DiJet40Eta2p6_BTagIP3DFastPV_v4 Index: 30 Prescale: -1 1
+Name: HLT_DiJet80Eta2p6_BTagIP3DFastPVLoose_v4 Index: 31 Prescale: -1 1
+Name: HLT_Jet60Eta1p7_Jet53Eta1p7_DiBTagIP3DFastPV_v4 Index: 32 Prescale: -1 1
+Name: HLT_Jet80Eta1p7_Jet70Eta1p7_DiBTagIP3DFastPV_v4 Index: 33 Prescale: -1 1
+Name: HLT_Jet160Eta2p4_Jet120Eta2p4_DiBTagIP3DFastPVLoose_v4 Index: 34 Prescale: -1 1
+Name: HLT_QuadJet50_v2 Index: 35 Prescale: -1 1
+Name: HLT_QuadJet50_Jet20_v1 Index: 36 Prescale: -1 1
+Name: HLT_QuadJet60_DiJet20_v2 Index: 37 Prescale: -1 1
+Name: HLT_QuadJet70_v2 Index: 38 Prescale: -1 1
+Name: HLT_QuadJet80_v2 Index: 39 Prescale: -1 1
+Name: HLT_QuadJet90_v2 Index: 40 Prescale: -1 1
+Name: HLT_QuadJet75_55_35_20_BTagIP_VBF_v3 Index: 41 Prescale: -1 1
+Name: HLT_QuadJet75_55_38_20_BTagIP_VBF_v3 Index: 42 Prescale: -1 1
+Name: HLT_QuadPFJet75_55_35_20_BTagCSV_VBF_v4 Index: 43 Prescale: -1 1
+Name: HLT_QuadPFJet75_55_38_20_BTagCSV_VBF_v4 Index: 44 Prescale: -1 1
+Name: HLT_SixJet35_v2 Index: 45 Prescale: -1 1
+Name: HLT_SixJet45_v2 Index: 46 Prescale: -1 1
+Name: HLT_SixJet50_v2 Index: 47 Prescale: -1 1
+Name: HLT_EightJet30_eta3p0_v1 Index: 48 Prescale: -1 1
+Name: HLT_EightJet35_eta3p0_v1 Index: 49 Prescale: -1 1
+Name: HLT_ExclDiJet35_HFOR_v2 Index: 50 Prescale: -1 1
+Name: HLT_ExclDiJet35_HFAND_v2 Index: 51 Prescale: -1 1
+Name: HLT_ExclDiJet80_HFAND_v2 Index: 52 Prescale: -1 1
+Name: HLT_JetE30_NoBPTX_v12 Index: 53 Prescale: -1 1
+Name: HLT_JetE30_NoBPTX3BX_v1 Index: 54 Prescale: -1 1
+Name: HLT_JetE50_NoBPTX3BX_v1 Index: 55 Prescale: -1 1
+Name: HLT_JetE70_NoBPTX3BX_v1 Index: 56 Prescale: -1 1
+Name: HLT_HT200_AlphaT0p57_v5 Index: 57 Prescale: -1 1
+Name: HLT_HT200_v3 Index: 58 Prescale: -1 1
+Name: HLT_HT250_AlphaT0p55_v4 Index: 59 Prescale: -1 1
+Name: HLT_HT250_AlphaT0p57_v4 Index: 60 Prescale: -1 1
+Name: HLT_HT250_v3 Index: 61 Prescale: -1 1
+Name: HLT_HT300_AlphaT0p53_v4 Index: 62 Prescale: -1 1
+Name: HLT_HT300_AlphaT0p54_v10 Index: 63 Prescale: -1 1
+Name: HLT_HT300_v3 Index: 64 Prescale: -1 1
+Name: HLT_HT300_DoubleDisplacedPFJet60_v5 Index: 65 Prescale: -1 1
+Name: HLT_HT300_DoubleDisplacedPFJet60_ChgFraction10_v5 Index: 66 Prescale: -1 1
+Name: HLT_HT300_SingleDisplacedPFJet60_v5 Index: 67 Prescale: -1 1
+Name: HLT_HT300_SingleDisplacedPFJet60_ChgFraction10_v5 Index: 68 Prescale: -1 1
+Name: HLT_HT350_v3 Index: 69 Prescale: -1 1
+Name: HLT_HT350_AlphaT0p52_v4 Index: 70 Prescale: -1 1
+Name: HLT_HT350_AlphaT0p53_v15 Index: 71 Prescale: -1 1
+Name: HLT_HT400_v3 Index: 72 Prescale: -1 1
+Name: HLT_HT400_AlphaT0p51_v15 Index: 73 Prescale: -1 1
+Name: HLT_HT400_AlphaT0p52_v10 Index: 74 Prescale: -1 1
+Name: HLT_HT450_AlphaT0p51_v10 Index: 75 Prescale: -1 1
+Name: HLT_HT450_v3 Index: 76 Prescale: -1 1
+Name: HLT_HT500_v3 Index: 77 Prescale: -1 1
+Name: HLT_HT550_v3 Index: 78 Prescale: -1 1
+Name: HLT_HT650_v3 Index: 79 Prescale: -1 1
+Name: HLT_HT650_Track50_dEdx3p6_v6 Index: 80 Prescale: -1 1
+Name: HLT_HT650_Track60_dEdx3p7_v6 Index: 81 Prescale: -1 1
+Name: HLT_HT750_v3 Index: 82 Prescale: -1 1
+Name: HLT_PFHT350_v6 Index: 83 Prescale: -1 1
+Name: HLT_PFHT650_v8 Index: 84 Prescale: -1 1
+Name: HLT_PFHT650_DiCentralPFJet80_CenPFJet40_v6 Index: 85 Prescale: -1 1
+Name: HLT_PFHT700_v6 Index: 86 Prescale: -1 1
+Name: HLT_PFHT750_v6 Index: 87 Prescale: -1 1
+Name: HLT_PFMET150_v4 Index: 88 Prescale: -1 1
+Name: HLT_PFMET180_v4 Index: 89 Prescale: -1 1
+Name: HLT_DiCentralJetSumpT100_dPhi05_DiCentralPFJet60_25_PFMET100_HBHENoiseCleaned_v1 Index: 90 Prescale: -1 1
+Name: HLT_DiCentralPFJet30_PFMET80_v2 Index: 91 Prescale: -1 1
+Name: HLT_DiCentralPFJet50_PFMET80_v6 Index: 92 Prescale: -1 1
+Name: HLT_DiCentralPFJet30_PFMET80_BTagCSV07_v1 Index: 93 Prescale: -1 1
+Name: HLT_DiPFJet80_DiPFJet30_BTagCSVd07d05d03_v1 Index: 94 Prescale: -1 1
+Name: HLT_DiPFJet80_DiPFJet30_BTagCSVd07d05d05_v1 Index: 95 Prescale: -1 1
+Name: HLT_DiPFJet80_DiPFJet30_BTagCSVd07d05d03_PFDiJetPt120_v1 Index: 96 Prescale: -1 1
+Name: HLT_DiPFJet80_DiPFJet30_BTagCSVd07d05_v1 Index: 97 Prescale: -1 1
+Name: HLT_MET80_v3 Index: 98 Prescale: -1 1
+Name: HLT_MET80_Track50_dEdx3p6_v4 Index: 99 Prescale: -1 1
+Name: HLT_MET80_Track60_dEdx3p7_v4 Index: 100 Prescale: -1 1
+Name: HLT_MET120_v10 Index: 101 Prescale: -1 1
+Name: HLT_MET120_HBHENoiseCleaned_v3 Index: 102 Prescale: -1 1
+Name: HLT_MET200_v10 Index: 103 Prescale: -1 1
+Name: HLT_MET200_HBHENoiseCleaned_v3 Index: 104 Prescale: -1 1
+Name: HLT_MET300_v2 Index: 105 Prescale: -1 1
+Name: HLT_MET300_HBHENoiseCleaned_v3 Index: 106 Prescale: -1 1
+Name: HLT_MET400_v5 Index: 107 Prescale: -1 1
+Name: HLT_MET400_HBHENoiseCleaned_v3 Index: 108 Prescale: -1 1
+Name: HLT_L1SingleMuOpen_v6 Index: 109 Prescale: -1 1
+Name: HLT_L1SingleMu12_v1 Index: 110 Prescale: -1 1
+Name: HLT_L2Mu70_eta2p1_PFMET55_v1 Index: 111 Prescale: -1 1
+Name: HLT_L2Mu70_eta2p1_PFMET60_v1 Index: 112 Prescale: -1 1
+Name: HLT_L2Mu20_eta2p1_NoVertex_v1 Index: 113 Prescale: -1 1
+Name: HLT_L2Mu10_NoVertex_NoBPTX3BX_v1 Index: 114 Prescale: -1 1
+Name: HLT_L2Mu20_NoVertex_NoBPTX3BX_v1 Index: 115 Prescale: -1 1
+Name: HLT_L2Mu30_NoVertex_NoBPTX3BX_v1 Index: 116 Prescale: -1 1
+Name: HLT_L2TripleMu10_0_0_NoVertex_PFJet40Neutral_v4 Index: 117 Prescale: -1 1
+Name: HLT_DoubleDisplacedMu4_DiPFJet40Neutral_v4 Index: 118 Prescale: -1 1
+Name: HLT_Mu5_v18 Index: 119 Prescale: -1 1
+Name: HLT_Mu8_v16 Index: 120 Prescale: -1 1
+Name: HLT_Mu12_v16 Index: 121 Prescale: -1 1
+Name: HLT_Mu17_v3 Index: 122 Prescale: -1 1
+Name: HLT_Mu12_eta2p1_L1Mu10erJetC12WdEtaPhi1DiJetsC_v3 Index: 123 Prescale: -1 1
+Name: HLT_Mu15_eta2p1_v3 Index: 124 Prescale: -1 1
+Name: HLT_Mu24_v14 Index: 125 Prescale: -1 1
+Name: HLT_Mu24_eta2p1_v3 Index: 126 Prescale: -1 1
+Name: HLT_Mu30_v14 Index: 127 Prescale: -1 1
+Name: HLT_Mu30_eta2p1_v3 Index: 128 Prescale: -1 1
+Name: HLT_Mu40_v12 Index: 129 Prescale: -1 1
+Name: HLT_Mu40_eta2p1_v9 Index: 130 Prescale: -1 1
+Name: HLT_Mu50_eta2p1_v6 Index: 131 Prescale: -1 1
+Name: HLT_RelIso1p0Mu5_v4 Index: 132 Prescale: -1 1
+Name: HLT_RelIso1p0Mu20_v1 Index: 133 Prescale: -1 1
+Name: HLT_IsoMu15_eta2p1_L1ETM20_v5 Index: 134 Prescale: -1 1
+Name: HLT_IsoMu20_eta2p1_v5 Index: 135 Prescale: -1 1
+Name: HLT_IsoMu24_v15 Index: 136 Prescale: -1 1
+Name: HLT_IsoMu24_eta2p1_v13 Index: 137 Prescale: -1 1
+Name: HLT_IsoMu30_v9 Index: 138 Prescale: -1 1
+Name: HLT_IsoMu30_eta2p1_v13 Index: 139 Prescale: -1 1
+Name: HLT_IsoMu34_eta2p1_v11 Index: 140 Prescale: -1 1
+Name: HLT_IsoMu40_eta2p1_v8 Index: 141 Prescale: -1 1
+Name: HLT_Mu40_eta2p1_Track50_dEdx3p6_v3 Index: 142 Prescale: -1 1
+Name: HLT_Mu40_eta2p1_Track60_dEdx3p7_v3 Index: 143 Prescale: -1 1
+Name: HLT_L2DoubleMu23_NoVertex_v10 Index: 144 Prescale: -1 1
+Name: HLT_L2DoubleMu23_NoVertex_2Cha_Angle2p5_v2 Index: 145 Prescale: -1 1
+Name: HLT_L2DoubleMu38_NoVertex_2Cha_Angle2p5_v2 Index: 146 Prescale: -1 1
+Name: HLT_DoubleMu11_Acoplanarity03_v3 Index: 147 Prescale: -1 1
+Name: HLT_DoubleMu4_Jpsi_Displaced_v9 Index: 148 Prescale: -1 1
+Name: HLT_DoubleMu4_JpsiTk_Displaced_v3 Index: 149 Prescale: -1 1
+Name: HLT_DoubleMu3_4_Dimuon5_Bs_Central_v2 Index: 150 Prescale: -1 1
+Name: HLT_DoubleMu3p5_4_Dimuon5_Bs_Central_v2 Index: 151 Prescale: -1 1
+Name: HLT_DoubleMu4_Dimuon7_Bs_Forward_v2 Index: 152 Prescale: -1 1
+Name: HLT_DoubleMu3p5_LowMass_Displaced_v3 Index: 153 Prescale: -1 1
+Name: HLT_DoubleMu3p5_LowMassNonResonant_Displaced_v3 Index: 154 Prescale: -1 1
+Name: HLT_Dimuon0_Jpsi_v14 Index: 155 Prescale: -1 1
+Name: HLT_Dimuon0_Jpsi_NoVertexing_v11 Index: 156 Prescale: -1 1
+Name: HLT_Dimuon0_Upsilon_v14 Index: 157 Prescale: -1 1
+Name: HLT_Dimuon0_PsiPrime_v3 Index: 158 Prescale: -1 1
+Name: HLT_Dimuon5_Upsilon_v3 Index: 159 Prescale: -1 1
+Name: HLT_Dimuon5_PsiPrime_v3 Index: 160 Prescale: -1 1
+Name: HLT_Dimuon7_Upsilon_v4 Index: 161 Prescale: -1 1
+Name: HLT_Dimuon8_Jpsi_v4 Index: 162 Prescale: -1 1
+Name: HLT_Dimuon8_Upsilon_v3 Index: 163 Prescale: -1 1
+Name: HLT_Dimuon9_PsiPrime_v9 Index: 164 Prescale: -1 1
+Name: HLT_Dimuon10_Jpsi_v3 Index: 165 Prescale: -1 1
+Name: HLT_Dimuon11_Upsilon_v3 Index: 166 Prescale: -1 1
+Name: HLT_Dimuon0_Jpsi_Muon_v15 Index: 167 Prescale: -1 1
+Name: HLT_Dimuon0_Upsilon_Muon_v15 Index: 168 Prescale: -1 1
+Name: HLT_Dimuon3p5_SameSign_v3 Index: 169 Prescale: -1 1
+Name: HLT_DoubleMu4_Acoplanarity03_v3 Index: 170 Prescale: -1 1
+Name: HLT_Tau2Mu_ItTrack_v3 Index: 171 Prescale: -1 1
+Name: HLT_Mu13_Mu8_v17 Index: 172 Prescale: -1 1
+Name: HLT_Mu17_Mu8_v17 Index: 173 Prescale: -1 1
+Name: HLT_Mu17_TkMu8_v10 Index: 174 Prescale: -1 1
+Name: HLT_Mu22_TkMu8_v5 Index: 175 Prescale: -1 1
+Name: HLT_Mu22_TkMu22_v5 Index: 176 Prescale: -1 1
+Name: HLT_TripleMu5_v17 Index: 177 Prescale: -1 1
+Name: HLT_DoubleMu5_IsoMu5_v18 Index: 178 Prescale: -1 1
+Name: HLT_Mu5_L2Mu3_Jpsi_v4 Index: 179 Prescale: -1 1
+Name: HLT_Mu5_Track2_Jpsi_v18 Index: 180 Prescale: -1 1
+Name: HLT_Mu5_Track3p5_Jpsi_v4 Index: 181 Prescale: -1 1
+Name: HLT_Mu7_Track7_Jpsi_v18 Index: 182 Prescale: -1 1
+Name: HLT_Photon20_CaloIdVL_v3 Index: 183 Prescale: -1 1
+Name: HLT_Photon20_CaloIdVL_IsoL_v15 Index: 184 Prescale: -1 1
+Name: HLT_Photon22_R9Id90_HE10_Iso40_EBOnly_v4 Index: 185 Prescale: -1 1
+Name: HLT_Photon26_Photon18_v11 Index: 186 Prescale: -1 1
+Name: HLT_Photon26_R9Id85_Photon18_R9Id85_Mass60_v3 Index: 187 Prescale: -1 1
+Name: HLT_Photon26_R9Id85_Photon18_CaloId10_Iso50_Mass60_v5 Index: 188 Prescale: -1 1
+Name: HLT_Photon26_CaloId10_Iso50_Photon18_R9Id85_Mass60_v5 Index: 189 Prescale: -1 1
+Name: HLT_Photon26_CaloId10_Iso50_Photon18_CaloId10_Iso50_Mass60_v5 Index: 190 Prescale: -1 1
+Name: HLT_Photon26_R9Id85_OR_CaloId10_Iso50_Photon18_R9Id85_OR_CaloId10_Iso50_Mass60_v5 Index: 191 Prescale: -1 1
+Name: HLT_Photon26_R9Id85_OR_CaloId10_Iso50_Photon18_v4 Index: 192 Prescale: -1 1
+Name: HLT_Photon30_CaloIdVL_v13 Index: 193 Prescale: -1 1
+Name: HLT_Photon30_CaloIdVL_IsoL_v18 Index: 194 Prescale: -1 1
+Name: HLT_Photon36_R9Id90_HE10_Iso40_EBOnly_v4 Index: 195 Prescale: -1 1
+Name: HLT_Photon36_Photon22_v5 Index: 196 Prescale: -1 1
+Name: HLT_Photon36_R9Id85_Photon22_R9Id85_v3 Index: 197 Prescale: -1 1
+Name: HLT_Photon36_R9Id85_Photon22_CaloId10_Iso50_v5 Index: 198 Prescale: -1 1
+Name: HLT_Photon36_CaloId10_Iso50_Photon22_R9Id85_v5 Index: 199 Prescale: -1 1
+Name: HLT_Photon36_CaloId10_Iso50_Photon22_CaloId10_Iso50_v5 Index: 200 Prescale: -1 1
+Name: HLT_Photon36_R9Id85_OR_CaloId10_Iso50_Photon22_R9Id85_OR_CaloId10_Iso50_v5 Index: 201 Prescale: -1 1
+Name: HLT_Photon36_R9Id85_OR_CaloId10_Iso50_Photon22_v4 Index: 202 Prescale: -1 1
+Name: HLT_Photon50_CaloIdVL_v9 Index: 203 Prescale: -1 1
+Name: HLT_Photon50_CaloIdVL_IsoL_v16 Index: 204 Prescale: -1 1
+Name: HLT_Photon50_R9Id90_HE10_Iso40_EBOnly_v4 Index: 205 Prescale: -1 1
+Name: HLT_Photon60_CaloIdL_MHT70_v8 Index: 206 Prescale: -1 1
+Name: HLT_Photon60_CaloIdL_HT300_v1 Index: 207 Prescale: -1 1
+Name: HLT_Photon70_CaloIdXL_PFHT400_v5 Index: 208 Prescale: -1 1
+Name: HLT_Photon70_CaloIdXL_PFHT500_v5 Index: 209 Prescale: -1 1
+Name: HLT_Photon70_CaloIdXL_PFMET100_v4 Index: 210 Prescale: -1 1
+Name: HLT_Photon75_CaloIdVL_v12 Index: 211 Prescale: -1 1
+Name: HLT_Photon75_CaloIdVL_IsoL_v17 Index: 212 Prescale: -1 1
+Name: HLT_Photon75_R9Id90_HE10_Iso40_EBOnly_v4 Index: 213 Prescale: -1 1
+Name: HLT_Photon90_CaloIdVL_v9 Index: 214 Prescale: -1 1
+Name: HLT_Photon90_CaloIdVL_IsoL_v14 Index: 215 Prescale: -1 1
+Name: HLT_Photon90_R9Id90_HE10_Iso40_EBOnly_v4 Index: 216 Prescale: -1 1
+Name: HLT_DisplacedPhoton65_CaloIdVL_IsoL_PFMET25_v1 Index: 217 Prescale: -1 1
+Name: HLT_DisplacedPhoton65EBOnly_CaloIdVL_IsoL_PFMET30_v1 Index: 218 Prescale: -1 1
+Name: HLT_Photon135_v6 Index: 219 Prescale: -1 1
+Name: HLT_Photon150_v3 Index: 220 Prescale: -1 1
+Name: HLT_Photon160_v3 Index: 221 Prescale: -1 1
+Name: HLT_Photon300_NoHE_v4 Index: 222 Prescale: -1 1
+Name: HLT_DoublePhoton48_HEVT_v7 Index: 223 Prescale: -1 1
+Name: HLT_DoublePhoton53_HEVT_v1 Index: 224 Prescale: -1 1
+Name: HLT_DoublePhoton70_v5 Index: 225 Prescale: -1 1
+Name: HLT_DoublePhoton80_v6 Index: 226 Prescale: -1 1
+Name: HLT_DoublePhoton5_IsoVL_CEP_v15 Index: 227 Prescale: -1 1
+Name: HLT_L1SingleEG5_v5 Index: 228 Prescale: -1 1
+Name: HLT_L1SingleEG12_v5 Index: 229 Prescale: -1 1
+Name: HLT_L1DoubleEG3_FwdVeto_v1 Index: 230 Prescale: -1 1
+Name: HLT_L1ETM30_v1 Index: 231 Prescale: -1 1
+Name: HLT_L1ETM40_v1 Index: 232 Prescale: -1 1
+Name: HLT_L1ETM70_v1 Index: 233 Prescale: -1 1
+Name: HLT_L1ETM100_v1 Index: 234 Prescale: -1 1
+Name: HLT_Ele8_CaloIdT_TrkIdVL_v4 Index: 235 Prescale: -1 1
+Name: HLT_Ele8_CaloIdT_TrkIdVL_EG7_v1 Index: 236 Prescale: -1 1
+Name: HLT_Ele8_CaloIdT_TrkIdVL_Jet30_v4 Index: 237 Prescale: -1 1
+Name: HLT_Ele8_CaloIdL_CaloIsoVL_v16 Index: 238 Prescale: -1 1
+Name: HLT_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v14 Index: 239 Prescale: -1 1
+Name: HLT_Ele17_CaloIdL_CaloIsoVL_v16 Index: 240 Prescale: -1 1
+Name: HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v5 Index: 241 Prescale: -1 1
+Name: HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v17 Index: 242 Prescale: -1 1
+Name: HLT_Ele17_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_Ele8_Mass50_v5 Index: 243 Prescale: -1 1
+Name: HLT_Ele20_CaloIdVT_CaloIsoVT_TrkIdT_TrkIsoVT_SC4_Mass50_v5 Index: 244 Prescale: -1 1
+Name: HLT_Ele22_CaloIdL_CaloIsoVL_v5 Index: 245 Prescale: -1 1
+Name: HLT_Ele27_CaloIdL_CaloIsoVL_TrkIdVL_TrkIsoVL_v10 Index: 246 Prescale: -1 1
+Name: HLT_Ele27_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Ele15_CaloIdT_CaloIsoVL_trackless_v6 Index: 247 Prescale: -1 1
+Name: HLT_Ele27_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_HFT15_v6 Index: 248 Prescale: -1 1
+Name: HLT_Ele23_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_HFT30_v6 Index: 249 Prescale: -1 1
+Name: HLT_Ele25_CaloIdVT_CaloIsoVL_TrkIdVL_TrkIsoT_TriCentralPFNoPUJet30_v1 Index: 250 Prescale: -1 1
+Name: HLT_Ele25_CaloIdVT_CaloIsoVL_TrkIdVL_TrkIsoT_TriCentralPFNoPUJet50_40_30_v1 Index: 251 Prescale: -1 1
+Name: HLT_Ele27_WP80_v10 Index: 252 Prescale: -1 1
+Name: HLT_Ele27_WP80_PFMET_MT50_v4 Index: 253 Prescale: -1 1
+Name: HLT_Ele30_CaloIdVT_TrkIdT_v5 Index: 254 Prescale: -1 1
+Name: HLT_Ele32_CaloIdL_CaloIsoVL_TrkIdVL_TrkIsoVL_v10 Index: 255 Prescale: -1 1
+Name: HLT_Ele32_CaloIdT_CaloIsoT_TrkIdT_TrkIsoT_SC17_Mass50_v5 Index: 256 Prescale: -1 1
+Name: HLT_Ele80_CaloIdVT_GsfTrkIdT_v1 Index: 257 Prescale: -1 1
+Name: HLT_Ele90_CaloIdVT_GsfTrkIdT_v1 Index: 258 Prescale: -1 1
+Name: HLT_DoubleEle8_CaloIdT_TrkIdVL_v11 Index: 259 Prescale: -1 1
+Name: HLT_DoubleEle33_CaloIdL_v13 Index: 260 Prescale: -1 1
+Name: HLT_DoubleEle33_CaloIdL_GsfTrkIdVL_v6 Index: 261 Prescale: -1 1
+Name: HLT_DoubleEle33_CaloIdT_v9 Index: 262 Prescale: -1 1
+Name: HLT_Ele15_Ele8_Ele5_CaloIdL_TrkIdVL_v5 Index: 263 Prescale: -1 1
+Name: HLT_LooseIsoPFTau35_Trk20_Prong1_v6 Index: 264 Prescale: -1 1
+Name: HLT_LooseIsoPFTau35_Trk20_Prong1_MET70_v6 Index: 265 Prescale: -1 1
+Name: HLT_LooseIsoPFTau35_Trk20_Prong1_MET75_v6 Index: 266 Prescale: -1 1
+Name: HLT_IsoMu15_eta2p1_LooseIsoPFTau35_Trk20_Prong1_L1ETM20_v6 Index: 267 Prescale: -1 1
+Name: HLT_DoubleMediumIsoPFTau30_Trk5_eta2p1_Jet30_v2 Index: 268 Prescale: -1 1
+Name: HLT_DoubleMediumIsoPFTau30_Trk5_eta2p1_v2 Index: 269 Prescale: -1 1
+Name: HLT_DoubleMediumIsoPFTau35_Trk5_eta2p1_v6 Index: 270 Prescale: -1 1
+Name: HLT_DoubleMediumIsoPFTau35_Trk5_eta2p1_Prong1_v6 Index: 271 Prescale: -1 1
+Name: HLT_IsoMu18_eta2p1_MediumIsoPFTau25_Trk5_eta2p1_v7 Index: 272 Prescale: -1 1
+Name: HLT_BTagMu_DiJet20_Mu5_v3 Index: 273 Prescale: -1 1
+Name: HLT_BTagMu_DiJet40_Mu5_v3 Index: 274 Prescale: -1 1
+Name: HLT_BTagMu_DiJet70_Mu5_v3 Index: 275 Prescale: -1 1
+Name: HLT_BTagMu_DiJet110_Mu5_v3 Index: 276 Prescale: -1 1
+Name: HLT_BTagMu_Jet300_Mu5_v3 Index: 277 Prescale: -1 1
+Name: HLT_Mu7_Ele7_CaloIdT_CaloIsoVL_v5 Index: 278 Prescale: -1 1
+Name: HLT_Mu8_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v7 Index: 279 Prescale: -1 1
+Name: HLT_Mu8_DiJet30_v4 Index: 280 Prescale: -1 1
+Name: HLT_Mu8_TriJet30_v4 Index: 281 Prescale: -1 1
+Name: HLT_Mu8_QuadJet30_v4 Index: 282 Prescale: -1 1
+Name: HLT_IsoMu12_DoubleCentralJet65_v1 Index: 283 Prescale: -1 1
+Name: HLT_Mu15_eta2p1_L1ETM20_v3 Index: 284 Prescale: -1 1
+Name: HLT_Mu24_PFJet30_PFJet25_Deta3_CentralPFJet25_v1 Index: 285 Prescale: -1 1
+Name: HLT_Mu24_CentralPFJet30_CentralPFJet25_v1 Index: 286 Prescale: -1 1
+Name: HLT_IsoMu24_PFJet30_PFJet25_Deta3_CentralPFJet25_v1 Index: 287 Prescale: -1 1
+Name: HLT_IsoMu24_CentralPFJet30_CentralPFJet25_v1 Index: 288 Prescale: -1 1
+Name: HLT_IsoMu24_CentralPFJet30_CentralPFJet25_PFMET20_v1 Index: 289 Prescale: -1 1
+Name: HLT_Ele32_WP80_PFJet30_PFJet25_Deta3_v1 Index: 290 Prescale: -1 1
+Name: HLT_Ele32_WP80_PFJet30_PFJet25_Deta3_CentralPFJet30_v1 Index: 291 Prescale: -1 1
+Name: HLT_Ele32_WP80_CentralPFJet35_CentralPFJet25_v1 Index: 292 Prescale: -1 1
+Name: HLT_Ele32_WP80_CentralPFJet35_CentralPFJet25_PFMET20_v1 Index: 293 Prescale: -1 1
+Name: HLT_IsoMu17_eta2p1_CentralPFNoPUJet30_BTagIPIter_v1 Index: 294 Prescale: -1 1
+Name: HLT_IsoMu17_eta2p1_CentralPFNoPUJet30_v1 Index: 295 Prescale: -1 1
+Name: HLT_IsoMu17_eta2p1_DiCentralPFNoPUJet30_v1 Index: 296 Prescale: -1 1
+Name: HLT_IsoMu17_eta2p1_TriCentralPFNoPUJet30_v1 Index: 297 Prescale: -1 1
+Name: HLT_IsoMu17_eta2p1_TriCentralPFNoPUJet50_40_30_v1 Index: 298 Prescale: -1 1
+Name: HLT_Mu17_eta2p1_CentralPFNoPUJet30_BTagIPIter_v1 Index: 299 Prescale: -1 1
+Name: HLT_Mu17_eta2p1_TriCentralPFNoPUJet30_v1 Index: 300 Prescale: -1 1
+Name: HLT_Mu17_eta2p1_TriCentralPFNoPUJet50_40_30_v1 Index: 301 Prescale: -1 1
+Name: HLT_IsoMu17_eta2p1_TriCentralPFJet30_v5 Index: 302 Prescale: -1 1
+Name: HLT_IsoMu20_eta2p1_WCandPt80_v6 Index: 303 Prescale: -1 1
+Name: HLT_Mu17_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_v7 Index: 304 Prescale: -1 1
+Name: HLT_Mu12_eta2p1_DiCentral_40_20_DiBTagIP3D1stTrack_v3 Index: 305 Prescale: -1 1
+Name: HLT_Mu12_eta2p1_DiCentral_40_20_BTagIP3D1stTrack_v3 Index: 306 Prescale: -1 1
+Name: HLT_Mu12_eta2p1_DiCentral_40_20_v3 Index: 307 Prescale: -1 1
+Name: HLT_Mu12_eta2p1_DiCentral_20_v3 Index: 308 Prescale: -1 1
+Name: HLT_Mu15_eta2p1_TriCentral_40_20_20_DiBTagIP3D1stTrack_v3 Index: 309 Prescale: -1 1
+Name: HLT_Mu15_eta2p1_TriCentral_40_20_20_BTagIP3D1stTrack_v3 Index: 310 Prescale: -1 1
+Name: HLT_Mu15_eta2p1_TriCentral_40_20_20_v3 Index: 311 Prescale: -1 1
+Name: HLT_Mu30_Ele30_CaloIdL_v6 Index: 312 Prescale: -1 1
+Name: HLT_IsoMu17_eta2p1_DiCentralPFJet30_PFHT350_PFMHT40_v6 Index: 313 Prescale: -1 1
+Name: HLT_IsoMu20_eta2p1_CentralPFJet80_v6 Index: 314 Prescale: -1 1
+Name: HLT_DoubleRelIso1p0Mu5_Mass8_PFHT175_v5 Index: 315 Prescale: -1 1
+Name: HLT_DoubleRelIso1p0Mu5_Mass8_PFHT225_v5 Index: 316 Prescale: -1 1
+Name: HLT_DoubleMu8_Mass8_PFHT225_v6 Index: 317 Prescale: -1 1
+Name: HLT_DoubleMu8_Mass8_PFHT175_v6 Index: 318 Prescale: -1 1
+Name: HLT_RelIso1p0Mu5_Ele8_CaloIdT_TrkIdVL_Mass8_PFHT175_v5 Index: 319 Prescale: -1 1
+Name: HLT_RelIso1p0Mu5_Ele8_CaloIdT_TrkIdVL_Mass8_PFHT225_v5 Index: 320 Prescale: -1 1
+Name: HLT_Mu8_Ele8_CaloIdT_TrkIdVL_Mass8_PFHT175_v6 Index: 321 Prescale: -1 1
+Name: HLT_Mu8_Ele8_CaloIdT_TrkIdVL_Mass8_PFHT225_v6 Index: 322 Prescale: -1 1
+Name: HLT_PFHT350_Mu15_PFMET45_v6 Index: 323 Prescale: -1 1
+Name: HLT_PFHT350_Mu15_PFMET50_v6 Index: 324 Prescale: -1 1
+Name: HLT_PFHT400_Mu5_PFMET45_v6 Index: 325 Prescale: -1 1
+Name: HLT_PFHT400_Mu5_PFMET50_v6 Index: 326 Prescale: -1 1
+Name: HLT_Mu40_PFHT350_v6 Index: 327 Prescale: -1 1
+Name: HLT_Mu60_PFHT350_v6 Index: 328 Prescale: -1 1
+Name: HLT_Mu40_HT200_v1 Index: 329 Prescale: -1 1
+Name: HLT_DoubleMu5_Ele8_CaloIdT_TrkIdVL_v14 Index: 330 Prescale: -1 1
+Name: HLT_DoubleMu8_Ele8_CaloIdT_TrkIdVL_v3 Index: 331 Prescale: -1 1
+Name: HLT_Ele8_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Jet30_v5 Index: 332 Prescale: -1 1
+Name: HLT_Ele8_CaloIdT_TrkIdT_DiJet30_v15 Index: 333 Prescale: -1 1
+Name: HLT_Ele8_CaloIdT_TrkIdT_TriJet30_v15 Index: 334 Prescale: -1 1
+Name: HLT_Ele8_CaloIdT_TrkIdT_QuadJet30_v15 Index: 335 Prescale: -1 1
+Name: HLT_Ele17_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_Jet30_v5 Index: 336 Prescale: -1 1
+Name: HLT_Ele25_CaloIdVT_TrkIdT_TriCentralPFNoPUJet30_v5 Index: 337 Prescale: -1 1
+Name: HLT_Ele25_CaloIdVT_TrkIdT_TriCentralPFNoPUJet50_40_30_v5 Index: 338 Prescale: -1 1
+Name: HLT_Ele25_CaloIdVT_CaloIsoT_TrkIdT_TrkIsoT_CentralPFNoPUJet30_v5 Index: 339 Prescale: -1 1
+Name: HLT_Ele25_CaloIdVT_CaloIsoT_TrkIdT_TrkIsoT_DiCentralPFNoPUJet30_v5 Index: 340 Prescale: -1 1
+Name: HLT_Ele25_CaloIdVT_CaloIsoT_TrkIdT_TrkIsoT_TriCentralPFNoPUJet30_v5 Index: 341 Prescale: -1 1
+Name: HLT_Ele25_CaloIdVL_CaloIsoT_TrkIdVL_TrkIsoT_TriCentralPFNoPUJet30_v1 Index: 342 Prescale: -1 1
+Name: HLT_Ele25_CaloIdVT_CaloIsoT_TrkIdT_TrkIsoT_CentralPFNoPUJet30_BTagIPIter_v6 Index: 343 Prescale: -1 1
+Name: HLT_Ele25_CaloIdVT_CaloIsoT_TrkIdT_TrkIsoT_TriCentralPFNoPUJet50_40_30_v5 Index: 344 Prescale: -1 1
+Name: HLT_Ele27_WP80_CentralPFJet80_v6 Index: 345 Prescale: -1 1
+Name: HLT_Ele27_WP80_WCandPt80_v6 Index: 346 Prescale: -1 1
+Name: HLT_Ele30_CaloIdVT_TrkIdT_PFJet100_PFJet25_v5 Index: 347 Prescale: -1 1
+Name: HLT_Ele30_CaloIdVT_TrkIdT_PFJet150_PFJet25_v5 Index: 348 Prescale: -1 1
+Name: HLT_Ele30_CaloIdVT_TrkIdT_PFNoPUJet100_PFNoPUJet25_v4 Index: 349 Prescale: -1 1
+Name: HLT_Ele30_CaloIdVT_TrkIdT_PFNoPUJet150_PFNoPUJet25_v4 Index: 350 Prescale: -1 1
+Name: HLT_DoubleEle8_CaloIdT_TrkIdVL_Mass8_PFHT175_v6 Index: 351 Prescale: -1 1
+Name: HLT_DoubleEle8_CaloIdT_TrkIdVL_Mass8_PFHT225_v6 Index: 352 Prescale: -1 1
+Name: HLT_DoubleEle10_CaloIdL_TrkIdVL_Ele10_CaloIdT_TrkIdVL_v11 Index: 353 Prescale: -1 1
+Name: HLT_TripleEle10_CaloIdL_TrkIdVL_v17 Index: 354 Prescale: -1 1
+Name: HLT_RsqMR40_Rsq0p04_v3 Index: 355 Prescale: -1 1
+Name: HLT_RsqMR45_Rsq0p09_v2 Index: 356 Prescale: -1 1
+Name: HLT_RsqMR55_Rsq0p09_MR150_v3 Index: 357 Prescale: -1 1
+Name: HLT_RsqMR60_Rsq0p09_MR150_v3 Index: 358 Prescale: -1 1
+Name: HLT_RsqMR65_Rsq0p09_MR150_v2 Index: 359 Prescale: -1 1
+Name: HLT_IsoMu12_RsqMR30_Rsq0p04_MR200_v1 Index: 360 Prescale: -1 1
+Name: HLT_IsoMu12_RsqMR40_Rsq0p04_MR200_v1 Index: 361 Prescale: -1 1
+Name: HLT_Ele12_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_RsqMR30_Rsq0p04_MR200_v1 Index: 362 Prescale: -1 1
+Name: HLT_Ele12_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_RsqMR40_Rsq0p04_MR200_v1 Index: 363 Prescale: -1 1
+Name: HLT_Ele12_CaloIdT_CaloIsoVL_TrkIdVL_TrkIsoVL_DoubleCentralJet65_v1 Index: 364 Prescale: -1 1
+Name: HLT_Photon40_CaloIdL_RsqMR35_Rsq0p09_MR150_v3 Index: 365 Prescale: -1 1
+Name: HLT_Photon40_CaloIdL_RsqMR40_Rsq0p09_MR150_v3 Index: 366 Prescale: -1 1
+Name: HLT_Photon40_CaloIdL_RsqMR45_Rsq0p09_MR150_v3 Index: 367 Prescale: -1 1
+Name: HLT_Photon40_CaloIdL_RsqMR50_Rsq0p09_MR150_v3 Index: 368 Prescale: -1 1
+Name: HLT_DoublePhoton40_CaloIdL_Rsq0p035_v3 Index: 369 Prescale: -1 1
+Name: HLT_DoublePhoton40_CaloIdL_Rsq0p06_v3 Index: 370 Prescale: -1 1
+Name: HLT_Mu22_Photon22_CaloIdL_v5 Index: 371 Prescale: -1 1
+Name: HLT_Mu8_DoubleEle8_CaloIdT_TrkIdVL_v5 Index: 372 Prescale: -1 1
+Name: HLT_Mu8_Ele8_CaloIdT_TrkIdVL_Ele8_CaloIdL_TrkIdVL_v5 Index: 373 Prescale: -1 1
+Name: HLT_DoubleMu14_Mass8_PFMET40_v5 Index: 374 Prescale: -1 1
+Name: HLT_DoubleMu14_Mass8_PFMET50_v5 Index: 375 Prescale: -1 1
+Name: HLT_DoubleEle14_CaloIdT_TrkIdVL_Mass8_PFMET40_v5 Index: 376 Prescale: -1 1
+Name: HLT_DoubleEle14_CaloIdT_TrkIdVL_Mass8_PFMET50_v5 Index: 377 Prescale: -1 1
+Name: HLT_Mu14_Ele14_CaloIdT_TrkIdVL_Mass8_PFMET40_v5 Index: 378 Prescale: -1 1
+Name: HLT_Mu14_Ele14_CaloIdT_TrkIdVL_Mass8_PFMET50_v5 Index: 379 Prescale: -1 1
+Name: HLT_PFHT350_PFMET100_v6 Index: 380 Prescale: -1 1
+Name: HLT_PFHT400_PFMET100_v6 Index: 381 Prescale: -1 1
+Name: HLT_CleanPFHT350_Ele5_CaloIdT_CaloIsoVL_TrkIdT_TrkIsoVL_PFMET45_v5 Index: 382 Prescale: -1 1
+Name: HLT_CleanPFHT350_Ele5_CaloIdT_CaloIsoVL_TrkIdT_TrkIsoVL_PFMET50_v5 Index: 383 Prescale: -1 1
+Name: HLT_CleanPFHT300_Ele15_CaloIdT_CaloIsoVL_TrkIdT_TrkIsoVL_PFMET45_v5 Index: 384 Prescale: -1 1
+Name: HLT_CleanPFHT300_Ele15_CaloIdT_CaloIsoVL_TrkIdT_TrkIsoVL_PFMET50_v5 Index: 385 Prescale: -1 1
+Name: HLT_CleanPFHT300_Ele40_CaloIdVT_TrkIdT_v5 Index: 386 Prescale: -1 1
+Name: HLT_CleanPFHT300_Ele60_CaloIdVT_TrkIdT_v5 Index: 387 Prescale: -1 1
+Name: HLT_Ele5_SC5_Jpsi_Mass2to15_v3 Index: 388 Prescale: -1 1
+Name: HLT_DiJet35_MJJ650_AllJets_DEta3p5_VBF_v1 Index: 389 Prescale: -1 1
+Name: HLT_DiJet35_MJJ700_AllJets_DEta3p5_VBF_v1 Index: 390 Prescale: -1 1
+Name: HLT_DiJet35_MJJ750_AllJets_DEta3p5_VBF_v1 Index: 391 Prescale: -1 1
+Name: HLT_Ele22_eta2p1_WP90Rho_LooseIsoPFTau20_v2 Index: 392 Prescale: -1 1
+Name: HLT_Ele22_eta2p1_WP90NoIso_LooseIsoPFTau20_v2 Index: 393 Prescale: -1 1
+Name: HLT_IsoMu17_eta2p1_LooseIsoPFTau20_v2 Index: 394 Prescale: -1 1
+Name: HLT_Mu17_eta2p1_LooseIsoPFTau20_v2 Index: 395 Prescale: -1 1
+Name: HLT_PixelTracks_Multiplicity70_v2 Index: 396 Prescale: -1 1
+Name: HLT_PixelTracks_Multiplicity80_v11 Index: 397 Prescale: -1 1
+Name: HLT_PixelTracks_Multiplicity90_v2 Index: 398 Prescale: -1 1
+Name: DST_HT250_v1 Index: 399 Prescale: -1 1
+Name: DST_L1HTT_Or_L1MultiJet_v1 Index: 400 Prescale: -1 1
+Name: DST_Mu5_HT250_v1 Index: 401 Prescale: -1 1
+Name: DST_Ele8_CaloIdL_CaloIsoVL_TrkIdVL_TrkIsoVL_HT250_v1 Index: 402 Prescale: -1 1
+Name: HLT_BeamGas_HF_Beam1_v4 Index: 403 Prescale: -1 1
+Name: HLT_BeamGas_HF_Beam2_v4 Index: 404 Prescale: -1 1
+Name: HLT_BeamHalo_v12 Index: 405 Prescale: -1 1
+Name: HLT_IsoTrackHE_v14 Index: 406 Prescale: -1 1
+Name: HLT_IsoTrackHB_v13 Index: 407 Prescale: -1 1
+Name: HLT_HcalPhiSym_v10 Index: 408 Prescale: -1 1
+Name: HLT_HcalNZS_v9 Index: 409 Prescale: -1 1
+Name: HLT_GlobalRunHPDNoise_v7 Index: 410 Prescale: -1 1
+Name: HLT_L1Tech_HBHEHO_totalOR_v5 Index: 411 Prescale: -1 1
+Name: HLT_L1Tech_HCAL_HF_single_channel_v3 Index: 412 Prescale: -1 1
+Name: HLT_ZeroBias_v6 Index: 413 Prescale: -1 1
+Name: HLT_ZeroBiasPixel_DoubleTrack_v1 Index: 414 Prescale: -1 1
+Name: HLT_Physics_v4 Index: 415 Prescale: -1 1
+Name: DST_Physics_v4 Index: 416 Prescale: -1 1
+Name: HLT_DTCalibration_v2 Index: 417 Prescale: -1 1
+Name: HLT_EcalCalibration_v3 Index: 418 Prescale: -1 1
+Name: HLT_HcalCalibration_v3 Index: 419 Prescale: -1 1
+Name: HLT_TrackerCalibration_v3 Index: 420 Prescale: -1 1
+Name: HLT_Random_v2 Index: 421 Prescale: -1 1
+Name: HLT_L1SingleMuOpen_AntiBPTX_v6 Index: 422 Prescale: -1 1
+Name: HLT_L1TrackerCosmics_v6 Index: 423 Prescale: -1 1
+Name: HLT_LogMonitor_v3 Index: 424 Prescale: -1 1
+Name: HLT_DTErrors_v3 Index: 425 Prescale: -1 1
+Name: HLT_L1DoubleJet36Central_v6 Index: 426 Prescale: -1 1
+Name: AlCa_EcalPi0EBonly_v5 Index: 427 Prescale: -1 1
+Name: AlCa_EcalPi0EEonly_v5 Index: 428 Prescale: -1 1
+Name: AlCa_EcalEtaEBonly_v5 Index: 429 Prescale: -1 1
+Name: AlCa_EcalEtaEEonly_v5 Index: 430 Prescale: -1 1
+Name: AlCa_EcalPhiSym_v12 Index: 431 Prescale: -1 1
+Name: AlCa_RPCMuonNoTriggers_v8 Index: 432 Prescale: -1 1
+Name: AlCa_RPCMuonNoHits_v8 Index: 433 Prescale: -1 1
+Name: AlCa_RPCMuonNormalisation_v8 Index: 434 Prescale: -1 1
+Name: AlCa_LumiPixels_v6 Index: 435 Prescale: -1 1
+Name: AlCa_LumiPixels_ZeroBias_v3 Index: 436 Prescale: -1 1
+Name: AlCa_LumiPixels_Random_v1 Index: 437 Prescale: -1 1
+Name: DQM_FEDIntegrity_v10 Index: 438 Prescale: -1 1
+Name: HLTriggerFinalPath Index: 439 Prescale: -1 1
+                                      Trigger Name total  ctau0.1 ctau1.0 ctau10
+                                L1_DoubleMu_10_3p5 0/0 0/0 0/0 0/0 
+                        L1_DoubleMu0_HighQ_EtaCuts 0/0 0/0 0/0 0/0 
+                                      L1_TripleMu0 0/0 0/0 0/0 0/0 
+                                         L1_HTT150 0/0 0/0 0/0 0/0 
+       L1_Mu10er_JetC12_WdEtaPhi1_DoubleJetC_20_12 0/0 0/0 0/0 0/0 
+        HLT_L2DoubleMu23_NoVertex_2Cha_Angle2p5_v2 0/0 0/0 0/0 0/0 
+        HLT_DoubleDisplacedMu4_DiPFJet40Neutral_v4 0/0 0/0 0/0 0/0 
+   HLT_L2TripleMu10_0_0_NoVertex_PFJet40Neutral_v4 0/0 0/0 0/0 0/0 
+HLT_Mu12_eta2p1_DiCentral_40_20_DiBTagIP3D1stTrack_v3 0/0 0/0 0/0 0/0 
+HLT_Mu15_eta2p1_TriCentral_40_20_20_DiBTagIP3D1stTrack_v3 0/0 0/0 0/0 0/0 
+               HLT_HT300_DoubleDisplacedPFJet60_v5 0/0 0/0 0/0 0/0 
+                            AnyDisplacedHLTTrigger 0/0 0/0 0/0 0/0 
+                                     AnyHLTTrigger 0/0 0/0 0/0 0/0 
+                                      Trigger Name total        ctau0.1      ctau1.0      ctau10
+                                L1_DoubleMu_10_3p5 nan +/- nan nan +/- nan nan +/- nan nan +/- nan 
+                        L1_DoubleMu0_HighQ_EtaCuts nan +/- nan nan +/- nan nan +/- nan nan +/- nan 
+                                      L1_TripleMu0 nan +/- nan nan +/- nan nan +/- nan nan +/- nan 
+                                         L1_HTT150 nan +/- nan nan +/- nan nan +/- nan nan +/- nan 
+       L1_Mu10er_JetC12_WdEtaPhi1_DoubleJetC_20_12 nan +/- nan nan +/- nan nan +/- nan nan +/- nan 
+        HLT_L2DoubleMu23_NoVertex_2Cha_Angle2p5_v2 nan +/- nan nan +/- nan nan +/- nan nan +/- nan 
+        HLT_DoubleDisplacedMu4_DiPFJet40Neutral_v4 nan +/- nan nan +/- nan nan +/- nan nan +/- nan 
+   HLT_L2TripleMu10_0_0_NoVertex_PFJet40Neutral_v4 nan +/- nan nan +/- nan nan +/- nan nan +/- nan 
+HLT_Mu12_eta2p1_DiCentral_40_20_DiBTagIP3D1stTrack_v3 nan +/- nan nan +/- nan nan +/- nan nan +/- nan 
+HLT_Mu15_eta2p1_TriCentral_40_20_20_DiBTagIP3D1stTrack_v3 nan +/- nan nan +/- nan nan +/- nan nan +/- nan 
+               HLT_HT300_DoubleDisplacedPFJet60_v5 nan +/- nan nan +/- nan nan +/- nan nan +/- nan 
+                            AnyDisplacedHLTTrigger nan +/- nan nan +/- nan nan +/- nan nan +/- nan 
+                                     AnyHLTTrigger nan +/- nan nan +/- nan nan +/- nan nan +/- nan 

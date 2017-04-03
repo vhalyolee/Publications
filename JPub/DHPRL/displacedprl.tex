@@ -1,0 +1,472 @@
+\documentclass[aps,prl,twocolumn,preprintnumbers,groupedaddress,nofootinbib]{revtex4}
+
+\pdfoutput=1
+
+\usepackage{graphicx}
+%\usepackage{latexsym}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{slashed}
+%\usepackage{array}
+%\usepackage{feynmp}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{multirow}
+\begin{document}
+\include{declare}
+
+\title{Don't Miss the Displaced Higgs at the LHC Again}
+
+\author{Matthew R.~Buckley$^{1}$, Valerie Halyo$^2$, and Paul Lujan$^2$}
+\affiliation{$^1$ Department of Physics and Astronomy, Rutgers University, Piscataway, USA}
+\affiliation{$^2$ Department of Physics, Princeton University, Princeton, USA}
+
+\preprint{}
+\date{\today}
+
+\begin{abstract}
+A signature often found in non-minimal Higgs sectors is Higgs decay to a new gauge-singlet scalar, followed by decays of the singlets into Standard Model  fermions through small mixing angles. The scalar decay can naturally be displaced from the primary vertex. The present experimental constraints on such models are extremely weak, due to low (or zero) trigger rates for the resulting low $p_T$ displaced jets. In this letter, we highlight the advantages of integrating into the trigger system massively parallel computing and coprocessors based on Graphics Processing Units (GPUs) or the Many Integrated Core (MIC) architecture. In particular, if such coprocessors are added to the LHC experiments' high level trigger systems, a fast Hough transform--based trigger performed on this hardware would result in significant improvement to displaced searches, sufficient to discover long-lived Higgs models with a small amount of luminosity in Run II at the 14~TeV LHC.
+\end{abstract}
+\maketitle
+
+The discovery of the 125~GeV Higgs by ATLAS and CMS \cite{Aad:2012tfa,Chatrchyan:2012ufa} has been a triumph for both experimental and theoretical physics \cite{Englert:1964et}. As we move into the Higgs Era, there is huge potential for new physics discovery from precision measurements of the Higgs' branching ratios (BRs) into Standard Model (SM) or non-SM particles and searches for an extended Higgs sector. Though the present measurements show no clear signal of deviation from the SM predictions \cite{Aad:2013wqa}, many channels remain unexplored, and the story is far from complete (see {\it e.g.}~Ref.~\cite{Curtin:2013fra}). In this letter, we will show that the experimental triggers currently in use at CMS and ATLAS are poorly suited to discover extensions of the Higgs sector involving long-lived particles. We demonstrate that such scenarios could be easily discovered in a small amount of LHC data with the addition of new massively parallel trigger algorithms, preferably with accelerators such as Graphics Processing Units (GPUs) or Xeon Phi coprocessors integrated into the trigger system.
+
+In a broad class of SM Higgs sector extensions, the Higgs can develop decay modes which terminate in vertices displaced a macroscopic distance from the beam. The simplest example contains just a single extra particle: a gauge singlet real scalar $X$ \cite{Strassler:2006ri}. Assuming just a single $SU(2)_L$ Higgs doublet $H$ (with physical Higgs $h$ after electroweak symmetry breaking), this model has the potential 
+\begin{eqnarray}
+V(H,X) & = & - \mu^2 H^2+\lambda H^4+M^2 X^2 + \lambda_X X^4  \\
+& & + \lambda_{HX} H^2X^2+aX+bX^3+cXH^2. \nonumber
+\end{eqnarray}
+The scalar $X$ has a tree-level coupling $\lambda_{HX}$ to the Higgs, resulting in $\Gamma(h \to XX) \sim (10~\mbox{GeV})\lambda_{HX}^2$ after electroweak symmetry breaking (assuming $m_X \ll m_h$). This typically results in large $h\to XX$ BRs when the $X$ is kinematically accessible, though the experimental upper limit on the total Higgs width \cite{CMS:2014ala} sets a bound on $\lambda_{XH} \lesssim 0.04$. If $a=b=c=0$, then the potential has a $\mathbb{Z}_2$ symmetry and the $X$ is stable. Breaking this symmetry allows for the $X$ to have small mixing with the Higgs, {\it i.e.}~the mass eigenstate is $X+\epsilon h$. The small $\epsilon \ll 1$ parameter is technically natural, as $\epsilon = 0$ is a point of enhanced symmetry. The $X$ can only decay through this admixture with the Higgs, so the couplings of the $X$ to SM fermions are proportional to the fermion masses. 
+
+As a result, we expect the $X$ to decay to the most massive fermions kinematically available ($W$ and $Z$ decays being highly suppressed, as we assume $m_X < m_h/2$). The width to $b$-quarks is $\Gamma(X\to b\bar{b}) \sim (\epsilon^2/16\pi)m_b^2 m_X/v^2$ (assuming $m_b \ll m_X$). This easily accommodates long lifetimes for the $X$, with $\Gamma^{-1} = c\tau \sim (10^{-5}/\epsilon)^{2}~\mbox{mm}$. 
+
+This simple model can be easily generalized to an extended Higgs sector with multiple doublet Higgses. Each Higgs can have different BRs into a pair of $X$ particles, followed by displaced decays of $X$ into SM fermions, with the ratios set by the details of the particular model. Similar phenomenology can be found in hidden valley \cite{Strassler:2006im} or supersymmetric models \cite{Graham:2012th}.
+
+Much of the theoretical and experimental effort has concentrated on the prompt decays of the 125 GeV Higgs. These searches are not very sensitive to possible displaced Higgs decay modes. Though CMS and ATLAS have performed searches for displaced decays \cite{Aad:2013txa,Chatrchyan:2012cg,CMS:2014wda}, they place only weak constraints on Higgs displaced decays, as the low masses involved make it difficult to pass jet- or MET (missing transverse energy)-based triggers at the 7 or 8 TeV LHC. The situation at the 14~TeV LHC will only be more difficult, as the trigger thresholds will be raised. Constraints have also been set by D\O\ \cite{Abazov:2009ik} and CDF \cite{Aaltonen:2011rja}. Strong general bounds are placed by the invisible width of the Higgs \cite{Bai:2011wz,Cheung:2013kla,Belanger:2013kya}. The global Higgs fits limit the invisible Higgs BR to $<22--23\%$ at $2\sigma$, assuming all other couplings are SM-like, and $<60\%$ if both the tree- and loop-level couplings are allowed to deviate from SM expectations \cite{Cheung:2013kla,Belanger:2013kya}. Direct bounds can be placed on heavier Higgses decaying with displaced vertices, as the larger masses increase the trigger efficiencies, but much of the parameter space is inaccessible \cite{Chatrchyan:2012cg}. %VH a bit clarification needed
+
+The search for physics with displaced decays can significantly improved by reconfiguring the high level triggers (HLTs) to use  massively parallel computing (MPC) architecture and enhancing the computer farm with accelerators such as GPUs or Xeon Phi. This cutting edge technology provides not only the means to speed up calculations for existing triggers, as for example is currently used at the ALICE experiment for trigger-level reconstruction in the TPC~\cite{Rohr:2012nf}, but also the opportunity to develop new complex algorithms that select events that previously would have evaded detection. Such accelerators can perform track reconstruction based on Hough transformations \cite{hough} in a few milliseconds at luminosity conditions that yield 250 pileup interactions per event  (${\cal L} \sim 10^{35}~\mbox{cm$^{-2}$s$^{-1}$}$).  
+
+We should note that this letter does not mean to imply that machine vision and pattern recognition algorithms are uniformly a more appropriate trigger solution compared to the conventional Combinatorial Track Finder (CTF) algorithms that are currently used in high energy collider physics. Rather, these new techniques can provide a complementary method of analyzing events, first studied by the authors~\cite{Halyo:2013iba} due to the similarities between the problems inherent to triggering on events with unique topological objects and computer image processing analysis. 
+
+The Hough transform differs from the CTF approach in that it does not operate on localized features of a data set. Rather, the technique is more holistic, operating on the entire pattern of tracking information from the detector as an single image. The use of new triggers based on these transformations would allow selection of events at the trigger level with ``interesting'' structure (such as displaced decays) in the detector activity that would be a smoking gun for new physics. The applicability of these image-processing techniques to new physics searches has been considered previously in a LHC search for topological objects such as black holes or displaced jets \cite{Halyo:2013cza}. This letter demonstrates the possible extension of the LHC physics reach in the well-motivated displaced Higgs channels if MPC architecture were integrated into the hardware of the trigger system.
+
+We now consider the effectiveness of a trigger using these massively parallel techniques, which we will refer to as an ``MPC trigger'', at CMS or ATLAS for the LHC14 run in the search channel $h \to XX$, followed by a displaced $X \to b\bar{b}$ decay. This channel has been investigated using a simulation of the present CMS trigger menu \cite{Halyo:2013yfa}, for the 125~GeV Higgs decaying to $15-40$~GeV $X$ with a BR of 20\%, where the $X$ then decays with an average displacement of $1-10$~mm. In this study, we consider $X$ decays with larger $\Gamma^{-1} = c\tau$, in the range $10-600$~mm. 
+
+Considering only $X\to b\bar{b}$ decays, simulated events are run through a simulation of the CMS L1 trigger. The simulation is designed to be similar to the actual CMS L1 trigger \cite{Brooke:2013hnf}, but uses only generator-level information to avoid introducing any details of the CMS simulation. The simulation also only simulates a small subset of paths which would be most efficient for this signal model. The main potential L1 triggers which could be efficient for this signal model are single- or double-jet triggers, muon+jet triggers from semileptonic $b$ decays, or, at higher $m_H$ values, $H_T$ triggers which consider the total scalar sum of all jet energies in the event. In addition, for $c\tau \gtrsim 300$~mm, the displacement of the jets can cause an apparent transverse energy imbalance in the detector, which provides another alternative trigger path through missing $E_T$ triggers. At lower $c\tau$ values, jet triggers are more important. However, we emphasize that the L1 trigger menu evolves over time, as the operating conditions of the LHC change. To account for discrepancies between our simulation and the real CMS L1 trigger, we assign an additional systematic uncertainty to the efficiency of 20\% for $m_H = 100$ or 125 GeV and 5\% for higher $m_H$ values.
+
+Events passing the L1 are then passed to the proposed MPC trigger. In order to estimate the potential efficiency of a proposed MPC trigger, we take the results shown in Ref.\~cite{Halyo:2013cza}, which shows that the Hough transform algorithm has an efficiency to identify displaced tracks of approximately 85\% for events passing the L1 selection; this efficiency is independent of $c\tau$ for the values considered.
+
+The 2012 8~TeV CMS HLT trigger which has the highest efficiency for events of this class of model is the displaced jet trigger used in Ref.~\cite{CMS:2014wda}, which requires an $H_T$ of at least 250 GeV and identifies displaced jets by requiring a transverse momentum of at least 60 GeV, that most tracks in the jet have an impact parameter greater than 300~$\mu$m, and that no more than $15\%$ of the total jet energy be from tracks with impact parameters less than 500~$\mu$m. As in the L1 trigger, we have constructed our own simulation of this trigger relying purely on generator-level information and our own detector simulation. Although this simulation is based on the CMS detector, the situation at ATLAS is expected to be similar. The low efficiency for the current experimental displaced trigger at HLT, as compared to L1 followed by MPC, is primarily due to the high $H_T$ requirement. Figure~\ref{fig:125higgsctautrigger} shows the efficiency for the simulated L1 trigger, the estimated efficiency for the proposed MPC trigger, and the efficiency for the simulated HLT trigger.
+
+In Figure~\ref{fig:125higgsmxtrigger}, we again show the trigger efficiencies for the $h \to XX \to 4b$ events, now holding $c\tau =  40$~mm fixed and varying $m_X$. Here, and throughout this paper, signal events were generated using {\tt Pythia6} \cite{Sjostrand:2006za}. 10000 events were generated for each parameter point in our one-dimensional scans over $c\tau$ and $m_X$ (Figures~\ref{fig:125higgsctautrigger} and \ref{fig:125higgsmxtrigger}), and 1000 events were generated per point for our two-dimensional scan (Figure~\ref{fig:massctau}). The uncertainties shown include the statistical uncertainty, and a 15\% systematic uncertainty from the simulated HLT to account for the differences between our simulation of the trigger and the full experimental treatment.
+
+\begin{figure}[t]
+
+\includegraphics[width=0.9\columnwidth]{./EffVsCtau.pdf}
+
+\caption{Trigger efficiencies for $h\to XX$, $X\to b\bar{b}$ as a function of $c\tau$ with $m_X = 20$~GeV. CMS responses are shown for the full CMS L1 trigger, the single best CMS HLT (a displaced jet trigger, see text), and the MPC trigger applied after the L1. \label{fig:125higgsctautrigger}}
+\end{figure} 
+
+\begin{figure}[t]
+
+\includegraphics[width=0.9\columnwidth]{./EffVsMX.pdf}
+
+\caption{Trigger efficiencies for $h\to XX$, $X\to b\bar{b}$ as a function of $m_X$ with $c\tau = 40$~mm. CMS responses are shown for the full CMS L1 trigger, the single best CMS HLT (a displaced jet trigger, see text), and the MPC trigger applied after the L1. \label{fig:125higgsmxtrigger}}
+\end{figure} 
+
+As can be seen, the MPC displaced vertex technique constitutes a massive increase in trigger efficiency over the status quo. This increase in efficiency allows us to trigger on events where a Higgs produces displaced jets which currently easily evade detection. The displaced jet trigger is the single HLT most sensitive to these $h\to XX \to 4b$ events (though a combination of all HLTs could reach efficiencies as high as $\sim 5\%$, combining the data set in this way is prohibitively impractical). Many events pass the L1 trigger, but in a standard analysis the requirement to pass the HLT reduces the efficiency by nearly a factor of 50. The fast processing time of the MPC trigger allows us to place it before the HLT, and thus we do not suffer the efficiency penalty from satisfying the stricter requirements of the higher-level trigger.
+
+\begin{figure}[t]
+
+\includegraphics[width=0.9\columnwidth]{./Eff2D.pdf}
+
+\caption{Production cross section times BR (in fb) required for 10 event observation in 1~fb$^{-1}$ at the LHC14 for a non-SM $h'$ decaying to pairs of 20~GeV $X$, followed by displaced $X\to b\bar{b}$, as a function of $m_{h'}$ and $c\tau$. Required $\sigma \times$BR are shown for MPC trigger (solid black lines) as well as for the most effective HLT (dashed blue lines). \label{fig:massctau}}
+\end{figure} 
+
+We now broaden the class of models by considering the production of a second, non-SM Higgs $h'$, decaying pairs of $X$ scalars which in turn decay to $b\bar{b}$ with a displaced $c\tau$. The production cross section of this $h'$ we take as a free parameter. We consider a slice of the three-dimensional parameter space of $m_{h'}$, $m_X$, and $c\tau$ by setting $m_X = 20$~GeV. In Figure~\ref{fig:massctau}, we show the $h'$ production cross section times branching ratio to $XX$, necessary for a 10 event discovery after 1~fb$^{-1}$ of LHC14 data. As a reminder, the SM 125~GeV Higgs will have a production cross section of 49~pb at LHC14~\cite{Dittmaier:2011ti}. Thus, the MPC-driven trigger would be able to discover SM $h\to XX \to 4b$ decays with a branching ratio as small as  $6 \times 10^{-4}$ in a mere 1~fb$^{-1}$.
+
+Using the presently existing single most sensitive HLT, a ten-event discovery scenario would require a BR~$>4-10\%$ for the 125~GeV Higgs, which rises quickly for a $h'$ lighter than this.  For comparison, the present CMS exclusion reach using $20$~fb$^{-1}$ of data from LHC8 requires $\sigma \times\mbox{BR} \gtrsim 10$~fb for $c\tau < 100$~mm with a 400~GeV $h'$ and $m_X = 50$~GeV. The luminosity requirements are at least an order of magnitude higher for a 200~GeV Higgs, and no bound is shown for a lighter Higgs \cite{Chatrchyan:2012cg}.  A combined LEPII analysis can place limits on $h' \to 4b$ below 125~GeV, but only excludes cross sections $\gtrsim 0.1\sigma_\text{SM}$ for masses above 80~GeV \cite{Schael:2006cr} (though this analysis does not require displaced decays). 
+
+We should also emphasize that the L1 and HLT efficiencies shown here are based on the trigger menu used at CMS for the 2012 8~TeV run. At the high luminosity LHC14, it is certain that the requirements for the HLT triggers will be raised, resulting in even lower efficiencies than presently indicated. While the L1 thresholds and efficiency will be similarly affected, the difference between the L1 and HLT efficiency in the 2015 run is expected to be at least as much, if not more, than currently. Without a significant improvement of the trigger stream after the L1, such as our proposed MPC-based system, a significant range of displaced Higgs parameter space would remain out of reach.
+
+Displaced decays involving new scalars and either the 125~GeV Higgs or as-yet-undiscovered additional doublet Higgses can be trivially implemented in simple extensions of the Higgs sector. Such scenarios are not well-constrained by existing LHC, Tevatron, or LEPII collider searches. Assuming decays through a long-lived $X$ into $b\bar{b}$ pairs, the existing search strategies at ATLAS and CMS are hampered by the low efficiency of the displaced $b$-jets to pass the HLT triggers. This is most notable for Higgs masses below $\sim 200$~GeV, as can be seen in Figure~\ref{fig:massctau}.
+
+At best, under the current trigger configuration large amounts of luminosity could be required for a discovery in this mass region. To search for these models, novel techniques are required. A new set of triggers, based on fast Hough transforms performed by massively parallel computing \cite{Halyo:2013iba,Halyo:2013gja,Halyo:2013cza,Halyo:2013yfa}, would allow events to be triggered on based on global characteristics -- such as the existence of displaced vertices. Using this type of trigger, displaced decays of the Higgs could be discovered in early LHC14 running, even with a branching ratio as small as $\sim 10^{-3}$. 
+
+\section*{Acknowledgements}
+ 
+This work is supported by the US Department of Energy, Office of Science Early Career Research Program under Award Number DE-SC0003925.
+
+\begin{thebibliography}{99}
+%\cite{Aad:2012tfa}
+\bibitem{Aad:2012tfa} 
+  G.~Aad {\it et al.}  [ATLAS Collaboration],
+  %``Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC,''
+  Phys.\ Lett.\ B {\bf 716}, 1 (2012).
+  %[arXiv:1207.7214 [hep-ex]].
+  %%CITATION = ARXIV:1207.7214;%%
+  %2244 citations counted in INSPIRE as of 26 Feb 2014
+  %\cite{Chatrchyan:2012ufa}
+\bibitem{Chatrchyan:2012ufa} 
+  S.~Chatrchyan {\it et al.}  [CMS Collaboration],
+  %``Observation of a new boson at a mass of 125 GeV with the CMS experiment at the LHC,''
+  Phys.\ Lett.\ B {\bf 716}, 30 (2012).
+  %[arXiv:1207.7235 [hep-ex]].
+  %%CITATION = ARXIV:1207.7235;%%
+  %2228 citations counted in INSPIRE as of 26 Feb 2014
+  
+%\cite{Englert:1964et}
+\bibitem{Englert:1964et} 
+  F.~Englert and R.~Brout,
+  %``Broken Symmetry and the Mass of Gauge Vector Mesons,''
+  Phys.\ Rev.\ Lett.\  {\bf 13}, 321 (1964).
+  %%CITATION = PRLTA,13,321;%%
+  %2303 citations counted in INSPIRE as of 26 Feb 2014
+  %\cite{Higgs:1964pj}
+%\bibitem{Higgs:1964pj} 
+  P.~W.~Higgs,
+  %``Broken Symmetries and the Masses of Gauge Bosons,''
+  Phys.\ Rev.\ Lett.\  {\bf 13}, 508 (1964).
+  %%CITATION = PRLTA,13,508;%%
+  %2514 citations counted in INSPIRE as of 26 Feb 2014  
+  %\cite{Higgs:1964ia}
+%\bibitem{Higgs:1964ia} 
+  P.~W.~Higgs,
+  %``Broken symmetries, massless particles and gauge fields,''
+  Phys.\ Lett.\  {\bf 12}, 132 (1964).
+  %%CITATION = PHLTA,12,132;%%
+  %2631 citations counted in INSPIRE as of 26 Feb 2014
+  %\cite{Guralnik:1964eu}
+%\bibitem{Guralnik:1964eu} 
+  G.~S.~Guralnik, C.~R.~Hagen and T.~W.~B.~Kibble,
+  %``Global Conservation Laws and Massless Particles,''
+  Phys.\ Rev.\ Lett.\  {\bf 13}, 585 (1964).
+  %%CITATION = PRLTA,13,585;%%
+  %1825 citations counted in INSPIRE as of 26 Feb 2014
+  %\cite{Higgs:1966ev}
+%\bibitem{Higgs:1966ev} 
+  P.~W.~Higgs,
+  %``Spontaneous Symmetry Breakdown without Massless Bosons,''
+  Phys.\ Rev.\  {\bf 145}, 1156 (1966).
+  %%CITATION = PHRVA,145,1156;%%
+  %1929 citations counted in INSPIRE as of 26 Feb 2014
+  %\cite{Kibble:1967sv}
+%\bibitem{Kibble:1967sv} 
+  T.~W.~B.~Kibble,
+  %``Symmetry breaking in nonAbelian gauge theories,''
+  Phys.\ Rev.\  {\bf 155}, 1554 (1967).
+  %%CITATION = PHRVA,155,1554;%%
+  %980 citations counted in INSPIRE as of 26 Feb 2014
+  %\cite{Glashow:1961tr}
+%\bibitem{Glashow:1961tr} 
+  S.~L.~Glashow,
+  %``Partial Symmetries of Weak Interactions,''
+  Nucl.\ Phys.\  {\bf 22}, 579 (1961).
+  %%CITATION = NUPHA,22,579;%%
+  %5207 citations counted in INSPIRE as of 26 Feb 2014
+  %\cite{Weinberg:1967tq}
+%\bibitem{Weinberg:1967tq} 
+  S.~Weinberg,
+  %``A Model of Leptons,''
+  Phys.\ Rev.\ Lett.\  {\bf 19}, 1264 (1967).
+  %%CITATION = PRLTA,19,1264;%%
+  %8721 citations counted in INSPIRE as of 26 Feb 2014
+  %\cite{Salam:1968rm}
+%\bibitem{Salam:1968rm} 
+  A.~Salam,
+  %``Weak and Electromagnetic Interactions,''
+  Conf.\ Proc.\ C {\bf 680519}, 367 (1968).
+  %%CITATION = CONFP,C680519,367;%%
+  %2049 citations counted in INSPIRE as of 26 Feb 2014
+  
+%\cite{Aad:2013wqa}
+\bibitem{Aad:2013wqa} 
+  G.~Aad {\it et al.}  [ATLAS Collaboration],
+  %``Measurements of Higgs boson production and couplings in diboson final states with the ATLAS detector at the LHC,''
+  Phys.\ Lett.\ B {\bf 726}, 88 (2013).
+  %[arXiv:1307.1427 [hep-ex]].
+  %%CITATION = ARXIV:1307.1427;%%
+  %111 citations counted in INSPIRE as of 02 Mar 2014  
+%\cite{Chatrchyan:2014vua}
+%\bibitem{Chatrchyan:2014vua} 
+  S.~Chatrchyan {\it et al.}  [CMS Collaboration],
+  %``Evidence for the direct decay of the 125 GeV Higgs boson to fermions,''
+  arXiv:1401.6527. %[hep-ex].
+  %%CITATION = ARXIV:1401.6527;%%
+  %1 citations counted in INSPIRE as of 02 Mar 2014  
+  
+  %\cite{Curtin:2013fra}
+\bibitem{Curtin:2013fra} 
+  D.~Curtin, R.~Essig, S.~Gori, P.~Jaiswal, A.~Katz, T.~Liu, Z.~Liu and D.~McKeen {\it et al.},
+  %``Exotic Decays of the 125 GeV Higgs Boson,''
+  arXiv:1312.4992. %[hep-ph].
+  %%CITATION = ARXIV:1312.4992;%%  
+  
+%\cite{Strassler:2006ri}
+\bibitem{Strassler:2006ri} 
+  M.~J.~Strassler and K.~M.~Zurek,
+  %``Discovering the Higgs through highly-displaced vertices,''
+  Phys.\ Lett.\ B {\bf 661}, 263 (2008).
+  %[hep-ph/0605193].
+  %%CITATION = HEP-PH/0605193;%%
+  %106 citations counted in INSPIRE as of 26 Feb 2014  
+  
+ %\cite{Strassler:2006im}
+\bibitem{Strassler:2006im} 
+  M.~J.~Strassler and K.~M.~Zurek,
+  %``Echoes of a hidden valley at hadron colliders,''
+  Phys.\ Lett.\ B {\bf 651}, 374 (2007).
+  %[hep-ph/0604261].
+  %%CITATION = HEP-PH/0604261;%%
+  %290 citations counted in INSPIRE as of 26 Feb 2014
+  %\cite{Falkowski:2010cm}
+%\bibitem{Falkowski:2010cm} 
+%  A.~Falkowski, J.~T.~Ruderman, T.~Volansky and J.~Zupan,
+  %``Hidden Higgs Decaying to Lepton Jets,''
+%  JHEP {\bf 1005}, 077 (2010).
+  %[arXiv:1002.2952 [hep-ph]].
+  %%CITATION = ARXIV:1002.2952;%%
+  %40 citations counted in INSPIRE as of 07 Mar 2014 
+  
+  %\cite{Chan:2011aa}
+% \bibitem{Chan:2011aa} 
+%  Y.~F.~Chan, M.~Low, D.~E.~Morrissey and A.~P.~Spray,
+  %``LHC Signatures of a Minimal Supersymmetric Hidden Valley,''
+%  JHEP {\bf 1205}, 155 (2012)
+%  [arXiv:1112.2705 [hep-ph]].
+  %%CITATION = ARXIV:1112.2705;%%
+  %4 citations counted in INSPIRE as of 07 Mar 2014
+
+  %\cite{CMS:2014ala}
+\bibitem{CMS:2014ala} 
+  CMS Collaboration [CMS Collaboration],
+  %``Constraints on the Higgs boson width from off-shell production and decay to ZZ to llll and llvv,''
+  CMS-PAS-HIG-14-002.
+  %%CITATION = CMS-PAS-HIG-14-002;%%
+  %4 citations counted in INSPIRE as of 07 May 2014  
+  
+%\cite{Graham:2012th}
+\bibitem{Graham:2012th} 
+  P.~W.~Graham, D.~E.~Kaplan, S.~Rajendran and P.~Saraswat,
+  %``Displaced Supersymmetry,''
+  JHEP {\bf 1207}, 149 (2012)
+  [arXiv:1204.6038 [hep-ph]].
+  %%CITATION = ARXIV:1204.6038;%%
+  %47 citations counted in INSPIRE as of 07 Mar 2014  
+  
+%\cite{Aad:2013txa}
+\bibitem{Aad:2013txa} 
+  G.~Aad {\it et al.}  [ATLAS Collaboration],
+  %``Triggers for displaced decays of long-lived neutral particles in the ATLAS detector,''
+  JINST {\bf 8}, P07015 (2013).
+  %[arXiv:1305.2284 [hep-ex]].
+  %%CITATION = ARXIV:1305.2284;%%
+  %3 citations counted in INSPIRE as of 26 Feb 2014
+   %\cite{Aad:2012kw}
+%\bibitem{Aad:2012kw} 
+  G.~Aad {\it et al.}  [ATLAS Collaboration],
+  %``Search for displaced muonic lepton jets from light Higgs boson decay in proton-proton collisions at $\sqrt{s}=7$ TeV with the ATLAS detector,''
+  Phys.\ Lett.\ B {\bf 721}, 32 (2013).
+  %[arXiv:1210.0435 [hep-ex]].
+  %%CITATION = ARXIV:1210.0435;%%
+  %18 citations counted in INSPIRE as of 26 Feb 2014
+  %\cite{ATLAS:2012av}
+%\bibitem{ATLAS:2012av} 
+  G.~Aad {\it et al.}  [ATLAS Collaboration],
+  %``Search for a light Higgs boson decaying to long-lived weakly-interacting particles in proton-proton collisions at $\sqrt{s}=7$ TeV with the ATLAS detector,''
+  Phys.\ Rev.\ Lett.\  {\bf 108}, 251801 (2012).
+  %[arXiv:1203.1303 [hep-ex]].
+  %%CITATION = ARXIV:1203.1303;%%
+  %24 citations counted in INSPIRE as of 07 Mar 2014  
+  
+%\cite{Chatrchyan:2012cg}
+\bibitem{Chatrchyan:2012cg} 
+  S.~Chatrchyan {\it et al.}  [CMS Collaboration],
+  %``Search for a non-standard-model Higgs boson decaying to a pair of new light bosons in four-muon final states,''
+  Phys.\ Lett.\ B {\bf 726}, 564 (2013).
+  %[arXiv:1210.7619 [hep-ex]].
+  %%CITATION = ARXIV:1210.7619;%%
+  %13 citations counted in INSPIRE as of 26 Feb 2014
+
+%\cite{CMS:2014wda}
+\bibitem{CMS:2014wda} 
+  [CMS Collaboration],
+  %``Search for long-lived neutral particles decaying to quark-antiquark pairs in proton-proton collisions at $\sqrt{s}$ = 8 TeV,''
+  arXiv:1411.6530 [hep-ex]. Submitted to Phys. Rev. D.
+  %%CITATION = ARXIV:1411.6530;%%
+  %2 citations counted in INSPIRE as of 13 Jan 2015
+
+  %\cite{Chatrchyan:2012jwg}
+%\bibitem{Chatrchyan:2012jwg} 
+  S.~Chatrchyan {\it et al.}  [CMS Collaboration],
+  %``Search for long-lived particles decaying to photons and missing energy in proton-proton collisions at $\sqrt{s}=7$ TeV,''
+  Phys.\ Lett.\ B {\bf 722}, 273 (2013).
+  %[arXiv:1212.1838 [hep-ex]].
+  %%CITATION = ARXIV:1212.1838;%%
+  %12 citations counted in INSPIRE as of 26 Feb 2014  
+  
+%\cite{Abazov:2009ik}
+\bibitem{Abazov:2009ik} 
+  V.~M.~Abazov {\it et al.}  [D0 Collaboration],
+  %``Search for Resonant Pair Production of long-lived particles decaying to b anti-b in p anti-p collisions at s**(1/2) = 1.96-TeV,''
+  Phys.\ Rev.\ Lett.\  {\bf 103}, 071801 (2009).
+  %[arXiv:0906.1787 [hep-ex]].
+  %%CITATION = ARXIV:0906.1787;%%
+  %20 citations counted in INSPIRE as of 26 Feb 2014  
+  
+%\cite{Aaltonen:2011rja}
+\bibitem{Aaltonen:2011rja} 
+  T.~Aaltonen {\it et al.}  [CDF Collaboration],
+  %``Search for heavy metastable particles decaying to jet pairs in $p\bar{p}$ collisions at $\sqrt{s} = 1.96$ TeV,''
+  Phys.\ Rev.\ D {\bf 85}, 012007 (2012).
+  %[arXiv:1109.3136 [hep-ex]].
+  %%CITATION = ARXIV:1109.3136;%%
+  %6 citations counted in INSPIRE as of 07 Mar 2014
+%\cite{CDFnote}
+% \bibitem{CDFnote}
+%  CDF Collaboration, CDF Note 10356, 2010.
+
+%\cite{Bai:2011wz}
+\bibitem{Bai:2011wz} 
+  Y.~Bai, P.~Draper and J.~Shelton,
+  %``Measuring the Invisible Higgs Width at the 7 and 8 TeV LHC,''
+  JHEP {\bf 1207}, 192 (2012).
+  %[arXiv:1112.4496 [hep-ph]].
+  %%CITATION = ARXIV:1112.4496;%%
+  %34 citations counted in INSPIRE as of 26 Feb 2014  
+%\cite{Djouadi:2012zc}
+%\bibitem{Djouadi:2012zc} 
+  A.~Djouadi, A.~Falkowski, Y.~Mambrini and J.~Quevillon,
+  %``Direct Detection of Higgs-Portal Dark Matter at the LHC,''
+  Eur.\ Phys.\ J.\ C {\bf 73}, 2455 (2013).
+  %[arXiv:1205.3169 [hep-ph]].
+  %%CITATION = ARXIV:1205.3169;%%
+  %45 citations counted in INSPIRE as of 26 Feb 2014  
+  %\cite{Ghosh:2012ep}
+%\bibitem{Ghosh:2012ep} 
+  D.~Ghosh, R.~Godbole, M.~Guchait, K.~Mohan and D.~Sengupta,
+  %``Looking for an Invisible Higgs Signal at the LHC,''
+  Phys.\  Lett.\ B {\bf 725}, 344 (2013).
+  %[arXiv:1211.7015 [hep-ph]].
+  %%CITATION = ARXIV:1211.7015;%%
+  %12 citations counted in INSPIRE as of 26 Feb 2014
+  
+%\cite{Cheung:2013kla}
+\bibitem{Cheung:2013kla} 
+  K.~Cheung, J.~S.~Lee and P.~Y.~Tseng,
+  %``Higgs Precision (Higgcision) Era begins,''
+  JHEP {\bf 1305}, 134 (2013).
+  %[arXiv:1302.3794 [hep-ph]].
+%\cite{Cheung:2013oya}
+%\bibitem{Cheung:2013oya} 
+  K.~Cheung, W.~Y.~Keung and T.~C.~Yuan,
+  %``Collider Signatures of Goldstone Bosons,''
+  Phys.\ Rev.\ D {\bf 89}, 015007 (2014).
+  %[arXiv:1308.4235 [hep-ph]].
+  %%CITATION = ARXIV:1308.4235;%%
+
+%\cite{Belanger:2013kya}
+\bibitem{Belanger:2013kya} 
+  G.~Belanger, B.~Dumont, U.~Ellwanger, J.~F.~Gunion and S.~Kraml,
+  %``Status of invisible Higgs decays,''
+  Phys.\ Lett.\ B {\bf 723}, 340 (2013).
+  %[arXiv:1302.5694 [hep-ph]].
+  %%CITATION = ARXIV:1302.5694;%%
+  %46 citations counted in INSPIRE as of 26 Feb 2014  
+%\cite{Ellis:2013lra}
+%\bibitem{Ellis:2013lra} 
+  J.~Ellis and T.~You,
+  %``Updated Global Analysis of Higgs Couplings,''
+  JHEP {\bf 1306}, 103 (2013).
+  %[arXiv:1303.3879 [hep-ph]].
+  %%CITATION = ARXIV:1303.3879;%%
+  %86 citations counted in INSPIRE as of 26 Feb 2014
+    
+%\cite{Rohr:2012nf}
+\bibitem{Rohr:2012nf}
+  D.~Rohr {\it et al.}  [ALICE HLT Collaboration],
+  %``ALICE HLT TPC tracking of Pb-Pb Events on GPUs,''
+  J.\ Phys.\ Conf.\ Ser.\  {\bf 396} (2012) 012044.
+  %%CITATION = 00462,396,012044;%%
+  %2 citations counted in INSPIRE as of 13 Jan 2015
+
+%\cite{hough}  
+\bibitem{hough}
+P.~Hough, Machine Analysis Of Bubble Chamber Pictures, Proc.~Int.~Conf.~High Energy Accelerators and Instrumentation C590914 (1959) 554--558.
+P.~Hough, {\it Method and mean for recognizing complex patterns}, United States Patent 3069654, 1962.
+R.~Gonzalez and R.~Woods, {\it Digital Image Processing}, Prentice Hall, 1993.
+
+%\cite{Halyo:2013iba}
+\bibitem{Halyo:2013iba} 
+  V.~Halyo, A.~Hunt, P.~Jindal, P.~LeGresley and P.~Lujan,
+  %``GPU Enhancement of the Trigger to Extend Physics Reach at the LHC,''
+  JINST {\bf 8}, P10005 (2013).
+  % [arXiv:1305.4855 [physics.ins-det]].
+  %%CITATION = ARXIV:1305.4855;%%
+  %3 citations counted in INSPIRE as of 26 Feb 2014
+
+%\cite{Halyo:2013gja}
+\bibitem{Halyo:2013gja} 
+  V.~Halyo, P.~LeGresley, P.~Lujan, V.~Karpusenko and A.~Vladimirov,
+  %``First Evaluation of the CPU, GPGPU and MIC Architectures for Real Time Particle Tracking based on Hough Transform at the LHC,''
+  JINST {\bf 9}, P04005 (2014).
+  % [arXiv:1310.7556 [physics.comp-ph]].
+  %%CITATION = ARXIV:1310.7556;%%
+  %2 citations counted in INSPIRE as of 07 May 2014
+  
+%\cite{Halyo:2013cza}
+\bibitem{Halyo:2013cza} 
+  V.~Halyo, P.~LeGresley and P.~Lujan,
+  %``Massively Parallel Computing and the Search for Jets and Black Holes at the LHC,''
+  NIM A  {\bf 744} 54 (2014).
+  % arXiv:1309.6275. [physics.comp-ph].
+  %%CITATION = ARXIV:1309.6275;%%
+  %2 citations counted in INSPIRE as of 26 Feb 2014
+
+%\cite{Halyo:2013yfa}
+\bibitem{Halyo:2013yfa} 
+  V.~Halyo, H.~K.~Lou, P.~Lujan and W.~Zhu,
+  %``Data driven search in the displaced $b\bar{b}$ pair channel for a Higgs boson decaying to long-lived neutral particles,''
+  JHEP {\bf 1401}, 140 (2014).
+  % [arXiv:1308.6213 [hep-ph]].
+  %%CITATION = ARXIV:1308.6213;%%
+  %3 citations counted in INSPIRE as of 26 Feb 2014
+
+%\cite{Brooke:2013hnf}
+\bibitem{Brooke:2013hnf} 
+  J.~Brooke [CMS Collaboration],
+  %``Performance of the CMS Level-1 Trigger,''
+  PoS ICHEP {\bf 2012}, 508 (2013).
+  % [arXiv:1302.2469 [hep-ex]].
+  %%CITATION = ARXIV:1302.2469;%%
+  %1 citations counted in INSPIRE as of 07 Mar 2014  
+  
+%\cite{Sjostrand:2006za}
+\bibitem{Sjostrand:2006za} 
+  T.~Sjostrand, S.~Mrenna and P.~Z.~Skands,
+  %``PYTHIA 6.4 Physics and Manual,''
+  JHEP {\bf 0605}, 026 (2006).
+  %[hep-ph/0603175].
+  %%CITATION = HEP-PH/0603175;%%
+  %4905 citations counted in INSPIRE as of 07 Mar 2014
+
+%\cite{Dittmaier:2011ti}
+\bibitem{Dittmaier:2011ti} 
+  S.~Dittmaier {\it et al.}  [LHC Higgs Cross Section Working Group Collaboration],
+  %``Handbook of LHC Higgs Cross Sections: 1. Inclusive Observables,''
+  arXiv:1101.0593. %[hep-ph].
+  %%CITATION = ARXIV:1101.0593;%%
+  %632 citations counted in INSPIRE as of 02 Mar 2014
+
+%\cite{Schael:2006cr}
+\bibitem{Schael:2006cr} 
+  S.~Schael {\it et al.}  [ALEPH and DELPHI and L3 and OPAL and LEP Working Group for Higgs Boson Searches Collaborations],
+  %``Search for neutral MSSM Higgs bosons at LEP,''
+  Eur.\ Phys.\ J.\ C {\bf 47}, 547 (2006).
+  %[hep-ex/0602042].
+  %%CITATION = HEP-EX/0602042;%%
+  %637 citations counted in INSPIRE as of 07 Mar 2014  
+\end{thebibliography}
+
+\end{document}
